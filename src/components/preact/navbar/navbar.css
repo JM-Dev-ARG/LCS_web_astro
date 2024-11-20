@@ -1,0 +1,27 @@
+.root {
+  --filter: invert(0);
+}
+/* .logo {
+  filter: var(--filter);
+} */
+
+.menu__toggle {
+  --icon-toggle-menu: url("../../../public/svg/menu_open.svg");
+  background-image: var(--icon-toggle-menu);
+  filter: var(--filter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.menu__toggle:has(.menu__input:checked) {
+  --icon-toggle-menu: url("../../../public/svg/menu_close.svg");
+  --filter: invert(1);
+}

@@ -1,0 +1,212 @@
+---
+import Carrousel from "../reutilizables/Carrousel.astro";
+import Container from "../reutilizables/Container.astro";
+
+const fotos = [
+  {
+    id: "1",
+    foto: "/img/foto2-mock.avif",
+    iframe: "https://www.youtube.com/embed/GBQ5JnYP1Z8?si=34ZTNmErWFSlM6Fl",
+  },
+  {
+    id: "2",
+    foto: "/img/foto2-mock.avif",
+    iframeSpoty:
+      "https://open.spotify.com/embed/episode/0rATigdLbj0YijusqpZM0I?utm_source=generator&theme=0",
+  },
+  {
+    id: "3",
+    foto: "/img/foto2-mock.avif",
+    href: "https://www.youtube.com/",
+    iframeSpoty:
+      "https://open.spotify.com/embed/episode/7544r9Fds87rdXFhIOYWgh?utm_source=generator",
+  },
+  {
+    id: "4",
+    foto: "/img/foto2-mock.avif",
+    iframeSpoty:
+      "https://open.spotify.com/embed/episode/3yt3vWVuAg3kDgTG9dDrNx?utm_source=generator",
+  },
+  {
+    id: "5",
+    foto: "/medios/img-pool-economico.avif",
+    iframe: "https://www.youtube.com/embed/0y1289PyiJI?si=F-2JMI-i68-d_Nb4",
+  },
+  {
+    id: "6",
+    foto: "/img/foto2-mock.avif",
+    iframe:
+      "https://www.youtube.com/embed/fYKIX_91kwU?si=-Xc7BZLK0Ak6xKja&amp;start=27",
+  },
+  {
+    id: "7",
+    foto: "/img/foto2-mock.avif",
+    iframe:
+      "https://www.youtube.com/embed/cBIFLMjTdoA?si=Olivjf18JF2WPvCt&amp;start=600",
+  },
+
+  {
+    id: "1",
+    foto: "/img/foto2-mock.avif",
+    iframe: "https://www.youtube.com/embed/WDcbnOP-MIo?si=UxejkrkNcoiD_Elv",
+  },
+  {
+    id: "2",
+    foto: "/img/foto2-mock.avif",
+    iframeSpoty:
+      "https://open.spotify.com/embed/episode/1UQofg09Rchr727lKB02ka?utm_source=generator&theme=0",
+  },
+  {
+    id: "3",
+    foto: "/img/foto2-mock.avif",
+    href: "https://www.youtube.com/",
+  },
+  {
+    id: "4",
+    foto: "/img/foto2-mock.avif",
+    href: "https://www.youtube.com/",
+  },
+  {
+    id: "5",
+    foto: "/img/foto2-mock.avif",
+    href: "https://www.youtube.com/",
+  },
+  {
+    id: "6",
+    foto: "/img/foto2-mock.avif",
+    href: "https://www.youtube.com/",
+  },
+  {
+    id: "7",
+    foto: "/img/foto2-mock.avif",
+    href: "https://www.youtube.com/",
+  },
+];
+---
+
+<section
+  id="medios"
+  class="relative overflow-hidden bg-lcsBlack pb-36 z-10"
+>
+  <Container>
+    <div
+      class="w-full flex flex-col items-start justify-start leading-tight text-[clamp(50px,8vw,80px)] text-gray-50 mt-10"
+    >
+      <h2 class="font-extralight">Mica en</h2>
+
+      <h2 class="font-extralight ml-20">los medios</h2>
+    </div>
+  </Container>
+  <div class="rotate-[-4deg] grid place-items-center mt-6">
+    <Carrousel
+      duration="slow"
+      pause="true"
+    >
+      {
+        fotos.map((foto) => (
+          <button
+            id={foto.id}
+            data-content={foto.iframe}
+            data-spoty={foto.iframeSpoty}
+            data-thumbnail={foto.foto}
+            class="w-[200px] h-[150px] md:w-[300px] md:h-[220px] lg:w-[400px] lg:h-[300px] rounded-[20px] overflow-hidden mr-6 hover:scale-[1.02] transition-all duration-300"
+          >
+            <img
+              class="w-full h-full object-cover "
+              src={foto.foto}
+              alt=""
+            />
+          </button>
+        ))
+      }
+    </Carrousel>
+  </div>
+</section>
+<dialog
+  class="w-full h-full xl:w-[80%] xl:h-[80%] bg-[#455e54] rounded-[20px] flex-col justify-center items-center"
+>
+  <form
+    method="dialog"
+    class="w-full h-auto px-5 pt-5"
+  >
+    <button
+      id="close"
+      class="w-full flex justify-end items-center invert"
+    >
+      <img
+        class="w-8 h-8"
+        src="/svg/menu_close.svg"
+        alt=""
+      />
+    </button>
+  </form>
+  <div
+    id="content"
+    class="w-full h-[calc(100%-52px)] flex justify-center items-center object-contain p-[20px] overflow-hidden"
+  >
+  </div>
+</dialog>
+
+<style>
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.63);
+  }
+</style>
+
+<script>
+  const btnDialog = document.querySelectorAll("button");
+  const dialog = document.querySelector("dialog");
+  const dialogContent = document.getElementById("content");
+  const close = document.getElementById("close");
+
+  close.addEventListener("click", () => {
+    dialog.classList.remove("flex");
+    dialogContent.innerHTML = "";
+    dialog.close();
+  });
+
+  function labnolThumb(imgSrc) {
+    return `<img class="w-full h-full" src="${imgSrc}" alt="Thumbnail">`;
+  }
+
+  function iframe(src) {
+    const iframe = document.createElement("iframe");
+    iframe.src = `${src}&autoplay=1`;
+    iframe.className = "w-full h-full";
+
+    iframe.allow =
+      "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+    return iframe;
+  }
+
+  btnDialog.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const iframeSrc = btn.getAttribute("data-content");
+      const thumbnail = btn.getAttribute("data-thumbnail");
+      const iframeSpoty = btn.getAttribute("data-spoty");
+
+      if (iframeSrc) {
+        dialog.classList.add("flex");
+        const imgContainer = document.createElement("div");
+        imgContainer.classList.add("h-[90%]");
+        imgContainer.classList.add("my-[20px]");
+        imgContainer.classList.add("object-contain");
+        imgContainer.classList.add("object-center");
+        imgContainer.classList.add("cursor-pointer");
+
+        imgContainer.innerHTML = labnolThumb(thumbnail);
+
+        imgContainer.onclick = () => {
+          dialogContent.replaceChildren(iframe(iframeSrc));
+        };
+
+        dialogContent.appendChild(imgContainer);
+        dialog.showModal();
+      } else if (iframeSpoty) {
+        dialog.classList.add("flex");
+        dialogContent.innerHTML = `<iframe style="border-radius:12px" src="${iframeSpoty}" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+        dialog.showModal();
+      }
+    });
+  });
+</script>

@@ -1,0 +1,26 @@
+footer {
+  background-color: #202022;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1;
+}
+.img__container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  z-index: 20;
+
+  & img {
+    width: auto;
+    height: 80%;
+    mask-image: linear-gradient(#202022 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(#222020 60%, transparent 100%);
+  }
+}

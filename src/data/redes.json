@@ -1,0 +1,26 @@
+[
+    {
+        "href": "https://www.instagram.com/lachica.delseguro/?hl=es",
+        "img": "/resources/instagram.svg",
+        "label": "Instagram de La Chica del Seguro",
+        "target": "_blank"
+    },
+    {
+        "href": "https://www.linkedin.com/in/micaelatissieresgelsi/?originalSubdomain=ar",
+        "img": "/resources/linkedin.svg",
+        "label": "Linkedin de Micaela Tissieres Gelsi - La Chica del Seguro",
+        "target": "_blank"
+    },
+    {
+        "href": "https://www.facebook.com/lachica.delseguro/",
+        "img": "/resources/facebook.svg",
+        "label": "Facebook de La Chica del Seguro",
+        "target": "_blank"
+    },
+    {
+        "href": "https://www.youtube.com/channel/UCWMN85pySeJnhBZphdOTRWw",
+        "img": "/resources/youtube.svg",
+        "label": "Canal de Youtube de La Chica del Seguro",
+        "target": "_blank"
+    }
+]

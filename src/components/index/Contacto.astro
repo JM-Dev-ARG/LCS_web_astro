@@ -1,0 +1,149 @@
+---
+import Container from "../reutilizables/Container.astro";
+import ContactForm from "../preact/form/ContactForm";
+---
+
+<section
+  id="contacto"
+  class="relative overflow-hidden bg-[url('/resources/back-contacto.svg')] bg-cover bg-center bg-no-repeat z-10"
+>
+  <Container>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 w-full md:gap-x-4 lg:gap-x-0 gap-y-6 mb-10 md:mb-0"
+    >
+      <div class="w-full h-full flex items-center">
+        <div
+          class="w-full h-full flex flex-col items-center justify-start leading-tight"
+        >
+          <div
+            class="w-full lg:w-[80%] xl:w-[70%] flex flex-col items-start justify-start leading-tight mt-20 gap-10 text-gray-50"
+          >
+            <h2 class="font-extralight text-[clamp(50px,5vw,80px)]">
+              Contacto
+            </h2>
+            <div>
+              <p class="font-extralight text-[clamp(18px,2.5vw,25px)] mb-4">
+                Now that your eyes are open, make the sun jealous with your
+                burning passion to start the day. Make the sun jealous or stay
+                in bed.
+              </p>
+              <p class="font-extralight text-[clamp(18px,2.5vw,25px)]">
+                Now that your eyes are open, make the sun jealous with your
+                burning passion to start the day. Make the sun jealous or stay
+                in bed.
+              </p>
+            </div>
+            <div class="hidden md:block">
+              <img
+                src="/img/e-corazon.avif"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-full flex justify-center items-center">
+        <ContactForm client:only="preact" />
+        <!-- <form
+          method="POST"
+          class="w-[80%]"
+        >
+          <div class="flex flex-col gap-1">
+            <label
+              for="nombre"
+              class="font-extralight text-[clamp(20px,5vw,30px)] pl-2 text-gray-50"
+              >Tu nombre
+            </label>
+            <input
+              required
+              class="flex-1 rounded-full px-4 py-2 campo"
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Nombre"
+            />
+          </div>
+          <div class="flex flex-col gap-1 mt-6">
+            <label
+              for="email"
+              class="font-extralight text-[clamp(20px,5vw,30px)] pl-2 text-gray-50"
+              >Tu email
+            </label>
+            <input
+              required
+              class="flex-1 rounded-full px-4 py-2 campo"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="juanperez@tumail.com"
+            />
+          </div>
+          <div class="flex flex-col gap-1 mt-6">
+            <label
+              for="telefono"
+              class="font-extralight text-[clamp(20px,5vw,30px)] pl-2 text-gray-50"
+              >Tu telefono
+            </label>
+            <input
+              required
+              class="flex-1 rounded-full px-4 py-2 campo"
+              type="number"
+              id="telefono"
+              name="telefono"
+              placeholder="(011) 12345 6789"
+            />
+          </div>
+          <div class="flex flex-col gap-1 mt-6">
+            <label
+              for="mensaje"
+              class="font-extralight text-[clamp(20px,5vw,30px)] pl-2 text-gray-50"
+              >Tu Mensaje
+            </label>
+            <textarea
+              required
+              rows="10"
+              draggable="false"
+              class="flex-1 rounded-3xl px-4 py-2 campo"
+              id="mensaje"
+              name="mensaje"
+              placeholder="Lo que quieras consultarme o contarme"
+            ></textarea>
+          </div>
+          <div class="w-full grid place-items-center mt-6">
+            <button
+              class="background w-[200px] mt-6 text-[clamp(18px,3vw,30px)] rounded-full px-4 py-3"
+              type="submit"
+              >Enviar</button
+            >
+          </div>
+        </form> -->
+      </div>
+    </div>
+  </Container>
+</section>
+
+<style>
+  form .campo:focus {
+    outline: 2px solid #ed705fa4;
+    outline-offset: -4px;
+  }
+  .background {
+    background-image: linear-gradient(
+      180deg,
+      #557367 0%,
+      rgba(236, 133, 119, 0.67) 100%
+    );
+    box-shadow: 5px 5px 1px 0 #254542;
+
+    background-size: 100% 200%;
+    color: #f9fafb;
+    transition: all 0.3s linear;
+
+    &:hover {
+      box-shadow: 2px 2px 1px 0 #254542;
+      transform: translate(4px, 4px);
+      background-position: 0 100%;
+      color: #1d1e1c;
+    }
+  }
+</style>

@@ -1,0 +1,227 @@
+---
+import Button from "../reutilizables/Button.astro";
+import Container from "../reutilizables/Container.astro";
+import GridWid from "../reutilizables/GridWid.astro";
+import TitleWid from "../reutilizables/TitleWid.astro";
+const textTitle =
+  "Now that your eyes are open, make the sun jealous with your burning passion to start the day. Make the sun jealous or stay in bed.";
+const textGrid = {
+  text1:
+    "Now that your eyes are open, make the sun jealous with your burning passion to start the day. Make the sun jealous or stay in bed.",
+  text2:
+    "Now that your eyes are open, make the sun jealous with your burning passion to start the day. Make the sun jealous or stay in bed.",
+  text3:
+    "Now that your eyes are open, make the sun jealous with your burning passion to start the day. Make the sun jealous or stay in bed.",
+  text4:
+    "Now that your eyes are open, make the sun jealous with your burning passion to start the day. Make the sun jealous or stay in bed.",
+};
+
+const textHistoria = [
+  {
+    text: "lorem ipsum dolor",
+  },
+  {
+    text: "lorem ipsum dolor",
+  },
+  {
+    text: "lorem ipsum dolor",
+  },
+  {
+    text: "lorem ipsum dolor",
+  },
+  {
+    text: "lorem ipsum dolor",
+  },
+  {
+    text: "lorem ipsum dolor",
+  },
+  {
+    text: "lorem ipsum dolor",
+  },
+];
+---
+
+<section
+  id="wid"
+  class="z-10 relative w-full h-auto place-content-center mx-auto overflow-hidden bg-[#fff5eb]"
+>
+  <div
+    class="wid relative w-full h-auto place-content-center mx-auto overflow-hidden rounded-[100px] bg-slate-600"
+  >
+    <div class="">
+      <img
+        class="hidden md:block w-auto h-[calc(100%/4)] absolute top-1/2 -left-2 translate-y-[-50%] opacity-30 z-[1]"
+        src="/resources/medio-espiral.svg"
+        alt=""
+      />
+    </div>
+    <div>
+      <img
+        class="w-auto h-[calc(100%/7)] absolute bottom-28 -left-16 rotate-[-30deg] opacity-30"
+        src="/resources/corazon-paragua.svg"
+        alt=""
+      />
+    </div>
+    <div>
+      <img
+        class="hidden md:block w-auto h-[calc(100%/4)] absolute bottom-0 -right-2 opacity-60"
+        src="/resources/media-caña.svg"
+        alt=""
+      />
+    </div>
+
+    <Container>
+      <div class="mx-auto w-[90%] mt-10">
+        <TitleWid text={textTitle} />
+
+        <GridWid
+          text1={textGrid.text1}
+          text2={textGrid.text2}
+          text3={textGrid.text3}
+          text4={textGrid.text4}
+        />
+
+        <div
+          class="w-full md:hidden flex flex-col justify-center items-center gap-4 my-20 relative z-10"
+        >
+          <div class="texto">
+            <p>{textGrid.text1}</p>
+            <p>{textGrid.text2}</p>
+          </div>
+          <img
+            class="w-full md:w-[80%] h-auto mx-auto"
+            src="/img/foto2-mock.avif"
+            alt=""
+          />
+          <div class="texto">
+            <p>{textGrid.text3}</p>
+            <p>{textGrid.text4}</p>
+          </div>
+        </div>
+
+        <div
+          class="w-full flex justify-center items-center my-14 relative z-10"
+        >
+          <div
+            class="flex flex-col lg:flex-row justify-center gap-4 md:gap-8 items-center w-full xl:w-[70%]"
+          >
+            <div class="bg-[#fef0e9] rounded-full overflow-hidden">
+              <img
+                class="object-cover w-[180px] h-[180px] md:w-[250px] md:h-[250px]"
+                src="/img/e-cute.avif"
+                alt=""
+              />
+            </div>
+            <div
+              class="historia-container place-items-center mx-auto lg:mx-0 w-[298px] md:w-[450px]"
+            >
+              {
+                textHistoria.map((item, index) => {
+                  return (
+                    <div class="text-gray-50 text-[clamp(13px,3vw,20px)] inline-flex  items-center gap-2  mr-3 historia-item opacity-30">
+                      <p>{item.text}</p>
+                      {index !== textHistoria.length - 1 && (
+                        <span>
+                          <img
+                            class="h-[clamp(13px,3vw,20px)] w-auto"
+                            src="/resources/flecha-texto.svg"
+                            alt=""
+                          />
+                        </span>
+                      )}
+                    </div>
+                  );
+                })
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full place-items-center mx-auto mb-8 relative z-10">
+          <div class="w-full md:w-[80%] lg:w-1/2">
+            <p class="text-gray-50 text-center text-[clamp(30px,3vw,50px)]">
+              Now that your eyes are open, make the sun jealous
+            </p>
+          </div>
+        </div>
+        <div class="w-full place-items-center mx-auto mb-14">
+          <div class="w-full md:w-[80%] lg:w-[60%] xl:w-[50%]">
+            <p
+              class="text-gray-50 text-center text-pretty text-[clamp(16px,3vw,20px)]"
+            >
+              Now that your eyes are open, make the sun jealous with your
+              burning passion to start the day. Make the sun jealous or stay in
+              bed.
+            </p>
+          </div>
+        </div>
+        <div class="w-full place-items-center mx-auto mb-20 relative z-10">
+          <Button
+            title1="Descargate"
+            title2="La Guía Digitalizadora"
+          />
+        </div>
+      </div>
+    </Container>
+  </div>
+
+  <style>
+    .wid {
+      background-image: linear-gradient(180deg, #518d87 33%, #c86363 100%);
+    }
+    .texto {
+      padding-inline: 5px;
+      width: 100%;
+      font-size: clamp(14px, 1.5vw, 20px);
+      font-weight: 500;
+      color: azure;
+      text-align: center;
+      text-wrap: pretty;
+    }
+    .texto :nth-child(1) {
+      margin-bottom: 4px;
+    }
+
+    .historia-item-animation {
+      opacity: 0.3;
+      animation: animationHistoria 3s ease-in-out infinite;
+    }
+
+    @keyframes animationHistoria {
+      0% {
+        opacity: 0.3;
+      }
+      20% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0.3;
+      }
+    }
+  </style>
+
+  <script>
+    window.onload = function () {
+      const historiaItems = document.querySelectorAll(".historia-item");
+      let currentIndex = 0;
+
+      function animateItems() {
+        historiaItems.forEach((item, index) => {
+          item.classList.remove("historia-item-animation");
+          if (index === currentIndex) {
+            item.classList.add("historia-item-animation");
+          }
+        });
+
+        currentIndex = (currentIndex + 1) % historiaItems.length;
+      }
+
+      setInterval(animateItems, 3000);
+      animateItems();
+    };
+  </script>
+</section>

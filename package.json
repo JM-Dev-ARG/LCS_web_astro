@@ -10,8 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^5.1.1",
-    "astro": "^4.15.9",
+    "@astrojs/preact": "^3.5.3",
+    "@astrojs/tailwind": "^5.1.2",
+    "astro": "^4.16.7",
+    "form-data": "^4.0.1",
+    "mailgun.js": "^10.2.3",
+    "preact": "^10.24.3",
+    "sweetalert2": "^11.14.5",
     "tailwindcss": "^3.4.13"
   }
 }

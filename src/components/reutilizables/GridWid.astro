@@ -1,0 +1,104 @@
+---
+type Props = {
+  text1: string;
+  text2: string;
+  text3: string;
+  text4: string;
+};
+
+const { text1, text2, text3, text4 } = Astro.props;
+---
+
+<div class="hidden w-full md:flex justify-end my-20">
+  <div class="w-full lg:w-[60%] lg:mr-32">
+    <div class="container">
+      <div class="text1 texto z-[2]">
+        <div class="h-full w-auto flex flex-col justify-end items-end">
+          <p>
+            {text1}
+          </p>
+          <p>
+            {text2}
+          </p>
+        </div>
+      </div>
+      <div class="image flex justify-center items-end relative">
+        <div class="w-full relative">
+          <img
+            class="object-cover relative z-[2]"
+            src="/img/foto2-mock.avif"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="arrow flex justify-end items-start z-[2]">
+        <img
+          class="w-[70%] relative -top-10"
+          src="/resources/flecha-curva.svg"
+          alt=""
+        />
+      </div>
+      <div class="text2 texto z-[2]">
+        <div class="h-auto flex flex-col justify-start items-left">
+          <p>
+            {text3}
+          </p>
+          <p>
+            {text4}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    width: 100%;
+    display: grid;
+    grid:
+      "text1 image" auto
+      "arrow text2" auto
+      / 1fr 1fr;
+    gap: 30px;
+  }
+  .texto {
+    padding-inline: 5px;
+    width: 100%;
+    font-size: clamp(14px, 1.5vw, 20px);
+    font-weight: 500;
+    color: azure;
+    text-align: justify;
+    text-wrap: pretty;
+  }
+
+  .text1 {
+    grid-area: text1;
+  }
+  .image {
+    grid-area: image;
+  }
+  .image div::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180%;
+    height: 180%;
+    background-image: url("/resources/asterisco-bold.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    z-index: 0;
+  }
+  .arrow {
+    grid-area: arrow;
+  }
+  .arrow img {
+    transform: rotate(274deg);
+  }
+  .text2 {
+    grid-area: text2;
+  }
+</style>

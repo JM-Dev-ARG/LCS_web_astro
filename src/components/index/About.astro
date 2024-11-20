@@ -1,0 +1,128 @@
+---
+import Container from "../reutilizables/Container.astro";
+---
+
+<section
+  id="about"
+  class="about relative w-full h-auto place-content-center mx-auto overflow-hidden z-10 bg-[#fff5eb]"
+>
+  <div
+    class="absolute size-[600px] -bottom-20 -left-[400px] rotate-[135deg] opacity-20"
+  >
+    <img
+      class="h-full"
+      src="/resources/flechas-verde-rojo.svg"
+      alt=""
+    />
+  </div>
+  <div
+    class="absolute size-[600px] top-0 -right-[400px] rotate-[-45deg] opacity-20"
+  >
+    <img
+      class="h-full"
+      src="/resources/flechas-rojo-verde.svg"
+      alt=""
+    />
+  </div>
+  <Container classname="relative z-10 ">
+    <div
+      class="h-auto w-full md:w-[85%] xl:w-[70%] flex flex-col lg:flex-row mt-40 md:mt-36 gap-12 justify-center mb-20"
+    >
+      <div class="mx-auto lg:mx-0 relative">
+        <img
+          class="w-[450px]"
+          src="/img/foto-mock.avif"
+          alt="foto mica"
+        />
+        <div
+          class="hidden md:block absolute size-[40%] -top-[20%] -left-[20%] -z-10"
+        >
+          <img
+            class="h-full"
+            src="/resources/asterisco-fino.svg"
+            alt=""
+          />
+        </div>
+
+        <div
+          class="absolute -top-32 left-1/2 -translate-x-1/2 md:translate-x-0 md:top-4 md:left-[calc(100%-150px)] lg:left-[calc(100%-100px)] leading-none"
+        >
+          <h1 class="title">¡HOLA!</h1>
+          <h1 class="saludo text-nowrap font-thin">Soy Mica</h1>
+        </div>
+      </div>
+
+      <div class="w-[80%] mx-auto lg:mx-0 lg:w-1/2 lg:mt-40 xl:mt-52 h-auto">
+        <div class="leading-none mb-6">
+          <h2 class="title2 title2--light mb-2">Now that your eyes</h2>
+          <h2 class="title2 title2--bold">Now that your eyes</h2>
+        </div>
+
+        <div class="mb-4 md:mb-8 text-pretty text-justify">
+          <p class="mb-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae
+            nihil reprehenderit at odio tempore quas totam assumenda nisi
+            ratione. Nemo ea consequuntur id cupiditate repudiandae nam dolorem
+            labore culpa libero.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae
+            nihil reprehenderit at odio tempore quas totam assumenda nisi
+            ratione. Nemo ea consequuntur id cupiditate repudiandae nam dolorem
+            labore culpa libero.
+          </p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 md:gap-6 w-full"
+        >
+          <div class="w-[90%] md:w-[60%]">
+            <p class="bg-[#e69c99] w-full py-2 mb-3">hola</p>
+            <p class="bg-[#6f9c8ad5] w-full py-2">hola</p>
+          </div>
+          <div class="w-[200px] relative img__idea">
+            <img
+              class="w-full relative"
+              src="/img/e-idea.avif"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
+
+<style>
+  .saludo {
+    font-size: clamp(70px, 8vw, 128px);
+  }
+  .title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-size: clamp(30px, 4vw, 60px);
+  }
+
+  .title2 {
+    font-size: clamp(28px, 3vw, 45px);
+  }
+
+  .title2--light {
+    font-weight: 200;
+  }
+
+  .title2--bold {
+    font-weight: 500;
+  }
+
+  .img__idea::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 70%;
+    background-color: #ea4d50;
+    border-radius: 20px;
+  }
+</style>

@@ -1,0 +1,27 @@
+---
+type Props = {
+  text: string;
+};
+
+const { text } = Astro.props;
+---
+
+<div class="w-full flex flex-col justify-center items-center gap-7">
+  <div class="">
+    <img
+      class="w-[65px] rotate-[-45deg]"
+      src="/resources/flechas.svg"
+      alt=""
+    />
+  </div>
+  <p class="text-[clamp(20px,3vw,60px)] text-pretty text-gray-50 text-center">
+    {text}
+  </p>
+  <div class="">
+    <img
+      class="w-[65px] rotate-[135deg]"
+      src="/resources/flechas.svg"
+      alt=""
+    />
+  </div>
+</div>
