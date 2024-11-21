@@ -12,7 +12,7 @@ import Hero from "../components/preact/hero/Hero";
 
 <Layout title="LCS - Inicio">
   <main>
-    <div class="absolute h-dvh w-full bg-[red] loader"></div>
+    <div class="absolute h-dvh w-full loader"></div>
     <!-- <Hero /> -->
     <Hero client:load />
     <div
@@ -38,6 +38,7 @@ import Hero from "../components/preact/hero/Hero";
 </Layout>
 <style>
   .loader {
+    background-color: #333333;
     animation: fadeOut 2s ease-in-out 0.3s forwards;
   }
   @keyframes fadeOut {
