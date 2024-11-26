@@ -19,6 +19,12 @@ const Navbar = () => {
         }
     };
 
+    const handleScrollToTopLogo = (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+
+    };
+
     /*  menuOpen ? window.scroll("0px", "0px") : window.scroll("auto"); */
     useEffect(() => {
         const closeMenuOnLinkClick = () => setMenuOpen(false);
@@ -43,12 +49,12 @@ const Navbar = () => {
             >
                 <div className="flex items-center justify-between lg:justify-center w-full mx-auto lg:px-3 2xl:px-0 py-3 ">
                     <div className="flex justify-left items-center flex-1 ml-8">
-                        <a href="/" >
+                        <button onClick={handleScrollToTopLogo} >
                             <img
                                 className={`w-[50px] logo `}
                                 src="/resources/corazon-paragua.svg"
                                 alt="Logo La Chica del Seguro"
-                            /></a>
+                            /></button>
 
                     </div>
 

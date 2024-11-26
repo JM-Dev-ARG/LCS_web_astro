@@ -12,13 +12,20 @@ import Hero from "../components/preact/hero/Hero";
 
 <Layout title="LCS - Inicio">
   <main>
-    <div class="absolute h-dvh w-full loader"></div>
+    <div class="absolute h-dvh w-full loader">
+      <img
+        class="w-full h-1/5"
+        src="/resources/ISOTIPO.svg"
+        alt=""
+      />
+    </div>
     <!-- <Hero /> -->
     <Hero client:load />
     <div
       class="h-auto place-content-center w-full bg-[#fff5eb] rounded-[100px] overflow-hidden relative"
     >
       <About />
+
       <WID />
       <Services />
       <div class="relative z-[11] bg-[#fff5eb] h-0">
@@ -38,9 +45,16 @@ import Hero from "../components/preact/hero/Hero";
 </Layout>
 <style>
   .loader {
-    background-color: #333333;
-    animation: fadeOut 2s ease-in-out 0.3s forwards;
+    background-color: #fef0e9;
+    place-content: center;
+    margin-inline: auto;
+    animation: fadeOut 3s ease-in-out 0.5s forwards;
+
+    /*    img {
+      animation: pulse 2s linear 0.2s forwards;
+    } */
   }
+
   @keyframes fadeOut {
     0% {
       opacity: 1;

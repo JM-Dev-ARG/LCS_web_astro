@@ -1,0 +1,20 @@
+[
+    {
+        "title": "PATRIMONIALES",
+        "description": "Lorem ipsum dolor sit amet consectetu adipisicing elit. Cupiditate deserunt, ab quis, maxime quaerat odio reprehenderit dignissimos laborum voluptatibus rerum impedit quam sequi eius cumque autem illum! Dicta, deserunt asperiores?",
+        "image": "./img/img-patrimoniales.avif",
+        "url": "/patrimoniales"
+    },
+    {
+        "title": "PERSONAS",
+        "description": "Lorem ipsum dolor sit amet consectetu adipisicing elit. Cupiditate deserunt, ab quis, maxime quaerat odio reprehenderit dignissimos laborum voluptatibus rerum impedit quam sequi eius cumque autem illum! Dicta, deserunt asperiores?",
+        "image": "./image/image-personas.avif",
+        "url": "/personas"
+    },
+    {
+        "title": "VIAJES",
+        "description": "Lorem ipsum dolor sit amet consectetu adipisicing elit. Cupiditate deserunt, ab quis, maxime quaerat odio reprehenderit dignissimos laborum voluptatibus rerum impedit quam sequi eius cumque autem illum! Dicta, deserunt asperiores?",
+        "image": "./image/image-viajes.avif",
+        "url": "/viajes"
+    }
+]
