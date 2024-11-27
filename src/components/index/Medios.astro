@@ -1,4 +1,5 @@
 ---
+import CarouselDialog from "../preact/medios/CarouselDialog";
 import Carrousel from "../reutilizables/Carrousel.astro";
 import Container from "../reutilizables/Container.astro";
 
@@ -86,7 +87,7 @@ const fotos = [
 
 <section
   id="medios"
-  class="relative overflow-hidden bg-lcsBlack pb-36 z-10"
+  class="relative bg-lcsBlack pb-36 z-10"
 >
   <Container>
     <div
@@ -98,10 +99,16 @@ const fotos = [
     </div>
   </Container>
   <div class="rotate-[-4deg] grid place-items-center mt-6">
-    <Carrousel
+    <CarouselDialog
+      client:load
+      fotos={fotos}
       duration="slow"
-      pause="true"
-    >
+      direction="left"
+      pause="false"
+      className="custom-container"
+      classSlider="custom-slider"
+    />
+    <!-- <Carrousel duration="slow">
       {
         fotos.map((foto) => (
           <button
@@ -119,7 +126,7 @@ const fotos = [
           </button>
         ))
       }
-    </Carrousel>
+    </Carrousel> -->
   </div>
 </section>
 <dialog
@@ -179,6 +186,9 @@ const fotos = [
     return iframe;
   }
 
+  window.addEventListener("hashchange", () => {
+    console.log("Loaded");
+  });
   btnDialog.forEach((btn) => {
     btn.addEventListener("click", () => {
       const iframeSrc = btn.getAttribute("data-content");

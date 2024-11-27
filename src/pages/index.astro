@@ -28,19 +28,13 @@ import Hero from "../components/preact/hero/Hero";
 
       <WID />
       <Services />
-      <div class="relative z-[11] bg-[#fff5eb] h-0">
-        <img
-          class="hidden lg:block w-auto lg:h-[400px] xl:h-[500px] absolute xl:-bottom-[400px] lg:-bottom-[350px] -right-[80%] lg:-right-[30%] xl:-right-[25%] 2xl:-right-[20%] rotate-[75deg] opacity-30"
-          src="/resources/flechas-rojo-verde.svg "
-          alt=""
-        />
-      </div>
+
       <Academia />
       <Medios />
       <Contacto />
     </div>
 
-    <Footer client:only="preact" />
+    <Footer client:load />
   </main>
 </Layout>
 <style>

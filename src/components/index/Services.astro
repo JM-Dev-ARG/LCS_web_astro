@@ -13,8 +13,15 @@ import CardServices from "../reutilizables/CardServices.astro";
 >
   <div class="">
     <img
-      class="hidden md:block w-auto h-[calc(100%/3)] absolute top-1/2 -left-[20%] xl:-left-[6%] translate-y-[-50%] opacity-70"
+      class="hidden lg:block w-auto h-[calc(100%/3)] absolute top-1/2 -left-[20%] xl:-left-[6%] translate-y-[-50%] opacity-70"
       src="/resources/asterisco-fino.svg"
+      alt=""
+    />
+  </div>
+  <div class="">
+    <img
+      class="hidden lg:block w-auto lg:h-[400px] xl:h-[500px] absolute xl:-bottom-[50px] lg:-bottom-[20px] -right-[80%] lg:-right-[30%] xl:-right-[25%] 2xl:-right-[20%] rotate-[65deg] opacity-30"
+      src="/resources/flechas-rojo-verde.svg "
       alt=""
     />
   </div>
@@ -25,7 +32,7 @@ import CardServices from "../reutilizables/CardServices.astro";
         Contrata Seguros
       </h1>
       <p
-        class="text-[clamp(80px,20vw,200px)] font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 text-lcsPink3 tracking-[-0.1em] opacity-60"
+        class="text-[clamp(80px,15vw,200px)] w-full font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 text-lcsPink3 tracking-wide opacity-60 text-center"
       >
         B B B
       </p>
@@ -60,16 +67,10 @@ import CardServices from "../reutilizables/CardServices.astro";
     </div>
 
     <div
-      class="hidden w-full md:flex flex-col lg:flex-row gap-4 mx-auto justify-center items-center mt-10"
+      class="w-full md:w-[70%] lg:w-full flex flex-col lg:flex-row gap-4 mx-auto justify-center items-center mt-10"
     >
       {data.map((item) => <CardServices {...item} />)}
     </div>
-    <!--  <p class="md:hidden text-[20px] font-light text-center text-pretty">
-      Selecciona una cobertura y recibi tu cotización
-    </p>
-    <div class="md:hidden w-full overflow-x-auto ml-3 sliderMobile">
-      <SliderServices />
-    </div> -->
   </Container>
 </section>
 
@@ -89,59 +90,4 @@ import CardServices from "../reutilizables/CardServices.astro";
   .sliderMobile {
     scrollbar-width: none;
   }
-  /*   .card__container {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    flex: 1 0 300px;
-    height: 600px;
-    border-radius: 20px;
-
-    & .card {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: end;
-      color: aliceblue;
-      width: 100%;
-      height: 100%;
-      transition: all 0.5s linear;
-      background-position: center;
-      background-size: cover;
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(transparent 1%, #1d312f 100%);
-        -webkit-mask-image: linear-gradient(transparent 1%, #1d312f 100%);
-      }
-    }
-
-    & .card__content {
-      position: absolute;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      top: 0;
-      right: 100%;
-      width: 100%;
-      height: 100%;
-      background-color: #1d312f65;
-      opacity: 1;
-      transition: all 0.4s linear;
-    }
-
-    &:hover .card__content {
-      right: 0;
-    }
-
-    &:hover .card {
-      opacity: 0;
-    }
-  } */
 </style>
