@@ -1,0 +1,155 @@
+---
+import navega from "../../data/navega.json";
+import aprende from "../../data/aprende.json";
+import redes from "../../data/redes.json";
+---
+
+<footer
+  id="footer"
+  class="sticky opacity-0 bottom-0 flex justify-end"
+>
+  <div
+    class="absolute w-full h-full bg-[url('/resources/amo-asegurar.svg')] bg-cover bg-center opacity-[0.03] z-[1]"
+  >
+  </div>
+
+  <div class="img__container">
+    <img
+      src="./resources/LOGOTIPO-CREMA.svg"
+      alt=""
+    />
+  </div>
+  <div
+    class="flex flex-col-reverse md:flex-row-reverse justify-around items-center gap-6 md:gap-0 h-1/2 w-full relative z-20"
+  >
+    <div class="flex flex-col justify-center items-center h-1/2 gap-4">
+      <div class="flex justify-center items-center gap-4">
+        {
+          redes.map((item) => (
+            <div class="border-2 border-zinc-50 size-[40px] rounded-full flex justify-center items-center hover:scale-[1.1] transition-all duration-200 ease-linear group">
+              <a
+                href={item.href}
+                target={item.target}
+              >
+                <img
+                  src={item.img}
+                  alt={item.label}
+                  class="size-[40px] p-2 group-hover:scale-[1.1] transition-all duration-200 ease-linear"
+                  style="filter: invert(100%) "
+                />
+              </a>
+            </div>
+          ))
+        }
+      </div>
+      <div class="flex flex-col gap-2 text-xs text-gray-50 text-center">
+        <p>Copyright © 2024 La Chica del Seguro</p>
+        <p>Reservados todos los derechos</p>
+      </div>
+    </div>
+
+    {
+      (
+        <div class="flex   justify-center items-start  w-auto gap-10 lg:gap-20  ">
+          <div class="w-auto">
+            <p class="text-[clamp(18px,3vw,22px)] font-medium pl-1 pb-[6px] text-zinc-200">
+              Navega
+            </p>
+            <div class="border-b  border-zinc-200 h-auto mb-3 w-[60%] lg:w-auto" />
+            <ul class="flex flex-col gap-[2px]">
+              {navega.map((item) => (
+                <li class="group text-[clamp(12px,3vw,18px)] leading-tight w-fit">
+                  <a
+                    id="navItem"
+                    class="text-zinc-500 hover:text-zinc-100 duration-300 ease-linear"
+                    href={item.href}
+                    target={item.target}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="w-auto">
+            <p class="text-[clamp(18px,3vw,22px)] font-medium pl-1 pb-[6px] text-zinc-200">
+              Aprende
+            </p>
+            <div class="border-b border-zinc-200 h-auto mb-3 w-[60%] lg:w-auto" />
+            <ul class="flex flex-col gap-[2px]">
+              {aprende.map((item) => (
+                <li class="group text-[clamp(12px,3vw,18px)] leading-tight w-fit">
+                  <a
+                    id="navItem"
+                    class="text-zinc-500 hover:text-zinc-100 duration-300 ease-linear"
+                    href={item.href}
+                    target={item.target}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )
+    }
+  </div>
+
+  <p class="text-center text-xs font-thin text-gray-300">
+    Desarrollado por{" "}
+    <a
+      aria-label="Link al Github de JM-Dev"
+      href="https://github.com/JM-Dev-ARG"
+      target="_blank"
+    >
+      JM-DEV{" "}
+    </a>{" "}
+    / Agencia Panambi
+  </p>
+</footer>
+
+<style>
+  footer {
+    background-color: #202022;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+  }
+  .img__container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    z-index: 20;
+
+    & img {
+      width: auto;
+      height: 80%;
+      mask-image: linear-gradient(#202022 60%, transparent 100%);
+      -webkit-mask-image: linear-gradient(#222020 60%, transparent 100%);
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    window.addEventListener("scroll", () => {
+      const footer = document.getElementById("footer");
+      const scrollY = window.scrollY;
+
+      if (scrollY > 2000) {
+        footer.classList.remove("opacity-0");
+      } else {
+        footer.classList.add("opacity-0");
+      }
+    });
+  });
+</script>

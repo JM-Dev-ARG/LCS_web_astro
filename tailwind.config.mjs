@@ -16,7 +16,12 @@ export default {
 				lcsPink3: "#f2a9b1",
 
 			},
+			screens: {
+				'3xl': '1720px',
+
+			}
 		},
+
 	},
 	plugins: [],
 }

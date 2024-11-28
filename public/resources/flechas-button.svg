@@ -55,11 +55,11 @@
 
       .cls-1 {
         opacity: 0.6;
-        fill: #ea4d50;
+        fill: #f9fafb;
       }
       .cls-1_2 {
         opacity: 0.3;
-        fill: #ea4d50;
+        fill: #f9fafb;
       }
     </style>
   </defs>

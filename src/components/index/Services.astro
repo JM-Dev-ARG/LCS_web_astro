@@ -9,7 +9,7 @@ import CardServices from "../reutilizables/CardServices.astro";
 
 <section
   id="services"
-  class="relative overflow-hidden scroll-p-[1000px] bg-[#fff5eb] z-10"
+  class="relative overflow-hidden bg-[#fff5eb] z-10"
 >
   <div class="">
     <img
@@ -37,9 +37,29 @@ import CardServices from "../reutilizables/CardServices.astro";
         B B B
       </p>
     </div>
+
     <div
-      class="w-full lg:w-[70%] xl:w-[60%] flex justify-center items-center gap-4"
+      class="relative w-full text__animated__container z-10 flex justify-center items-center"
     >
+      <p
+        data-delay="2s"
+        class="text-[clamp(20px,3vw,40px)] font-semibold text-pretty text-center my-0 absolute opacity-0 text-[#518d87]"
+      >
+        BUENO
+      </p>
+      <p
+        class="text-[clamp(20px,3vw,40px)] font-semibold text-pretty text-center my-0 absolute opacity-0 text-[#518d87]"
+      >
+        BONITO
+      </p>
+      <p
+        class="text-[clamp(20px,3vw,40px)] font-semibold text-pretty text-center my-0 absolute opacity-0 text-[#518d87]"
+      >
+        BIEN HECHO
+      </p>
+    </div>
+
+    <div class="w-full lg:w-[80%] flex justify-center items-center gap-20">
       <div class="">
         <img
           class="w-[100px] rotate-[225deg]"
@@ -48,13 +68,21 @@ import CardServices from "../reutilizables/CardServices.astro";
         />
       </div>
       <div>
-        <p
-          class="text-[clamp(20px,3vw,40px)] font-light text-pretty text-center"
+        <div
+          class="text-[clamp(20px,3vw,40px)] font-light text-pretty text-center flex flex-col justify-center items-center mt-3"
         >
-          Si no tenes un <span class="sub relative text-[#518d87]"
-            >Broker de seguros</span
-          >, te conectamos con uno de confianza
-        </p>
+          <p>Te presentamos a nuestros</p>
+          <div class="relative w-fit text-[#518d87]">
+            <p>Brokers de seguros</p>
+            <div class="sub">
+              <img
+                src="/resources/surayado.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <p>de confianza.</p>
+        </div>
       </div>
 
       <div class="">
@@ -75,19 +103,48 @@ import CardServices from "../reutilizables/CardServices.astro";
 </section>
 
 <style>
-  .sub::before {
-    content: "";
+  --delay: calc(data-delay * 3s);
+
+  .sub__container {
+    position: relative;
+  }
+  .sub {
     position: absolute;
-    bottom: -50%;
+    bottom: -45%;
     left: 0%;
     width: 100%;
     height: 40px;
-    background-image: url("./resources/surayado.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
   }
-  .sliderMobile {
-    scrollbar-width: none;
+
+  .text__animated__container p {
+    opacity: 0;
+    animation: fadeInOut 12s linear infinite;
+  }
+
+  .text__animated__container p:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .text__animated__container p:nth-child(2) {
+    animation-delay: 4s;
+  }
+
+  .text__animated__container p:nth-child(3) {
+    animation-delay: 8s;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 </style>

@@ -1,5 +1,5 @@
 ---
-import WidArrow from "../preact/wid/WidArrow";
+import data from "../../data/historia.json";
 import Button from "../reutilizables/Button.astro";
 import Container from "../reutilizables/Container.astro";
 import GridWid from "../reutilizables/GridWid.astro";
@@ -92,7 +92,27 @@ const textGrid = {
             <div
               class="historia-container place-items-center mx-auto lg:mx-0 w-[298px] md:w-[450px]"
             >
-              <WidArrow client:only="preact" />
+              {
+                data.map((item, index) => {
+                  return (
+                    <div
+                      class="text-gray-50 text-[clamp(13px,3vw,20px)] inline-flex
+              items-center gap-2 mr-3 historia-item opacity-30"
+                    >
+                      <p>{item.text}</p>{" "}
+                      {index !== data.length - 1 && (
+                        <span>
+                          <img
+                            class="h-[clamp(13px,3vw,20px)] w-auto"
+                            src="/resources/flecha-texto.svg"
+                            alt=""
+                          />{" "}
+                        </span>
+                      )}
+                    </div>
+                  );
+                })
+              }
             </div>
           </div>
         </div>
@@ -141,4 +161,45 @@ const textGrid = {
   .texto :nth-child(1) {
     margin-bottom: 4px;
   }
+
+  .historia-item-animation {
+    opacity: 0.3;
+    animation: animationHistoria 3s ease-in-out infinite;
+  }
+
+  @keyframes animationHistoria {
+    0% {
+      opacity: 0.3;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0.3;
+    }
+  }
 </style>
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const historiaItems = document.querySelectorAll(".historia-item");
+    let currentIndex = 0;
+
+    function animateItems() {
+      historiaItems.forEach((item, index) => {
+        item.classList.remove("historia-item-animation");
+        if (index === currentIndex) {
+          item.classList.add("historia-item-animation");
+        }
+      });
+
+      currentIndex = (currentIndex + 1) % historiaItems.length;
+    }
+
+    setInterval(animateItems, 3000);
+    animateItems();
+  });
+</script>

@@ -1,0 +1,73 @@
+[
+    {
+        "id": "1",
+        "foto": "/img/foto2-mock.avif",
+        "iframe": "https://www.youtube.com/embed/GBQ5JnYP1Z8?si=34ZTNmErWFSlM6Fl"
+    },
+    {
+        "id": "2",
+        "foto": "/img/foto2-mock.avif",
+        "iframeSpoty": "https://open.spotify.com/embed/episode/0rATigdLbj0YijusqpZM0I?utm_source=generator&theme=0"
+    },
+    {
+        "id": "3",
+        "foto": "/img/foto2-mock.avif",
+        "href": "https://www.youtube.com/",
+        "iframeSpoty": "https://open.spotify.com/embed/episode/7544r9Fds87rdXFhIOYWgh?utm_source=generator"
+    },
+    {
+        "id": "4",
+        "foto": "/img/foto2-mock.avif",
+        "iframeSpoty": "https://open.spotify.com/embed/episode/3yt3vWVuAg3kDgTG9dDrNx?utm_source=generator"
+    },
+    {
+        "id": "5",
+        "foto": "/medios/img-pool-economico.avif",
+        "iframe": "https://www.youtube.com/embed/0y1289PyiJI?si=F-2JMI-i68-d_Nb4"
+    },
+    {
+        "id": "6",
+        "foto": "/img/foto2-mock.avif",
+        "iframe": "https://www.youtube.com/embed/fYKIX_91kwU?si=-Xc7BZLK0Ak6xKja&amp;start=27"
+    },
+    {
+        "id": "7",
+        "foto": "/img/foto2-mock.avif",
+        "iframe": "https://www.youtube.com/embed/cBIFLMjTdoA?si=Olivjf18JF2WPvCt&amp;start=600"
+    },
+    {
+        "id": "8",
+        "foto": "/img/foto2-mock.avif",
+        "iframe": "https://www.youtube.com/embed/WDcbnOP-MIo?si=UxejkrkNcoiD_Elv"
+    },
+    {
+        "id": "9",
+        "foto": "/img/foto2-mock.avif",
+        "iframeSpoty": "https://open.spotify.com/embed/episode/1UQofg09Rchr727lKB02ka?utm_source=generator&theme=0"
+    },
+    {
+        "id": "10",
+        "foto": "/img/foto2-mock.avif",
+        "href": "https://www.youtube.com/"
+    },
+    {
+        "id": "11",
+        "foto": "/img/foto2-mock.avif",
+        "href": "https://www.youtube.com/"
+    },
+    {
+        "id": "12",
+        "foto": "/img/foto2-mock.avif",
+        "href": "https://www.youtube.com/"
+    },
+    {
+        "id": "13",
+        "foto": "/img/foto2-mock.avif",
+        "href": "https://www.youtube.com/"
+    },
+    {
+        "id": "14",
+        "foto": "/img/foto2-mock.avif",
+        "href": "https://www.youtube.com/"
+    }
+]

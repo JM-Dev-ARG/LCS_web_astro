@@ -1,0 +1,75 @@
+---
+type Props = {
+  title: string;
+  subtitle: string;
+  image: string;
+  className?: string;
+};
+
+const { title, subtitle, image, className } = Astro.props;
+---
+
+<section class="hero__container h-[600px]">
+  <div
+    class=`text__wrapper bg-[bottom_-80px_center] ${className}`
+    style=`background-image: url('${image}');`
+  >
+    <div class="z-10 w-full h-[70%] flex flex-col justify-center items-center">
+      <h1
+        class="text-[clamp(38px,6vw,100px)] font-normal text-gray-50 drop-shadow-2xl"
+      >
+        {title}
+      </h1>
+
+      <h2
+        class="text-[clamp(20px,6vw,80px)] font-extralight text-gray-50 drop-shadow-xl"
+      >
+        {subtitle}
+      </h2>
+    </div>
+    <div class="text-gray-50">
+      <img
+        class="h-[60px] w-[60px] rotate-[-45deg]"
+        src="/resources/flechas-button.svg"
+        alt="hero"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero__container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    & .text__wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(transparent 1%, #101616 100%);
+        -webkit-mask-image: linear-gradient(transparent 1%, #101616 100%);
+      }
+    }
+  }
+</style>

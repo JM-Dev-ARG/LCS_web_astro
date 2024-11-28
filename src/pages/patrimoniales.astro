@@ -1,19 +1,16 @@
 ---
+import Hero from "../components/servicePages/hero.astro";
+import Services from "../components/servicePages/Services.astro";
 import LayoutPatrimoniales from "../layouts/LayoutPatrimoniales.astro";
 ---
 
 <LayoutPatrimoniales title="LCS - Seguros Patrimoniales">
   <main>
-    <div class="h-[calc(100vh/2)] bg-black place-content-center mx-auto">
-      <h1 class="text-white text-center font-semibold text-[90px]">
-        Seguros Patrimoniales
-      </h1>
-    </div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
+    <Hero
+      title="Asegurarse es la nueva moda"
+      subtitle="Seguros que Protegen tus Sueños"
+      image="/img/img-patrimoniales.avif"
+    />
+    <Services />
   </main>
 </LayoutPatrimoniales>

@@ -3,24 +3,18 @@ import About from "../components/index/About.astro";
 import WID from "../components/index/WID.astro";
 import Services from "../components/index/Services.astro";
 import Layout from "../layouts/Layout.astro";
-import Footer from "../components/preact/footer/Footer";
+
 import Academia from "../components/index/Academia.astro";
 import Medios from "../components/index/Medios.astro";
 import Contacto from "../components/index/Contacto.astro";
-import Hero from "../components/preact/hero/Hero";
+import Hero from "../components/index/Hero.astro";
+import Footer from "../components/index/Footer.astro";
+/* import Hero from "../components/preact/hero/Hero"; */
 ---
 
 <Layout title="LCS - Inicio">
   <main>
-    <div class="absolute h-dvh w-full loader">
-      <img
-        class="w-full h-1/5"
-        src="/resources/ISOTIPO.svg"
-        alt=""
-      />
-    </div>
-    <!-- <Hero /> -->
-    <Hero client:load />
+    <Hero />
     <div
       class="h-auto place-content-center w-full bg-[#fff5eb] rounded-[100px] overflow-hidden relative"
     >
@@ -34,27 +28,6 @@ import Hero from "../components/preact/hero/Hero";
       <Contacto />
     </div>
 
-    <Footer client:load />
+    <Footer />
   </main>
 </Layout>
-<style>
-  .loader {
-    background-color: #fef0e9;
-    place-content: center;
-    margin-inline: auto;
-    animation: fadeOut 3s ease-in-out 0.5s forwards;
-
-    /*    img {
-      animation: pulse 2s linear 0.2s forwards;
-    } */
-  }
-
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-</style>
