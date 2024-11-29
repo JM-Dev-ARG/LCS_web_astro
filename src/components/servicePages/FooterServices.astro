@@ -1,30 +1,30 @@
 ---
-import navega from "../../data/navega.json";
-import aprende from "../../data/aprende.json";
 import redes from "../../data/redes.json";
+import Container from "../reutilizables/Container.astro";
 ---
 
 <footer
-  id="footer"
-  class="flex justify-end relative"
+  id="footerServices"
+  class=""
 >
   <div
     class="absolute w-full h-full bg-[url('/resources/amo-asegurar.svg')] bg-cover bg-center opacity-[0.03]"
   >
   </div>
   <div
-    class="w-full h-[80%] flex flex-col md:flex-row justify-center md:justify-around items-center"
+    class="w-[70%] h-full flex flex-col md:flex-row justify-center md:justify-between items-center gap-y-5 py-6"
   >
-    <div class="img__container">
+    <div class="img__container justify-center md:justify-start">
       <img
+        class="w-full md:w-[80%] lg:w-[60%]"
         src="./resources/LOGOTIPO-CREMA.svg"
         alt=""
       />
     </div>
     <div
-      class="flex flex-col-reverse md:flex-row-reverse justify-around items-center gap-6 md:gap-0 w-full relative"
+      class="flex flex-col justify-center items-center md:items-end gap-6 md:gap-0 w-full relative"
     >
-      <div class="flex flex-col justify-center items-center gap-4">
+      <div class="flex flex-col justify-center items-center gap-[6px]">
         <div class="flex justify-center items-center gap-4">
           {
             redes.map((item) => (
@@ -44,7 +44,7 @@ import redes from "../../data/redes.json";
             ))
           }
         </div>
-        <div class="flex flex-col gap-2 text-xs text-gray-50 text-center">
+        <div class="flex flex-col gap-0 text-xs text-gray-50 text-center">
           <p>Copyright © 2024 La Chica del Seguro</p>
           <p>Reservados todos los derechos</p>
         </div>
@@ -53,14 +53,15 @@ import redes from "../../data/redes.json";
   </div>
 
   <p class="text-center text-xs font-thin text-gray-300">
-    Desarrollado por{" "}
+    Desarrollado por
     <a
+      class="cursor-pointer"
       aria-label="Link al Github de JM-Dev"
       href="https://github.com/JM-Dev-ARG"
       target="_blank"
     >
-      JM-DEV{" "}
-    </a>{" "}
+      JM-DEV
+    </a>
     / Agencia Panambi
   </p>
 </footer>
@@ -68,26 +69,23 @@ import redes from "../../data/redes.json";
 <style>
   footer {
     background-color: #202022;
-    height: 200px;
+    position: relative;
+    height: max-content;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    z-index: 1;
   }
   .img__container {
-    width: 80%;
+    width: 100%;
     display: flex;
-    justify-content: center;
+
     align-items: center;
     height: 60%;
-    z-index: 20;
+    z-index: 10;
 
     & img {
-      width: auto;
-      height: 80%;
       mask-image: linear-gradient(#202022 60%, transparent 100%);
       -webkit-mask-image: linear-gradient(#222020 60%, transparent 100%);
     }
