@@ -90,20 +90,20 @@ const textGrid = {
               />
             </div>
             <div
-              class="historia-container place-items-center mx-auto lg:mx-0 w-[298px] md:w-[450px]"
+              class="place-items-center mx-auto lg:mx-0 w-[290px] md:w-[450px]"
             >
               {
                 data.map((item, index) => {
                   return (
                     <div
-                      class="text-gray-50 text-[clamp(13px,3vw,20px)] inline-flex
+                      class="text-gray-50 text-[clamp(12px,3vw,20px)] inline-flex
               items-center gap-2 mr-3 historia-item opacity-30"
                     >
                       <p>{item.text}</p>{" "}
                       {index !== data.length - 1 && (
                         <span>
                           <img
-                            class="h-[clamp(13px,3vw,20px)] w-auto"
+                            class="h-[clamp(12px,3vw,20px)] w-auto"
                             src="/resources/flecha-texto.svg"
                             alt=""
                           />{" "}

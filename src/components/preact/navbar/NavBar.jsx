@@ -48,10 +48,10 @@ const Navbar = () => {
                 className="w-full grid place-items-center fixed z-[51] transition-all duration-500 "
             >
                 <div className="flex items-center justify-between lg:justify-center w-full mx-auto lg:px-3 2xl:px-0 py-3 ">
-                    <div className="flex justify-left items-center flex-1 ml-8">
+                    <div className="flex justify-left items-center flex-1 ml-8 ">
                         <button onClick={handleScrollToTopLogo} >
                             <img
-                                className={`w-[50px] logo `}
+                                className={`w-[50px] logo hover:rotate-[15deg] hover:scale-[1.1] transition duration-300 ease-in-out`}
                                 src="/resources/corazon-paragua.svg"
                                 alt="Logo La Chica del Seguro"
                             /></button>

@@ -7,22 +7,26 @@ type Props = {
 };
 
 const { title, subtitle, image, className } = Astro.props;
+
+const url = new URL(Astro.url.href); // Convierte la URL en un objeto URL
+const path = url.pathname.split("/").filter(Boolean).pop(); // Obtiene el último segmento
+console.log(path);
 ---
 
-<section class="hero__container h-[600px]">
+<section class="hero__container h-[400px] md:h-[500px] lg:h-[600px]">
   <div
-    class=`text__wrapper bg-[bottom_-80px_center] ${className}`
+    class=`text__wrapper bg-[bottom_center] ${className}`
     style=`background-image: url('${image}');`
   >
     <div class="z-10 w-full h-[70%] flex flex-col justify-center items-center">
       <h1
-        class="text-[clamp(38px,6vw,100px)] font-normal text-gray-50 drop-shadow-2xl"
+        class="text-[clamp(40px,6vw,100px)] text-center text-wrap font-normal text-gray-50 drop-shadow-2xl"
       >
         {title}
       </h1>
 
       <h2
-        class="text-[clamp(20px,6vw,80px)] font-extralight text-gray-50 drop-shadow-xl"
+        class="text-[clamp(20px,4vw,80px)] text-center text-wrap font-extralight text-gray-50 drop-shadow-xl"
       >
         {subtitle}
       </h2>
