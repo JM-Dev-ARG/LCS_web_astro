@@ -1,0 +1,95 @@
+---
+import navega from "../../data/navega.json";
+import aprende from "../../data/aprende.json";
+import redes from "../../data/redes.json";
+---
+
+<footer
+  id="footer"
+  class="flex justify-end relative"
+>
+  <div
+    class="absolute w-full h-full bg-[url('/resources/amo-asegurar.svg')] bg-cover bg-center opacity-[0.03]"
+  >
+  </div>
+  <div
+    class="w-full h-[80%] flex flex-col md:flex-row justify-center md:justify-around items-center"
+  >
+    <div class="img__container">
+      <img
+        src="./resources/LOGOTIPO-CREMA.svg"
+        alt=""
+      />
+    </div>
+    <div
+      class="flex flex-col-reverse md:flex-row-reverse justify-around items-center gap-6 md:gap-0 w-full relative"
+    >
+      <div class="flex flex-col justify-center items-center gap-4">
+        <div class="flex justify-center items-center gap-4">
+          {
+            redes.map((item) => (
+              <div class="border-2 border-zinc-50 size-[40px] rounded-full flex justify-center items-center hover:scale-[1.1] transition-all duration-200 ease-linear group">
+                <a
+                  href={item.href}
+                  target={item.target}
+                >
+                  <img
+                    src={item.img}
+                    alt={item.label}
+                    class="size-[40px] p-2 group-hover:scale-[1.1] transition-all duration-200 ease-linear"
+                    style="filter: invert(100%) "
+                  />
+                </a>
+              </div>
+            ))
+          }
+        </div>
+        <div class="flex flex-col gap-2 text-xs text-gray-50 text-center">
+          <p>Copyright © 2024 La Chica del Seguro</p>
+          <p>Reservados todos los derechos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="text-center text-xs font-thin text-gray-300">
+    Desarrollado por{" "}
+    <a
+      aria-label="Link al Github de JM-Dev"
+      href="https://github.com/JM-Dev-ARG"
+      target="_blank"
+    >
+      JM-DEV{" "}
+    </a>{" "}
+    / Agencia Panambi
+  </p>
+</footer>
+
+<style>
+  footer {
+    background-color: #202022;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+  }
+  .img__container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    z-index: 20;
+
+    & img {
+      width: auto;
+      height: 80%;
+      mask-image: linear-gradient(#202022 60%, transparent 100%);
+      -webkit-mask-image: linear-gradient(#222020 60%, transparent 100%);
+    }
+  }
+</style>
