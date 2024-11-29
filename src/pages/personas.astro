@@ -1,5 +1,8 @@
 ---
+import FooterServices from "../components/servicePages/FooterServices.astro";
 import Hero from "../components/servicePages/hero.astro";
+import Presentacion from "../components/servicePages/Presentacion.astro";
+import Services from "../components/servicePages/Services.astro";
 import LayoutPatrimoniales from "../layouts/LayoutPatrimoniales.astro";
 ---
 
@@ -11,11 +14,17 @@ import LayoutPatrimoniales from "../layouts/LayoutPatrimoniales.astro";
       image="/img/img-personas.avif"
       className="bg-[top_center]"
     />
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
+    <Services>
+      <div class="bg-red-400 h-svh"></div>
+    </Services>
+    <Presentacion image="/resources/Logotipo.svg">
+      <p class="text-[clamp(18px,2vw,30px)] font-light text-pretty">
+        <span class="font-normal text-[#1a6dc0]"
+          >15 años de experiencia en el mercado y más de 9.000 clientes</span
+        >, que confían en nosotros. Brindamos asesoramiento personalizado y
+        <span class="font-normal text-[#1a6dc0]">!aseguramos tu mundo!</span>
+      </p>
+    </Presentacion>
+    <FooterServices />
   </main>
 </LayoutPatrimoniales>

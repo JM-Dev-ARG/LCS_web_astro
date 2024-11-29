@@ -1,15 +1,30 @@
 ---
+import FooterServices from "../components/servicePages/FooterServices.astro";
+import Hero from "../components/servicePages/hero.astro";
+import Presentacion from "../components/servicePages/Presentacion.astro";
+import Services from "../components/servicePages/Services.astro";
 import LayoutPatrimoniales from "../layouts/LayoutPatrimoniales.astro";
 ---
 
 <LayoutPatrimoniales title="LCS - Seguros de Viajes">
   <main>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
+    <Hero
+      title="Asegurarse es la nueva moda"
+      subtitle="Seguros que Protegen tus Sueños"
+      image="/img/img-viajes.avif"
+      className="bg-[top_center]"
+    />
+    <Services>
+      <div class="bg-red-400 h-svh"></div>
+    </Services>
+    <Presentacion image="/resources/Logotipo.svg">
+      <p class="text-[clamp(18px,2vw,30px)] font-light text-pretty">
+        <span class="font-normal text-[#1a6dc0]"
+          >15 años de experiencia en el mercado y más de 9.000 clientes</span
+        >, que confían en nosotros. Brindamos asesoramiento personalizado y
+        <span class="font-normal text-[#1a6dc0]">!aseguramos tu mundo!</span>
+      </p>
+    </Presentacion>
+    <FooterServices />
   </main>
 </LayoutPatrimoniales>
