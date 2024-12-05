@@ -1,5 +1,6 @@
 ---
 import ContactForm from "../components/preact/form/ContactForm";
+import ServicesForm from "../components/preact/servicesForm/ServicesForm";
 import SliderServices from "../components/reutilizables/SliderServices.astro";
 import FooterServices from "../components/servicePages/FooterServices.astro";
 import Hero from "../components/servicePages/hero.astro";
@@ -194,7 +195,7 @@ import LayoutPatrimoniales from "../layouts/LayoutPatrimoniales.astro";
       <!-- MODAL INFO -->
       <dialog
         id="modal-info"
-        class="w-full h-full xl:w-[80%] xl:h-[80%] rounded-[20px] flex-col justify-center items-center overflow-hidden"
+        class="w-full h-full xl:w-[80%] xl:h-[90%] rounded-[20px] flex-col justify-center items-center overflow-hidden"
       >
         <div
           class="relative w-full h-full flex-col justify-center items-center rounded-[20px]"
@@ -234,7 +235,7 @@ import LayoutPatrimoniales from "../layouts/LayoutPatrimoniales.astro";
                 >
                 </p>
                 <button
-                  id="open-modal-contaco"
+                  id="open-modal-contacto"
                   class="button px-4"
                   ><div class="text-gray-50">
                     <p class="font-semibold text-[clamp(18px,3vw,25px)]">
@@ -257,14 +258,30 @@ import LayoutPatrimoniales from "../layouts/LayoutPatrimoniales.astro";
 
       <!-- MODAL CONTACTO -->
       <dialog
-        id="modal-contaco-services"
-        class="w-full h-full xl:w-[80%] xl:h-[80%] backdrop-blur-md bg-red-500 rounded-[20px] flex-col justify-center items-center"
+        id="modal-contacto-services"
+        class="w-full h-full xl:w-[80%] xl:h-[90%] backdrop-blur-md bg-[#e69c99] rounded-[20px] flex-col justify-center items-center"
       >
-        <form method="dialog">
-          <button id="close-contact">close</button>
+        <form
+          method="dialog"
+          class="w-full flex justify-end pr-5 pt-3"
+        >
+          <div class="w-full flex justify-end items-center invert">
+            <button id="close-contact">
+              <img
+                class="w-8 h-8"
+                src="/svg/menu_close.svg"
+                alt=""
+              />
+            </button>
+          </div>
         </form>
-        <div class="w-[80%] h-full flex flex-col justify-around items-center">
-          <ContactForm client:only="preact" />
+
+        <div
+          class="w-full h-[calc(100%-44px)] flex justify-center items-center"
+        >
+          <div class="w-[80%]">
+            <ServicesForm client:only="preact" />
+          </div>
         </div>
       </dialog>
     </Services>
@@ -444,17 +461,18 @@ import LayoutPatrimoniales from "../layouts/LayoutPatrimoniales.astro";
 <script>
   document.addEventListener("astro:page-load", () => {
     const btnDialog = document.querySelectorAll("button");
-    const btnModalContact = document.querySelectorAll("#open-modal-contaco");
+    const btnModalContact = document.querySelectorAll("#open-modal-contacto");
     const dialog = document.getElementById("modal-info") as HTMLDialogElement;
     const close = document.getElementById("close");
     const closeContact = document.getElementById("close-contact");
     const dialogContact = document.getElementById(
-      "modal-contaco-services"
+      "modal-contacto-services"
     ) as HTMLDialogElement;
     const modalContent = document.getElementById("modal-info-content");
     const modalImg = document.getElementById(
       "modal-info-img"
     ) as HTMLImageElement;
+    const btnForm = document.getElementById("btn-send-form");
 
     btnDialog.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -478,6 +496,15 @@ import LayoutPatrimoniales from "../layouts/LayoutPatrimoniales.astro";
     });
 
     close.addEventListener("click", () => {
+      dialog.close();
+      const activeElement = document.activeElement;
+      if (activeElement instanceof HTMLElement) {
+        activeElement.blur();
+      }
+    });
+
+    btnForm.addEventListener("click", () => {
+      dialogContact.close();
       dialog.close();
       const activeElement = document.activeElement;
       if (activeElement instanceof HTMLElement) {

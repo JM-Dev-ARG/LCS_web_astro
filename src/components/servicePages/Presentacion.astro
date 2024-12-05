@@ -12,7 +12,7 @@ const { image } = Astro.props;
 
 <Container>
   <div
-    class="w-full lg:w-[90%] flex justify-center items-center gap-4 md:gap-20"
+    class="w-full lg:w-[90%] flex justify-center items-center gap-4 md:gap-20 mt-10 md:mt-0"
   >
     <div class="">
       <img
@@ -74,3 +74,18 @@ const { image } = Astro.props;
     </div>
   </div>
 </Container>
+
+<style>
+  .sub__container {
+    position: relative;
+  }
+  .sub {
+    position: absolute;
+    top: clamp(26px, 3.5vw, 50px);
+    bottom: 0;
+    right: 0;
+    left: 0%;
+    width: 100%;
+    height: 40px;
+  }
+</style>

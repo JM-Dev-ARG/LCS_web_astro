@@ -1,8 +1,8 @@
 <div
-  class="container overflow-x-auto w-max flex md:hidden flex-wrap gap-3 pr-4"
+  class="container overflow-x-auto w-max flex md:hidden flex-wrap gap-3 pr-4 mt-6 snap-x snap-mandatory"
 >
   <button
-    class="card1 card justify-end"
+    class="card1 card justify-end snap-center"
     data-content="Seguros_Patrimoniales lorem ipsum dolor"
     data-color="#6fa29d"
     data-img-background="/img/comercio.avif"
@@ -19,7 +19,7 @@
   </button>
 
   <button
-    class="card2 card"
+    class="card2 card snap-center"
     data-content="Seguros_Patrimoniales lorem ipsum dolor"
     data-color="#1d1e1c"
     data-img-background="/img/auto.avif"
@@ -36,7 +36,7 @@
   </button>
 
   <button
-    class="card3 card"
+    class="card3 card snap-center"
     data-content="Seguros_Patrimoniales lorem ipsum dolor"
     data-color="#393737"
     data-img-background="/img/art.avif"
@@ -53,7 +53,7 @@
   </button>
 
   <button
-    class="card4 card"
+    class="card4 card snap-center"
     data-content="Seguros_Patrimoniales lorem ipsum dolor"
     data-color="#18403e"
     data-img-background="/img/hogar.avif"
@@ -69,7 +69,7 @@
     </div>
   </button>
   <button
-    class="card5 card"
+    class="card5 card snap-center"
     data-content="Seguros_Patrimoniales lorem ipsum dolor"
     data-color="#e8abac"
     data-img-background="/img/caucion.avif"
@@ -86,7 +86,7 @@
   </button>
 
   <button
-    class="card6 card"
+    class="card6 card snap-center"
     data-content="Seguros_Patrimoniales lorem ipsum dolor"
     data-color="#f05759"
     data-img-background="/img/consorcio2.avif"
@@ -103,7 +103,7 @@
   </button>
 
   <button
-    class="card7 card"
+    class="card7 card snap-center"
     data-content="Seguros_Patrimoniales lorem ipsum dolor"
     data-color="#1d1e1c"
     data-img-background="/img/retiro.avif"
@@ -120,6 +120,9 @@
   </button>
 </div>
 <style>
+  .container::-webkit-scrollbar {
+    display: none;
+  }
   .card {
     position: relative;
     overflow: hidden;
