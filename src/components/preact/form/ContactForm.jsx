@@ -98,7 +98,7 @@ export default function ContactForm() {
                     placeholder="juanperez@tumail.com"
                 />
             </div>
-            <div class="flex flex-col gap-1 mt-3 lg:mt-6">
+            {/*             <div class="flex flex-col gap-1 mt-3 lg:mt-6">
                 <label
                     for="telefono"
                     class="font-extralight text-[clamp(20px,5vw,30px)] pl-2 text-gray-50"
@@ -112,7 +112,7 @@ export default function ContactForm() {
                     name="telefono"
                     placeholder="(011) 12345 6789"
                 />
-            </div>
+            </div> */}
             <div class="flex flex-col gap-1 mt-3 lg:mt-6">
                 <label
                     for="mensaje"

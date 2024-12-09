@@ -14,18 +14,18 @@ const { title, description, image, url } = Astro.props;
     class="card"
     style=`background-image: url('${image}');`
   >
-    <h2 class="z-[2] font-light text-[clamp(20px,3vw,30px)] pb-2">
+    <h2 class="z-[2] font-light text-[clamp(30px,3vw,40px)] pb-2">
       {title}
     </h2>
   </div>
   <div class="card__content">
     <p
-      class="text-pretty text-gray-50 text-[clamp(14px,1.5vw,20px)] font-light"
+      class="text-pretty text-center text-gray-50 text-[clamp(16px,1.5vw,30px)] font-light"
     >
       {description}
     </p>
     <a
-      class="text-gray-50 text-[clamp(20px,3vw,40px)] hover:text-lcsPink3 transition-all duration-500 ease-linear"
+      class="text-gray-50 text-[clamp(30px,3vw,50px)] hover:text-lcsPink3 transition-all duration-500 ease-linear"
       href=`${url}`
     >
       Ver Más +</a

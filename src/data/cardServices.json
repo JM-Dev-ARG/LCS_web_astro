@@ -1,19 +1,19 @@
 [
     {
         "title": "PATRIMONIALES",
-        "description": "Lorem ipsum dolor sit amet consectetu adipisicing elit. Cupiditate deserunt, ab quis, maxime quaerat odio reprehenderit dignissimos laborum voluptatibus rerum impedit quam sequi eius cumque autem illum! Dicta, deserunt asperiores?",
+        "description": "Todo lo que tenemos o construimos ha costado muchísimo esfuerzo y dinero. Mirá si no vas a asegurarlo bien!",
         "image": "./img/img-patrimoniales.avif",
         "url": "/patrimoniales"
     },
     {
         "title": "PERSONAS",
-        "description": "Lorem ipsum dolor sit amet consectetu adipisicing elit. Cupiditate deserunt, ab quis, maxime quaerat odio reprehenderit dignissimos laborum voluptatibus rerum impedit quam sequi eius cumque autem illum! Dicta, deserunt asperiores?",
+        "description": "La vida es eso que pasa mientras estás dudando en asegurarla.",
         "image": "./img/img-personas.avif",
         "url": "/personas"
     },
     {
         "title": "VIAJES",
-        "description": "Lorem ipsum dolor sit amet consectetu adipisicing elit. Cupiditate deserunt, ab quis, maxime quaerat odio reprehenderit dignissimos laborum voluptatibus rerum impedit quam sequi eius cumque autem illum! Dicta, deserunt asperiores?",
+        "description": "Emprender un viaje, no importa el tiempo o el destino, es ir en busca de momentos inolvidables. No te pierdas de vivirlos porque no te aseguraste. Aseguramos cualquier viaje, 24hs en todo el planeta. Cotiza tu aventura!",
         "image": "./img/img-viajes.avif",
         "url": "/viajes"
     }
