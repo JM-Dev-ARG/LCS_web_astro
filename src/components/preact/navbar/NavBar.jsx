@@ -60,7 +60,7 @@ const Navbar = () => {
 
                     <div className="text-center lg:flex justify-end items-center lg:static z-10 flex-1 ">
                         <div className="flex justify-end items-center flex-1 mr-8 ">
-                            <label className="menu__toggle  ">
+                            <label className="menu__toggle">
                                 <input
                                     type="checkbox"
                                     className="menu__input hidden "

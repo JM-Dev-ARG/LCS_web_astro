@@ -69,7 +69,7 @@ const { title, path } = Astro.props;
       crossorigin
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Darker+Grotesque:wght@300..900&display=swap"
       rel="stylesheet"
     />
 
@@ -87,6 +87,15 @@ const { title, path } = Astro.props;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    scrollbar-color: #ed705f96 #90a59c75;
+
+    .darker-grotesque-<uniquifier > {
+      font-family: "Darker Grotesque", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+    }
 
     .cormorant-garamond-light {
       font-family: "Cormorant Garamond", serif;
@@ -173,7 +182,6 @@ const { title, path } = Astro.props;
   }
 
   html {
-    /*  background-color: #ffefe9; */
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
