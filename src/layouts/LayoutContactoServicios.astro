@@ -1,0 +1,182 @@
+---
+import { ViewTransitions } from "astro:transitions";
+
+import NavBarFormularios from "../components/secciones/NavBarFormularios.astro";
+
+interface Props {
+  title: string;
+  path: string;
+}
+
+const { title, path } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Astro description"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/resources/ISO-BLANCO.svg"
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{title}</title>
+
+    <ViewTransitions />
+  </head>
+  <body>
+    <NavBarFormularios path={path} />
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    .cormorant-garamond-light {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    .cormorant-garamond-regular {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .cormorant-garamond-medium {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .cormorant-garamond-semibold {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    .cormorant-garamond-bold {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+    .poppins-thin {
+      font-family: "Poppins", sans-serif;
+      font-weight: 100;
+      font-style: normal;
+    }
+
+    .poppins-extralight {
+      font-family: "Poppins", sans-serif;
+      font-weight: 200;
+      font-style: normal;
+    }
+
+    .poppins-light {
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    .poppins-regular {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .poppins-medium {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .poppins-semibold {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    .poppins-bold {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .poppins-extrabold {
+      font-family: "Poppins", sans-serif;
+      font-weight: 800;
+      font-style: normal;
+    }
+
+    .poppins-black {
+      font-family: "Poppins", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+    }
+  }
+
+  html {
+    /*  background-color: #ffefe9; */
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+</style>

@@ -1,15 +1,15 @@
 ---
-import ContactForm from "../components/preact/form/ContactForm";
-import ServicesForm from "../components/preact/servicesForm/ServicesForm";
-import SliderServices from "../components/reutilizables/SliderServices.astro";
+import BentoServices from "../components/reutilizables/BentoServices.astro";
+import SliderServicesPatrimoniales from "../components/reutilizables/SliderServicesPatrimoniales.astro";
 import FooterServices from "../components/servicePages/FooterServices.astro";
 import Hero from "../components/servicePages/hero.astro";
 import Presentacion from "../components/servicePages/Presentacion.astro";
 import Services from "../components/servicePages/Services.astro";
-import LayoutPatrimoniales from "../layouts/LayoutPatrimoniales.astro";
+import LayoutServicios from "../layouts/LayoutServicios.astro";
+import data from "../data/bentoPatrimoniales.json";
 ---
 
-<LayoutPatrimoniales title="LCS - Seguros Patrimoniales">
+<LayoutServicios title="LCS - Seguros Patrimoniales">
   <main>
     <Hero
       title="Asegurarse es la nueva moda"
@@ -17,274 +17,34 @@ import LayoutPatrimoniales from "../layouts/LayoutPatrimoniales.astro";
       image="/img/img-patrimoniales.avif"
     />
     <Services>
-      <!-- BENTO -->
-      <div class="hidden md:grid grid__container w-full xl:w-[70%] my-10">
-        <button
-          class="card1 card justify-end"
-          data-content="Integral de Comercio"
-          data-color="#6fa29d"
-          data-img-background="/img/comercio.avif"
-          data-img-position="right bottom"
-        >
-          <div class="w-full h-full flex ml-4">
-            <p class="text-gray-50 texto font-light">I. COMERCIO</p>
-          </div>
-
-          <div
-            class="absolute w-full h-full bg-[url('/img/comercio.avif')] bg-contain bg-right-bottom bg-no-repeat"
-          >
-          </div>
-          <div class="absolute ver__mas">
-            <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-          </div>
-        </button>
-
-        <button
-          class="card2 card"
-          data-content="Automotores"
-          data-color="#1d1e1c"
-          data-img-background="/img/auto.avif"
-          data-img-position="right bottom"
-        >
-          <div class="w-full h-full flex ml-4">
-            <p class="text-gray-50 texto font-light">AUTOMOTORES</p>
-          </div>
-
-          <div
-            class="absolute w-full h-full bg-[url('/img/auto.avif')] bg-contain bg-right-bottom lg:bg-[right_-50px_bottom_-50px] bg-no-repeat"
-          >
-          </div>
-          <div class="absolute ver__mas">
-            <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-          </div>
-        </button>
-
-        <button
-          class="card3 card"
-          data-content="Art"
-          data-color="#393737"
-          data-img-background="/img/art.avif"
-          data-img-position="left bottom"
-        >
-          <div class="w-full h-full flex justify-end mr-4">
-            <p class="text-gray-50 texto font-light">ART</p>
-          </div>
-
-          <div
-            class="absolute w-full h-full bg-[url('/img/art.avif')] -bottom-10 lg:bottom-0 bg-cover bg-no-repeat"
-          >
-          </div>
-          <div class="absolute ver__mas">
-            <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-          </div>
-        </button>
-
-        <button
-          class="card4 card"
-          data-content="Hogar"
-          data-color="#18403e"
-          data-img-background="/img/hogar.avif"
-          data-img-position="right bottom"
-        >
-          <div class="w-full h-full flex ml-4">
-            <p class="text-gray-50 texto font-light">HOGAR</p>
-          </div>
-
-          <div
-            class="absolute w-full h-full bg-[url('/img/hogar.avif')] bg-contain bg-right-bottom bg-no-repeat"
-          >
-          </div>
-          <div class="absolute ver__mas">
-            <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-          </div>
-        </button>
-        <button
-          class="card5 card"
-          data-content="Caucion"
-          data-color="#e8abac"
-          data-img-background="/img/caucion.avif"
-          data-img-position="right bottom"
-        >
-          <div class="w-full h-full flex ml-4">
-            <p class="text-gray-50 texto font-light">CAUCION</p>
-          </div>
-
-          <div
-            class="absolute w-full h-full bg-[url('/img/caucion.avif')] bg-[right_-20px_bottom] 2xl:bg-[right_bottom] bg-cover bg-no-repeat"
-          >
-          </div>
-          <div class="absolute ver__mas">
-            <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-          </div>
-        </button>
-
-        <button
-          class="card6 card"
-          data-content="Consorcio"
-          data-color="#f05759"
-          data-img-background="/img/consorcio2.avif"
-          data-img-position="bottom"
-        >
-          <div class="w-full h-full flex justify-center items-start px-[10px]">
-            <p class="text-gray-50 texto font-light">CONSORCIO</p>
-          </div>
-
-          <div
-            class="absolute w-full h-full bg-[url('/img/consorcio.avif')] bg-cover bg-[center_bottom_-50px] bg-no-repeat"
-          >
-          </div>
-          <div class="absolute ver__mas">
-            <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-          </div>
-        </button>
-
-        <button
-          class="card7 card"
-          data-content="Accidentes"
-          data-color="#1d1e1c"
-          data-img-background="/img/retiro.avif"
-          data-img-position="right bottom"
-        >
-          <div class="w-full h-full flex justify-end mr-4">
-            <p class="text-gray-50 texto font-light">ACCIDENTES</p>
-          </div>
-
-          <div
-            class="absolute w-full h-full bg-[url('/img/retiro.avif')] bg-cover bg-[right_-80px_bottom] lg:bg-[right_-10px_bottom] 2xl:bg-[right_-10px_bottom_-20px] bg-no-repeat"
-          >
-          </div>
-          <div class="absolute ver__mas">
-            <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-          </div>
-        </button>
-
-        <!-- <button class="card8 card">
-        <div class="w-full h-full flex ml-4">
-          <p class="text-gray-50 texto font-light">I. COMERCIO</p>
-        </div>
-
-        <div
-          class="absolute w-full h-full bg-[url('/img/comercio.avif')] bg-contain bg-[right_bottom_-5px] bg-no-repeat"
-        >
-        </div>
-        <div class="absolute ver__mas">
-          <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-        </div>
-      </button>
-
-      <button class="card9 card">
-        <div class="w-full h-full flex ml-4">
-          <p class="text-gray-50 texto font-light">CAUCION</p>
-        </div>
-
-        <div
-          class="absolute w-full h-full bg-[url('/img/caucion.avif')] bg-cover bg-[right_bottom] 2xl:bg-[right_bottom_-50px] bg-no-repeat"
-        >
-        </div>
-        <div class="absolute ver__mas">
-          <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-        </div>
-      </button> -->
-      </div>
-
-      <!-- SLIDER -->
-      <div class="md:hidden overflow-x-scroll w-full">
-        <SliderServices />
-      </div>
-
-      <!-- MODAL INFO -->
-      <dialog
-        id="modal-info"
-        class="w-full h-full xl:w-[80%] xl:h-[90%] rounded-[20px] flex-col justify-center items-center overflow-hidden"
-      >
-        <div
-          class="relative w-full h-full flex-col justify-center items-center rounded-[20px]"
-        >
-          <img
-            id="modal-info-img"
-            class="absolute w-full h-full opacity-30 object-contain -bottom-2"
-            alt=""
-          />
-          <div
-            class="w-full h-full flex-col justify-center items-center relative z-10"
-          >
-            <form
-              method="dialog"
-              class="w-full flex justify-end pr-5 pt-3"
-            >
-              <button
-                id="close"
-                class="w-full flex justify-end items-center invert"
-              >
-                <img
-                  class="w-8 h-8"
-                  src="/svg/menu_close.svg"
-                  alt=""
-                />
-              </button>
-            </form>
-            <div
-              class="w-full h-[calc(100%-52px)] flex justify-center items-center"
-            >
-              <div
-                class="w-[80%] h-full flex flex-col justify-around items-center"
-              >
-                <p
-                  id="modal-info-content"
-                  class="text-gray-50 font-extralight text-[clamp(18px,3vw,22px)] text-left"
-                >
-                </p>
-                <button
-                  id="open-modal-contacto"
-                  class="button px-4"
-                  ><div class="text-gray-50">
-                    <p class="font-semibold text-[clamp(18px,3vw,25px)]">
-                      COTIZA TU SEGURO
-                    </p>
-                  </div>
-                  <div class="flex items-center mr-5">
-                    <img
-                      class="h-[40px] w-[40px] rotate-[-135deg]"
-                      src="/resources/flechas-button.svg"
-                      alt=""
-                    />
-                  </div></button
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </dialog>
-
-      <!-- MODAL CONTACTO -->
-      <dialog
-        id="modal-contacto-services"
-        class="w-full h-full xl:w-[80%] xl:h-[90%] backdrop-blur-md bg-[#e69c99] rounded-[20px] flex-col justify-center items-center"
-      >
-        <form
-          method="dialog"
-          class="w-full flex justify-end pr-5 pt-3"
-        >
-          <div class="w-full flex justify-end items-center invert">
-            <button id="close-contact">
-              <img
-                class="w-8 h-8"
-                src="/svg/menu_close.svg"
-                alt=""
-              />
-            </button>
-          </div>
-        </form>
-
-        <div
-          class="w-full h-[calc(100%-44px)] flex justify-center items-center"
-        >
-          <div class="w-[80%]">
-            <ServicesForm client:only="preact" />
-          </div>
-        </div>
-      </dialog>
+      <BentoServices
+        title1={data.title1}
+        title2={data.title2}
+        title3={data.title3}
+        title4={data.title4}
+        datacontent1={data.datacontent1}
+        datacontent2={data.datacontent2}
+        datacontent3={data.datacontent3}
+        datacontent4={data.datacontent4}
+        datacolor1={data.datacolor1}
+        datacolor2={data.datacolor2}
+        datacolor3={data.datacolor3}
+        datacolor4={data.datacolor4}
+        dataimgbackground1={data.dataimgbackground1}
+        dataimgbackground2={data.dataimgbackground2}
+        dataimgbackground3={data.dataimgbackground3}
+        dataimgbackground4={data.dataimgbackground4}
+        dataimgposition1={data.dataimgposition1}
+        dataimgposition2={data.dataimgposition2}
+        dataimgposition3={data.dataimgposition3}
+        dataimgposition4={data.dataimgposition4}
+        dataform1={data.dataform1}
+        dataform2={data.dataform2}
+        dataform3={data.dataform3}
+        dataform4={data.dataform4}
+      />
     </Services>
+
     <Presentacion image="/resources/cebrokers_logo.svg">
       <p class="text-[clamp(18px,2vw,30px)] font-light text-pretty">
         <span class="font-normal text-[#1a6dc0]"
@@ -293,231 +53,7 @@ import LayoutPatrimoniales from "../layouts/LayoutPatrimoniales.astro";
         <span class="font-normal text-[#1a6dc0]">!aseguramos tu mundo!</span>
       </p>
     </Presentacion>
+
     <FooterServices />
   </main>
-</LayoutPatrimoniales>
-
-<style>
-  .grid__container {
-    position: relative;
-    z-index: 20;
-
-    grid:
-      "card1 card1 card1 card1 card1 card1 card2 card2 card2 card2 card2 card2" 1fr
-      "card3 card3 card3 card3 card3 card4 card4 card4 card4 card4 card4 card4" 1fr
-      "card5 card5 card5 card5 card6 card6 card6 card6 card7 card7 card7 card7" 1fr
-      /* "card8 card8 card8 card8 card8 card8 card8 card9 card9 card9 card9 card9" 1fr */
-      / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 18px;
-  }
-
-  .grid__container:has(.card:hover) .card:not(:hover) {
-    filter: grayscale(70%);
-    opacity: 30%;
-  }
-
-  .card {
-    z-index: 20;
-    overflow: hidden;
-    display: flex;
-    position: relative;
-    width: 100%;
-    min-height: 300px;
-    max-height: 550px;
-    border-radius: 20px;
-
-    transition: all 0.3s linear;
-    cursor: pointer;
-
-    &:hover {
-      scale: 1.05;
-    }
-
-    &:hover .ver__mas {
-      opacity: 1;
-    }
-    &:focus .ver__mas {
-      opacity: 1;
-    }
-
-    .texto {
-      font-size: clamp(20px, 4vw, 42px);
-    }
-  }
-
-  .ver__mas {
-    opacity: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000c4;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s linear 0.1s;
-  }
-
-  .card1 {
-    grid-area: card1;
-    background-color: #6fa29d;
-  }
-  .card2 {
-    grid-area: card2;
-    background-color: #1d1e1c;
-  }
-  .card3 {
-    grid-area: card3;
-    background-color: #393737;
-  }
-  .card4 {
-    grid-area: card4;
-    background-color: #18403e;
-  }
-  .card5 {
-    grid-area: card5;
-    background-color: #e8abac;
-  }
-  .card6 {
-    grid-area: card6;
-    background-color: #f05759;
-  }
-  .card7 {
-    grid-area: card7;
-
-    background-color: #1a191a;
-  }
-  .card8 {
-    grid-area: card8;
-    background-color: #393737;
-  }
-  .card9 {
-    grid-area: card9;
-    background-color: #e8abac;
-  }
-
-  dialog {
-    scale: 0;
-    opacity: 0;
-    transition:
-      scale 0.3s linear,
-      display 0.4s linear allow-discrete,
-      opacity 0.4s linear;
-  }
-
-  dialog[open] {
-    opacity: 1;
-    scale: 1;
-    transition:
-      scale 0.3s linear,
-      opacity 0.4s linear;
-
-    @starting-style {
-      scale: 0;
-      opacity: 0;
-    }
-  }
-
-  dialog::backdrop {
-    backdrop-filter: blur(4px);
-    background: rgba(0, 0, 0, 0.26);
-  }
-
-  .button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 10px;
-    height: clamp(80px, 10vw, 100px);
-    width: clamp(200px, 50vw, 400px);
-    background-image: linear-gradient(
-      135deg,
-      #3e5351 30%,
-      rgb(66, 182, 170) 100%
-    );
-    transition: all 0.2s linear;
-    cursor: pointer;
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-
-  .sub__container {
-    position: relative;
-  }
-  .sub {
-    position: absolute;
-    top: clamp(30px, 3.5vw, 50px);
-    bottom: 0;
-    right: 0;
-    left: 0%;
-    width: 100%;
-    height: 40px;
-  }
-</style>
-
-<script>
-  document.addEventListener("astro:page-load", () => {
-    const btnDialog = document.querySelectorAll("button");
-    const btnModalContact = document.querySelectorAll("#open-modal-contacto");
-    const dialog = document.getElementById("modal-info") as HTMLDialogElement;
-    const close = document.getElementById("close");
-    const closeContact = document.getElementById("close-contact");
-    const dialogContact = document.getElementById(
-      "modal-contacto-services"
-    ) as HTMLDialogElement;
-    const modalContent = document.getElementById("modal-info-content");
-    const modalImg = document.getElementById(
-      "modal-info-img"
-    ) as HTMLImageElement;
-    const btnForm = document.getElementById("btn-send-form");
-
-    btnDialog.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const bgColor = btn.getAttribute("data-color");
-        const data = btn.getAttribute("data-content");
-        const img = btn.getAttribute("data-img-background");
-        const position = btn.getAttribute("data-img-position");
-        dialog.style.backgroundColor = bgColor;
-        modalContent.innerHTML = data;
-        modalImg.src = img;
-        modalImg.style.objectPosition = position;
-
-        dialog.showModal();
-      });
-    });
-
-    btnModalContact.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        dialogContact.showModal();
-      });
-    });
-
-    close.addEventListener("click", () => {
-      dialog.close();
-      const activeElement = document.activeElement;
-      if (activeElement instanceof HTMLElement) {
-        activeElement.blur();
-      }
-    });
-
-    btnForm.addEventListener("click", () => {
-      dialogContact.close();
-      dialog.close();
-      const activeElement = document.activeElement;
-      if (activeElement instanceof HTMLElement) {
-        activeElement.blur();
-      }
-    });
-
-    closeContact.addEventListener("click", () => {
-      dialog.close();
-      const activeElement = document.activeElement;
-      if (activeElement instanceof HTMLElement) {
-        activeElement.blur();
-      }
-    });
-  });
-</script>
+</LayoutServicios>

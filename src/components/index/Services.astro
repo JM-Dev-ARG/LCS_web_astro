@@ -1,8 +1,5 @@
 ---
-import Bento from "../reutilizables/Bento.astro";
-import BentoServices from "../reutilizables/BentoServices.astro";
 import Container from "../reutilizables/Container.astro";
-import SliderServices from "../reutilizables/SliderServices.astro";
 import data from "../../data/cardServices.json";
 import CardServices from "../reutilizables/CardServices.astro";
 ---
@@ -13,7 +10,7 @@ import CardServices from "../reutilizables/CardServices.astro";
 >
   <div class="">
     <img
-      class="hidden lg:block w-auto h-[calc(100%/3)] absolute top-1/2 -left-[20%] xl:-left-[6%] translate-y-[-50%] opacity-70"
+      class="hidden lg:block w-auto h-[calc(100%/3)] absolute top-1/2 -left-[20%] xl:-left-[6%] translate-y-[-50%] opacity-20"
       src="/resources/asterisco-fino.svg"
       alt=""
     />
@@ -27,69 +24,82 @@ import CardServices from "../reutilizables/CardServices.astro";
   </div>
 
   <Container>
-    <div class="relative z-10 mt-10 w-full grid place-items-center mx-auto">
-      <h1 class="text-[clamp(32px,6vw,100px)] font-extralight z-10">
+    <div
+      class="relative z-10 mt-10 md:mt-20 w-full grid place-items-center mx-auto"
+    >
+      <h1 class="text-[clamp(28px,9vw,80px)] font-extralight z-10">
         Contrata un Seguro
       </h1>
-      <p
-        class="text-[clamp(80px,15vw,200px)] w-full font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 text-lcsPink3 tracking-wide opacity-60 text-center"
+      <div
+        class="text-[clamp(80px,15vw,180px)] w-full h-[clamp(80px,20vw,200px)] font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 text-lcsPink3 tracking-wide opacity-60 text-center flex justify-center items-center"
       >
-        B B B
-      </p>
+        <p>B B B</p>
+      </div>
     </div>
 
     <div
-      class="relative w-full text__animated__container z-10 flex justify-center items-center"
+      class="relative w-full text__animated__container z-10 flex justify-center items-center h-[clamp(30px,7vw,50px)]"
     >
       <p
         data-delay="2s"
-        class="text-[clamp(40px,3vw,60px)] font-semibold text-pretty text-center my-0 absolute opacity-0 text-[#518d87]"
+        class="text-[clamp(30px,7vw,50px)] font-semibold text-pretty text-center my-0 absolute opacity-0 text-[#518d87]"
       >
         BUENO
       </p>
       <p
-        class="text-[clamp(40px,3vw,60px)] font-semibold text-pretty text-center my-0 absolute opacity-0 text-[#518d87]"
+        class="text-[clamp(30px,7vw,50px)] font-semibold text-pretty text-center my-0 absolute opacity-0 text-[#518d87]"
       >
         BONITO
       </p>
       <p
-        class="text-[clamp(40px,3vw,60px)] font-semibold text-pretty text-center my-0 absolute opacity-0 text-[#518d87]"
+        class="text-[clamp(30px,7vw,50px)] font-semibold text-pretty text-center my-0 absolute opacity-0 text-[#518d87]"
       >
         BIEN HECHO
       </p>
     </div>
 
     <div
-      class="w-full lg:w-[90%] flex justify-center items-center gap-4 md:gap-10"
+      class="w-full lg:w-fit flex justify-around items-center gap-4 md:gap-20"
     >
       <div class="">
         <img
-          class="w-[50px] md:w-[70px] lg:w-[100px] rotate-[225deg]"
+          class="hidden md:block w-[50px] md:w-[70px] lg:w-[100px] rotate-[225deg]"
           src="/resources/flechas-rojas.svg"
           alt=""
         />
       </div>
-      <div>
+      <div class="w-full md:w-[calc(100%-160px)] lg:w-full">
         <div
-          class="text-[clamp(18px,3vw,40px)] font-light text-pretty text-center flex flex-col justify-center items-center"
+          class="text-[clamp(18px,2.5vw,40px)] w-full font-extralight text-pretty text-center flex flex-col justify-center items-center"
         >
-          <p>Te presentamos a nuestros</p>
-          <div class="relative w-fit text-[#518d87]">
-            <p>Brokers de seguros</p>
+          <p>
+            Te presentamos a nuestros <span
+              class="sub relative font-normal text-nowrap w-fit text-[#518d87]"
+              >Brokers de seguros
+            </span>
+          </p>
+          <!--  <span class="relative w-fit text-[#518d87]">
+            <p></p>
             <div class="sub">
               <img
                 src="/resources/surayado.svg"
                 alt=""
               />
             </div>
-          </div>
+          </span> -->
           <p>de confianza.</p>
+          <!-- <div class="sub">
+            <img
+              src="/resources/surayado.svg"
+              alt=""
+            />
+          </div> -->
         </div>
       </div>
 
       <div class="">
         <img
-          class="w-[50px] md:w-[70px] lg:w-[100px] rotate-[45deg]"
+          class="hidden md:block w-[50px] md:w-[70px] lg:w-[100px] rotate-[45deg]"
           src="/resources/flechas-rojas.svg"
           alt=""
         />
@@ -97,7 +107,7 @@ import CardServices from "../reutilizables/CardServices.astro";
     </div>
 
     <div
-      class="w-full md:w-[70%] lg:w-full flex flex-col lg:flex-row gap-4 mx-auto justify-center items-center mt-10"
+      class="w-full md:w-[70%] lg:w-full flex flex-col lg:flex-row gap-4 mx-auto justify-center items-center"
     >
       {data.map((item) => <CardServices {...item} />)}
     </div>
@@ -108,12 +118,14 @@ import CardServices from "../reutilizables/CardServices.astro";
   .sub__container {
     position: relative;
   }
-  .sub {
+  .sub::after {
+    content: "";
+    background-image: url("/resources/surayado.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
     position: absolute;
-    top: clamp(22px, 3.5vw, 50px);
-    bottom: 0;
+    bottom: clamp(-35px, 4vw, -42px);
     right: 0;
-    left: 0%;
     width: 100%;
     height: 40px;
   }

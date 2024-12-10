@@ -4,18 +4,8 @@ import Button from "../reutilizables/Button.astro";
 import Container from "../reutilizables/Container.astro";
 import GridWid from "../reutilizables/GridWid.astro";
 import TitleWid from "../reutilizables/TitleWid.astro";
-const textTitle =
-  "Si tenés un problema que se soluciona con UN SEGUROS … entonces no tenés un problema.";
-const textGrid = {
-  text1:
-    "En mi vida siempre me gustó hacer dos cosas: conectar con personas y resolver problemas.Y eso es justamente lo que hago desde que me convertí en asesora de seguros.",
-  text2:
-    "Llevo 8 años acompañando desde muchos niveles a personas, empresas y colegas en el camino a sanar la relación que tenemos con el Seguro.",
-  text3:
-    "Derrocando mitos y tendiendo puentes entre todos los actores para volver a darle el lugar que siempre ocupó: el instrumento más importante para construir el futuro.",
-  text4:
-    "Comencé como una simple recepcionista, hoy soy una consultora de marketing y negocios especializada en seguros, referente y activista de la conciencia aseguradora, todo gracias a mi propósito principal: hacer de nuestra realidad un lugar seguro.",
-};
+import textGrid from "../../data/textGrid.json";
+const textTitle = " Asegurarse es la nueva moda";
 ---
 
 <section
@@ -48,7 +38,7 @@ const textGrid = {
     </div>
 
     <Container>
-      <div class="mx-auto w-[90%] mt-10">
+      <div class="mx-auto w-[80%] mt-10">
         <TitleWid text={textTitle} />
 
         <GridWid
@@ -66,7 +56,7 @@ const textGrid = {
             <p>{textGrid.text2}</p>
           </div>
           <img
-            class="w-full md:w-[80%] h-auto mx-auto"
+            class="w-full md:w-[60%] h-auto mx-auto"
             src="/img/foto2-mock.avif"
             alt=""
           />
@@ -80,7 +70,7 @@ const textGrid = {
           class="w-full flex justify-center items-center my-14 relative z-10"
         >
           <div
-            class="flex flex-col lg:flex-row justify-center gap-4 md:gap-8 items-center w-full xl:w-[70%]"
+            class="flex flex-col lg:flex-row justify-center gap-4 md:gap-8 items-center w-full 2xl:w-[80%]"
           >
             <div class="bg-[#fef0e9] rounded-full overflow-hidden">
               <img
@@ -90,20 +80,20 @@ const textGrid = {
               />
             </div>
             <div
-              class="grid place-items-center mx-auto lg:mx-0 w-auto lg:block lg:w-[550px]"
+              class="grid place-items-center mx-auto lg:mx-0 w-auto lg:inline lg:w-[calc(100%-300px)]"
             >
               {
                 data.map((item, index) => {
                   return (
                     <div
-                      class="text-gray-50 text-[clamp(12px,3vw,20px)] inline-flex
+                      class="text-gray-50 text-[clamp(20px,2.1vw,30px)] inline-flex
               items-center gap-2 mr-3 historia-item opacity-30"
                     >
                       <p>{item.text}</p>{" "}
                       {index !== data.length - 1 && (
                         <span>
                           <img
-                            class="h-[clamp(12px,3vw,20px)] w-auto"
+                            class="h-[clamp(20px,2.1vw,30px)] w-auto"
                             src="/resources/flecha-texto.svg"
                             alt=""
                           />{" "}
@@ -117,7 +107,10 @@ const textGrid = {
           </div>
         </div>
 
-        <div class="w-full place-items-center mx-auto mb-8 relative z-10">
+        <div
+          id="guia_descarga"
+          class="w-full place-items-center mx-auto mb-8 relative z-10"
+        >
           <div class="w-full md:w-[80%] lg:w-1/2">
             <p class="text-gray-50 text-center text-[clamp(30px,3vw,50px)]">
               Asegurarse es la nueva moda
@@ -156,11 +149,11 @@ const textGrid = {
     font-size: clamp(14px, 1.5vw, 20px);
     font-weight: 500;
     color: azure;
-    text-align: center;
+    text-align: left;
     text-wrap: pretty;
   }
   .texto :nth-child(1) {
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
 
   .historia-item-animation {

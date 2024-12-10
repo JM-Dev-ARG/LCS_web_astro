@@ -1,0 +1,22 @@
+---
+import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
+const path = Astro.url.pathname;
+const basePath = path.split("/")[1];
+const result = `/${basePath}`;
+---
+
+<LayoutContactoServicios
+  title="Formulario de contacto para Seguros Integrales de Comercio"
+  path={result}
+>
+  <main>
+    <div class="h-[500px] bg-white"></div>
+    <div class="h-[500px] bg-black"></div>
+    <div class="h-[500px] bg-white"></div>
+    <div class="h-[500px] bg-black"></div>
+    <div class="h-[500px] bg-white"></div>
+    <div class="h-[500px] bg-black"></div>
+    <div class="h-[500px] bg-white"></div>
+    <div class="h-[500px] bg-black"></div>
+  </main>
+</LayoutContactoServicios>

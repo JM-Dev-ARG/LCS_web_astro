@@ -1,5 +1,9 @@
 ---
+type Props = {
+  path: string;
+};
 
+const { path } = Astro.props;
 ---
 
 <nav
@@ -13,7 +17,7 @@
       <a href="/">
         <img
           class="w-[50px] hover:rotate-[15deg] hover:scale-[1.1] transition duration-300 ease-in-out"
-          src="./resources/corazon-paragua.svg"
+          src="../resources/corazon-paragua.svg"
           alt="Logo La Chica Del Seguro"
         /></a
       >
@@ -21,7 +25,7 @@
 
     <div>
       <div class="flex justify-end items-center flex-1 mr-8">
-        <a href="/#services"
+        <a href=`${path}`
           ><svg
             class="w-[50px] stroke-[#ed6f5f] hover:scale-[1.1] hover:stroke-[#ea4d50] transition duration-300"
             xmlns="http://www.w3.org/2000/svg"

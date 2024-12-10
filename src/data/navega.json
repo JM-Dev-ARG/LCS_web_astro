@@ -5,11 +5,6 @@
         "target": "_self"
     },
     {
-        "href": "/#medios",
-        "label": "En los Medios",
-        "target": "_self"
-    },
-    {
         "href": "#services",
         "label": "Servicios",
         "target": "_self"
@@ -27,6 +22,11 @@
     {
         "href": "/viajes",
         "label": "Seguros de Viajes",
+        "target": "_self"
+    },
+    {
+        "href": "/#medios",
+        "label": "En los Medios",
         "target": "_self"
     }
 ]

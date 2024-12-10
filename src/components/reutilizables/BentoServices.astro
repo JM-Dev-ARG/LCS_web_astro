@@ -1,15 +1,81 @@
 ---
+const path = Astro.url.pathname;
+const basePath = path.split("/")[1];
+const result = `/${basePath}`;
 
+
+
+import SliderServicesPatrimoniales from "./SliderServicesPatrimoniales.astro";
+import SliderServicesPersonas from "./SliderServicesPersonas.astro";
+type Props = {
+  title1: string;
+  title2: string;
+  title3: string;
+  title4: string;
+  datacontent1: string;
+  datacontent2: string;
+  datacontent3: string;
+  datacontent4: string;
+  datacolor1: string;
+  datacolor2: string;
+  datacolor3: string;
+  datacolor4: string;
+  dataimgbackground1: string;
+  dataimgbackground2: string;
+  dataimgbackground3: string;
+  dataimgbackground4: string;
+  dataimgposition1: string;
+  dataimgposition2: string;
+  dataimgposition3: string;
+  dataimgposition4: string;
+  dataform1: string;
+  dataform2: string;
+  dataform3: string;
+  dataform4: string;
+};
+const {
+  title1,
+  title2,
+  title3,
+  title4,
+  datacontent1,
+  datacontent2,
+  datacontent3,
+  datacontent4,
+  datacolor1,
+  datacolor2,
+  datacolor3,
+  datacolor4,
+  dataimgbackground1,
+  dataimgbackground2,
+  dataimgbackground3,
+  dataimgbackground4,
+  dataimgposition1,
+  dataimgposition2,
+  dataimgposition3,
+  dataimgposition4,
+  dataform1,
+  dataform2,
+  dataform3,
+  dataform4,
+} = Astro.props;
 ---
 
-<div class="grid__container">
-  <button class="card1 card justify-end">
+<div class="hidden md:grid grid__container w-full xl:w-[70%] my-10">
+  <button
+    class="card1 card justify-end"
+    data-content={datacontent1}
+    data-color={datacolor1}
+    data-img-background={dataimgbackground1}
+    data-img-position={dataimgposition1}
+    data-form={dataform1}
+  >
     <div class="w-full h-full flex ml-4">
-      <p class="text-gray-50 texto font-light">I. COMERCIO</p>
+      <p class="text-gray-50 texto font-light">{title1}</p>
     </div>
 
     <div
-      class="absolute w-full h-full bg-[url('/img/comercio.avif')] bg-contain bg-right-bottom bg-no-repeat"
+      class=`absolute  w-full h-full bg-[url('${dataimgbackground1}')] bg-contain bg-[right_bottom] bg-no-repeat`
     >
     </div>
     <div class="absolute ver__mas">
@@ -17,13 +83,20 @@
     </div>
   </button>
 
-  <button class="card2 card">
+  <button
+    class="card2 card"
+    data-content={datacontent2}
+    data-color={datacolor2}
+    data-img-background={dataimgbackground2}
+    data-img-position={dataimgposition2}
+    data-form={dataform2}
+  >
     <div class="w-full h-full flex ml-4">
-      <p class="text-gray-50 texto font-light">AUTOMOTORES</p>
+      <p class="text-gray-50 texto font-light">{title2}</p>
     </div>
 
     <div
-      class="absolute w-full h-full bg-[url('/img/auto.avif')] bg-contain bg-right-bottom lg:bg-[right_-50px_bottom_-50px] bg-no-repeat"
+      class=`absolute w-full h-full bg-[url('${dataimgbackground2}')] bg-cover lg:bg-contain bg-right-bottom bg-no-repeat`
     >
     </div>
     <div class="absolute ver__mas">
@@ -31,121 +104,223 @@
     </div>
   </button>
 
-  <button class="card3 card">
-    <div class="w-full h-full flex justify-end mr-4">
-      <p class="text-gray-50 texto font-light">ART</p>
-    </div>
-
-    <div
-      class="absolute w-full h-full bg-[url('/img/art.avif')] bg-cover bg-no-repeat"
-    >
-    </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
-
-  <button class="card4 card">
+  <button
+    class="card3 card"
+    data-content={datacontent3}
+    data-color={datacolor3}
+    data-img-background={dataimgbackground3}
+    data-img-position={dataimgposition3}
+    data-form={dataform3}
+  >
     <div class="w-full h-full flex ml-4">
-      <p class="text-gray-50 texto font-light">HOGAR</p>
+      <p class="text-gray-50 texto font-light">{title3}</p>
     </div>
 
-    <div
-      class="absolute w-full h-full bg-[url('/img/hogar.avif')] bg-contain bg-right-bottom bg-no-repeat"
+    {
+      result === "/patrimoniales" ?  
+      <div class=`absolute w-full h-full bg-[url('${dataimgbackground3}')] bg-cover bg-[center_bottom_-100px] bg-no-repeat`    >
+    </div>  : <div
+      class= `absolute w-full h-full bg-[url('${dataimgbackground3}')] bg-cover bg-[right_bottom_-50px] bg-no-repeat`    
     >
     </div>
+    }
+    <!-- -->
     <div class="absolute ver__mas">
       <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
     </div>
   </button>
-  <button class="card5 card">
+
+  <button
+    class="card4 card"
+    data-content={datacontent4}
+    data-color={datacolor4}
+    data-img-background={dataimgbackground4}
+    data-img-position={dataimgposition4}
+    data-form={dataform4}
+  >
     <div class="w-full h-full flex ml-4">
-      <p class="text-gray-50 texto font-light">CAUCION</p>
+      <p class="text-gray-50 texto font-light">{title4}</p>
     </div>
 
     <div
-      class="absolute w-full h-full bg-[url('/img/caucion.avif')] 2xl:bg-[right_bottom] bg-cover bg-left-bottom bg-no-repeat"
+      class=`absolute  w-full h-full bg-[url('${dataimgbackground4}')] bg-cover bg-[right_bottom] 2xl:bg-[right_-40px_bottom_-20px] bg-no-repeat`
     >
     </div>
     <div class="absolute ver__mas">
       <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
     </div>
   </button>
+  <!-- <button
+          class="card5 card"
+          data-content="Caucion"
+          data-color="#e8abac"
+          data-img-background="/img/caucion.avif"
+          data-img-position="right bottom"
+        >
+          <div class="w-full h-full flex ml-4">
+            <p class="text-gray-50 texto font-light">CAUCION</p>
+          </div>
 
-  <button class="card6 card">
-    <div class="w-full h-full flex justify-center items-start px-[10px]">
-      <p class="text-gray-50 texto font-light">CONSORCIO</p>
-    </div>
+          <div
+            class="absolute w-full h-full bg-[url('/img/caucion.avif')] bg-[right_-20px_bottom] 2xl:bg-[right_bottom] bg-cover bg-no-repeat"
+          >
+          </div>
+          <div class="absolute ver__mas">
+            <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
+          </div>
+        </button>
 
-    <div
-      class="absolute w-full h-full bg-[url('/img/consorcio.avif')] bg-cover bg-[center_bottom_-50px] bg-no-repeat"
-    >
-    </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
+        <button
+          class="card6 card"
+          data-content="Consorcio"
+          data-color="#f05759"
+          data-img-background="/img/consorcio2.avif"
+          data-img-position="bottom"
+        >
+          <div class="w-full h-full flex justify-center items-start px-[10px]">
+            <p class="text-gray-50 texto font-light">CONSORCIO</p>
+          </div>
 
-  <button class="card7 card">
-    <div class="w-full h-full flex justify-end mr-4">
-      <p class="text-gray-50 texto font-light">ACCIDENTES</p>
-    </div>
+          <div
+            class="absolute w-full h-full bg-[url('/img/consorcio.avif')] bg-cover bg-[center_bottom_-50px] bg-no-repeat"
+          >
+          </div>
+          <div class="absolute ver__mas">
+            <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
+          </div>
+        </button> -->
+  <!-- 
+        <button
+          class="card7 card"
+          data-content="Accidentes"
+          data-color="#1d1e1c"
+          data-img-background="/img/retiro.avif"
+          data-img-position="right bottom"
+        >
+          <div class="w-full h-full flex justify-end mr-4">
+            <p class="text-gray-50 texto font-light">ACCIDENTES</p>
+          </div>
 
-    <div
-      class="absolute w-full h-full bg-[url('/img/retiro.avif')] bg-cover bg-[right_-80px_bottom] lg:bg-[right_-10px_bottom] 2xl:bg-[right_-10px_bottom_-20px] bg-no-repeat"
-    >
-    </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
+          <div
+            class="absolute w-full h-full bg-[url('/img/retiro.avif')] bg-cover bg-[right_-80px_bottom] lg:bg-[right_-10px_bottom] 2xl:bg-[right_-10px_bottom_-20px] bg-no-repeat"
+          >
+          </div>
+          <div class="absolute ver__mas">
+            <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
+          </div>
+        </button> -->
 
-  <button class="card8 card">
-    <div class="w-full h-full flex ml-4">
-      <p class="text-gray-50 texto font-light">I. COMERCIO</p>
-    </div>
+  <!-- <button class="card8 card">
+        <div class="w-full h-full flex ml-4">
+          <p class="text-gray-50 texto font-light">I. COMERCIO</p>
+        </div>
 
-    <div
-      class="absolute w-full h-full bg-[url('/img/comercio.avif')] bg-contain bg-[right_bottom_-5px] bg-no-repeat"
-    >
-    </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
+        <div
+          class="absolute w-full h-full bg-[url('/img/comercio.avif')] bg-contain bg-[right_bottom_-5px] bg-no-repeat"
+        >
+        </div>
+        <div class="absolute ver__mas">
+          <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
+        </div>
+      </button>
 
-  <button class="card9 card">
-    <div class="w-full h-full flex ml-4">
-      <p class="text-gray-50 texto font-light">CAUCION</p>
-    </div>
+      <button class="card9 card">
+        <div class="w-full h-full flex ml-4">
+          <p class="text-gray-50 texto font-light">CAUCION</p>
+        </div>
 
-    <div
-      class="absolute w-full h-full bg-[url('/img/caucion.avif')] bg-cover bg-[right_bottom] 2xl:bg-[right_bottom_-50px] bg-no-repeat"
-    >
-    </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
+        <div
+          class="absolute w-full h-full bg-[url('/img/caucion.avif')] bg-cover bg-[right_bottom] 2xl:bg-[right_bottom_-50px] bg-no-repeat"
+        >
+        </div>
+        <div class="absolute ver__mas">
+          <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
+        </div>
+      </button> -->
 </div>
-<dialog class="w-full h-full flex justify-center items-center">
-  <form method="dialog">
-    <button id="close">close</button>
-  </form>
+
+<!-- SLIDER -->
+<div class="md:hidden overflow-x-scroll w-full">
+  {
+    result === "/personas" ? (
+      <SliderServicesPersonas />
+    ) : (
+      <SliderServicesPatrimoniales />
+    )
+  }
+  <!-- <SliderServicesPersonas /> -->
+</div>
+
+<!-- MODAL INFO -->
+<dialog
+  id="modal-info"
+  class="w-full h-full xl:w-[80%] xl:h-[90%] rounded-[20px] flex-col justify-center items-center overflow-hidden"
+>
+  <div
+    class="relative w-full h-full flex-col justify-center items-center rounded-[20px]"
+  >
+    <img
+      id="modal-info-img"
+      class="absolute w-full h-full opacity-30 object-contain -bottom-2"
+      alt=""
+    />
+    <div
+      class="w-full h-full flex-col justify-center items-center relative z-10"
+    >
+      <form
+        method="dialog"
+        class="w-full flex justify-end pr-5 pt-3"
+      >
+        <button
+          id="close"
+          class="w-full flex justify-end items-center invert"
+        >
+          <img
+            class="w-8 h-8"
+            src="/svg/menu_close.svg"
+            alt=""
+          />
+        </button>
+      </form>
+      <div class="w-full h-[calc(100%-52px)] flex justify-center items-center">
+        <div class="w-[80%] h-full flex flex-col justify-around items-center">
+          <p
+            id="modal-info-content"
+            class="text-gray-50 font-extralight text-[clamp(18px,3vw,22px)] text-left"
+          >
+          </p>
+          <a
+            id="open-modal-contacto"
+            class="button px-4"
+            ><div class="text-gray-50">
+              <p class="font-semibold text-[clamp(18px,3vw,25px)]">
+                COTIZA TU SEGURO
+              </p>
+            </div>
+            <div class="flex items-center mr-5">
+              <img
+                class="h-[40px] w-[40px] rotate-[-135deg]"
+                src="/resources/flechas-button.svg"
+                alt=""
+              />
+            </div></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
 </dialog>
 
 <style>
   .grid__container {
     position: relative;
     z-index: 20;
-    margin-block: 40px;
-    width: 100%;
-    display: grid;
+
     grid:
       "card1 card1 card1 card1 card1 card1 card2 card2 card2 card2 card2 card2" 1fr
       "card3 card3 card3 card3 card3 card4 card4 card4 card4 card4 card4 card4" 1fr
-      "card5 card5 card5 card5 card6 card6 card6 card6 card7 card7 card7 card7" 1fr
-      "card8 card8 card8 card8 card8 card8 card8 card9 card9 card9 card9 card9" 1fr
+      /* "card5 card5 card5 card5 card5 card5 card5 card5 card6 card6 card6 card6" 1fr */
+      /* "card8 card8 card8 card8 card8 card8 card8 card9 card9 card9 card9 card9" 1fr */
       / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 18px;
   }
@@ -165,7 +340,7 @@
     max-height: 550px;
     border-radius: 20px;
 
-    transition: all 0.5s linear;
+    transition: all 0.3s linear;
     cursor: pointer;
 
     &:hover {
@@ -180,7 +355,7 @@
     }
 
     .texto {
-      font-size: clamp(20px, 4vw, 42px);
+      font-size: clamp(30px, 5vw, 42px);
     }
   }
 
@@ -191,12 +366,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000000ce;
+    background-color: #000000c4;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s linear 0.2s;
+    transition: all 0.3s linear 0.1s;
   }
 
   .card1 {
@@ -208,11 +383,8 @@
     background-color: #1d1e1c;
   }
   .card3 {
-    display: flex;
-    justify-content: center;
-    align-items: end;
     grid-area: card3;
-    background-color: #393737;
+    background-color: #e8abac;
   }
   .card4 {
     grid-area: card4;
@@ -220,7 +392,7 @@
   }
   .card5 {
     grid-area: card5;
-    background-color: #1a191a;
+    background-color: #e8abac;
   }
   .card6 {
     grid-area: card6;
@@ -228,7 +400,8 @@
   }
   .card7 {
     grid-area: card7;
-    background-color: #518d87;
+
+    background-color: #1a191a;
   }
   .card8 {
     grid-area: card8;
@@ -238,23 +411,118 @@
     grid-area: card9;
     background-color: #e8abac;
   }
+
+  dialog {
+    scale: 0;
+    opacity: 0;
+    transition:
+      scale 0.3s linear,
+      display 0.4s linear allow-discrete,
+      opacity 0.4s linear;
+  }
+
+  dialog[open] {
+    opacity: 1;
+    scale: 1;
+    transition:
+      scale 0.3s linear,
+      opacity 0.4s linear;
+
+    @starting-style {
+      scale: 0;
+      opacity: 0;
+    }
+  }
+
+  dialog::backdrop {
+    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.26);
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    height: clamp(80px, 10vw, 100px);
+    width: clamp(200px, 50vw, 400px);
+    background-image: linear-gradient(
+      135deg,
+      #3e5351 30%,
+      rgb(66, 182, 170) 100%
+    );
+    transition: all 0.2s linear;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .sub__container {
+    position: relative;
+  }
+  .sub {
+    position: absolute;
+    top: clamp(30px, 3.5vw, 50px);
+    bottom: 0;
+    right: 0;
+    left: 0%;
+    width: 100%;
+    height: 40px;
+  }
 </style>
 
 <script>
   document.addEventListener("astro:page-load", () => {
     const btnDialog = document.querySelectorAll("button");
-    const dialog = document.querySelector("dialog");
-
+    const btnModalContact = document.querySelectorAll("#open-modal-contacto");
+    const dialog = document.getElementById("modal-info") as HTMLDialogElement;
     const close = document.getElementById("close");
+    const closeContact = document.querySelectorAll("#close-contact");
+
+    const modalContent = document.getElementById("modal-info-content");
+    const modalImg = document.getElementById(
+      "modal-info-img"
+    ) as HTMLImageElement;
 
     btnDialog.forEach((btn) => {
       btn.addEventListener("click", () => {
+        const bgColor = btn.getAttribute("data-color");
+        const data = btn.getAttribute("data-content");
+        console.log(data);
+
+        const img = btn.getAttribute("data-img-background");
+        const position = btn.getAttribute("data-img-position");
+        const form = btn.getAttribute("data-form");
+        dialog.style.backgroundColor = bgColor;
+        modalContent.innerHTML = data;
+        modalImg.src = img;
+        modalImg.style.objectPosition = position;
+        dialog.setAttribute("data-form", form);
+
+        btnModalContact.forEach((btn) => {
+          btn.setAttribute("href", form);
+        });
         dialog.showModal();
+      });
+    });
+
+    btnModalContact.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        dialog.close();
+        const activeElement = document.activeElement;
+        if (activeElement instanceof HTMLElement) {
+          activeElement.blur();
+        }
       });
     });
 
     close.addEventListener("click", () => {
       dialog.close();
+      const activeElement = document.activeElement;
+      if (activeElement instanceof HTMLElement) {
+        activeElement.blur();
+      }
     });
   });
 </script>

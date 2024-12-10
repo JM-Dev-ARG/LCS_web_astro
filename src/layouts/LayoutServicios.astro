@@ -1,6 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import NavBarPatrimoniales from "../components/secciones/NavBarPatrimoniales.astro";
+import NavBarServicios from "../components/secciones/NavBarServicios.astro";
 
 interface Props {
   title: string;
@@ -76,7 +76,7 @@ const { title } = Astro.props;
     <ViewTransitions />
   </head>
   <body>
-    <NavBarPatrimoniales />
+    <NavBarServicios />
     <slot />
   </body>
 </html>
