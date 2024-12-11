@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Vacaciones",
+        "long_description": "Con nuestro asesoramiento profesionales podrás acceder a coberturas personales para protegerte de riesgos en el hogar, resguardar tu auto y asegurar tus vacaciones en todo el mundo.Con nuestro asesoramiento profesionales podrás acceder a coberturas personales para protegerte de riesgos en el hogar, resguardar tu auto y asegurar tus vacaciones en todo el mundo.",
+        "cardBackground": "../img/vacaciones.avif",
+        "href": "/viajes/vacacionesForm"
+    },
+    {
+        "id": 2,
+        "title": "Work & Holiday",
+        "long_description": "Contamos con un equipo especializado en análisis y prevención de riesgos corporativos, capaz de diseñar planificaciones a medida que protejan el patrimonio de la empresa a largo plazo, mitigando el impacto de riesgos económicos y contribuyendo al crecimiento sostenido.",
+        "cardBackground": "../img/w&t.avif",
+        "href": "/viajes/w&hForm"
+    },
+    {
+        "id": 3,
+        "title": "Pasajero en viaje",
+        "long_description": "Nuestra especialización en el rubro de la construcción nos permite ofrecerte soluciones específicas para este sector. Ya sea que necesites cubrir maquinaria, equipos o gestionar contratos y garantías, estamos aquí para asesorarte en cada paso.",
+        "cardBackground": "../img/enviaje.avif",
+        "href": "/viajes/enViajeForm"
+    }
+]

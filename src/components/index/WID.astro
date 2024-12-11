@@ -49,7 +49,7 @@ const textTitle = " Asegurarse es la nueva moda";
         />
 
         <div
-          class="w-full md:hidden flex flex-col justify-center items-center gap-4 my-20 relative z-10"
+          class="w-full lg:hidden flex flex-col justify-center items-center gap-4 my-20 relative z-10"
         >
           <div class="texto">
             <p>{textGrid.text1}</p>
@@ -74,13 +74,13 @@ const textTitle = " Asegurarse es la nueva moda";
           >
             <div class="bg-[#fef0e9] rounded-full overflow-hidden">
               <img
-                class="object-cover w-[180px] h-[180px] md:w-[250px] md:h-[250px]"
+                class="object-cover w-[180px] h-[180px] md:w-[200px] md:h-[200px]"
                 src="/img/e-cute.avif"
                 alt=""
               />
             </div>
             <div
-              class="grid place-items-center mx-auto lg:mx-0 w-auto lg:inline lg:w-[calc(100%-300px)]"
+              class="grid place-items-center w-auto lg:inline lg:w-[calc(100%-200px)]"
             >
               {
                 data.map((item, index) => {
@@ -146,8 +146,8 @@ const textTitle = " Asegurarse es la nueva moda";
   .texto {
     padding-inline: 5px;
     width: 100%;
-    font-size: clamp(14px, 1.5vw, 20px);
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 400;
     color: azure;
     text-align: left;
     text-wrap: pretty;

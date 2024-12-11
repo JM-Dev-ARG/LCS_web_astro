@@ -1,0 +1,139 @@
+---
+type Props = {
+  title: string;
+  long_description: string;
+  href?: string;
+  cardBackground?: string;
+};
+
+const { title, long_description, cardBackground, href } = Astro.props;
+---
+
+<div class="card__service__mobile h-[500px] shadow-md">
+  <img
+    src={cardBackground}
+    alt=`Imagen de ${title}`
+    class="relative w-full h-full object-cover object-center -z-10"
+  />
+  <div class="content__container">
+    <div class="card__init__container opacity-100 z-10">
+      <div class="title__on__hover">
+        <p class="text-[clamp(30px,8vw,40px)] font-black">
+          {title}
+        </p>
+        <p class="card__description__not__hover leading-normal text-base">
+          {long_description}
+        </p>
+        <a
+          href={href}
+          class="button px-4"
+        >
+          <div class="text-gray-50">
+            <p class="font-semibold text-[clamp(18px,3vw,25px)] text-nowrap">
+              COTIZA TU SEGURO
+            </p>
+          </div>
+          <div class="flex items-center mr-2">
+            <img
+              class="h-[40px] w-[40px] rotate-[-135deg]"
+              src="/resources/flechas-button.svg"
+              alt=""
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card__service__mobile {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 21;
+    border-radius: 10px;
+  }
+  .card__service__mobile::before {
+    content: "";
+    position: absolute;
+    flex: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #262727;
+    opacity: 0.4;
+  }
+
+  .content__container {
+    position: absolute;
+    padding: 1.25rem;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+  }
+
+  .title__on__hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    height: 100%;
+
+    & .card__description__not__hover {
+      padding: 1rem;
+      background-image: linear-gradient(
+        135deg,
+        hsla(174, 14%, 28%, 0.7) 30%,
+        rgba(66, 182, 170, 0.7) 100%
+      );
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 10px;
+      font-size: clamp(14px, 2vw, 20px);
+    }
+
+    & p {
+      color: #e7e7e7;
+      text-shadow: #1d1d1b 6px 3px 10px;
+    }
+
+    & .card__button {
+      width: fit-content;
+      display: flex;
+      align-self: flex-end;
+      flex-wrap: nowrap;
+      border-radius: 40px;
+      padding-inline: 2rem;
+      padding-block: 1rem;
+      font-weight: 600;
+    }
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-radius: 10px;
+    height: clamp(80px, 10vw, 100px);
+    width: clamp(auto, 50vw, 400px);
+    background-image: linear-gradient(
+      135deg,
+      #3e5351 30%,
+      rgb(66, 182, 170) 100%
+    );
+    transition: all 0.2s linear;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+</style>

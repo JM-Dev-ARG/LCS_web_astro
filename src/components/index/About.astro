@@ -71,17 +71,21 @@ import Container from "../reutilizables/Container.astro";
           </p>
         </div>
         <div
-          class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 md:gap-6 w-full"
+          class="flex flex-col md:flex-row items-center justify-center md:justify-around gap-6 md:gap-0 w-full"
         >
-          <div class="w-[90%] md:w-[70%] font-medium">
-            <p class="bg-[#e69c99] w-full py-2 px-4 mb-3 rounded-sm">
+          <div class="w-[90%] md:w-[70%] lg:w-[50%] font-medium">
+            <p
+              class="bg-[#e69c99] w-full py-2 px-4 mb-3 rounded-sm text-nowrap"
+            >
               No solo te cuento el Qué.
             </p>
-            <p class="bg-[#6f9c8ad5] w-full py-2 px-4 text-gray-50 rounded-sm">
+            <p
+              class="bg-[#6f9c8ad5] w-full py-2 px-4 text-gray-50 rounded-sm text-nowrap"
+            >
               Sino también el Por qué.
             </p>
           </div>
-          <div class="w-[200px] relative img__idea">
+          <div class="w-[clamp(180px,18vw,200px)] relative img__idea">
             <img
               class="w-full relative drop-shadow-md"
               src="/img/e-idea.avif"

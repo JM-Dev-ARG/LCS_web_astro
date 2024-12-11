@@ -3,7 +3,10 @@ import FooterServices from "../components/servicePages/FooterServices.astro";
 import Hero from "../components/servicePages/hero.astro";
 import Presentacion from "../components/servicePages/Presentacion.astro";
 import Services from "../components/servicePages/Services.astro";
+import ViajesCard from "../components/servicePages/ViajesCard.astro";
 import LayoutServicios from "../layouts/LayoutServicios.astro";
+import data from "../data/viajesCardData.json";
+import ViajesCardMobile from "../components/servicePages/ViajesCardMobile.astro";
 ---
 
 <LayoutServicios title="LCS - Seguros de Viajes">
@@ -15,7 +18,22 @@ import LayoutServicios from "../layouts/LayoutServicios.astro";
       className="bg-[top_center]"
     />
     <Services>
-      <div class="h-svh w-full flex"></div>
+      <div
+        class="hidden relative lg:flex gap-8 my-20 bg-[#fff5eb]"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        data-aos-once="true"
+      >
+        {data.map((item) => <ViajesCard {...item} />)}
+      </div>
+
+      <div
+        class="flex lg:hidden w-full mx-auto flex-col justify-center items-center gap-4"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
+        {data.map((item) => <ViajesCardMobile {...item} />)}
+      </div>
     </Services>
     <Presentacion image="/resources/Logotipo.svg">
       <p class="text-[clamp(18px,2vw,30px)] font-light text-pretty">
