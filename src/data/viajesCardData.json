@@ -2,21 +2,21 @@
     {
         "id": 1,
         "title": "Vacaciones",
-        "long_description": "Con nuestro asesoramiento profesionales podrás acceder a coberturas personales para protegerte de riesgos en el hogar, resguardar tu auto y asegurar tus vacaciones en todo el mundo.Con nuestro asesoramiento profesionales podrás acceder a coberturas personales para protegerte de riesgos en el hogar, resguardar tu auto y asegurar tus vacaciones en todo el mundo.",
+        "long_description": "Si estás organizando tus vacaciones hay 3 cosas que tenes que llevarte: ropa, dinero y un buen seguro de viaje. Todo lo que pueda pasarte en casa te puede pasar viajando: alguna enfermedad o accidente puede interrumpir tu aventura, la diferencia es que en otro país va a salirte mucho más caro resolverlo. Aseguramos tu aventura 24hs dentro y fuera del país, encontrá el plan ideal para tu viaje.",
         "cardBackground": "../img/vacaciones.avif",
         "href": "/viajes/vacacionesForm"
     },
     {
         "id": 2,
         "title": "Work & Holiday",
-        "long_description": "Contamos con un equipo especializado en análisis y prevención de riesgos corporativos, capaz de diseñar planificaciones a medida que protejan el patrimonio de la empresa a largo plazo, mitigando el impacto de riesgos económicos y contribuyendo al crecimiento sostenido.",
+        "long_description": "Antes de salir para el aeropuerto necesitás contratar tu seguro de viaje internacional porque para asistir al programa work & holiday es OBLIGATORIO. Vas a pasar un año o más viviendo y trabajando en un país desconocido y donde hablan otro idioma. Será emocionante pero solo podrás disfrutarlo si estás ASEGURADO. OJO con comprar coberturas online sin asesoramiento porque podes estar eligiendo una equivocada que luego no te preste asistencia médica ni resuelva tus problemas. Llevo 6 años asegurando aventureros en todo el mundo, quiero guiarte a elegir el seguro de viaje ideal para vos.",
         "cardBackground": "../img/w&t.avif",
         "href": "/viajes/w&hForm"
     },
     {
         "id": 3,
         "title": "Pasajero en viaje",
-        "long_description": "Nuestra especialización en el rubro de la construcción nos permite ofrecerte soluciones específicas para este sector. Ya sea que necesites cubrir maquinaria, equipos o gestionar contratos y garantías, estamos aquí para asesorarte en cada paso.",
+        "long_description": "Si ya estás transitando un programa work & holiday o una visa de intercambio y necesitás renovar tu seguro de viaje internacional. Pero no cualquiera va a aceptar asegurarte, por eso es indispensable que cuentes con un asesoramiento profesional para hacerlo. Cuento con más de 6 años y más de 1000 aventureros asegurados, puedo ayudarte a elegir la mejor cobertura para vos.",
         "cardBackground": "../img/enviaje.avif",
         "href": "/viajes/enViajeForm"
     }

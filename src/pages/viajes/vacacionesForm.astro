@@ -1,4 +1,7 @@
 ---
+import CheckBoxForm from "../../components/react_components/formsComponents/CheckBoxForm";
+import InputForm from "../../components/react_components/formsComponents/InputForm";
+import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
 import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
 const path = Astro.url.pathname;
 const basePath = path.split("/")[1];
@@ -9,14 +12,55 @@ const result = `/${basePath}`;
   title="Formulario de contacto para Seguro de viaje por vacaciones"
   path={result}
 >
-  <main>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
+  <main
+    class="relative my-20 z-10 h-auto w-full grid place-items-center mx-auto"
+  >
+    <section class="flex h-full w-[80%] justify-center items-center">
+      <ServicesForm
+        client:only="react"
+        placeholderMensaje="Dejanos un mensaje"
+      >
+        <InputForm
+          name="Nacionalidad"
+          placeholder="Argentino"
+          type="text"
+          labelText="Nacionalidad"
+        />
+        <InputForm
+          name="Fecha Inicio"
+          placeholder="dd/mm/aaaa"
+          type="date"
+          labelText="Fecha de inicio del viaje"
+        />
+        <InputForm
+          name="Fecha Fin"
+          placeholder="dd/mm/aaaa"
+          type="date"
+          labelText="Fecha de fin del viaje"
+        />
+        <InputForm
+          name="Cantidad Pasajeros"
+          placeholder="1 pasajero"
+          type="text"
+          labelText="Cantidad de pasajeros"
+        />
+        <InputForm
+          name="Edades Pasajeros"
+          placeholder="20 / 15 años / 5, 8 y 12 años"
+          type="text"
+          labelText="Edades de los pasajeros"
+        />
+        <CheckBoxForm
+          title={"Coberturas adicionales"}
+          data={[
+            { value: "Preexistencias", labelText: "Preexistencias" },
+            { value: "Deportes", labelText: "Deportes" },
+            { value: "Tecnologia", labelText: "Tecnologia" },
+            { value: "Embarazo", labelText: "Embarazo" },
+          ]}
+          client:only="react"
+        />
+      </ServicesForm>
+    </section>
   </main>
 </LayoutContactoServicios>

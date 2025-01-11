@@ -6,11 +6,13 @@ import preact from '@astrojs/preact';
 
 import netlify from '@astrojs/netlify';
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
 
-  integrations: [tailwind(), preact(
+  integrations: [tailwind(), react(
     {
       compat: true
     }

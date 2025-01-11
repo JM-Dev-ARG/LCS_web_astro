@@ -1,4 +1,7 @@
 ---
+import CheckBoxForm from "../../components/react_components/formsComponents/CheckBoxForm";
+import InputForm from "../../components/react_components/formsComponents/InputForm";
+import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
 import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
 const path = Astro.url.pathname;
 const basePath = path.split("/")[1];
@@ -9,14 +12,61 @@ const result = `/${basePath}`;
   title="Formulario de contacto para Seguro para pasajero en viaje"
   path={result}
 >
-  <main>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
+  <main
+    class="relative my-20 z-10 h-auto w-full grid place-items-center mx-auto"
+  >
+    <section class="flex h-full w-[80%] justify-center items-center">
+      <ServicesForm
+        client:only="react"
+        placeholderMensaje="Dejanos un mensaje"
+      >
+        <InputForm
+          name="nacionalidad"
+          placeholder="Argentino"
+          type="text"
+          labelText="Nacionalidad"
+        />
+        <InputForm
+          name="residencia"
+          placeholder="Argentina"
+          type="text"
+          labelText="Pais de residencia actual"
+        />
+        <InputForm
+          name="destinoProximo"
+          placeholder="Argentina"
+          type="text"
+          labelText="Pais de destino proximo"
+        />
+        <InputForm
+          name="fechaSalidaOrigenViaje"
+          placeholder="dd/mm/aaaa"
+          type="date"
+          labelText="Fecha de salida del pais de origen "
+        />
+        <InputForm
+          name="fechaRetornoOrigen"
+          placeholder="dd/mm/aaaa"
+          type="date"
+          labelText="Fecha de retorno al pais de origen"
+        />
+
+        <InputForm
+          name="edadPasajeroEnViaje"
+          placeholder="20 / 15 años "
+          type="text"
+          labelText="Edades de los pasajeros"
+        />
+        <CheckBoxForm
+          title={"Coberturas adicionales"}
+          data={[
+            { value: "preexistencias", labelText: "Preexistencias" },
+            { value: "deportes", labelText: "Deportes" },
+            { value: "tecnologia", labelText: "Tecnologia" },
+          ]}
+          client:only="react"
+        />
+      </ServicesForm>
+    </section>
   </main>
 </LayoutContactoServicios>

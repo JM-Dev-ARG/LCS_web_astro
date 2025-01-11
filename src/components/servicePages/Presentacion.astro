@@ -1,13 +1,19 @@
 ---
+import { color } from "framer-motion";
 import Container from "../reutilizables/Container.astro";
 
 type Props = {
   /*  text: string; */
   image: string;
   className?: string;
+  border?: string;
+  bgColor?: string;
 };
 
-const { image } = Astro.props;
+const { image, className, border, bgColor } = Astro.props;
+
+const borderColor = border ? border : "border-[#1a6dc0]";
+const backgroundColor = bgColor ? bgColor : "bg-[#1a6dc0]";
 ---
 
 <Container>
@@ -66,7 +72,7 @@ const { image } = Astro.props;
     </div>
 
     <div
-      class="w-full md:w-1/2 border-2 border-[#1a6dc0] rounded-[20px] bg-[#1a6dc0] bg-opacity-10 p-4 mb-7 md:mb-0"
+      class=`w-full md:w-1/2 border-2  rounded-[20px] ${borderColor} ${backgroundColor}  bg-opacity-10 p-4 mb-7 md:mb-0`
     >
       <div class="text-[clamp(18px,2vw,30px)] font-light text-pretty">
         <slot />

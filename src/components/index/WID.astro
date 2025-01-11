@@ -5,6 +5,7 @@ import Container from "../reutilizables/Container.astro";
 import GridWid from "../reutilizables/GridWid.astro";
 import TitleWid from "../reutilizables/TitleWid.astro";
 import textGrid from "../../data/textGrid.json";
+import { WidScrollReveal } from "../react_components/wid/WidScrollReveal";
 const textTitle = " Asegurarse es la nueva moda";
 ---
 
@@ -31,32 +32,40 @@ const textTitle = " Asegurarse es la nueva moda";
     </div>
     <div>
       <img
-        class="hidden md:block w-auto h-[calc(100%/4)] absolute bottom-0 -right-2 opacity-60"
+        class="hidden lg:block w-auto h-[calc(100%/4)] absolute bottom-0 -right-2 opacity-60"
         src="/resources/media-caña.svg"
         alt=""
       />
     </div>
 
     <Container>
-      <div class="mx-auto w-[80%] mt-10">
+      <div class="mx-auto w-full mt-10">
         <TitleWid text={textTitle} />
 
-        <GridWid
+        <div class="hidden relative z-20 md:grid w-full place-content-center">
+          <div
+            class="mt-10 py-10 w-full backdrop-blur-sm bg-lcsPink1/20 rounded-[20px] cursor__personalizado"
+          >
+            <WidScrollReveal client:only="react" />
+          </div>
+        </div>
+
+        <!-- <GridWid
           text1={textGrid.text1}
           text2={textGrid.text2}
           text3={textGrid.text3}
           text4={textGrid.text4}
-        />
+        /> -->
 
         <div
-          class="w-full lg:hidden flex flex-col justify-center items-center gap-4 my-20 relative z-10"
+          class="w-full md:hidden flex flex-col justify-center items-center gap-4 my-20 relative z-10"
         >
           <div class="texto">
             <p>{textGrid.text1}</p>
             <p>{textGrid.text2}</p>
           </div>
           <img
-            class="w-full md:w-[60%] h-auto mx-auto"
+            class="w-[80%] h-auto mx-auto rounded-[20px]"
             src="/img/foto2-mock.avif"
             alt=""
           />
@@ -70,7 +79,7 @@ const textTitle = " Asegurarse es la nueva moda";
           class="w-full flex justify-center items-center my-14 relative z-10"
         >
           <div
-            class="flex flex-col lg:flex-row justify-center gap-4 md:gap-8 items-center w-full 2xl:w-[80%]"
+            class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 items-center w-full lg:w-[75%] 2xl:w-[55%]"
           >
             <div class="bg-[#fef0e9] rounded-full overflow-hidden">
               <img
@@ -80,20 +89,20 @@ const textTitle = " Asegurarse es la nueva moda";
               />
             </div>
             <div
-              class="grid place-items-center w-auto lg:inline lg:w-[calc(100%-200px)]"
+              class="grid place-items-center w-auto lg:inline lg:w-[calc(100%-300px)]"
             >
               {
                 data.map((item, index) => {
                   return (
                     <div
-                      class="text-gray-50 text-[clamp(20px,2.1vw,30px)] inline-flex
+                      class="text-gray-50 text-[clamp(18px,2.1vw,20px)] inline-flex
               items-center gap-2 mr-3 historia-item opacity-30"
                     >
                       <p>{item.text}</p>{" "}
                       {index !== data.length - 1 && (
                         <span>
                           <img
-                            class="h-[clamp(20px,2.1vw,30px)] w-auto"
+                            class="h-[clamp(18px,2.1vw,20px)] w-auto"
                             src="/resources/flecha-texto.svg"
                             alt=""
                           />{" "}
@@ -111,9 +120,9 @@ const textTitle = " Asegurarse es la nueva moda";
           id="guia_descarga"
           class="w-full place-items-center mx-auto mb-8 relative z-10"
         >
-          <div class="w-full md:w-[80%] lg:w-1/2">
+          <div class="w-full md:w-[80%]">
             <p class="text-gray-50 text-center text-[clamp(30px,3vw,50px)]">
-              Asegurarse es la nueva moda
+              El mundo sin Seguro, no tiene sentido.
             </p>
           </div>
         </div>
@@ -147,13 +156,13 @@ const textTitle = " Asegurarse es la nueva moda";
     padding-inline: 5px;
     width: 100%;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
     color: azure;
     text-align: left;
     text-wrap: pretty;
   }
   .texto :nth-child(1) {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
   }
 
   .historia-item-animation {
@@ -175,6 +184,10 @@ const textTitle = " Asegurarse es la nueva moda";
     100% {
       opacity: 0.3;
     }
+  }
+
+  .cursor__personalizado {
+    cursor: url("/resources/scroll-icon.svg"), auto;
   }
 </style>
 <script>

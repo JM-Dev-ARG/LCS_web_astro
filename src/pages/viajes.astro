@@ -35,12 +35,19 @@ import ViajesCardMobile from "../components/servicePages/ViajesCardMobile.astro"
         {data.map((item) => <ViajesCardMobile {...item} />)}
       </div>
     </Services>
-    <Presentacion image="/resources/Logotipo.svg">
+    <Presentacion
+      image="/resources/Logotipo.svg"
+      border="border-lcsOrange3"
+      bgColor="bg-lcsOrange3"
+    >
       <p class="text-[clamp(18px,2vw,30px)] font-light text-pretty">
-        <span class="font-normal text-[#1a6dc0]"
-          >15 años de experiencia en el mercado y más de 9.000 clientes</span
-        >, que confían en nosotros. Brindamos asesoramiento personalizado y
-        <span class="font-normal text-[#1a6dc0]">!aseguramos tu mundo!</span>
+        <span class="font-normal text-lcsOrange3">Soy Mica Tissieres</span>,
+        asesora especialista en seguros de viaje internacionales. Aseguro
+        aventuras por el mundo desde el <span
+          class="font-normal text-lcsOrange3">2018</span
+        > y mi propósito es que a donde sea que viajes estés 100% protegido 24hs
+        con
+        <span class="font-normal text-lcsOrange3">la mejor cobertura.</span>
       </p>
     </Presentacion>
     <FooterServices />

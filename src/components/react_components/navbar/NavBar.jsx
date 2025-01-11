@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "preact/hooks";
+import { useState, useEffect, useRef } from "react";
 import "./navbar.css"
 
 import navega from "../../../data/navega.json";

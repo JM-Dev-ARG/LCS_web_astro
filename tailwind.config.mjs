@@ -19,6 +19,9 @@ export default {
 			screens: {
 				'3xl': '1720px',
 
+			},
+			cursor: {
+				'scroll': 'url(/resources/scroll-icon.svg), pointer',
 			}
 		},
 

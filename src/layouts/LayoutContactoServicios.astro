@@ -77,9 +77,24 @@ const { title, path } = Astro.props;
 
     <ViewTransitions />
   </head>
-  <body>
+  <body class="back-forms">
+    <div
+      class="absolute w-full h-full bg-[url('/resources/amo-asegurar.svg')] bg-cover bg-center opacity-[0.03] z-[1]"
+    >
+    </div>
     <NavBarFormularios path={path} />
     <slot />
+    <p class="text-center text-xs font-thin text-gray-300">
+      Desarrollado por{" "}
+      <a
+        aria-label="Link al Github de JM-Dev"
+        href="https://github.com/JM-Dev-ARG"
+        target="_blank"
+      >
+        JM-DEV{" "}
+      </a>{" "}
+      / Agencia Panambi
+    </p>
   </body>
 </html>
 <style is:global>
@@ -186,5 +201,15 @@ const { title, path } = Astro.props;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+  }
+  .back-forms {
+    background-color: #202221;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
   }
 </style>

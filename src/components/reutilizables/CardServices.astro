@@ -18,19 +18,21 @@ const { title, description, image, url } = Astro.props;
       {title}
     </h2>
   </div>
-  <div class="card__content">
+  <a
+    class="card__content group"
+    href=`${url}`
+  >
     <p
       class="text-pretty text-center text-gray-50 text-[clamp(16px,1.5vw,30px)] font-light"
     >
       {description}
     </p>
-    <a
+    <p
       class="text-gray-50 text-[clamp(30px,3vw,50px)] hover:text-lcsPink3 transition-all duration-500 ease-linear"
-      href=`${url}`
     >
-      Ver Más +</a
-    >
-  </div>
+      Ver Más +
+    </p>
+  </a>
 </div>
 
 <style>

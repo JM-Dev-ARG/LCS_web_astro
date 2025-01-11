@@ -1,4 +1,5 @@
 ---
+import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
 import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
 const path = Astro.url.pathname;
 const basePath = path.split("/")[1];
@@ -9,14 +10,16 @@ const result = `/${basePath}`;
   title="Formulario de contacto para Seguro de viaje por Work and Holiday"
   path={result}
 >
-  <main>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
+  <main
+    class="relative my-20 z-10 h-auto w-full grid place-items-center mx-auto"
+  >
+    <section class="flex h-full w-[80%] justify-center items-center">
+      <ServicesForm
+        client:only="react"
+        placeholderMensaje="Dejanos un mensaje"
+      >
+        <span></span>
+      </ServicesForm>
+    </section>
   </main>
 </LayoutContactoServicios>
