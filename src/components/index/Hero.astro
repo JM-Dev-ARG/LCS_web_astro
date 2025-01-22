@@ -6,10 +6,10 @@
   id="hero"
   class="sticky top-0 -z-10 h-[100vh] w-full overflow-hidden hero bg-[#ffefe9]"
 >
-  <div
-    class={"w-full h-full flex flex-col-reverse justify-center items-center md:items-end md:justify-end  md:bg-[url('/img/hero-mock.avif')] bg-[center_left_-80px] lg:bg-[center_left] bg-cover xl:bg-contain bg-no-repeat  "}
-  >
-    {
+  <!--  <div
+    class={"w-full h-full flex flex-col-reverse justify-center items-center md:items-end md:justify-end  "}
+  > -->
+  <!--     {
       (
         <div class="md:hidden h-1/2 lg:h-full w-full flex items-end relative img">
           <img
@@ -19,22 +19,22 @@
           />
         </div>
       )
-    }
-    <div class="h-full w-[70%] md:w-1/2 flex items-center md:pb-32 relative">
-      <picture class="w-full pr-6 lg:mr-10">
-        <source
-          srcset="./resources/Logotipo-animado.svg"
-          type="image/svg+xml"
-          media="(min-width: 600px)"
-        />
-        <img
-          class="w-full h-auto"
-          src="./resources/isotipo-animado.svg"
-          alt=""
-        />
-      </picture>
-    </div>
+    } -->
+  <div class="h-full w-full flex justify-center items-center relative">
+    <picture class="w-[70%]">
+      <source
+        srcset="./resources/Logotipo-animado.svg"
+        type="image/svg+xml"
+        media="(min-width: 600px)"
+      />
+      <img
+        class="w-full h-auto"
+        src="./resources/isotipo-animado.svg"
+        alt=""
+      />
+    </picture>
   </div>
+  <!--  </div> -->
 </section>
 
 <style>

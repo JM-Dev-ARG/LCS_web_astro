@@ -3,8 +3,6 @@ const path = Astro.url.pathname;
 const basePath = path.split("/")[1];
 const result = `/${basePath}`;
 
-
-
 import SliderServicesPatrimoniales from "./SliderServicesPatrimoniales.astro";
 import SliderServicesPersonas from "./SliderServicesPersonas.astro";
 type Props = {
@@ -12,52 +10,76 @@ type Props = {
   title2: string;
   title3: string;
   title4: string;
+  title5: string;
+  title6: string;
   datacontent1: string;
   datacontent2: string;
   datacontent3: string;
   datacontent4: string;
+  datacontent5: string;
+  datacontent6: string;
   datacolor1: string;
   datacolor2: string;
   datacolor3: string;
   datacolor4: string;
+  datacolor5: string;
+  datacolor6: string;
   dataimgbackground1: string;
   dataimgbackground2: string;
   dataimgbackground3: string;
   dataimgbackground4: string;
+  dataimgbackground5: string;
+  dataimgbackground6: string;
   dataimgposition1: string;
   dataimgposition2: string;
   dataimgposition3: string;
   dataimgposition4: string;
+  dataimgposition5: string;
+  dataimgposition6: string;
   dataform1: string;
   dataform2: string;
   dataform3: string;
   dataform4: string;
+  dataform5: string;
+  dataform6: string;
 };
 const {
   title1,
   title2,
   title3,
   title4,
+  title5,
+  title6,
   datacontent1,
   datacontent2,
   datacontent3,
   datacontent4,
+  datacontent5,
+  datacontent6,
   datacolor1,
   datacolor2,
   datacolor3,
   datacolor4,
+  datacolor5,
+  datacolor6,
   dataimgbackground1,
   dataimgbackground2,
   dataimgbackground3,
   dataimgbackground4,
+  dataimgbackground5,
+  dataimgbackground6,
   dataimgposition1,
   dataimgposition2,
   dataimgposition3,
   dataimgposition4,
+  dataimgposition5,
+  dataimgposition6,
   dataform1,
   dataform2,
   dataform3,
   dataform4,
+  dataform5,
+  dataform6,
 } = Astro.props;
 ---
 
@@ -75,7 +97,7 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('${dataimgbackground1}')] bg-contain bg-[right_bottom] bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('./img/proteccion.avif')] bg-contain bg-[right_bottom] bg-no-repeat`
     >
     </div>
     <div class="absolute ver__mas">
@@ -96,7 +118,7 @@ const {
     </div>
 
     <div
-      class=`absolute w-full h-full bg-[url('${dataimgbackground2}')] bg-cover lg:bg-contain bg-right-bottom bg-no-repeat`
+      class=`absolute w-full h-full bg-[url('./img/libre.avif')] bg-cover lg:bg-contain bg-right-bottom bg-no-repeat`
     >
     </div>
     <div class="absolute ver__mas">
@@ -116,14 +138,11 @@ const {
       <p class="text-gray-50 texto font-light">{title3}</p>
     </div>
 
-    {
-      result === "/patrimoniales" ?  
-      <div class=`absolute w-full h-full bg-[url('${dataimgbackground3}')] bg-cover bg-[center_bottom_-100px] bg-no-repeat`    >
-    </div>  : <div
-      class= `absolute w-full h-full bg-[url('${dataimgbackground3}')] bg-cover bg-[right_bottom_-50px] bg-no-repeat`    
+    <div
+      class=`absolute w-full h-full bg-[url('./img/retiro.avif')] bg-cover bg-[right_bottom] 2xl:bg-[right_bottom_-50px] bg-no-repeat`
     >
     </div>
-    }
+
     <!-- -->
     <div class="absolute ver__mas">
       <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
@@ -143,13 +162,54 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('${dataimgbackground4}')] bg-cover bg-[right_bottom] 2xl:bg-[right_-40px_bottom_-20px] bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('./img/educativo.avif')] bg-contain bg-[right_bottom]  bg-no-repeat`
     >
     </div>
     <div class="absolute ver__mas">
       <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
     </div>
   </button>
+  <button
+    class="card5 card"
+    data-content={datacontent5}
+    data-color={datacolor5}
+    data-img-background={dataimgbackground5}
+    data-img-position={dataimgposition5}
+    data-form={dataform5}
+  >
+    <div class="w-full h-full flex ml-4">
+      <p class="text-gray-50 texto font-light">{title5}</p>
+    </div>
+
+    <div
+      class=`absolute  w-full h-full bg-[url('./img/independencia.avif')] bg-cover bg-[right_bottom] 2xl:bg-[right_-20px_bottom_-130px] bg-no-repeat`
+    >
+    </div>
+    <div class="absolute ver__mas">
+      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
+    </div>
+  </button>
+  <button
+    class="card6 card"
+    data-content={datacontent6}
+    data-color={datacolor6}
+    data-img-background={dataimgbackground6}
+    data-img-position={dataimgposition6}
+    data-form={dataform6}
+  >
+    <div class="w-full h-full flex ml-4">
+      <p class="text-gray-50 texto font-light">{title6}</p>
+    </div>
+
+    <div
+      class=`absolute  w-full h-full bg-[url('./img/emprendedor.avif')] bg-cover bg-[right_bottom] 2xl:bg-[right_bottom_-20px] bg-no-repeat`
+    >
+    </div>
+    <div class="absolute ver__mas">
+      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
+    </div>
+  </button>
+
   <!-- <button
           class="card5 card"
           data-content="Caucion"
@@ -261,7 +321,7 @@ const {
   >
     <img
       id="modal-info-img"
-      class="absolute w-full h-full opacity-30 object-contain -bottom-2"
+      class="absolute w-full h-full opacity-30 object-cover"
       alt=""
     />
     <div
@@ -283,10 +343,12 @@ const {
         </button>
       </form>
       <div class="w-full h-[calc(100%-52px)] flex justify-center items-center">
-        <div class="w-[80%] h-full flex flex-col justify-around items-center">
+        <div
+          class="w-[80%] h-full flex flex-col justify-center items-center gap-10"
+        >
           <p
             id="modal-info-content"
-            class="text-gray-50 font-extralight text-[clamp(18px,3vw,22px)] text-left"
+            class="text-gray-50 font-light mix-blend-difference text-[clamp(18px,3vw,22px)] text-left"
           >
           </p>
           <a
@@ -319,7 +381,7 @@ const {
     grid:
       "card1 card1 card1 card1 card1 card1 card2 card2 card2 card2 card2 card2" 1fr
       "card3 card3 card3 card3 card3 card4 card4 card4 card4 card4 card4 card4" 1fr
-      /* "card5 card5 card5 card5 card5 card5 card5 card5 card6 card6 card6 card6" 1fr */
+      "card5 card5 card5 card5 card5 card5 card5 card6 card6 card6 card6 card6" 1fr
       /* "card8 card8 card8 card8 card8 card8 card8 card9 card9 card9 card9 card9" 1fr */
       / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 18px;
@@ -338,6 +400,7 @@ const {
     width: 100%;
     min-height: 300px;
     max-height: 550px;
+
     border-radius: 20px;
 
     transition: all 0.3s linear;
@@ -355,7 +418,9 @@ const {
     }
 
     .texto {
-      font-size: clamp(30px, 5vw, 42px);
+      font-size: clamp(20px, 3.3vw, 30px);
+      font-weight: 400;
+      z-index: 30;
     }
   }
 
@@ -376,28 +441,60 @@ const {
 
   .card1 {
     grid-area: card1;
-    background-color: #6fa29d;
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #6fa29d 52%,
+      #96b6b3 100%
+    );
   }
   .card2 {
     grid-area: card2;
-    background-color: #1d1e1c;
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #1d1e1c 39%,
+      #686868 100%
+    );
   }
   .card3 {
     grid-area: card3;
-    background-color: #e8abac;
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #eb8284 39%,
+      #e8abac 100%
+    );
   }
   .card4 {
     grid-area: card4;
-    background-color: #18403e;
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #18403e 39%,
+      #349792 100%
+    );
   }
   .card5 {
     grid-area: card5;
-    background-color: #e8abac;
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #ed6f5f 39%,
+      #f6ada3 100%
+    );
   }
   .card6 {
     grid-area: card6;
-    background-color: #f05759;
+
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #6fa29d 52%,
+      #96b6b3 100%
+    );
   }
+
   .card7 {
     grid-area: card7;
 
@@ -489,7 +586,6 @@ const {
       btn.addEventListener("click", () => {
         const bgColor = btn.getAttribute("data-color");
         const data = btn.getAttribute("data-content");
-        console.log(data);
 
         const img = btn.getAttribute("data-img-background");
         const position = btn.getAttribute("data-img-position");

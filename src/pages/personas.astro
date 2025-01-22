@@ -5,7 +5,7 @@ import Presentacion from "../components/servicePages/Presentacion.astro";
 import Services from "../components/servicePages/Services.astro";
 import LayoutServicios from "../layouts/LayoutServicios.astro";
 import data from "../data/bentoPersonas.json";
-import BentoServices from "../components/servicePages/BentoServices.astro";
+import BentoPersonas from "../components/servicePages/BentoPersonas.astro";
 ---
 
 <LayoutServicios title="LCS - Seguros de Personas">
@@ -17,45 +17,60 @@ import BentoServices from "../components/servicePages/BentoServices.astro";
       className="bg-[top_center]"
     />
     <Services>
-      <BentoServices
+      <BentoPersonas
         title1={data.title1}
         title2={data.title2}
         title3={data.title3}
         title4={data.title4}
+        title5={data.title5}
+        title6={data.title6}
         datacontent1={data.datacontent1}
         datacontent2={data.datacontent2}
         datacontent3={data.datacontent3}
         datacontent4={data.datacontent4}
+        datacontent5={data.datacontent5}
+        datacontent6={data.datacontent6}
         datacolor1={data.datacolor1}
         datacolor2={data.datacolor2}
         datacolor3={data.datacolor3}
         datacolor4={data.datacolor4}
+        datacolor5={data.datacolor5}
+        datacolor6={data.datacolor6}
         dataimgbackground1={data.dataimgbackground1}
         dataimgbackground2={data.dataimgbackground2}
         dataimgbackground3={data.dataimgbackground3}
         dataimgbackground4={data.dataimgbackground4}
+        dataimgbackground5={data.dataimgbackground5}
+        dataimgbackground6={data.dataimgbackground6}
         dataimgposition1={data.dataimgposition1}
         dataimgposition2={data.dataimgposition2}
         dataimgposition3={data.dataimgposition3}
         dataimgposition4={data.dataimgposition4}
+        dataimgposition5={data.dataimgposition5}
+        dataimgposition6={data.dataimgposition6}
         dataform1={data.dataform1}
         dataform2={data.dataform2}
         dataform3={data.dataform3}
         dataform4={data.dataform4}
+        dataform5={data.dataform5}
+        dataform6={data.dataform6}
       />
     </Services>
 
-    <Presentacion image="/resources/planifica_mejor_logo.svg">
+    <Presentacion
+      image="/resources/planifica_mejor_logo.svg"
+      bgColor="bg-[#cdfacf]"
+      border="border-[#4cabad]"
+    >
       <p>
-        <span class="font-normal text-[#1a6dc0]"
+        <span class="font-medium text-[#386885]"
           >Especialista en seguros de personas y desarrollo económico
           multinivel.</span
         ><br />
         La meta es lograr que las personas y empresas cumplan sus objetivos financieros
         utilizando planificaciones confiables y transparentes con el respaldo de
-        aseguradoras y brokers de primera línea y experiencia. El mejor aliado para
-        lograr tu
-        <span class="font-normal text-[#1a6dc0]"
+        aseguradoras de primera línea. El mejor aliado para lograr tu
+        <span class="font-medium text-[#386885]"
           >salud e independencia financiera.</span
         >
       </p>

@@ -5,7 +5,8 @@ import Presentacion from "../components/servicePages/Presentacion.astro";
 import Services from "../components/servicePages/Services.astro";
 import LayoutServicios from "../layouts/LayoutServicios.astro";
 import data from "../data/bentoPatrimoniales.json";
-import BentoServices from "../components/servicePages/BentoServices.astro";
+
+import BentoPatrimonio from "../components/servicePages/BentoPatrimonio.astro";
 ---
 
 <LayoutServicios title="LCS - Seguros Patrimoniales">
@@ -16,19 +17,34 @@ import BentoServices from "../components/servicePages/BentoServices.astro";
       image="/img/img-patrimoniales.avif"
     />
     <Services>
-      <BentoServices
+      <BentoPatrimonio
         title1={data.title1}
         title2={data.title2}
         title3={data.title3}
         title4={data.title4}
+        title5={data.title5}
+        title6={data.title6}
+        title7={data.title7}
+        title8={data.title8}
+        title9={data.title9}
         datacontent1={data.datacontent1}
         datacontent2={data.datacontent2}
         datacontent3={data.datacontent3}
         datacontent4={data.datacontent4}
+        datacontent5={data.datacontent5}
+        datacontent6={data.datacontent6}
+        datacontent7={data.datacontent7}
+        datacontent8={data.datacontent8}
+        datacontent9={data.datacontent9}
         datacolor1={data.datacolor1}
         datacolor2={data.datacolor2}
         datacolor3={data.datacolor3}
         datacolor4={data.datacolor4}
+        datacolor5={data.datacolor5}
+        datacolor6={data.datacolor6}
+        datacolor7={data.datacolor7}
+        datacolor8={data.datacolor8}
+        datacolor9={data.datacolor9}
         dataimgbackground1={data.dataimgbackground1}
         dataimgbackground2={data.dataimgbackground2}
         dataimgbackground3={data.dataimgbackground3}
@@ -37,22 +53,48 @@ import BentoServices from "../components/servicePages/BentoServices.astro";
         dataimgposition2={data.dataimgposition2}
         dataimgposition3={data.dataimgposition3}
         dataimgposition4={data.dataimgposition4}
+        dataimgposition5={data.dataimgposition5}
+        dataimgposition6={data.dataimgposition6}
+        dataimgposition7={data.dataimgposition7}
+        dataimgposition8={data.dataimgposition8}
+        dataimgposition9={data.dataimgposition9}
         dataform1={data.dataform1}
         dataform2={data.dataform2}
         dataform3={data.dataform3}
         dataform4={data.dataform4}
+        dataform5={data.dataform5}
+        dataform6={data.dataform6}
+        dataform7={data.dataform7}
+        dataform8={data.dataform8}
+        dataform9={data.dataform9}
       />
     </Services>
 
-    <Presentacion image="/resources/cebrokers_logo.svg">
-      <p class="text-[clamp(18px,2vw,30px)] font-light text-pretty">
-        <span class="font-normal text-[#1a6dc0]"
-          >15 años de experiencia en el mercado y más de 9.000 clientes</span
-        >, que confían en nosotros. Brindamos asesoramiento personalizado y
-        <span class="font-normal text-[#1a6dc0]">!aseguramos tu mundo!</span>
+    <Presentacion
+      image="/resources/cebrokers_logo.svg"
+      border="#0E206C"
+      bgColor="bg-[#3379f6]"
+    >
+      <p>
+        Con más de <span class="resaltado">15 años de experiencia</span>, mas de
+        <span class="resaltado">40.000 clientes satisfechos</span>, más de <span
+          >20 aseguradoras</span
+        > líderes que nos avalan y un equipo jóven de más de <span
+          class="resaltado">50 expertos</span
+        >, te brindamos soluciones personalizadas e integrales. En <span
+          class="resaltado"
+          >CEBROKERS, aseguramos tu mundo y seguimos avanzando.</span
+        >
       </p>
     </Presentacion>
 
     <FooterServices />
   </main>
 </LayoutServicios>
+
+<style>
+  .resaltado {
+    color: #3379f6;
+    font-weight: 500;
+  }
+</style>

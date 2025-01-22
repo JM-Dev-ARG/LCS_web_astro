@@ -6,7 +6,7 @@ import Container from "../reutilizables/Container.astro";
   id="about"
   class="about relative w-full h-auto place-content-center mx-auto overflow-hidden z-10 bg-[#fff5eb]"
 >
-  <div
+  <!--   <div
     class="absolute size-[600px] -bottom-20 -left-[400px] rotate-[135deg] opacity-20"
   >
     <img
@@ -23,7 +23,7 @@ import Container from "../reutilizables/Container.astro";
       src="/resources/flechas-rojo-verde.svg"
       alt=""
     />
-  </div>
+  </div> -->
   <Container classname="relative z-10 ">
     <div
       class="h-auto w-full xl:w-[90%] flex flex-col lg:flex-row mt-40 md:mt-36 gap-12 justify-center mb-20"
@@ -52,13 +52,15 @@ import Container from "../reutilizables/Container.astro";
         </div>
       </div>
 
-      <div class="w-[80%] mx-auto lg:mx-0 lg:w-1/2 lg:mt-40 xl:mt-52 h-auto">
+      <div class="w-[80%] mx-auto lg:mx-0 lg:w-1/2 lg:mt-52 xl:mt-60 h-auto">
         <div class="leading-none mb-6">
-          <h2 class="title2 title2--light mb-2">Tu nueva amiga en el</h2>
+          <h2 class="title2 title2--light mb-2">Tu nueva aliada en el</h2>
           <h2 class="title2 title2--bold">Mundo Asegurador.</h2>
         </div>
 
-        <div class="mb-4 md:mb-8 text-pretty text-justify">
+        <div
+          class="mb-4 md:mb-8 text-pretty text-justify text-[clamp(14px,3vw,20px)] font-light"
+        >
           <p class="mb-2">
             Hace unos años me animé a abrir un espacio libre y gratuito para que
             todos puedan aprender sobre seguros y aplicarlos a su vida …. y WOW

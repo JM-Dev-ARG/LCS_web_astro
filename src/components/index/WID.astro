@@ -18,18 +18,18 @@ const textTitle = " Asegurarse es la nueva moda";
   >
     <div class="">
       <img
-        class="hidden md:block w-auto h-[calc(100%/4)] absolute top-1/2 -left-2 translate-y-[-50%] opacity-30 z-[1]"
+        class="hidden md:block w-auto h-[calc(100%/2)] absolute top-0 -left-1 translate-y-[-50%] opacity-30 z-[1]"
         src="/resources/medio-espiral.svg"
         alt=""
       />
     </div>
-    <div>
+    <!-- <div>
       <img
         class="hidden md:block w-auto h-[calc(100%/7)] absolute bottom-28 -left-16 rotate-[-30deg] opacity-30"
         src="/resources/corazon-paragua.svg"
         alt=""
       />
-    </div>
+    </div> -->
     <div>
       <img
         class="hidden lg:block w-auto h-[calc(100%/4)] absolute bottom-0 -right-2 opacity-60"
@@ -40,7 +40,7 @@ const textTitle = " Asegurarse es la nueva moda";
 
     <Container>
       <div class="mx-auto w-full mt-10">
-        <TitleWid text={textTitle} />
+        <!-- <TitleWid text={textTitle} /> -->
 
         <div class="hidden relative z-20 md:grid w-full place-content-center">
           <div
@@ -79,44 +79,62 @@ const textTitle = " Asegurarse es la nueva moda";
           class="w-full flex justify-center items-center my-14 relative z-10"
         >
           <div
-            class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 items-center w-full lg:w-[75%] 2xl:w-[55%]"
+            class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 items-center w-full md:w-[70%] lg:w-[80%]"
           >
-            <div class="bg-[#fef0e9] rounded-full overflow-hidden">
+            <div class="bg-[#fef0e9] rounded-full overflow-hidden min-w-fit">
               <img
-                class="object-cover w-[180px] h-[180px] md:w-[200px] md:h-[200px]"
+                class="object-cover w-[150px] h-[150px]"
                 src="/img/e-cute.avif"
                 alt=""
               />
             </div>
-            <div
-              class="grid place-items-center w-auto lg:inline lg:w-[calc(100%-300px)]"
+
+            <!--  <div
+              class="grid place-items-center w-auto md:flex flex-wrap lg:w-[70%] gap-x-3"
             >
               {
                 data.map((item, index) => {
                   return (
-                    <div
-                      class="text-gray-50 text-[clamp(18px,2.1vw,20px)] inline-flex
-              items-center gap-2 mr-3 historia-item opacity-30"
+                    <span
+                      class="text-gray-50 text-[clamp(15px,2.1vw,18px)] 
+                historia-item opacity-30  flex items-center gap-2 whitespace-nowrap "
                     >
-                      <p>{item.text}</p>{" "}
+                      {item.text}
                       {index !== data.length - 1 && (
-                        <span>
-                          <img
-                            class="h-[clamp(18px,2.1vw,20px)] w-auto"
-                            src="/resources/flecha-texto.svg"
-                            alt=""
-                          />{" "}
-                        </span>
-                      )}
-                    </div>
+                        <img
+                          class="h-[clamp(15px,2.1vw,18px)] min-w-[13px]"
+                          src="/resources/flecha-texto.svg"
+                          alt=""
+                        />
+                      )}{" "}
+                    </span>
                   );
                 })
+              }
+            </div> -->
+
+            <div
+              class="flex max-w-full items-center flex-wrap gap-x-2 w-full text-gray-50 text-[clamp(15px,2.1vw,18px)] bg-blue-500"
+            >
+              {
+                data.map((item, index) => (
+                  <span class="flex items-center gap-2 text-nowrap">
+                    <span>{item.text}</span>
+                    {index !== data.length - 1 && (
+                      <img
+                        class="h-[clamp(15px,2.1vw,18px)] "
+                        src="/resources/flecha-texto.svg"
+                        alt=""
+                      />
+                    )}
+                  </span>
+                ))
               }
             </div>
           </div>
         </div>
 
-        <div
+        <!--         <div
           id="guia_descarga"
           class="w-full place-items-center mx-auto mb-8 relative z-10"
         >
@@ -144,69 +162,73 @@ const textTitle = " Asegurarse es la nueva moda";
             title2="Aprendé a leer tu póliza"
           />
         </div>
+      </div> -->
       </div>
     </Container>
   </div>
+  <style>
+    .wid {
+      background-image: linear-gradient(180deg, #518d87 33%, #c86363 100%);
+    }
+    .texto {
+      padding-inline: 5px;
+      width: 100%;
+      font-size: 18px;
+      font-weight: 300;
+      color: azure;
+      text-align: left;
+      text-wrap: pretty;
+    }
+    .texto :nth-child(1) {
+      margin-bottom: 16px;
+    }
+
+    .historia-item-animation {
+      opacity: 0.3;
+      animation: animationHistoria 3s ease-in-out infinite;
+    }
+
+    @keyframes animationHistoria {
+      0% {
+        opacity: 0.3;
+      }
+      20% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0.3;
+      }
+    }
+
+    .over-word {
+      overflow-wrap: anywhere;
+    }
+    .cursor__personalizado {
+      cursor: url("/resources/scroll-icon.svg"), auto;
+    }
+  </style>
+  <script>
+    document.addEventListener("astro:page-load", () => {
+      const historiaItems = document.querySelectorAll(".historia-item");
+      let currentIndex = 0;
+
+      function animateItems() {
+        historiaItems.forEach((item, index) => {
+          item.classList.remove("historia-item-animation");
+          if (index === currentIndex) {
+            item.classList.add("historia-item-animation");
+          }
+        });
+
+        currentIndex = (currentIndex + 1) % historiaItems.length;
+      }
+
+      setInterval(animateItems, 3000);
+      animateItems();
+    });
+  </script>
 </section>
-<style>
-  .wid {
-    background-image: linear-gradient(180deg, #518d87 33%, #c86363 100%);
-  }
-  .texto {
-    padding-inline: 5px;
-    width: 100%;
-    font-size: 18px;
-    font-weight: 300;
-    color: azure;
-    text-align: left;
-    text-wrap: pretty;
-  }
-  .texto :nth-child(1) {
-    margin-bottom: 16px;
-  }
-
-  .historia-item-animation {
-    opacity: 0.3;
-    animation: animationHistoria 3s ease-in-out infinite;
-  }
-
-  @keyframes animationHistoria {
-    0% {
-      opacity: 0.3;
-    }
-    20% {
-      opacity: 1;
-    }
-    80% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0.3;
-    }
-  }
-
-  .cursor__personalizado {
-    cursor: url("/resources/scroll-icon.svg"), auto;
-  }
-</style>
-<script>
-  document.addEventListener("astro:page-load", () => {
-    const historiaItems = document.querySelectorAll(".historia-item");
-    let currentIndex = 0;
-
-    function animateItems() {
-      historiaItems.forEach((item, index) => {
-        item.classList.remove("historia-item-animation");
-        if (index === currentIndex) {
-          item.classList.add("historia-item-animation");
-        }
-      });
-
-      currentIndex = (currentIndex + 1) % historiaItems.length;
-    }
-
-    setInterval(animateItems, 3000);
-    animateItems();
-  });
-</script>

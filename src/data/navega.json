@@ -23,10 +23,5 @@
         "href": "/viajes",
         "label": "Seguros de Viajes",
         "target": "_self"
-    },
-    {
-        "href": "/#medios",
-        "label": "En los Medios",
-        "target": "_self"
     }
 ]

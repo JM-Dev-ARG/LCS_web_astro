@@ -2,19 +2,19 @@
     {
         "title": "PATRIMONIALES",
         "description": "Todo lo que tenés o construiste te ha costado muchísimo esfuerzo y dinero. Mirá si no vas a asegurarlo bien!",
-        "image": "./img/img-patrimoniales.avif",
+        "image": "../../public/img/img-patrimoniales.avif",
         "url": "/patrimoniales"
     },
     {
         "title": "PERSONAS",
         "description": "La vida es eso que pasa mientras estás dudando en asegurarla.",
-        "image": "./img/img-personas.avif",
+        "image": "../../public/img/img-personas.avif",
         "url": "/personas"
     },
     {
         "title": "VIAJES",
         "description": "Emprender un viaje, no importa el tiempo o el destino, es ir en busca de momentos inolvidables. No te pierdas de vivirlos porque no te aseguraste. Aseguramos cualquier viaje, 24hs en todo el planeta. Cotiza tu aventura!",
-        "image": "./img/img-viajes.avif",
+        "image": "../../public/img/img-viajes.avif",
         "url": "/viajes"
     }
 ]
