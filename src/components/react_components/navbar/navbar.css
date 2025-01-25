@@ -7,7 +7,7 @@
 
 .menu__toggle {
   z-index: 50;
-  --icon-toggle-menu: url("./svg/menu_open.svg");
+  --icon-toggle-menu: url("./public/svg/menu_open.svg");
   background-image: var(--icon-toggle-menu);
   filter: var(--filter);
   display: flex;

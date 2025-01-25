@@ -3,10 +3,9 @@ const path = Astro.url.pathname;
 const basePath = path.split("/")[1];
 const result = `/${basePath}`;
 
-
-
 import SliderServicesPatrimoniales from "./SliderServicesPatrimoniales.astro";
 import SliderServicesPersonas from "./SliderServicesPersonas.astro";
+
 type Props = {
   title1: string;
   title2: string;
@@ -24,47 +23,17 @@ type Props = {
   datacontent5: string;
   datacontent6: string;
   datacontent7: string;
-    datacontent8: string;
-    datacontent9: string;
-  datacolor1: string;
-  datacolor2: string;
-  datacolor3: string;
-  datacolor4: string;
-  datacolor5: string;
-  datacolor6: string;
-    datacolor7: string;
-    datacolor8: string;
-    datacolor9: string;
-  dataimgbackground1: string;
-  dataimgbackground2: string;
-  dataimgbackground3: string;
-  dataimgbackground4: string;
-  dataimgbackground5: string;
-  dataimgbackground6: string;
-    dataimgbackground7: string;
-    dataimgbackground8: string;
-    dataimgbackground9: string;
-  dataimgposition1: string;
-  dataimgposition2: string;
-  dataimgposition3: string;
-  dataimgposition4: string;
-  dataimgposition5: string;
-  dataimgposition6: string;
-    dataimgposition7: string;
-    dataimgposition8: string;
-    dataimgposition9: string;
-
+  datacontent8: string;
+  datacontent9: string;
   dataform1: string;
   dataform2: string;
   dataform3: string;
   dataform4: string;
   dataform5: string;
   dataform6: string;
-    dataform7: string;
-    dataform8: string;
-    dataform9: string;
-
-
+  dataform7: string;
+  dataform8: string;
+  dataform9: string;
 };
 const {
   title1,
@@ -83,326 +52,406 @@ const {
   datacontent5,
   datacontent6,
   datacontent7,
-    datacontent8,
-    datacontent9,
-  datacolor1,
-  datacolor2,
-  datacolor3,
-  datacolor4,
-  datacolor5,
-  datacolor6,
-    datacolor7,
-    datacolor8,
-    datacolor9,
-  dataimgbackground1,
-  dataimgbackground2,
-  dataimgbackground3,
-  dataimgbackground4,
-  dataimgbackground5,
-  dataimgbackground6,
-    dataimgbackground7,
-    dataimgbackground8, 
-    dataimgbackground9,
-  dataimgposition1,
-  dataimgposition2,
-  dataimgposition3,
-  dataimgposition4,
-  dataimgposition5,
-  dataimgposition6,
-    dataimgposition7,
-    dataimgposition8, 
-    dataimgposition9,
+  datacontent8,
+  datacontent9,
+
   dataform1,
   dataform2,
   dataform3,
   dataform4,
   dataform5,
   dataform6,
-    dataform7,
-    dataform8,
-    dataform9,
-
+  dataform7,
+  dataform8,
+  dataform9,
 } = Astro.props;
 ---
 
-<div class="hidden md:grid grid__container w-full xl:w-[70%] my-10 ">
-  <button
+<div class="hidden md:grid grid__container w-full xl:w-[70%] my-10">
+  <div
     class="card1 card justify-end"
     data-content={datacontent1}
-    data-color={datacolor1}
-    data-img-background={dataimgbackground1}
-    data-img-position={dataimgposition1}
-    data-form={dataform1}
   >
-    <div class="w-full h-full flex ml-4">
+    <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title1}</p>
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('${dataimgbackground1}')] bg-contain bg-[right_bottom] bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('/img/auto.avif')] bg-contain bg-[right_bottom] bg-no-repeat`
     >
     </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
+    <a
+      href={dataform1}
+      class="ver__mas"
+    >
+      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
+        {datacontent1}
+      </p>
+      <p
+        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
+      >
+        Solicita tu cotización <span
+          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
+        >
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
+        >
+      </p>
+    </a>
+  </div>
 
-  <button
+  <div
     class="card2 card"
     data-content={datacontent2}
-    data-color={datacolor2}
-    data-img-background={dataimgbackground2}
-    data-img-position={dataimgposition2}
-    data-form={dataform2}
   >
-    <div class="w-full h-full flex ml-4">
+    <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title2}</p>
     </div>
 
     <div
-      class=`absolute w-full h-full bg-[url('${dataimgbackground2}')] bg-cover lg:bg-contain bg-right-bottom bg-no-repeat`
+      class=`absolute w-full h-full bg-[url('/img/moto.avif')] bg-cover lg:bg-contain bg-right-bottom bg-no-repeat`
     >
     </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
+    <a
+      href={dataform2}
+      class="ver__mas"
+    >
+      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
+        {datacontent2}
+      </p>
+      <p
+        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
+      >
+        Solicita tu cotización <span
+          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
+        >
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
+        >
+      </p>
+    </a>
+  </div>
 
-  <button
+  <div
     class="card3 card"
     data-content={datacontent3}
-    data-color={datacolor3}
-    data-img-background={dataimgbackground3}
-    data-img-position={dataimgposition3}
-    data-form={dataform3}
   >
-    <div class="w-full h-full flex ml-4">
+    <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title3}</p>
     </div>
 
-    {
-      result === "/patrimoniales" ?  
-      <div class=`absolute w-full h-full bg-[url('${dataimgbackground3}')] bg-cover bg-[center_bottom_-100px] bg-no-repeat` >
-    </div>  : <div
-      class= `absolute w-full h-full bg-[url('${dataimgbackground3}')] bg-cover bg-[right_bottom] bg-no-repeat`    
+    <div
+      class=`absolute w-full h-full bg-[url('/img/art.avif')] bg-cover scale-x-[-1] bg-contain bg-no-repeat`
     >
     </div>
-    }
-    <!-- -->
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
 
-  <button
+    <a
+      href={dataform3}
+      class="ver__mas"
+    >
+      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
+        {datacontent3}
+      </p>
+      <p
+        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
+      >
+        Solicita tu cotización <span
+          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
+        >
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
+        >
+      </p>
+    </a>
+  </div>
+
+  <div
     class="card4 card"
     data-content={datacontent4}
-    data-color={datacolor4}
-    data-img-background={dataimgbackground4}
-    data-img-position={dataimgposition4}
-    data-form={dataform4}
   >
-    <div class="w-full h-full flex ml-4">
+    <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title4}</p>
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('${dataimgbackground4}')] bg-contain bg-[right_bottom]  bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('/img/hogar.avif')] bg-contain bg-[right_bottom]  bg-no-repeat`
     >
     </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
-  <button
+    <a
+      href={dataform4}
+      class="ver__mas"
+    >
+      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
+        {datacontent4}
+      </p>
+      <p
+        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
+      >
+        Solicita tu cotización <span
+          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
+        >
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
+        >
+      </p>
+    </a>
+  </div>
+  <div
     class="card5 card"
     data-content={datacontent5}
-    data-color={datacolor5}
-    data-img-background={dataimgbackground5}
-    data-img-position={dataimgposition5}
-    data-form={dataform5}
   >
-    <div class="w-full h-full flex ml-4">
+    <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title5}</p>
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('${dataimgbackground5}')] bg-cover  bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('/img/urbano.avif')] bg-cover bg-[right_20%_bottom]  bg-no-repeat`
     >
     </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
-  <button
+    <a
+      href={dataform5}
+      class="ver__mas"
+    >
+      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
+        {datacontent5}
+      </p>
+      <p
+        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
+      >
+        Solicita tu cotización <span
+          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
+        >
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
+        >
+      </p>
+    </a>
+  </div>
+  <div
     class="card6 card"
     data-content={datacontent6}
-    data-color={datacolor6}
-    data-img-background={dataimgbackground6}
-    data-img-position={dataimgposition6}
-    data-form={dataform6}
   >
-    <div class="w-full h-full flex ml-4">
+    <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title6}</p>
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('${dataimgbackground6}')] bg-cover bg-[right_bottom] 2xl:bg-[right_-40px_bottom_-20px] bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('/img/celular.avif')] bg-cover bg-[right_bottom]  bg-no-repeat`
     >
     </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
-    <button
+    <a
+      href={dataform6}
+      class="ver__mas"
+    >
+      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
+        {datacontent6}
+      </p>
+      <p
+        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
+      >
+        Solicita tu cotización <span
+          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
+        >
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
+        >
+      </p>
+    </a>
+  </div>
+  <div
     class="card7 card"
     data-content={datacontent7}
-    data-color={datacolor7}
-    data-img-background={dataimgbackground7}
-    data-img-position={dataimgposition7}
-    data-form={dataform7}
   >
-    <div class="w-full h-full flex ml-4">
+    <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title7}</p>
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('${dataimgbackground7}')] bg-cover bg-[right_bottom] 2xl:bg-[right_-40px_bottom_-20px] bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('/img/asistencia.avif')] bg-cover bg-[right_40%_bottom]  bg-no-repeat`
     >
     </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
-   </button>
-    <button
+    <a
+      href={dataform7}
+      class="ver__mas"
+    >
+      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
+        {datacontent7}
+      </p>
+      <p
+        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
+      >
+        Solicita tu cotización <span
+          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
+        >
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
+        >
+      </p>
+    </a>
+  </div>
+
+  <div
     class="card8 card"
     data-content={datacontent8}
-    data-color={datacolor8}
-    data-img-background={dataimgbackground8}
-    data-img-position={dataimgposition8}
-    data-form={dataform8}
   >
-    <div class="w-full h-full flex ml-4">
+    <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title8}</p>
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('${dataimgbackground8}')] bg-cover bg-[right_bottom] 2xl:bg-[right_-40px_bottom_-20px] bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('/img/comercio.avif')] bg-contain bg-[right_bottom_-10px]  bg-no-repeat`
     >
     </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
-   </button>
-    <button
+    <a
+      href={dataform8}
+      class="ver__mas"
+    >
+      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
+        {datacontent8}
+      </p>
+      <p
+        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
+      >
+        Solicita tu cotización <span
+          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
+        >
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
+        >
+      </p>
+    </a>
+  </div>
+
+  <div
     class="card9 card"
     data-content={datacontent9}
-    data-color={datacolor9}
-    data-img-background={dataimgbackground9}
-    data-img-position={dataimgposition9}
-    data-form={dataform9}
   >
-    <div class="w-full h-full flex ml-4">
+    <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title9}</p>
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('${dataimgbackground9}')] bg-cover bg-[right_bottom] 2xl:bg-[right_-40px_bottom_-20px] bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('/img/consorcio.avif')] bg-cover bg-[right_bottom] 2xl:bg-[right_-40px_bottom_-20px] bg-no-repeat`
     >
     </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
-  <!-- <button
-          class="card5 card"
-          data-content="Caucion"
-          data-color="#e8abac"
-          data-img-background="/img/caucion.avif"
-          data-img-position="right bottom"
+    <a
+      href={dataform9}
+      class="ver__mas"
+    >
+      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
+        {datacontent9}
+      </p>
+      <p
+        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
+      >
+        Solicita tu cotización <span
+          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
         >
-          <div class="w-full h-full flex ml-4">
-            <p class="text-gray-50 texto font-light">CAUCION</p>
-          </div>
-
-          <div
-            class="absolute w-full h-full bg-[url('/img/caucion.avif')] bg-[right_-20px_bottom] 2xl:bg-[right_bottom] bg-cover bg-no-repeat"
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
           >
-          </div>
-          <div class="absolute ver__mas">
-            <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-          </div>
-        </button>
-
-        <button
-          class="card6 card"
-          data-content="Consorcio"
-          data-color="#f05759"
-          data-img-background="/img/consorcio2.avif"
-          data-img-position="bottom"
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
         >
-          <div class="w-full h-full flex justify-center items-start px-[10px]">
-            <p class="text-gray-50 texto font-light">CONSORCIO</p>
-          </div>
-
-          <div
-            class="absolute w-full h-full bg-[url('/img/consorcio.avif')] bg-cover bg-[center_bottom_-50px] bg-no-repeat"
-          >
-          </div>
-          <div class="absolute ver__mas">
-            <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-          </div>
-        </button> -->
-  <!-- 
-        <button
-          class="card7 card"
-          data-content="Accidentes"
-          data-color="#1d1e1c"
-          data-img-background="/img/retiro.avif"
-          data-img-position="right bottom"
-        >
-          <div class="w-full h-full flex justify-end mr-4">
-            <p class="text-gray-50 texto font-light">ACCIDENTES</p>
-          </div>
-
-          <div
-            class="absolute w-full h-full bg-[url('/img/retiro.avif')] bg-cover bg-[right_-80px_bottom] lg:bg-[right_-10px_bottom] 2xl:bg-[right_-10px_bottom_-20px] bg-no-repeat"
-          >
-          </div>
-          <div class="absolute ver__mas">
-            <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-          </div>
-        </button> -->
-
-  <!-- <button class="card8 card">
-        <div class="w-full h-full flex ml-4">
-          <p class="text-gray-50 texto font-light">I. COMERCIO</p>
-        </div>
-
-        <div
-          class="absolute w-full h-full bg-[url('/img/comercio.avif')] bg-contain bg-[right_bottom_-5px] bg-no-repeat"
-        >
-        </div>
-        <div class="absolute ver__mas">
-          <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-        </div>
-      </button>
-
-      <button class="card9 card">
-        <div class="w-full h-full flex ml-4">
-          <p class="text-gray-50 texto font-light">CAUCION</p>
-        </div>
-
-        <div
-          class="absolute w-full h-full bg-[url('/img/caucion.avif')] bg-cover bg-[right_bottom] 2xl:bg-[right_bottom_-50px] bg-no-repeat"
-        >
-        </div>
-        <div class="absolute ver__mas">
-          <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-        </div>
-      </button> -->
+      </p>
+    </a>
+  </div>
 </div>
 
 <!-- SLIDER -->
@@ -418,16 +467,16 @@ const {
 </div>
 
 <!-- MODAL INFO -->
-<dialog
+<!-- <dialog
   id="modal-info"
-  class="w-full h-full xl:w-[80%] xl:h-[90%] rounded-[20px] flex-col justify-center items-center overflow-hidden"
+  class="w-full h-full lg:w-[70%] lg:h-[80%] xl:w-[60%] xl:h-[70%] rounded-[20px] flex-col justify-center items-center overflow-hidden"
 >
   <div
     class="relative w-full h-full flex-col justify-center items-center rounded-[20px]"
   >
     <img
       id="modal-info-img"
-      class="absolute w-full h-full opacity-30 object-cover "
+      class="absolute w-full h-full opacity-10 object-cover"
       alt=""
     />
     <div
@@ -437,7 +486,7 @@ const {
         method="dialog"
         class="w-full flex justify-end pr-5 pt-3"
       >
-        <button
+        <div
           id="close"
           class="w-full flex justify-end items-center invert"
         >
@@ -446,27 +495,28 @@ const {
             src="/svg/menu_close.svg"
             alt=""
           />
-        </button>
+        </div>
       </form>
       <div class="w-full h-[calc(100%-52px)] flex justify-center items-center">
         <div class="w-[80%] h-full flex flex-col justify-around items-center">
           <p
             id="modal-info-content"
-            class="text-gray-50 font-extralight text-[clamp(18px,3vw,22px)] text-left"
+            class="text-gray-50 font-medium text-[clamp(18px,3vw,22px)] text-left"
           >
           </p>
           <a
             id="open-modal-contacto"
-            class="button px-4"
-            ><div class="text-gray-50">
-              <p class="font-semibold text-[clamp(18px,3vw,25px)]">
+            class="div px-4"
+          >
+            <div class="text-gray-50">
+              <p class="font-semibold text-[clamp(14px,3vw,18px)]">
                 COTIZA TU SEGURO
               </p>
             </div>
             <div class="flex items-center mr-5">
               <img
-                class="h-[40px] w-[40px] rotate-[-135deg]"
-                src="/resources/flechas-button.svg"
+                class="h-[30px] w-[30px] rotate-[-135deg]"
+                src="/resources/flechas-div.svg"
                 alt=""
               />
             </div></a
@@ -475,13 +525,13 @@ const {
       </div>
     </div>
   </div>
-</dialog>
+</dialog> -->
 
 <style>
   .grid__container {
     position: relative;
     z-index: 20;
-    
+
     grid:
       "card1 card1 card1 card1 card1 card1 card2 card2 card2 card2 card2 card2" 1fr
       "card3 card3 card3 card3 card3 card4 card4 card4 card4 card4 card4 card4" 1fr
@@ -493,7 +543,7 @@ const {
 
   .grid__container:has(.card:hover) .card:not(:hover) {
     filter: grayscale(70%);
-    opacity: 30%;
+    opacity: 25%;
   }
 
   .card {
@@ -502,85 +552,131 @@ const {
     display: flex;
     position: relative;
     width: 100%;
-    min-height: 300px;
+    min-height: 400px;
     max-height: 550px;
-  
+
     border-radius: 20px;
 
     transition: all 0.3s linear;
     cursor: pointer;
 
-    &:hover {
-      scale: 1.05;
+    &:hover .ver__mas {
+      left: 0;
     }
 
-    &:hover .ver__mas {
-      opacity: 1;
-    }
-    &:focus .ver__mas {
-      opacity: 1;
+    &:hover .title {
+      opacity: 0;
     }
 
     .texto {
-      font-size: clamp(20px, 5vw, 30px);
+      font-size: clamp(20px, 3.3vw, 30px);
       font-weight: 400;
       z-index: 30;
     }
   }
 
+  .title {
+    opacity: 1;
+    transition: all 0.3s linear;
+  }
+
   .ver__mas {
-    opacity: 0;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #000000c4;
+    padding: 2rem;
+    background-color: #000000ec;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     transition: all 0.3s linear 0.1s;
   }
 
   .card1 {
     grid-area: card1;
-   background-image: linear-gradient(135deg, #000000 0%, #6fa29d 52%, #96b6b3 100%);
-    
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #6fa29d 52%,
+      #96b6b3 100%
+    );
   }
   .card2 {
     grid-area: card2;
-   background-image: linear-gradient(135deg, #000000 0%, #1d1e1c 39%, #686868 100%);
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #1d1e1c 39%,
+      #686868 100%
+    );
   }
   .card3 {
     grid-area: card3;
-    background-image: linear-gradient(135deg, #000000 0%, #eb8284 39%, #e8abac 100%);
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #eb8284 39%,
+      #e8abac 100%
+    );
   }
   .card4 {
     grid-area: card4;
-    background-image: linear-gradient(135deg, #000000 0%, #18403e 39%, #349792 100%);
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #18403e 39%,
+      #349792 100%
+    );
   }
   .card5 {
     grid-area: card5;
-     background-image: linear-gradient(135deg, #000000 0%, #ed6f5f 39%, #f6ada3 100%);
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #1d1e1c 39%,
+      #686868 100%
+    );
   }
   .card6 {
     grid-area: card6;
-   
-    background-image: linear-gradient(135deg, #000000 0%, #6fa29d 52%, #96b6b3 100%);
+
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #6fa29d 52%,
+      #96b6b3 100%
+    );
   }
   .card7 {
     grid-area: card7;
-
-      background-image: linear-gradient(135deg, #000000 0%, #1d1e1c 39%, #686868 100%);
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #ed6f5f 39%,
+      #f6ada3 100%
+    );
   }
   .card8 {
     grid-area: card8;
-   background-image: linear-gradient(135deg, #000000 0%, #eb8284 39%, #e8abac 100%);
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #eb8284 39%,
+      #e8abac 100%
+    );
   }
   .card9 {
     grid-area: card9;
-    background-image: linear-gradient(135deg, #000000 0%, #18403e 39%, #349792 100%);
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #18403e 39%,
+      #349792 100%
+    );
   }
 
   dialog {
@@ -595,6 +691,7 @@ const {
   dialog[open] {
     opacity: 1;
     scale: 1;
+
     transition:
       scale 0.3s linear,
       opacity 0.4s linear;
@@ -610,13 +707,13 @@ const {
     background: rgba(0, 0, 0, 0.26);
   }
 
-  .button {
+  .div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 10px;
-    height: clamp(80px, 10vw, 100px);
-    width: clamp(200px, 50vw, 400px);
+    border-radius: 20px;
+    height: clamp(50px, 10vw, 70px);
+    width: clamp(150px, 50vw, 300px);
     background-image: linear-gradient(
       135deg,
       #3e5351 30%,
@@ -643,9 +740,9 @@ const {
   }
 </style>
 
-<script>
+<!-- <script>
   document.addEventListener("astro:page-load", () => {
-    const btnDialog = document.querySelectorAll("button");
+    const btnDialog = document.querySelectorAll("div");
     const btnModalContact = document.querySelectorAll("#open-modal-contacto");
     const dialog = document.getElementById("modal-info") as HTMLDialogElement;
     const close = document.getElementById("close");
@@ -660,8 +757,9 @@ const {
       btn.addEventListener("click", () => {
         const bgColor = btn.getAttribute("data-color");
         const data = btn.getAttribute("data-content");
-        
+
         const img = btn.getAttribute("data-img-background");
+
         const position = btn.getAttribute("data-img-position");
         const form = btn.getAttribute("data-form");
         dialog.style.backgroundImage = bgColor;
@@ -695,4 +793,4 @@ const {
       }
     });
   });
-</script>
+</script> -->

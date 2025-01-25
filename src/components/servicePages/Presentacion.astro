@@ -12,15 +12,13 @@ type Props = {
 
 const { image, className, border, bgColor } = Astro.props;
 
-console.log(bgColor);
-
-const borderColor = border ? border : "#1a6dc0";
-const backgroundColor = bgColor ? bgColor : "#1a6dc0";
+const borderColor = border ? border : "border-[#1a6dc0]";
+const backgroundColor = bgColor ? bgColor : "bg-[#1a6dc0]";
 ---
 
-<Container>
+<Container classname="mt-10 ">
   <div
-    class="w-full lg:w-[90%] flex justify-center items-center gap-4 md:gap-20 mt-10 md:mt-0"
+    class="w-full lg:w-[90%] flex justify-center items-center gap-4 md:gap-20"
   >
     <div class="">
       <img
@@ -57,7 +55,7 @@ const backgroundColor = bgColor ? bgColor : "#1a6dc0";
   </div>
 
   <div
-    class="w-full xl:w-[90%] flex flex-col md:flex-row justify-between items-center md:h-[220px] lg:h-auto gap-4 pb-10"
+    class="w-full xl:w-[90%] flex flex-col md:flex-row justify-between items-center md:h-[220px] lg:h-auto gap-4 py-10"
   >
     <div class="w-[80%] md:w-[30%] grid place-items-center">
       <img
@@ -68,7 +66,7 @@ const backgroundColor = bgColor ? bgColor : "#1a6dc0";
     </div>
 
     <div
-      class=`w-[90%] md:w-[70%]  border-2  rounded-[20px] border-[${borderColor}] ${backgroundColor}  bg-opacity-10 p-4 mb-7 md:mb-0`
+      class=`w-[90%] md:w-[70%]  border-2  rounded-[20px] ${borderColor} ${backgroundColor}  bg-opacity-10 p-4 mb-7 md:mb-0`
     >
       <div class="text-[clamp(14px,2vw,20px)] font-light text-pretty">
         <slot />

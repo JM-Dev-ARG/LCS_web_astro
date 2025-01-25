@@ -1,4 +1,9 @@
 ---
+import CheckBoxForm from "../../components/react_components/formsComponents/CheckBoxForm";
+import InputForm from "../../components/react_components/formsComponents/InputForm";
+import { SelectForm } from "../../components/react_components/formsComponents/SelectForm";
+
+import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
 import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
 const path = Astro.url.pathname;
 const basePath = path.split("/")[1];
@@ -9,14 +14,59 @@ const result = `/${basePath}`;
   title="Formulario de contacto para Seguros Integrales de Comercio"
   path={result}
 >
-  <main>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
+  <main
+    class="relative my-20 z-10 h-auto w-full grid place-items-center mx-auto"
+  >
+    <section class="flex h-full w-[80%] justify-center items-center">
+      <ServicesForm
+        client:only="react"
+        placeholderMensaje={""}
+      >
+        <InputForm
+          name="fechaNacimiento"
+          placeholder="Juan Perez"
+          type="date"
+          labelText="Fecha de Nacimiento"
+        />
+        <SelectForm
+          name="laboral"
+          labelText="Situación Laboral"
+          data={[
+            { value: "empleado", labelText: "Relación de dependencia" },
+            { value: "monotributo", labelText: "Monotributista" },
+            { value: "autonomo", labelText: "Autonomo" },
+            { value: "inscripto", labelText: "Responsable inscripto" },
+            { value: "otro", labelText: "Otro" },
+          ]}
+        />
+        <InputForm
+          name="hijos"
+          placeholder="1"
+          type="number"
+          labelText="Cantidad de hijos"
+          client:only="react"
+        />
+        <InputForm
+          name="edades"
+          placeholder="10 / 15 años / 5, 8 y 12 años"
+          type="text"
+          labelText="Edades de los hijos"
+          client:only="react"
+        />
+
+        <CheckBoxForm
+          title={"Etapas a transitar"}
+          data={[
+            { value: "inicial", labelText: "Inicial" },
+            { value: "primaria", labelText: "Primaria" },
+            { value: "secundaria", labelText: "Secundaria" },
+            { value: "universitaria", labelText: "Universitaria" },
+            { value: "posgrado", labelText: "Posgrado" },
+            { value: "otro", labelText: "Otro" },
+          ]}
+          client:only="react"
+        />
+      </ServicesForm>
+    </section>
   </main>
 </LayoutContactoServicios>

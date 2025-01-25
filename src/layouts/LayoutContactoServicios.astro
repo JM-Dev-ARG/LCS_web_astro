@@ -78,10 +78,14 @@ const { title, path } = Astro.props;
     <ViewTransitions />
   </head>
   <body class="back-forms">
-    <div
-      class="absolute w-full h-full bg-[url('/resources/amo-asegurar.svg')] bg-cover bg-center opacity-[0.03] z-[1]"
-    >
+    <div class="absolute w-full h-full opacity-[0.03] z-[1]">
+      <img
+        class="object-cover w-full h-full"
+        src="/resources/amo-asegurar.svg"
+        alt=""
+      />
     </div>
+
     <NavBarFormularios path={path} />
     <slot />
     <p class="text-center text-xs font-thin text-gray-300">
@@ -204,7 +208,8 @@ const { title, path } = Astro.props;
   }
   .back-forms {
     background-color: #202221;
-    height: 100vh;
+    position: relative;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: space-between;

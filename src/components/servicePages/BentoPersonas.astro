@@ -18,24 +18,6 @@ type Props = {
   datacontent4: string;
   datacontent5: string;
   datacontent6: string;
-  datacolor1: string;
-  datacolor2: string;
-  datacolor3: string;
-  datacolor4: string;
-  datacolor5: string;
-  datacolor6: string;
-  dataimgbackground1: string;
-  dataimgbackground2: string;
-  dataimgbackground3: string;
-  dataimgbackground4: string;
-  dataimgbackground5: string;
-  dataimgbackground6: string;
-  dataimgposition1: string;
-  dataimgposition2: string;
-  dataimgposition3: string;
-  dataimgposition4: string;
-  dataimgposition5: string;
-  dataimgposition6: string;
   dataform1: string;
   dataform2: string;
   dataform3: string;
@@ -56,24 +38,7 @@ const {
   datacontent4,
   datacontent5,
   datacontent6,
-  datacolor1,
-  datacolor2,
-  datacolor3,
-  datacolor4,
-  datacolor5,
-  datacolor6,
-  dataimgbackground1,
-  dataimgbackground2,
-  dataimgbackground3,
-  dataimgbackground4,
-  dataimgbackground5,
-  dataimgbackground6,
-  dataimgposition1,
-  dataimgposition2,
-  dataimgposition3,
-  dataimgposition4,
-  dataimgposition5,
-  dataimgposition6,
+
   dataform1,
   dataform2,
   dataform3,
@@ -84,15 +49,12 @@ const {
 ---
 
 <div class="hidden md:grid grid__container w-full xl:w-[70%] my-10">
-  <button
-    class="card1 card justify-end"
+  <div
+    class="card1 card"
     data-content={datacontent1}
-    data-color={datacolor1}
-    data-img-background={dataimgbackground1}
-    data-img-position={dataimgposition1}
     data-form={dataform1}
   >
-    <div class="w-full h-full flex ml-4">
+    <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title1}</p>
     </div>
 
@@ -100,20 +62,43 @@ const {
       class=`absolute  w-full h-full bg-[url('./img/proteccion.avif')] bg-contain bg-[right_bottom] bg-no-repeat`
     >
     </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
+    <a
+      href={dataform1}
+      class="ver__mas"
+    >
+      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
+        {datacontent1}
+      </p>
+      <p
+        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
+      >
+        Agenda tu cita <span
+          class="w-3 grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
+        >
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
+        >
+      </p>
+    </a>
+  </div>
 
-  <button
+  <div
     class="card2 card"
     data-content={datacontent2}
-    data-color={datacolor2}
-    data-img-background={dataimgbackground2}
-    data-img-position={dataimgposition2}
     data-form={dataform2}
   >
-    <div class="w-full h-full flex ml-4">
+    <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title2}</p>
     </div>
 
@@ -121,43 +106,90 @@ const {
       class=`absolute w-full h-full bg-[url('./img/libre.avif')] bg-cover lg:bg-contain bg-right-bottom bg-no-repeat`
     >
     </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
-
-  <button
+    <a
+      href={dataform2}
+      class="ver__mas"
+    >
+      <p
+        class="text-gray-50 w-[80%] text-pretty text-left text-[clamp(14px,3vw,16px)]"
+      >
+        {datacontent2}
+      </p>
+      <p
+        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-[95%] flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
+      >
+        Agenda tu cita <span
+          class="w-3 grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
+        >
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
+        >
+      </p>
+    </a>
+  </div>
+  <div
     class="card3 card"
-    data-content={datacontent3}
-    data-color={datacolor3}
-    data-img-background={dataimgbackground3}
-    data-img-position={dataimgposition3}
-    data-form={dataform3}
+    data-content={datacontent5}
+    data-form={dataform5}
   >
-    <div class="w-full h-full flex ml-4">
-      <p class="text-gray-50 texto font-light">{title3}</p>
+    <div class="w-full h-full flex ml-4 title">
+      <p class="text-gray-50 texto font-light">{title5}</p>
     </div>
 
     <div
-      class=`absolute w-full h-full bg-[url('./img/retiro.avif')] bg-cover bg-[right_bottom] 2xl:bg-[right_bottom_-50px] bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('./img/independencia.avif')] bg-cover bg-[right_bottom]  bg-no-repeat`
     >
     </div>
+    <a
+      href={dataform5}
+      class="ver__mas"
+    >
+      <p
+        class="text-gray-50 w-[80%] text-pretty text-left text-[clamp(14px,3vw,16px)]"
+      >
+        {datacontent5}
+      </p>
+      <p
+        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-[95%] flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
+      >
+        Agenda tu cita <span
+          class="w-3 grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
+        >
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
+        >
+      </p>
+    </a>
+  </div>
 
-    <!-- -->
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
-
-  <button
+  <div
     class="card4 card"
     data-content={datacontent4}
-    data-color={datacolor4}
-    data-img-background={dataimgbackground4}
-    data-img-position={dataimgposition4}
     data-form={dataform4}
   >
-    <div class="w-full h-full flex ml-4">
+    <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title4}</p>
     </div>
 
@@ -165,39 +197,91 @@ const {
       class=`absolute  w-full h-full bg-[url('./img/educativo.avif')] bg-contain bg-[right_bottom]  bg-no-repeat`
     >
     </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
-  <button
+    <a
+      href={dataform4}
+      class="ver__mas"
+    >
+      <p
+        class="text-gray-50 w-[80%] text-pretty text-left text-[clamp(14px,3vw,16px)]"
+      >
+        {datacontent4}
+      </p>
+      <p
+        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-[95%] flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
+      >
+        Agenda tu cita <span
+          class="w-3 grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
+        >
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
+        >
+      </p>
+    </a>
+  </div>
+  <div
     class="card5 card"
-    data-content={datacontent5}
-    data-color={datacolor5}
-    data-img-background={dataimgbackground5}
-    data-img-position={dataimgposition5}
-    data-form={dataform5}
+    data-content={datacontent3}
+    data-form={dataform3}
   >
-    <div class="w-full h-full flex ml-4">
-      <p class="text-gray-50 texto font-light">{title5}</p>
+    <div class="w-full h-full flex ml-4 title">
+      <p class="text-gray-50 texto font-light">{title3}</p>
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('./img/independencia.avif')] bg-cover bg-[right_bottom] 2xl:bg-[right_-20px_bottom_-130px] bg-no-repeat`
+      class=`absolute w-full h-full bg-[url('./img/retiro.avif')] bg-contain bg-[right_bottom] bg-no-repeat`
     >
     </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
-  <button
+
+    <a
+      href={dataform3}
+      class="ver__mas"
+    >
+      <p
+        class="text-gray-50 w-[80%] text-pretty text-left text-[clamp(14px,3vw,16px)]"
+      >
+        {datacontent3}
+      </p>
+      <p
+        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-[95%] flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
+      >
+        Agenda tu cita <span
+          class="w-3 grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
+        >
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
+        >
+      </p>
+    </a>
+  </div>
+
+  <div
     class="card6 card"
     data-content={datacontent6}
-    data-color={datacolor6}
-    data-img-background={dataimgbackground6}
-    data-img-position={dataimgposition6}
     data-form={dataform6}
   >
-    <div class="w-full h-full flex ml-4">
+    <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title6}</p>
     </div>
 
@@ -205,100 +289,39 @@ const {
       class=`absolute  w-full h-full bg-[url('./img/emprendedor.avif')] bg-cover bg-[right_bottom] 2xl:bg-[right_bottom_-20px] bg-no-repeat`
     >
     </div>
-    <div class="absolute ver__mas">
-      <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-    </div>
-  </button>
-
-  <!-- <button
-          class="card5 card"
-          data-content="Caucion"
-          data-color="#e8abac"
-          data-img-background="/img/caucion.avif"
-          data-img-position="right bottom"
+    <a
+      href={dataform6}
+      class="ver__mas"
+    >
+      <p
+        class="text-gray-50 w-[80%] text-pretty text-left text-[clamp(14px,3vw,16px)]"
+      >
+        {datacontent6}
+      </p>
+      <p
+        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-[95%] flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
+      >
+        Agenda tu cita <span
+          class="w-3 grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
         >
-          <div class="w-full h-full flex ml-4">
-            <p class="text-gray-50 texto font-light">CAUCION</p>
-          </div>
-
-          <div
-            class="absolute w-full h-full bg-[url('/img/caucion.avif')] bg-[right_-20px_bottom] 2xl:bg-[right_bottom] bg-cover bg-no-repeat"
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
           >
-          </div>
-          <div class="absolute ver__mas">
-            <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-          </div>
-        </button>
-
-        <button
-          class="card6 card"
-          data-content="Consorcio"
-          data-color="#f05759"
-          data-img-background="/img/consorcio2.avif"
-          data-img-position="bottom"
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
         >
-          <div class="w-full h-full flex justify-center items-start px-[10px]">
-            <p class="text-gray-50 texto font-light">CONSORCIO</p>
-          </div>
-
-          <div
-            class="absolute w-full h-full bg-[url('/img/consorcio.avif')] bg-cover bg-[center_bottom_-50px] bg-no-repeat"
-          >
-          </div>
-          <div class="absolute ver__mas">
-            <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-          </div>
-        </button> -->
-  <!-- 
-        <button
-          class="card7 card"
-          data-content="Accidentes"
-          data-color="#1d1e1c"
-          data-img-background="/img/retiro.avif"
-          data-img-position="right bottom"
-        >
-          <div class="w-full h-full flex justify-end mr-4">
-            <p class="text-gray-50 texto font-light">ACCIDENTES</p>
-          </div>
-
-          <div
-            class="absolute w-full h-full bg-[url('/img/retiro.avif')] bg-cover bg-[right_-80px_bottom] lg:bg-[right_-10px_bottom] 2xl:bg-[right_-10px_bottom_-20px] bg-no-repeat"
-          >
-          </div>
-          <div class="absolute ver__mas">
-            <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-          </div>
-        </button> -->
-
-  <!-- <button class="card8 card">
-        <div class="w-full h-full flex ml-4">
-          <p class="text-gray-50 texto font-light">I. COMERCIO</p>
-        </div>
-
-        <div
-          class="absolute w-full h-full bg-[url('/img/comercio.avif')] bg-contain bg-[right_bottom_-5px] bg-no-repeat"
-        >
-        </div>
-        <div class="absolute ver__mas">
-          <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-        </div>
-      </button>
-
-      <button class="card9 card">
-        <div class="w-full h-full flex ml-4">
-          <p class="text-gray-50 texto font-light">CAUCION</p>
-        </div>
-
-        <div
-          class="absolute w-full h-full bg-[url('/img/caucion.avif')] bg-cover bg-[right_bottom] 2xl:bg-[right_bottom_-50px] bg-no-repeat"
-        >
-        </div>
-        <div class="absolute ver__mas">
-          <p class="text-gray-50 text-[clamp(20px,3vw,40px)]">Ver Mas +</p>
-        </div>
-      </button> -->
+      </p>
+    </a>
+  </div>
 </div>
-
 <!-- SLIDER -->
 <div class="md:hidden overflow-x-scroll w-full">
   {
@@ -310,68 +333,6 @@ const {
   }
   <!-- <SliderServicesPersonas /> -->
 </div>
-
-<!-- MODAL INFO -->
-<dialog
-  id="modal-info"
-  class="w-full h-full xl:w-[80%] xl:h-[90%] rounded-[20px] flex-col justify-center items-center overflow-hidden"
->
-  <div
-    class="relative w-full h-full flex-col justify-center items-center rounded-[20px]"
-  >
-    <img
-      id="modal-info-img"
-      class="absolute w-full h-full opacity-30 object-cover"
-      alt=""
-    />
-    <div
-      class="w-full h-full flex-col justify-center items-center relative z-10"
-    >
-      <form
-        method="dialog"
-        class="w-full flex justify-end pr-5 pt-3"
-      >
-        <button
-          id="close"
-          class="w-full flex justify-end items-center invert"
-        >
-          <img
-            class="w-8 h-8"
-            src="/svg/menu_close.svg"
-            alt=""
-          />
-        </button>
-      </form>
-      <div class="w-full h-[calc(100%-52px)] flex justify-center items-center">
-        <div
-          class="w-[80%] h-full flex flex-col justify-center items-center gap-10"
-        >
-          <p
-            id="modal-info-content"
-            class="text-gray-50 font-light mix-blend-difference text-[clamp(18px,3vw,22px)] text-left"
-          >
-          </p>
-          <a
-            id="open-modal-contacto"
-            class="button px-4"
-            ><div class="text-gray-50">
-              <p class="font-semibold text-[clamp(18px,3vw,25px)]">
-                COTIZA TU SEGURO
-              </p>
-            </div>
-            <div class="flex items-center mr-5">
-              <img
-                class="h-[40px] w-[40px] rotate-[-135deg]"
-                src="/resources/flechas-button.svg"
-                alt=""
-              />
-            </div></a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-</dialog>
 
 <style>
   .grid__container {
@@ -389,7 +350,7 @@ const {
 
   .grid__container:has(.card:hover) .card:not(:hover) {
     filter: grayscale(70%);
-    opacity: 30%;
+    opacity: 25%;
   }
 
   .card {
@@ -398,7 +359,7 @@ const {
     display: flex;
     position: relative;
     width: 100%;
-    min-height: 300px;
+    min-height: 400px;
     max-height: 550px;
 
     border-radius: 20px;
@@ -406,15 +367,12 @@ const {
     transition: all 0.3s linear;
     cursor: pointer;
 
-    &:hover {
-      scale: 1.05;
+    &:hover .ver__mas {
+      left: 0;
     }
 
-    &:hover .ver__mas {
-      opacity: 1;
-    }
-    &:focus .ver__mas {
-      opacity: 1;
+    &:hover .title {
+      opacity: 0;
     }
 
     .texto {
@@ -424,18 +382,24 @@ const {
     }
   }
 
+  .title {
+    opacity: 1;
+    transition: all 0.3s linear;
+  }
+
   .ver__mas {
-    opacity: 0;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #000000c4;
+    padding: 2rem;
+    background-color: #000000ec;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     transition: all 0.3s linear 0.1s;
   }
 
@@ -508,117 +472,4 @@ const {
     grid-area: card9;
     background-color: #e8abac;
   }
-
-  dialog {
-    scale: 0;
-    opacity: 0;
-    transition:
-      scale 0.3s linear,
-      display 0.4s linear allow-discrete,
-      opacity 0.4s linear;
-  }
-
-  dialog[open] {
-    opacity: 1;
-    scale: 1;
-    transition:
-      scale 0.3s linear,
-      opacity 0.4s linear;
-
-    @starting-style {
-      scale: 0;
-      opacity: 0;
-    }
-  }
-
-  dialog::backdrop {
-    backdrop-filter: blur(4px);
-    background: rgba(0, 0, 0, 0.26);
-  }
-
-  .button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 10px;
-    height: clamp(80px, 10vw, 100px);
-    width: clamp(200px, 50vw, 400px);
-    background-image: linear-gradient(
-      135deg,
-      #3e5351 30%,
-      rgb(66, 182, 170) 100%
-    );
-    transition: all 0.2s linear;
-    cursor: pointer;
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-
-  .sub__container {
-    position: relative;
-  }
-  .sub {
-    position: absolute;
-    top: clamp(30px, 3.5vw, 50px);
-    bottom: 0;
-    right: 0;
-    left: 0%;
-    width: 100%;
-    height: 40px;
-  }
 </style>
-
-<script>
-  document.addEventListener("astro:page-load", () => {
-    const btnDialog = document.querySelectorAll("button");
-    const btnModalContact = document.querySelectorAll("#open-modal-contacto");
-    const dialog = document.getElementById("modal-info") as HTMLDialogElement;
-    const close = document.getElementById("close");
-    const closeContact = document.querySelectorAll("#close-contact");
-
-    const modalContent = document.getElementById("modal-info-content");
-    const modalImg = document.getElementById(
-      "modal-info-img"
-    ) as HTMLImageElement;
-
-    btnDialog.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const bgColor = btn.getAttribute("data-color");
-        const data = btn.getAttribute("data-content");
-
-        const img = btn.getAttribute("data-img-background");
-        const position = btn.getAttribute("data-img-position");
-        const form = btn.getAttribute("data-form");
-        dialog.style.backgroundColor = bgColor;
-        modalContent.innerHTML = data;
-        modalImg.src = img;
-        modalImg.style.objectPosition = position;
-        dialog.setAttribute("data-form", form);
-
-        btnModalContact.forEach((btn) => {
-          btn.setAttribute("href", form);
-        });
-        dialog.showModal();
-      });
-    });
-
-    btnModalContact.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        dialog.close();
-        const activeElement = document.activeElement;
-        if (activeElement instanceof HTMLElement) {
-          activeElement.blur();
-        }
-      });
-    });
-
-    close.addEventListener("click", () => {
-      dialog.close();
-      const activeElement = document.activeElement;
-      if (activeElement instanceof HTMLElement) {
-        activeElement.blur();
-      }
-    });
-  });
-</script>
