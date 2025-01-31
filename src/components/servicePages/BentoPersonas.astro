@@ -3,8 +3,6 @@ const path = Astro.url.pathname;
 const basePath = path.split("/")[1];
 const result = `/${basePath}`;
 
-import SliderServicesPatrimoniales from "./SliderServicesPatrimoniales.astro";
-import SliderServicesPersonas from "./SliderServicesPersonas.astro";
 type Props = {
   title1: string;
   title2: string;
@@ -321,17 +319,6 @@ const {
       </p>
     </a>
   </div>
-</div>
-<!-- SLIDER -->
-<div class="md:hidden overflow-x-scroll w-full">
-  {
-    result === "/personas" ? (
-      <SliderServicesPersonas />
-    ) : (
-      <SliderServicesPatrimoniales />
-    )
-  }
-  <!-- <SliderServicesPersonas /> -->
 </div>
 
 <style>

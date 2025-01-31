@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 import NavBarFormularios from "../components/secciones/NavBarFormularios.astro";
 
@@ -75,7 +75,7 @@ const { title, path } = Astro.props;
 
     <title>{title}</title>
 
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="back-forms">
     <div class="absolute w-full h-full opacity-[0.03] z-[1]">

@@ -3,9 +3,6 @@ const path = Astro.url.pathname;
 const basePath = path.split("/")[1];
 const result = `/${basePath}`;
 
-import SliderServicesPatrimoniales from "./SliderServicesPatrimoniales.astro";
-import SliderServicesPersonas from "./SliderServicesPersonas.astro";
-
 type Props = {
   title1: string;
   title2: string;
@@ -67,7 +64,7 @@ const {
 } = Astro.props;
 ---
 
-<div class="hidden md:grid grid__container w-full xl:w-[70%] my-10">
+<div class="flex flex-col lg:grid grid__container w-full xl:w-[70%] my-10">
   <div
     class="card1 card justify-end"
     data-content={datacontent1}
@@ -77,7 +74,7 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('/img/auto.avif')] bg-contain bg-[right_bottom] bg-no-repeat`
+      class="absolute w-full h-full bg-[url('/img/auto.avif')] bg-cover bg-[right_70%_top_20px] md:bg-contain md:bg-[right_bottom] bg-no-repeat"
     >
     </div>
     <a
@@ -120,7 +117,7 @@ const {
     </div>
 
     <div
-      class=`absolute w-full h-full bg-[url('/img/moto.avif')] bg-cover lg:bg-contain bg-right-bottom bg-no-repeat`
+      class=`absolute w-full h-full bg-[url('/img/moto.avif')] bg-cover md:bg-contain bg-right-bottom bg-no-repeat`
     >
     </div>
     <a
@@ -163,7 +160,7 @@ const {
     </div>
 
     <div
-      class=`absolute w-full h-full bg-[url('/img/art.avif')] bg-cover scale-x-[-1] bg-contain bg-no-repeat`
+      class=`absolute w-full h-full bg-[url('/img/art.avif')] bg-cover scale-x-[-1] md:bg-contain lg:bg-cover bg-no-repeat`
     >
     </div>
 
@@ -207,7 +204,7 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('/img/hogar.avif')] bg-contain bg-[right_bottom]  bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('/img/hogar.avif')] bg-cover bg-[right_30%_top] md:bg-contain md:bg-[right_bottom]  bg-no-repeat`
     >
     </div>
     <a
@@ -249,7 +246,7 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('/img/urbano.avif')] bg-cover bg-[right_20%_bottom]  bg-no-repeat`
+      class="absolute w-full h-full bg-[url('/img/urbano.avif')] bg-cover md:bg-contain lg:bg-cover md:bg-[right_bottom] bg-[right_20%_bottom] bg-no-repeat"
     >
     </div>
     <a
@@ -291,7 +288,7 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('/img/celular.avif')] bg-cover bg-[right_bottom]  bg-no-repeat`
+      class="absolute w-full h-full bg-[url('/img/celular.avif')] bg-cover md:bg-contain lg:bg-cover bg-[right_20%_bottom] md:bg-[right_bottom] bg-no-repeat"
     >
     </div>
     <a
@@ -333,7 +330,7 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('/img/asistencia.avif')] bg-cover bg-[right_40%_bottom]  bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('/img/asistencia.avif')] bg-cover bg-[right_40%_bottom] md:bg-[right_40%_bottom_-70px] lg:bg-[right_40%_bottom]  bg-no-repeat`
     >
     </div>
     <a
@@ -376,7 +373,7 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('/img/comercio.avif')] bg-contain bg-[right_bottom_-10px]  bg-no-repeat`
+      class="absolute w-full h-full bg-[url('/img/comercio.avif')] bg-contain bg-[right_bottom] md:bg-[right_bottom_-10px] bg-no-repeat"
     >
     </div>
     <a
@@ -419,7 +416,7 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('/img/consorcio.avif')] bg-cover bg-[right_bottom] 2xl:bg-[right_-40px_bottom_-20px] bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('/img/consorcio.avif')] bg-cover bg-center md:bg-[right_bottom_-100px] lg:bg-center 2xl:bg-[right_-40px_bottom_-20px] bg-no-repeat`
     >
     </div>
     <a
@@ -453,79 +450,6 @@ const {
     </a>
   </div>
 </div>
-
-<!-- SLIDER -->
-<div class="md:hidden overflow-x-scroll w-full">
-  {
-    result === "/personas" ? (
-      <SliderServicesPersonas />
-    ) : (
-      <SliderServicesPatrimoniales />
-    )
-  }
-  <!-- <SliderServicesPersonas /> -->
-</div>
-
-<!-- MODAL INFO -->
-<!-- <dialog
-  id="modal-info"
-  class="w-full h-full lg:w-[70%] lg:h-[80%] xl:w-[60%] xl:h-[70%] rounded-[20px] flex-col justify-center items-center overflow-hidden"
->
-  <div
-    class="relative w-full h-full flex-col justify-center items-center rounded-[20px]"
-  >
-    <img
-      id="modal-info-img"
-      class="absolute w-full h-full opacity-10 object-cover"
-      alt=""
-    />
-    <div
-      class="w-full h-full flex-col justify-center items-center relative z-10"
-    >
-      <form
-        method="dialog"
-        class="w-full flex justify-end pr-5 pt-3"
-      >
-        <div
-          id="close"
-          class="w-full flex justify-end items-center invert"
-        >
-          <img
-            class="w-8 h-8"
-            src="/svg/menu_close.svg"
-            alt=""
-          />
-        </div>
-      </form>
-      <div class="w-full h-[calc(100%-52px)] flex justify-center items-center">
-        <div class="w-[80%] h-full flex flex-col justify-around items-center">
-          <p
-            id="modal-info-content"
-            class="text-gray-50 font-medium text-[clamp(18px,3vw,22px)] text-left"
-          >
-          </p>
-          <a
-            id="open-modal-contacto"
-            class="div px-4"
-          >
-            <div class="text-gray-50">
-              <p class="font-semibold text-[clamp(14px,3vw,18px)]">
-                COTIZA TU SEGURO
-              </p>
-            </div>
-            <div class="flex items-center mr-5">
-              <img
-                class="h-[30px] w-[30px] rotate-[-135deg]"
-                src="/resources/flechas-div.svg"
-                alt=""
-              />
-            </div></a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-</dialog> -->
 
 <style>
   .grid__container {
