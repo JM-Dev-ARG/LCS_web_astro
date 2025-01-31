@@ -23,47 +23,39 @@ const result = `/${basePath}`;
         placeholderMensaje={""}
       >
         <InputForm
-          name="fechaNacimiento"
-          placeholder="Juan Perez"
-          type="date"
-          labelText="Fecha de Nacimiento"
+          name="edad"
+          placeholder="25 años"
+          type="text"
+          labelText="Edad"
         />
-        <SelectForm
-          name="laboral"
-          labelText="Situación Laboral"
-          data={[
-            { value: "empleado", labelText: "Relación de dependencia" },
-            { value: "monotributo", labelText: "Monotributista" },
-            { value: "autonomo", labelText: "Autonomo" },
-            { value: "inscripto", labelText: "Responsable inscripto" },
-            { value: "otro", labelText: "Otro" },
-          ]}
-        />
+
         <InputForm
-          name="hijos"
-          placeholder="1"
-          type="number"
-          labelText="Cantidad de hijos"
+          name="codigoPostal"
+          placeholder="1424"
+          type="text"
+          labelText="Codigo Postal"
           client:only="react"
         />
         <InputForm
-          name="edades"
-          placeholder="10 / 15 años / 5, 8 y 12 años"
+          name="marcaMoto"
+          placeholder="Honda"
           type="text"
-          labelText="Edades de los hijos"
+          labelText="Marca de la moto"
+          client:only="react"
+        />
+        <InputForm
+          name="modeloMoto"
+          placeholder="CB300F"
+          type="text"
+          labelText="Modelo de la moto"
           client:only="react"
         />
 
-        <CheckBoxForm
-          title={"Etapas a transitar"}
-          data={[
-            { value: "inicial", labelText: "Inicial" },
-            { value: "primaria", labelText: "Primaria" },
-            { value: "secundaria", labelText: "Secundaria" },
-            { value: "universitaria", labelText: "Universitaria" },
-            { value: "posgrado", labelText: "Posgrado" },
-            { value: "otro", labelText: "Otro" },
-          ]}
+        <InputForm
+          name="añoMoto"
+          placeholder="2024"
+          type="text"
+          labelText="Año de la moto"
           client:only="react"
         />
       </ServicesForm>

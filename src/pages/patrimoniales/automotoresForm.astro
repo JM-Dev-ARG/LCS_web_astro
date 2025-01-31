@@ -23,47 +23,45 @@ const result = `/${basePath}`;
         placeholderMensaje={""}
       >
         <InputForm
-          name="fechaNacimiento"
-          placeholder="Juan Perez"
-          type="date"
-          labelText="Fecha de Nacimiento"
-        />
-        <SelectForm
-          name="laboral"
-          labelText="Situación Laboral"
-          data={[
-            { value: "empleado", labelText: "Relación de dependencia" },
-            { value: "monotributo", labelText: "Monotributista" },
-            { value: "autonomo", labelText: "Autonomo" },
-            { value: "inscripto", labelText: "Responsable inscripto" },
-            { value: "otro", labelText: "Otro" },
-          ]}
-        />
-        <InputForm
-          name="hijos"
-          placeholder="1"
-          type="number"
-          labelText="Cantidad de hijos"
-          client:only="react"
-        />
-        <InputForm
-          name="edades"
-          placeholder="10 / 15 años / 5, 8 y 12 años"
+          name="edad"
+          placeholder="25 años"
           type="text"
-          labelText="Edades de los hijos"
-          client:only="react"
+          labelText="Edad"
         />
 
-        <CheckBoxForm
-          title={"Etapas a transitar"}
-          data={[
-            { value: "inicial", labelText: "Inicial" },
-            { value: "primaria", labelText: "Primaria" },
-            { value: "secundaria", labelText: "Secundaria" },
-            { value: "universitaria", labelText: "Universitaria" },
-            { value: "posgrado", labelText: "Posgrado" },
-            { value: "otro", labelText: "Otro" },
-          ]}
+        <InputForm
+          name="codigoPostal"
+          placeholder="1424"
+          type="text"
+          labelText="Codigo Postal"
+          client:only="react"
+        />
+        <InputForm
+          name="marcaAuto"
+          placeholder="Ford"
+          type="text"
+          labelText="Marca del automovil"
+          client:only="react"
+        />
+        <InputForm
+          name="modeloAuto"
+          placeholder="Focus"
+          type="text"
+          labelText="Modelo del automovil"
+          client:only="react"
+        />
+        <InputForm
+          name="versionAuto"
+          placeholder="Titanium"
+          type="text"
+          labelText="Versión del automovil"
+          client:only="react"
+        />
+        <InputForm
+          name="añoAuto"
+          placeholder="2016"
+          type="text"
+          labelText="Año del automovil"
           client:only="react"
         />
       </ServicesForm>

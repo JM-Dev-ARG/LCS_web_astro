@@ -23,47 +23,31 @@ const result = `/${basePath}`;
         placeholderMensaje={""}
       >
         <InputForm
-          name="fechaNacimiento"
-          placeholder="Juan Perez"
-          type="date"
-          labelText="Fecha de Nacimiento"
-        />
-        <SelectForm
-          name="laboral"
-          labelText="Situación Laboral"
-          data={[
-            { value: "empleado", labelText: "Relación de dependencia" },
-            { value: "monotributo", labelText: "Monotributista" },
-            { value: "autonomo", labelText: "Autonomo" },
-            { value: "inscripto", labelText: "Responsable inscripto" },
-            { value: "otro", labelText: "Otro" },
-          ]}
-        />
-        <InputForm
-          name="hijos"
-          placeholder="1"
-          type="number"
-          labelText="Cantidad de hijos"
-          client:only="react"
-        />
-        <InputForm
-          name="edades"
-          placeholder="10 / 15 años / 5, 8 y 12 años"
+          name="cuit"
+          placeholder="20-12345678-9"
           type="text"
-          labelText="Edades de los hijos"
-          client:only="react"
+          labelText="CUIT"
         />
 
-        <CheckBoxForm
-          title={"Etapas a transitar"}
-          data={[
-            { value: "inicial", labelText: "Inicial" },
-            { value: "primaria", labelText: "Primaria" },
-            { value: "secundaria", labelText: "Secundaria" },
-            { value: "universitaria", labelText: "Universitaria" },
-            { value: "posgrado", labelText: "Posgrado" },
-            { value: "otro", labelText: "Otro" },
-          ]}
+        <InputForm
+          name="razonSocial"
+          placeholder="Tu Empresa S.A."
+          type="text"
+          labelText="Razón Social"
+          client:only="react"
+        />
+        <InputForm
+          name="cantEmpleados"
+          placeholder="200"
+          type="number"
+          labelText="Cantidad de empleados"
+          client:only="react"
+        />
+        <InputForm
+          name="masaSalarial"
+          placeholder="200000 (los valores se expresan en AR$)"
+          type="number"
+          labelText="Masa Salarial"
           client:only="react"
         />
       </ServicesForm>

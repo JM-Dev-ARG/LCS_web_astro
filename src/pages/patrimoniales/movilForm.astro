@@ -1,8 +1,5 @@
 ---
-import CheckBoxForm from "../../components/react_components/formsComponents/CheckBoxForm";
 import InputForm from "../../components/react_components/formsComponents/InputForm";
-import { SelectForm } from "../../components/react_components/formsComponents/SelectForm";
-
 import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
 import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
 const path = Astro.url.pathname;
@@ -23,47 +20,45 @@ const result = `/${basePath}`;
         placeholderMensaje={""}
       >
         <InputForm
-          name="fechaNacimiento"
-          placeholder="Juan Perez"
-          type="date"
-          labelText="Fecha de Nacimiento"
-        />
-        <SelectForm
-          name="laboral"
-          labelText="Situación Laboral"
-          data={[
-            { value: "empleado", labelText: "Relación de dependencia" },
-            { value: "monotributo", labelText: "Monotributista" },
-            { value: "autonomo", labelText: "Autonomo" },
-            { value: "inscripto", labelText: "Responsable inscripto" },
-            { value: "otro", labelText: "Otro" },
-          ]}
-        />
-        <InputForm
-          name="hijos"
-          placeholder="1"
-          type="number"
-          labelText="Cantidad de hijos"
-          client:only="react"
-        />
-        <InputForm
-          name="edades"
-          placeholder="10 / 15 años / 5, 8 y 12 años"
+          name="edad"
+          placeholder="25 años"
           type="text"
-          labelText="Edades de los hijos"
-          client:only="react"
+          labelText="Edad"
         />
 
-        <CheckBoxForm
-          title={"Etapas a transitar"}
-          data={[
-            { value: "inicial", labelText: "Inicial" },
-            { value: "primaria", labelText: "Primaria" },
-            { value: "secundaria", labelText: "Secundaria" },
-            { value: "universitaria", labelText: "Universitaria" },
-            { value: "posgrado", labelText: "Posgrado" },
-            { value: "otro", labelText: "Otro" },
-          ]}
+        <InputForm
+          name="codigoPostal"
+          placeholder="1424"
+          type="text"
+          labelText="Codigo Postal"
+          client:only="react"
+        />
+        <InputForm
+          name="provincia"
+          placeholder="Buenos Aires"
+          type="text"
+          labelText="Provincia"
+          client:only="react"
+        />
+        <InputForm
+          name="marcaMovil"
+          placeholder="Samsung"
+          type="text"
+          labelText="Marca dispositivo"
+          client:only="react"
+        />
+        <InputForm
+          name="modeloMovil"
+          placeholder="A50"
+          type="text"
+          labelText="Modelo dispositivo"
+          client:only="react"
+        />
+        <InputForm
+          name="sumaAsegurada"
+          placeholder="$200000 (los valores se expresan en AR$)"
+          type="text"
+          labelText="Suma asegurada"
           client:only="react"
         />
       </ServicesForm>
