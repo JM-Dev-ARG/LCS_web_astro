@@ -17,35 +17,7 @@ import BentoPatrimonio from "../components/servicePages/BentoPatrimonio.astro";
       image="/img/img-patrimoniales.avif"
     />
     <Services>
-      <BentoPatrimonio
-        title1={data.title1}
-        title2={data.title2}
-        title3={data.title3}
-        title4={data.title4}
-        title5={data.title5}
-        title6={data.title6}
-        title7={data.title7}
-        title8={data.title8}
-        title9={data.title9}
-        datacontent1={data.datacontent1}
-        datacontent2={data.datacontent2}
-        datacontent3={data.datacontent3}
-        datacontent4={data.datacontent4}
-        datacontent5={data.datacontent5}
-        datacontent6={data.datacontent6}
-        datacontent7={data.datacontent7}
-        datacontent8={data.datacontent8}
-        datacontent9={data.datacontent9}
-        dataform1={data.dataform1}
-        dataform2={data.dataform2}
-        dataform3={data.dataform3}
-        dataform4={data.dataform4}
-        dataform5={data.dataform5}
-        dataform6={data.dataform6}
-        dataform7={data.dataform7}
-        dataform8={data.dataform8}
-        dataform9={data.dataform9}
-      />
+      {data.map((item) => <BentoPatrimonio {...item} />)}
     </Services>
 
     <Presentacion

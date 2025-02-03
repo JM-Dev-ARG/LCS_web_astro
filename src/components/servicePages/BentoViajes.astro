@@ -7,60 +7,27 @@ type Props = {
   title1: string;
   title2: string;
   title3: string;
-  title4: string;
-  title5: string;
-  title6: string;
-  title7: string;
-  title8: string;
-  title9: string;
+
   datacontent1: string;
   datacontent2: string;
   datacontent3: string;
-  datacontent4: string;
-  datacontent5: string;
-  datacontent6: string;
-  datacontent7: string;
-  datacontent8: string;
-  datacontent9: string;
+
   dataform1: string;
   dataform2: string;
   dataform3: string;
-  dataform4: string;
-  dataform5: string;
-  dataform6: string;
-  dataform7: string;
-  dataform8: string;
-  dataform9: string;
 };
 const {
   title1,
   title2,
   title3,
-  title4,
-  title5,
-  title6,
-  title7,
-  title8,
-  title9,
+
   datacontent1,
   datacontent2,
   datacontent3,
-  datacontent4,
-  datacontent5,
-  datacontent6,
-  datacontent7,
-  datacontent8,
-  datacontent9,
 
   dataform1,
   dataform2,
   dataform3,
-  dataform4,
-  dataform5,
-  dataform6,
-  dataform7,
-  dataform8,
-  dataform9,
 } = Astro.props;
 ---
 
@@ -74,7 +41,7 @@ const {
     </div>
 
     <div
-      class="absolute w-full h-full bg-[url('/img/auto.avif')] bg-cover bg-[right_70%_top_20px] md:bg-contain md:bg-[right_bottom] bg-no-repeat"
+      class="absolute w-full h-full bg-[url('/img/vacaciones.avif')] bg-cover bg-no-repeat"
     >
     </div>
     <a
@@ -113,57 +80,13 @@ const {
     data-content={datacontent2}
   >
     <div class="w-full h-full flex ml-4 title">
-      <p class="text-gray-50 texto font-light">{title2}</p>
-    </div>
-
-    <div
-      class=`absolute w-full h-full bg-[url('/img/moto.avif')] bg-cover md:bg-contain bg-right-bottom bg-no-repeat`
-    >
-    </div>
-    <a
-      href={dataform2}
-      class="ver__mas"
-    >
-      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
-        {datacontent2}
-      </p>
-      <p
-        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
-      >
-        Solicita tu cotización <span
-          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
-        >
-          <svg
-            xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              class="cls-1"
-              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-            ></path></svg
-          ></span
-        >
-      </p>
-    </a>
-  </div>
-
-  <div
-    class="card3 card"
-    data-content={datacontent3}
-  >
-    <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title3}</p>
     </div>
 
     <div
-      class=`absolute w-full h-full bg-[url('/img/art.avif')] bg-cover scale-x-[-1] md:bg-contain lg:bg-cover bg-no-repeat`
+      class=`absolute w-full h-full bg-[url('/img/enviaje.avif')] bg-cover bg-no-repeat`
     >
     </div>
-
     <a
       href={dataform3}
       class="ver__mas"
@@ -196,6 +119,50 @@ const {
   </div>
 
   <div
+    class="card3 card"
+    data-content={datacontent2}
+  >
+    <div class="w-full h-full flex ml-4 title">
+      <p class="text-gray-50 texto font-light">{title2}</p>
+    </div>
+
+    <div
+      class=`absolute w-full h-full bg-[url('/img/w&t.avif')] bg-cover   bg-no-repeat`
+    >
+    </div>
+
+    <a
+      href={dataform2}
+      class="ver__mas"
+    >
+      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
+        {datacontent2}
+      </p>
+      <p
+        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
+      >
+        Solicita tu cotización <span
+          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
+        >
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
+        >
+      </p>
+    </a>
+  </div>
+
+  <!--   <div
     class="card4 card"
     data-content={datacontent4}
   >
@@ -448,7 +415,7 @@ const {
         >
       </p>
     </a>
-  </div>
+  </div> -->
 </div>
 
 <style>
@@ -458,9 +425,9 @@ const {
 
     grid:
       "card1 card1 card1 card1 card1 card1 card2 card2 card2 card2 card2 card2" 1fr
-      "card3 card3 card3 card3 card3 card4 card4 card4 card4 card4 card4 card4" 1fr
-      "card5 card5 card5 card5 card6 card6 card6 card6 card7 card7 card7 card7" 1fr
-      "card8 card8 card8 card8 card8 card8 card8 card9 card9 card9 card9 card9" 1fr
+      "card3 card3 card3 card3 card3 card3 card3 card3 card3 card3 card3 card3" 1fr
+      /*  "card5 card5 card5 card5 card6 card6 card6 card6 card7 card7 card7 card7" 1fr
+      "card8 card8 card8 card8 card8 card8 card8 card9 card9 card9 card9 card9" 1fr */
       / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 18px;
   }
@@ -493,7 +460,7 @@ const {
     }
 
     .texto {
-      font-size: 30px;
+      font-size: clamp(20px, 3.3vw, 30px);
       font-weight: 400;
       z-index: 30;
     }
@@ -501,7 +468,6 @@ const {
 
   .title {
     opacity: 1;
-    margin-top: 8px;
     transition: all 0.3s linear;
   }
 
@@ -548,7 +514,7 @@ const {
       #e8abac 100%
     );
   }
-  .card4 {
+  /* .card4 {
     grid-area: card4;
     background-image: linear-gradient(
       135deg,
@@ -602,7 +568,7 @@ const {
       #18403e 39%,
       #349792 100%
     );
-  }
+  } */
 
   dialog {
     scale: 0;

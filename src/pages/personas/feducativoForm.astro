@@ -23,31 +23,31 @@ const result = `/${basePath}`;
         placeholderMensaje={""}
       >
         <InputForm
-          name="fechaNacimiento"
+          name="Fecha Nacimiento"
           placeholder="Juan Perez"
           type="date"
           labelText="Fecha de Nacimiento"
         />
         <SelectForm
-          name="laboral"
+          name="Situacion laboral"
           labelText="Situación Laboral"
           data={[
-            { value: "empleado", labelText: "Relación de dependencia" },
-            { value: "monotributo", labelText: "Monotributista" },
-            { value: "autonomo", labelText: "Autonomo" },
-            { value: "inscripto", labelText: "Responsable inscripto" },
-            { value: "otro", labelText: "Otro" },
+            { value: "Empleado", labelText: "Relación de dependencia" },
+            { value: "Monotributo", labelText: "Monotributista" },
+            { value: "Autonomo", labelText: "Autonomo" },
+            { value: "Inscripto", labelText: "Responsable inscripto" },
+            { value: "Otro", labelText: "Otro" },
           ]}
         />
         <InputForm
-          name="hijos"
+          name="Cantidad Hijos"
           placeholder="1"
           type="number"
           labelText="Cantidad de hijos"
           client:only="react"
         />
         <InputForm
-          name="edades"
+          name="Hijos Edades"
           placeholder="10 / 15 años / 5, 8 y 12 años"
           type="text"
           labelText="Edades de los hijos"
@@ -57,12 +57,12 @@ const result = `/${basePath}`;
         <CheckBoxForm
           title={"Etapas a transitar"}
           data={[
-            { value: "inicial", labelText: "Inicial" },
-            { value: "primaria", labelText: "Primaria" },
-            { value: "secundaria", labelText: "Secundaria" },
-            { value: "universitaria", labelText: "Universitaria" },
-            { value: "posgrado", labelText: "Posgrado" },
-            { value: "otro", labelText: "Otro" },
+            { value: "Inicial", labelText: "Inicial" },
+            { value: "Primaria", labelText: "Primaria" },
+            { value: "Secundaria", labelText: "Secundaria" },
+            { value: "Universitaria", labelText: "Universitaria" },
+            { value: "Posgrado", labelText: "Posgrado" },
+            { value: "Otro", labelText: "Otro" },
           ]}
           client:only="react"
         />

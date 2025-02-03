@@ -1,23 +1,13 @@
 [
     {
-        "id": 1,
-        "title": "Vacaciones",
-        "long_description": "Si estás organizando tus vacaciones hay 3 cosas que tenes que llevarte: ropa, dinero y un buen seguro de viaje. Todo lo que pueda pasarte en casa te puede pasar viajando: alguna enfermedad o accidente puede interrumpir tu aventura, la diferencia es que en otro país va a salirte mucho más caro resolverlo. Aseguramos tu aventura 24hs dentro y fuera del país, encontrá el plan ideal para tu viaje.",
-        "cardBackground": "../../public/img/vacaciones.avif",
-        "href": "/viajes/vacacionesForm"
-    },
-    {
-        "id": 2,
-        "title": "Work & Holiday",
-        "long_description": "Antes de salir para el aeropuerto necesitás contratar tu seguro de viaje internacional porque para asistir al programa work & holiday es OBLIGATORIO. Vas a pasar un año o más viviendo y trabajando en un país desconocido y donde hablan otro idioma. Será emocionante pero solo podrás disfrutarlo si estás ASEGURADO. OJO con comprar coberturas online sin asesoramiento porque podes estar eligiendo una equivocada que luego no te preste asistencia médica ni resuelva tus problemas. Llevo 6 años asegurando aventureros en todo el mundo, quiero guiarte a elegir el seguro de viaje ideal para vos.",
-        "cardBackground": "../../public/img/w&t.avif",
-        "href": "/viajes/w&hForm"
-    },
-    {
-        "id": 3,
-        "title": "Pasajero en viaje",
-        "long_description": "Si ya estás transitando un programa work & holiday o una visa de intercambio y necesitás renovar tu seguro de viaje internacional. Pero no cualquiera va a aceptar asegurarte, por eso es indispensable que cuentes con un asesoramiento profesional para hacerlo. Cuento con más de 6 años y más de 1000 aventureros asegurados, puedo ayudarte a elegir la mejor cobertura para vos.",
-        "cardBackground": "../../public/img/enviaje.avif",
-        "href": "/viajes/enViajeForm"
+        "title1": "Vacaciones",
+        "datacontent1": "Si estás organizando tus vacaciones hay 3 cosas que tenes que llevarte: ropa, dinero y un buen seguro de viaje. Todo lo que pueda pasarte en casa te puede pasar viajando: alguna enfermedad o accidente puede interrumpir tu aventura, la diferencia es que en otro país va a salirte mucho más caro resolverlo. Aseguramos tu aventura 24hs dentro y fuera del país, encontrá el plan ideal para tu viaje.",
+        "dataform1": "/viajes/vacacionesForm",
+        "title3": "Work & Holiday",
+        "datacontent3": "Antes de salir para el aeropuerto necesitás contratar tu seguro de viaje internacional porque para asistir al programa work & holiday es OBLIGATORIO. Vas a pasar un año o más viviendo y trabajando en un país desconocido y donde hablan otro idioma. Será emocionante pero solo podrás disfrutarlo si estás ASEGURADO. OJO con comprar coberturas online sin asesoramiento porque podes estar eligiendo una equivocada que luego no te preste asistencia médica ni resuelva tus problemas. Llevo 6 años asegurando aventureros en todo el mundo, quiero guiarte a elegir el seguro de viaje ideal para vos.",
+        "dataform3": "/viajes/w&hForm",
+        "title2": "Pasajero en viaje",
+        "datacontent2": "Si ya estás transitando un programa work & holiday o una visa de intercambio y necesitás renovar tu seguro de viaje internacional. Pero no cualquiera va a aceptar asegurarte, por eso es indispensable que cuentes con un asesoramiento profesional para hacerlo. Cuento con más de 6 años y más de 1000 aventureros asegurados, puedo ayudarte a elegir la mejor cobertura para vos.",
+        "dataform2": "/viajes/enViajeForm"
     }
 ]

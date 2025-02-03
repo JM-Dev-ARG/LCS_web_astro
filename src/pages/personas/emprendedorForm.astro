@@ -1,5 +1,4 @@
 ---
-import CheckBoxForm from "../../components/react_components/formsComponents/CheckBoxForm";
 import InputForm from "../../components/react_components/formsComponents/InputForm";
 import { SelectForm } from "../../components/react_components/formsComponents/SelectForm";
 
@@ -22,48 +21,27 @@ const result = `/${basePath}`;
         client:only="react"
         placeholderMensaje={""}
       >
-        <InputForm
-          name="fechaNacimiento"
-          placeholder="Juan Perez"
-          type="date"
-          labelText="Fecha de Nacimiento"
-        />
         <SelectForm
-          name="laboral"
-          labelText="Situación Laboral"
+          name="Tipo Emprendimiento"
+          labelText="Tipo de Emprendimiento"
           data={[
-            { value: "empleado", labelText: "Relación de dependencia" },
-            { value: "monotributo", labelText: "Monotributista" },
-            { value: "autonomo", labelText: "Autonomo" },
-            { value: "inscripto", labelText: "Responsable inscripto" },
+            { value: "Producto", labelText: "Producto" },
+            { value: "Servicio", labelText: "Servicio" },
             { value: "otro", labelText: "Otro" },
           ]}
         />
         <InputForm
-          name="hijos"
-          placeholder="1"
-          type="number"
-          labelText="Cantidad de hijos"
-          client:only="react"
-        />
-        <InputForm
-          name="edades"
-          placeholder="10 / 15 años / 5, 8 y 12 años"
+          name="Tiempo de lanzamiento"
+          placeholder="6 meses"
           type="text"
-          labelText="Edades de los hijos"
+          labelText="Tiempo en que tiene planeado lanzar el producto o servicio"
           client:only="react"
         />
-
-        <CheckBoxForm
-          title={"Etapas a transitar"}
-          data={[
-            { value: "inicial", labelText: "Inicial" },
-            { value: "primaria", labelText: "Primaria" },
-            { value: "secundaria", labelText: "Secundaria" },
-            { value: "universitaria", labelText: "Universitaria" },
-            { value: "posgrado", labelText: "Posgrado" },
-            { value: "otro", labelText: "Otro" },
-          ]}
+        <InputForm
+          name="Capital Necesario"
+          placeholder="AR$200000 / U$S50000 / no lo tengo definido aún"
+          type="text"
+          labelText="Capital necesario para lanzar el producto o servicio"
           client:only="react"
         />
       </ServicesForm>

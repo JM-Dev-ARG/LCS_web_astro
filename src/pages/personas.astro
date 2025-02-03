@@ -6,6 +6,9 @@ import Services from "../components/servicePages/Services.astro";
 import LayoutServicios from "../layouts/LayoutServicios.astro";
 import data from "../data/bentoPersonas.json";
 import BentoPersonas from "../components/servicePages/BentoPersonas.astro";
+import Bento from "../components/reutilizables/Bento.astro";
+import BentoPatrimonio from "../components/servicePages/BentoPatrimonio.astro";
+import type { ACTION_ERROR_CODES } from "astro:actions";
 ---
 
 <LayoutServicios title="LCS - Seguros de Personas">
@@ -17,26 +20,7 @@ import BentoPersonas from "../components/servicePages/BentoPersonas.astro";
       className="bg-[top_center]"
     />
     <Services>
-      <BentoPersonas
-        title1={data.title1}
-        title2={data.title2}
-        title3={data.title3}
-        title4={data.title4}
-        title5={data.title5}
-        title6={data.title6}
-        datacontent1={data.datacontent1}
-        datacontent2={data.datacontent2}
-        datacontent3={data.datacontent3}
-        datacontent4={data.datacontent4}
-        datacontent5={data.datacontent5}
-        datacontent6={data.datacontent6}
-        dataform1={data.dataform1}
-        dataform2={data.dataform2}
-        dataform3={data.dataform3}
-        dataform4={data.dataform4}
-        dataform5={data.dataform5}
-        dataform6={data.dataform6}
-      />
+      {data.map((item) => <BentoPersonas {...item} />)}
     </Services>
 
     <Presentacion

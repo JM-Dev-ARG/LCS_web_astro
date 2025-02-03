@@ -21,38 +21,45 @@ const result = `/${basePath}`;
         placeholderMensaje="Dejanos un mensaje"
       >
         <InputForm
-          name="nacionalidad"
+          name="Nacionalidad"
           placeholder="Argentino"
           type="text"
           labelText="Nacionalidad"
         />
         <InputForm
-          name="residencia"
+          name="Residencia"
           placeholder="Argentina"
           type="text"
           labelText="Pais de residencia actual"
         />
         <InputForm
-          name="destinoProximo"
+          name="Pais destino"
           placeholder="Argentina"
           type="text"
           labelText="Pais de destino proximo"
         />
         <InputForm
-          name="fechaSalidaOrigenViaje"
+          name="Fecha Inicio"
           placeholder="dd/mm/aaaa"
           type="date"
           labelText="Fecha de salida del pais de origen "
         />
         <InputForm
-          name="fechaRetornoOrigen"
+          name="Fecha Fin"
           placeholder="dd/mm/aaaa"
           type="date"
           labelText="Fecha de retorno al pais de origen"
         />
 
         <InputForm
-          name="edadPasajeroEnViaje"
+          name="Cantidad Pasajeros"
+          placeholder="1 pasajero"
+          type="text"
+          labelText="Cantidad de pasajeros"
+        />
+
+        <InputForm
+          name="Edades Pasajeros"
           placeholder="20 / 15 años "
           type="text"
           labelText="Edades de los pasajeros"
@@ -60,9 +67,9 @@ const result = `/${basePath}`;
         <CheckBoxForm
           title={"Coberturas adicionales"}
           data={[
-            { value: "preexistencias", labelText: "Preexistencias" },
-            { value: "deportes", labelText: "Deportes" },
-            { value: "tecnologia", labelText: "Tecnologia" },
+            { value: "Preexistencias", labelText: "Preexistencias" },
+            { value: "Deportes", labelText: "Deportes" },
+            { value: "Tecnologia", labelText: "Tecnologia" },
           ]}
           client:only="react"
         />

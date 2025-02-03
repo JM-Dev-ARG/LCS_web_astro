@@ -7,6 +7,7 @@ import ViajesCard from "../components/servicePages/ViajesCard.astro";
 import LayoutServicios from "../layouts/LayoutServicios.astro";
 import data from "../data/viajesCardData.json";
 import ViajesCardMobile from "../components/servicePages/ViajesCardMobile.astro";
+import BentoViajes from "../components/servicePages/BentoViajes.astro";
 ---
 
 <LayoutServicios title="LCS - Seguros de Viajes">
@@ -18,22 +19,7 @@ import ViajesCardMobile from "../components/servicePages/ViajesCardMobile.astro"
       className="bg-[top_center]"
     />
     <Services>
-      <div
-        class="hidden relative lg:flex gap-8 my-20 bg-[#fff5eb]"
-        data-aos="fade-up"
-        data-aos-duration="2000"
-        data-aos-once="true"
-      >
-        {data.map((item) => <ViajesCard {...item} />)}
-      </div>
-
-      <div
-        class="flex lg:hidden w-full mx-auto flex-col justify-center items-center gap-4"
-        data-aos="fade-up"
-        data-aos-duration="2000"
-      >
-        {data.map((item) => <ViajesCardMobile {...item} />)}
-      </div>
+      {data.map((item) => <BentoViajes {...item} />)}
     </Services>
     <Presentacion
       image="/resources/Logotipo.svg"

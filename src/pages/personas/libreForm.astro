@@ -21,32 +21,32 @@ const result = `/${basePath}`;
         placeholderMensaje="Dejanos un mensaje"
       >
         <InputForm
-          name="fechaNacimiento"
+          name="Fecha Nacimiento"
           placeholder="Juan Perez"
           type="date"
           labelText="Fecha de Nacimiento"
         />
         <SelectForm
-          name="laboral"
+          name="Situacion laboral"
           labelText="Situación Laboral"
           data={[
-            { value: "empleado", labelText: "Relación de dependencia" },
-            { value: "monotributo", labelText: "Monotributista" },
-            { value: "autonomo", labelText: "Autonomo" },
-            { value: "inscripto", labelText: "Responsable inscripto" },
-            { value: "otro", labelText: "Otro" },
+            { value: "Empleado", labelText: "Relación de dependencia" },
+            { value: "Monotributo", labelText: "Monotributista" },
+            { value: "Autonomo", labelText: "Autonomo" },
+            { value: "Inscripto", labelText: "Responsable inscripto" },
+            { value: "Otro", labelText: "Otro" },
           ]}
         />
         <SelectForm
-          name="proposito"
+          name="Proposito"
           labelText="¿Tenés un propósito para tu ahorro?"
           data={[
-            { value: "auto", labelText: "Automovil" },
-            { value: "viaje", labelText: "Viaje" },
-            { value: "casa", labelText: "Casa" },
-            { value: "capital", labelText: "Capital para emprendimiento" },
-            { value: "estudios", labelText: "Estudios superiores" },
-            { value: "a_definir", labelText: "Aún no definí un propósito" },
+            { value: "Auto", labelText: "Automovil" },
+            { value: "Viaje", labelText: "Viaje" },
+            { value: "Casa", labelText: "Casa" },
+            { value: "Capital", labelText: "Capital para emprendimiento" },
+            { value: "Estudios", labelText: "Estudios superiores" },
+            { value: "A Definir", labelText: "Aún no definí un propósito" },
           ]}
           client:only="react"
         />

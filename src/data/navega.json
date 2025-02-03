@@ -1,27 +1,22 @@
 [
     {
-        "href": "/#",
-        "label": "Inicio",
-        "target": "_self"
+        "href": "/",
+        "label": "Inicio"
     },
     {
-        "href": "#services",
-        "label": "Servicios",
-        "target": "_self"
+        "href": "/#services",
+        "label": "Servicios"
     },
     {
         "href": "/patrimoniales",
-        "label": "Seguros Patrimoniales",
-        "target": "_self"
+        "label": "Seguros Patrimoniales"
     },
     {
         "href": "/personas",
-        "label": "Seguros de Personas",
-        "target": "_self"
+        "label": "Seguros de Personas"
     },
     {
         "href": "/viajes",
-        "label": "Seguros de Viajes",
-        "target": "_self"
+        "label": "Seguros de Viajes"
     }
 ]

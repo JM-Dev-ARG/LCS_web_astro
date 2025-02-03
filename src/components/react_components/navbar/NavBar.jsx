@@ -4,6 +4,8 @@ import "./navbar.css"
 import navega from "../../../data/navega.json";
 import aprende from "../../../data/aprende.json";
 
+let url = window.location.pathname;
+
 
 
 const Navbar = () => {
@@ -13,20 +15,24 @@ const Navbar = () => {
     const toggleMenu = () => setMenuOpen((prev) => !prev);
 
     const handleScrollToTop = (e) => {
-        if (e.target.href === "/#hero" || e.target.textContent === "Inicio") {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
+        // Obtenemos el href del enlace clickeado (usando currentTarget para mayor precisión)
+        const linkHref = e.currentTarget.getAttribute('href');
+        // Verificamos si la página actual es la de inicio
+        const isHomePage = window.location.pathname === '/';
+
+        // Si el enlace es hacia la página de inicio y ya estamos en ella
+        if (linkHref === '/' && isHomePage) {
+            e.preventDefault(); // Evita la navegación
+            window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll suave al top
         }
+        // Si no está en la página de inicio, el href se ejecutará normalmente
     };
 
-    const handleScrollToTopLogo = (e) => {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
 
-    };
 
-    /*  menuOpen ? window.scroll("0px", "0px") : window.scroll("auto"); */
+
     useEffect(() => {
+        console.log(url);
         const closeMenuOnLinkClick = () => setMenuOpen(false);
         const navbarMovilLinks = navbarMovilRef.current.querySelectorAll("a");
 
@@ -49,12 +55,13 @@ const Navbar = () => {
             >
                 <div className="flex items-center justify-between lg:justify-center w-full mx-auto lg:px-3 2xl:px-0 py-3 ">
                     <div className="flex justify-left items-center flex-1 ml-8 ">
-                        <button onClick={handleScrollToTopLogo} >
+                        <a onClick={handleScrollToTop} href="/" >
                             <img
                                 className={`w-[50px] logo hover:rotate-[15deg] hover:scale-[1.1] transition duration-300 ease-in-out`}
                                 src="/resources/corazon-paragua.svg"
                                 alt="Logo La Chica del Seguro"
-                            /></button>
+                            />
+                        </a>
 
                     </div>
 

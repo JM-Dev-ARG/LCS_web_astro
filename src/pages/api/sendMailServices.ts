@@ -25,13 +25,14 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     let formDataString = keyValuePairs.join("&");
+    console.log(formDataString);
 
     fetch(import.meta.env.DATA_BASE, {
       redirect: "follow",
       method: "POST",
       body: formDataString,
       headers: {
-        "Content-Type": "text/plain;charset=UTF-8",
+        "Content-Type": "application/x-www-form-urlencoded",
       },
     });
 
@@ -72,62 +73,75 @@ export const POST: APIRoute = async ({ request }) => {
   }
 };
 
-/* document.getElementById("form").addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent the default form submission
-  document.getElementById("message").textContent = "Submitting..";
-  document.getElementById("message").style.display = "block";
-  document.getElementById("submit-button").disabled = true;
+//probar este codigo para envio de mails y para guardar datos en una base de datos
 
-  // Collect the form data
-  var formData = new FormData(this);
-  var keyValuePairs = [];
-  for (var pair of formData.entries()) {
-    keyValuePairs.push(pair[0] + "=" + pair[1]);
+/* import type { APIRoute } from "astro";
+import formData from "form-data";
+import Mailgun from "mailgun.js";
+
+export const POST: APIRoute = async ({ request }) => {
+  const data = await request.formData();
+
+  const emailTo = data.get("Email Destinatario");
+
+  // Convertir FormData a un objeto
+  const formDataObject: { [key: string]: string } = {};
+  for (const [key, value] of data.entries()) {
+    formDataObject[key] = value.toString();
   }
 
-  var formDataString = keyValuePairs.join("&");
+  // Configuración de Mailgun
+  const mailgun = new Mailgun(formData);
+  const client = mailgun.client({
+    username: "api",
+    key: import.meta.env.MAILGUN_API_KEY, // API Key desde Mailgun
+  });
 
-  // Send a POST request to your Google Apps Script
-  fetch(
-    "https://script.google.com/macros/s/AKfycbz_aHKLvz6LO3NT9y9HS9FuIlQ8NZadn2fHcn66HBaT7nheUKF3jJ6eaUN9piFKiD4l/exec",
-    {
+  try {
+    // Enviar datos a la base de datos (Google Sheets, etc.)
+    const formDataString = new URLSearchParams(formDataObject).toString();
+
+    await fetch(import.meta.env.DATA_BASE, {
       redirect: "follow",
       method: "POST",
       body: formDataString,
       headers: {
-        "Content-Type": "text/plain;charset=utf-8",
+        "Content-Type": "application/x-www-form-urlencoded",
       },
-    }
-  )
-    .then(function (response) {
-      // Check if the request was successful
-      if (response) {
-        return response; // Assuming your script returns JSON response
-      } else {
-        throw new Error("Failed to submit the form.");
-      }
-    })
-    .then(function (data) {
-      // Display a success message
-      document.getElementById("message").textContent =
-        "Data submitted successfully!";
-      document.getElementById("message").style.display = "block";
-      document.getElementById("message").style.backgroundColor = "green";
-      document.getElementById("message").style.color = "beige";
-      document.getElementById("submit-button").disabled = false;
-      document.getElementById("form").reset();
-
-      setTimeout(function () {
-        document.getElementById("message").textContent = "";
-        document.getElementById("message").style.display = "none";
-      }, 2600);
-    })
-    .catch(function (error) {
-      // Handle errors, you can display an error message here
-      console.error(error);
-      document.getElementById("message").textContent =
-        "An error occurred while submitting the form.";
-      document.getElementById("message").style.display = "block";
     });
-});
- */
+
+    // Enviar el correo con los datos dinámicos
+    const emailText = Object.entries(formDataObject)
+      .map(([key, value]) => `${key}: ${value}`)
+      .join("\n");
+
+    const result = await client.messages.create(
+      import.meta.env.MAILGUN_DOMAIN,
+      {
+        from: `Formulario de Patrimoniales <noreply@${
+          import.meta.env.MAILGUN_DOMAIN
+        }>`,
+        to: emailTo,
+        subject: "Nueva solicitud de cotización patrimoniales desde página web",
+        text: `Los datos del formulario son:\n${emailText}`,
+      }
+    );
+
+    console.log("Email enviado:", result.id);
+
+    return new Response(
+      JSON.stringify({
+        message: "Email enviado exitosamente.",
+      }),
+      { status: 200 }
+    );
+  } catch (error: any) {
+    console.error("Error al enviar el email:", error.message);
+    return new Response(
+      JSON.stringify({
+        message: error.message || "Hubo un error al enviar el email.",
+      }),
+      { status: 500 }
+    );
+  }
+}; */

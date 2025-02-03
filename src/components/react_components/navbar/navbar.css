@@ -7,7 +7,7 @@
 
 .menu__toggle {
   z-index: 50;
-  --icon-toggle-menu: url("./public/svg/menu_open.svg");
+  --icon-toggle-menu: url("../public/svg/menu_open.svg");
   background-image: var(--icon-toggle-menu);
   filter: var(--filter);
   display: flex;
@@ -23,6 +23,6 @@
 }
 
 .menu__toggle:has(.menu__input:checked) {
-  --icon-toggle-menu: url("./public/svg/menu_close.svg");
-  --filter: invert(1);
+  --icon-toggle-menu: url("../public/svg/menu_close.svg");
+  /* --filter: invert(1); */
 }
