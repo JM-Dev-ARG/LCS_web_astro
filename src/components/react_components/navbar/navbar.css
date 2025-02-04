@@ -1,15 +1,7 @@
-.root {
-  --filter: invert(0);
-}
-/* .logo {
-  filter: var(--filter);
-} */
-
 .menu__toggle {
   z-index: 50;
   --icon-toggle-menu: url("/svg/menu_open.svg");
   background-image: var(--icon-toggle-menu);
-  filter: var(--filter);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,5 +16,4 @@
 
 .menu__toggle:has(.menu__input:checked) {
   --icon-toggle-menu: url("/svg/menu_close.svg");
-  /* --filter: invert(1); */
 }
