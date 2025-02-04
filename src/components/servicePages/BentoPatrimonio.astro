@@ -74,7 +74,7 @@ const {
     </div>
 
     <div
-      class="absolute w-full h-full bg-[url('/img/auto.avif')] bg-cover bg-[right_70%_top_20px] md:bg-contain md:bg-[right_bottom] bg-no-repeat"
+      class="absolute w-full h-full bg-[url('/img/auto2.avif')] opacity-80 bg-cover bg-[center_bottom] bg-no-repeat"
     >
     </div>
     <a
@@ -117,7 +117,7 @@ const {
     </div>
 
     <div
-      class=`absolute w-full h-full bg-[url('/img/moto.avif')] bg-cover md:bg-contain bg-right-bottom bg-no-repeat`
+      class=`absolute w-full h-full bg-[url('/img/moto2.avif')] opacity-80 bg-cover bg-[right_30%_bottom] bg-no-repeat`
     >
     </div>
     <a
@@ -160,7 +160,7 @@ const {
     </div>
 
     <div
-      class=`absolute w-full h-full bg-[url('/img/art.avif')] bg-cover scale-x-[-1] md:bg-contain lg:bg-cover bg-no-repeat`
+      class=`absolute w-full h-full bg-[url('/img/art2.avif')] opacity-80 bg-cover bg-[center_bottom]  bg-no-repeat`
     >
     </div>
 
@@ -204,7 +204,7 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('/img/hogar.avif')] bg-cover bg-[right_30%_top] md:bg-contain md:bg-[right_bottom]  bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('/img/hogar2.avif')] opacity-80 bg-cover bg-[center_bottom]  bg-no-repeat`
     >
     </div>
     <a
@@ -237,6 +237,7 @@ const {
       </p>
     </a>
   </div>
+
   <div
     class="card5 card"
     data-content={datacontent5}
@@ -246,7 +247,7 @@ const {
     </div>
 
     <div
-      class="absolute w-full h-full bg-[url('/img/urbano.avif')] bg-cover md:bg-contain lg:bg-cover md:bg-[right_bottom] bg-[right_20%_bottom] bg-no-repeat"
+      class="absolute w-full h-full bg-[url('/img/urbano_movil.avif')] opacity-80 md:bg-[url('/img/urbano2.avif')] opacity-80 bg-cover bg-[center_bottom] bg-no-repeat"
     >
     </div>
     <a
@@ -279,6 +280,7 @@ const {
       </p>
     </a>
   </div>
+
   <div
     class="card6 card"
     data-content={datacontent6}
@@ -288,7 +290,7 @@ const {
     </div>
 
     <div
-      class="absolute w-full h-full bg-[url('/img/celular.avif')] bg-cover md:bg-contain lg:bg-cover bg-[right_20%_bottom] md:bg-[right_bottom] bg-no-repeat"
+      class="absolute w-full h-full bg-[url('/img/celular2.avif')] opacity-80 bg-cover bg-[right_30%_bottom] md:bg-[right_bottom] lg:bg-[right_40%_bottom] bg-no-repeat"
     >
     </div>
     <a
@@ -321,6 +323,7 @@ const {
       </p>
     </a>
   </div>
+
   <div
     class="card7 card"
     data-content={datacontent7}
@@ -330,7 +333,7 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('/img/asistencia.avif')] bg-cover bg-[right_40%_bottom] md:bg-[right_40%_bottom_-70px] lg:bg-[right_40%_bottom]  bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('/img/asistencia2.avif')] opacity-80 bg-cover bg-[right_40%_bottom] md:bg-[right_bottom] lg:bg-[right_40%_bottom]  bg-no-repeat`
     >
     </div>
     <a
@@ -373,7 +376,7 @@ const {
     </div>
 
     <div
-      class="absolute w-full h-full bg-[url('/img/comercio.avif')] bg-contain bg-[right_bottom] md:bg-[right_bottom_-10px] bg-no-repeat"
+      class="absolute w-full h-full bg-[url('/img/comercio2.avif')] opacity-80 bg-cover bg-[right_40%_bottom] md:bg-[center_bottom] bg-no-repeat"
     >
     </div>
     <a
@@ -416,7 +419,7 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('/img/consorcio.avif')] bg-cover bg-center md:bg-[right_bottom_-100px] lg:bg-center 2xl:bg-[right_-40px_bottom_-20px] bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('/img/consorcio3.avif')] opacity-80 bg-cover bg-[left_30%_bottom]  bg-no-repeat`
     >
     </div>
     <a
@@ -484,6 +487,13 @@ const {
     transition: all 0.3s linear;
     cursor: pointer;
 
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #6fa29d 52%,
+      #96b6b3 100%
+    );
+
     &:hover .ver__mas {
       left: 0;
     }
@@ -494,8 +504,10 @@ const {
 
     .texto {
       font-size: 30px;
+      margin-top: 8px;
       font-weight: 400;
       z-index: 30;
+      filter: drop-shadow(5px 5px 6px #000000);
     }
   }
 
@@ -523,199 +535,29 @@ const {
 
   .card1 {
     grid-area: card1;
-    background-image: linear-gradient(
-      135deg,
-      #000000 0%,
-      #6fa29d 52%,
-      #96b6b3 100%
-    );
   }
   .card2 {
     grid-area: card2;
-    background-image: linear-gradient(
-      135deg,
-      #000000 0%,
-      #1d1e1c 39%,
-      #686868 100%
-    );
   }
   .card3 {
     grid-area: card3;
-    background-image: linear-gradient(
-      135deg,
-      #000000 0%,
-      #eb8284 39%,
-      #e8abac 100%
-    );
   }
   .card4 {
     grid-area: card4;
-    background-image: linear-gradient(
-      135deg,
-      #000000 0%,
-      #18403e 39%,
-      #349792 100%
-    );
   }
   .card5 {
     grid-area: card5;
-    background-image: linear-gradient(
-      135deg,
-      #000000 0%,
-      #1d1e1c 39%,
-      #686868 100%
-    );
   }
   .card6 {
     grid-area: card6;
-
-    background-image: linear-gradient(
-      135deg,
-      #000000 0%,
-      #6fa29d 52%,
-      #96b6b3 100%
-    );
   }
   .card7 {
     grid-area: card7;
-    background-image: linear-gradient(
-      135deg,
-      #000000 0%,
-      #ed6f5f 39%,
-      #f6ada3 100%
-    );
   }
   .card8 {
     grid-area: card8;
-    background-image: linear-gradient(
-      135deg,
-      #000000 0%,
-      #eb8284 39%,
-      #e8abac 100%
-    );
   }
   .card9 {
     grid-area: card9;
-    background-image: linear-gradient(
-      135deg,
-      #000000 0%,
-      #18403e 39%,
-      #349792 100%
-    );
-  }
-
-  dialog {
-    scale: 0;
-    opacity: 0;
-    transition:
-      scale 0.3s linear,
-      display 0.4s linear allow-discrete,
-      opacity 0.4s linear;
-  }
-
-  dialog[open] {
-    opacity: 1;
-    scale: 1;
-
-    transition:
-      scale 0.3s linear,
-      opacity 0.4s linear;
-
-    @starting-style {
-      scale: 0;
-      opacity: 0;
-    }
-  }
-
-  dialog::backdrop {
-    backdrop-filter: blur(4px);
-    background: rgba(0, 0, 0, 0.26);
-  }
-
-  .div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 20px;
-    height: clamp(50px, 10vw, 70px);
-    width: clamp(150px, 50vw, 300px);
-    background-image: linear-gradient(
-      135deg,
-      #3e5351 30%,
-      rgb(66, 182, 170) 100%
-    );
-    transition: all 0.2s linear;
-    cursor: pointer;
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-
-  .sub__container {
-    position: relative;
-  }
-  .sub {
-    position: absolute;
-    top: clamp(30px, 3.5vw, 50px);
-    bottom: 0;
-    right: 0;
-    left: 0%;
-    width: 100%;
-    height: 40px;
   }
 </style>
-
-<!-- <script>
-  document.addEventListener("astro:page-load", () => {
-    const btnDialog = document.querySelectorAll("div");
-    const btnModalContact = document.querySelectorAll("#open-modal-contacto");
-    const dialog = document.getElementById("modal-info") as HTMLDialogElement;
-    const close = document.getElementById("close");
-    const closeContact = document.querySelectorAll("#close-contact");
-
-    const modalContent = document.getElementById("modal-info-content");
-    const modalImg = document.getElementById(
-      "modal-info-img"
-    ) as HTMLImageElement;
-
-    btnDialog.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const bgColor = btn.getAttribute("data-color");
-        const data = btn.getAttribute("data-content");
-
-        const img = btn.getAttribute("data-img-background");
-
-        const position = btn.getAttribute("data-img-position");
-        const form = btn.getAttribute("data-form");
-        dialog.style.backgroundImage = bgColor;
-        modalContent.innerHTML = data;
-        modalImg.src = img;
-        modalImg.style.objectPosition = position;
-        dialog.setAttribute("data-form", form);
-
-        btnModalContact.forEach((btn) => {
-          btn.setAttribute("href", form);
-        });
-        dialog.showModal();
-      });
-    });
-
-    btnModalContact.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        dialog.close();
-        const activeElement = document.activeElement;
-        if (activeElement instanceof HTMLElement) {
-          activeElement.blur();
-        }
-      });
-    });
-
-    close.addEventListener("click", () => {
-      dialog.close();
-      const activeElement = document.activeElement;
-      if (activeElement instanceof HTMLElement) {
-        activeElement.blur();
-      }
-    });
-  });
-</script> -->

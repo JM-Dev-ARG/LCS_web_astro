@@ -32,16 +32,13 @@ const {
 ---
 
 <div class="flex flex-col lg:grid grid__container w-full xl:w-[70%] my-10">
-  <div
-    class="card1 card justify-end"
-    data-content={datacontent1}
-  >
+  <div class="card1 card">
     <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title1}</p>
     </div>
 
     <div
-      class="absolute w-full h-full bg-[url('/img/vacaciones.avif')] bg-cover bg-no-repeat"
+      class="absolute w-full h-full bg-[url('/img/vacaciones.avif')] opacity-80 bg-cover bg-[right_50%_bottom] md:bg-[center_bottom] bg-no-repeat"
     >
     </div>
     <a
@@ -75,20 +72,17 @@ const {
     </a>
   </div>
 
-  <div
-    class="card2 card"
-    data-content={datacontent2}
-  >
+  <div class="card2 card">
     <div class="w-full h-full flex ml-4 title">
-      <p class="text-gray-50 texto font-light">{title3}</p>
+      <p class="text-gray-50 texto font-light">{title2}</p>
     </div>
 
     <div
-      class=`absolute w-full h-full bg-[url('/img/enviaje.avif')] bg-cover bg-no-repeat`
+      class=`absolute w-full h-full bg-[url('/img/enviaje.avif')] opacity-80 bg-cover bg-[right_50%_bottom] md:bg-[center_bottom_-100px] lg:bg-[right_50%_bottom] bg-no-repeat`
     >
     </div>
     <a
-      href={dataform3}
+      href={dataform2}
       class="ver__mas"
     >
       <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
@@ -118,25 +112,22 @@ const {
     </a>
   </div>
 
-  <div
-    class="card3 card"
-    data-content={datacontent2}
-  >
+  <div class="card3 card">
     <div class="w-full h-full flex ml-4 title">
-      <p class="text-gray-50 texto font-light">{title2}</p>
+      <p class="text-gray-50 texto font-light">{title3}</p>
     </div>
 
     <div
-      class=`absolute w-full h-full bg-[url('/img/w&t.avif')] bg-cover   bg-no-repeat`
+      class=`absolute w-full h-full bg-[url('/img/w&t2.avif')] opacity-80  bg-cover bg-[right_70%_bottom] md:bg-[center_bottom] lg:bg-[right_bottom_-40px] bg-no-repeat`
     >
     </div>
 
     <a
-      href={dataform2}
+      href={dataform3}
       class="ver__mas"
     >
       <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
-        {datacontent2}
+        {datacontent3}
       </p>
       <p
         class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
@@ -171,7 +162,7 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('/img/hogar.avif')] bg-cover bg-[right_30%_top] md:bg-contain md:bg-[right_bottom]  bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('/img/hogar.avif')] opacity-80 bg-cover bg-[right_30%_top] md:bg-contain md:bg-[right_bottom]  bg-no-repeat`
     >
     </div>
     <a
@@ -213,7 +204,7 @@ const {
     </div>
 
     <div
-      class="absolute w-full h-full bg-[url('/img/urbano.avif')] bg-cover md:bg-contain lg:bg-cover md:bg-[right_bottom] bg-[right_20%_bottom] bg-no-repeat"
+      class="absolute w-full h-full bg-[url('/img/urbano.avif')] opacity-80 bg-cover md:bg-contain lg:bg-cover md:bg-[right_bottom] bg-[right_20%_bottom] bg-no-repeat"
     >
     </div>
     <a
@@ -255,7 +246,7 @@ const {
     </div>
 
     <div
-      class="absolute w-full h-full bg-[url('/img/celular.avif')] bg-cover md:bg-contain lg:bg-cover bg-[right_20%_bottom] md:bg-[right_bottom] bg-no-repeat"
+      class="absolute w-full h-full bg-[url('/img/celular.avif')] opacity-80 bg-cover md:bg-contain lg:bg-cover bg-[right_20%_bottom] md:bg-[right_bottom] bg-no-repeat"
     >
     </div>
     <a
@@ -297,7 +288,7 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('/img/asistencia.avif')] bg-cover bg-[right_40%_bottom] md:bg-[right_40%_bottom_-70px] lg:bg-[right_40%_bottom]  bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('/img/asistencia.avif')] opacity-80 bg-cover bg-[right_40%_bottom] md:bg-[right_40%_bottom_-70px] lg:bg-[right_40%_bottom]  bg-no-repeat`
     >
     </div>
     <a
@@ -340,7 +331,7 @@ const {
     </div>
 
     <div
-      class="absolute w-full h-full bg-[url('/img/comercio.avif')] bg-contain bg-[right_bottom] md:bg-[right_bottom_-10px] bg-no-repeat"
+      class="absolute w-full h-full bg-[url('/img/comercio.avif')] opacity-80 bg-contain bg-[right_bottom] md:bg-[right_bottom_-10px] bg-no-repeat"
     >
     </div>
     <a
@@ -383,7 +374,7 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('/img/consorcio.avif')] bg-cover bg-center md:bg-[right_bottom_-100px] lg:bg-center 2xl:bg-[right_-40px_bottom_-20px] bg-no-repeat`
+      class=`absolute  w-full h-full bg-[url('/img/consorcio.avif')] opacity-80 bg-cover bg-center md:bg-[right_bottom_-100px] lg:bg-center 2xl:bg-[right_-40px_bottom_-20px] bg-no-repeat`
     >
     </div>
     <a
@@ -450,6 +441,12 @@ const {
 
     transition: all 0.3s linear;
     cursor: pointer;
+    background-image: linear-gradient(
+      135deg,
+      #000000 0%,
+      #6fa29d 52%,
+      #96b6b3 100%
+    );
 
     &:hover .ver__mas {
       left: 0;
@@ -460,9 +457,11 @@ const {
     }
 
     .texto {
-      font-size: clamp(20px, 3.3vw, 30px);
+      font-size: 30px;
+      margin-top: 8px;
       font-weight: 400;
       z-index: 30;
+      filter: drop-shadow(5px 5px 6px #000000);
     }
   }
 
@@ -489,30 +488,12 @@ const {
 
   .card1 {
     grid-area: card1;
-    background-image: linear-gradient(
-      135deg,
-      #000000 0%,
-      #6fa29d 52%,
-      #96b6b3 100%
-    );
   }
   .card2 {
     grid-area: card2;
-    background-image: linear-gradient(
-      135deg,
-      #000000 0%,
-      #1d1e1c 39%,
-      #686868 100%
-    );
   }
   .card3 {
     grid-area: card3;
-    background-image: linear-gradient(
-      135deg,
-      #000000 0%,
-      #eb8284 39%,
-      #e8abac 100%
-    );
   }
   /* .card4 {
     grid-area: card4;
