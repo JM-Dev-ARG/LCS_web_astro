@@ -5,7 +5,7 @@ const InputForm = ({ name, placeholder, type, labelText }) => {
     return (
         <div className="w-full lg:w-[calc(50%-40px)] flex flex-col gap-1">
             <label
-                for={name}
+                htmlFor={name}
                 className="font-extralight text-[clamp(20px,5vw,30px)] pl-2 text-gray-50"
             >{labelText}
             </label>

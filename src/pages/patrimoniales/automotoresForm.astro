@@ -57,11 +57,23 @@ const result = `/${basePath}`;
           labelText="Versión del automovil"
           client:only="react"
         />
-        <InputForm
+
+        <SelectForm
           name="Año"
-          placeholder="2016"
-          type="text"
           labelText="Año del automovil"
+          data={[
+            { value: "2025", labelText: "2025" },
+            { value: "2024", labelText: "2024" },
+            { value: "2023", labelText: "2023" },
+            { value: "2022", labelText: "2022" },
+            { value: "2021", labelText: "2021" },
+            { value: "2020", labelText: "2020" },
+            { value: "2019", labelText: "2019" },
+            { value: "2018", labelText: "2018" },
+            { value: "2017", labelText: "2017" },
+            { value: "2016", labelText: "2016" },
+            { value: "2015", labelText: "2015" },
+          ]}
           client:only="react"
         />
       </ServicesForm>
