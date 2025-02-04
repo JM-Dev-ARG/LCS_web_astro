@@ -16,6 +16,12 @@ type Props = {
   datacontent4: string;
   datacontent5: string;
   datacontent6: string;
+  databullet1?: Array<string>;
+  databullet2?: Array<string>;
+  databullet3?: Array<string>;
+  databullet4?: Array<string>;
+  databullet5?: Array<string>;
+  databullet6?: Array<string>;
   dataform1: string;
   dataform2: string;
   dataform3: string;
@@ -36,7 +42,12 @@ const {
   datacontent4,
   datacontent5,
   datacontent6,
-
+  databullet1,
+  databullet2,
+  databullet3,
+  databullet4,
+  databullet5,
+  databullet6,
   dataform1,
   dataform2,
   dataform3,
@@ -47,11 +58,7 @@ const {
 ---
 
 <div class="flex flex-col lg:grid grid__container w-full xl:w-[70%] my-10">
-  <div
-    class="card1 card"
-    data-content={datacontent1}
-    data-form={dataform1}
-  >
+  <div class="card1 card">
     <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title1}</p>
     </div>
@@ -66,6 +73,30 @@ const {
     >
       <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
         {datacontent1}
+        {
+          databullet1
+            ? databullet1.map((item) => (
+                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
+                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                    <svg
+                      xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        class="cls-1"
+                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+                      />
+                    </svg>
+                  </span>
+                  {item}
+                </p>
+              ))
+            : ""
+        }
       </p>
       <p
         class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
@@ -91,11 +122,7 @@ const {
     </a>
   </div>
 
-  <div
-    class="card2 card"
-    data-content={datacontent2}
-    data-form={dataform2}
-  >
+  <div class="card2 card">
     <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title2}</p>
     </div>
@@ -112,6 +139,30 @@ const {
         class="text-gray-50 w-[80%] text-pretty text-left text-[clamp(14px,3vw,16px)]"
       >
         {datacontent2}
+        {
+          databullet2
+            ? databullet2.map((item) => (
+                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
+                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                    <svg
+                      xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        class="cls-1"
+                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+                      />
+                    </svg>
+                  </span>
+                  {item}
+                </p>
+              ))
+            : ""
+        }
       </p>
       <p
         class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-[95%] flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
@@ -136,11 +187,7 @@ const {
       </p>
     </a>
   </div>
-  <div
-    class="card3 card"
-    data-content={datacontent5}
-    data-form={dataform5}
-  >
+  <div class="card3 card">
     <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title5}</p>
     </div>
@@ -157,6 +204,30 @@ const {
         class="text-gray-50 w-[80%] text-pretty text-left text-[clamp(14px,3vw,16px)]"
       >
         {datacontent5}
+        {
+          databullet5
+            ? databullet5.map((item) => (
+                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
+                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                    <svg
+                      xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        class="cls-1"
+                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+                      />
+                    </svg>
+                  </span>
+                  {item}
+                </p>
+              ))
+            : ""
+        }
       </p>
       <p
         class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-[95%] flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
@@ -203,6 +274,30 @@ const {
         class="text-gray-50 w-[80%] text-pretty text-left text-[clamp(14px,3vw,16px)]"
       >
         {datacontent4}
+        {
+          databullet4
+            ? databullet4.map((item) => (
+                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
+                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                    <svg
+                      xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        class="cls-1"
+                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+                      />
+                    </svg>
+                  </span>
+                  {item}
+                </p>
+              ))
+            : ""
+        }
       </p>
       <p
         class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-[95%] flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
@@ -249,6 +344,30 @@ const {
         class="text-gray-50 w-[80%] text-pretty text-left text-[clamp(14px,3vw,16px)]"
       >
         {datacontent3}
+        {
+          databullet3
+            ? databullet3.map((item) => (
+                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
+                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                    <svg
+                      xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        class="cls-1"
+                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+                      />
+                    </svg>
+                  </span>
+                  {item}
+                </p>
+              ))
+            : ""
+        }
       </p>
       <p
         class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-[95%] flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
@@ -295,125 +414,149 @@ const {
         class="text-gray-50 w-[80%] text-pretty text-left text-[clamp(14px,3vw,16px)]"
       >
         {datacontent6}
-      </p>
-      <p
-        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-[95%] flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
-      >
-        Agenda tu cita <span
-          class="w-3 grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
-        >
-          <svg
-            xmlns="
+        {
+          databullet6
+            ? databullet6.map((item) => (
+                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
+                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                    <svg
+                      xmlns="
           http:
           www.w3.org
           2000
           svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              class="cls-1"
-              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-            ></path></svg
-          ></span
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        class="cls-1"
+                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+                      />
+                    </svg>
+                  </span>
+                  {item}
+                </p>
+              ))
+            : ""
+        }
+        <p
+          class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-[95%] flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
         >
+          Agenda tu cita <span
+            class="w-3 grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
+          >
+            <svg
+              xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                class="cls-1"
+                d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+              ></path></svg
+            ></span
+          >
+        </p>
       </p>
     </a>
   </div>
+
+  <style>
+    .grid__container {
+      position: relative;
+      z-index: 20;
+
+      grid:
+        "card1 card1 card1 card1 card1 card1 card2 card2 card2 card2 card2 card2" 1fr
+        "card3 card3 card3 card3 card3 card4 card4 card4 card4 card4 card4 card4" 1fr
+        "card5 card5 card5 card5 card5 card5 card5 card6 card6 card6 card6 card6" 1fr
+        / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 18px;
+    }
+
+    .grid__container:has(.card:hover) .card:not(:hover) {
+      filter: grayscale(70%);
+      opacity: 25%;
+    }
+
+    .card {
+      z-index: 20;
+      overflow: hidden;
+      display: flex;
+      position: relative;
+      width: 100%;
+      min-height: 400px;
+      max-height: 550px;
+
+      border-radius: 20px;
+
+      transition: all 0.3s linear;
+      cursor: pointer;
+      background-image: linear-gradient(
+        135deg,
+        #000000 0%,
+        #6fa29d 52%,
+        #96b6b3 100%
+      );
+
+      &:hover .ver__mas {
+        left: 0;
+      }
+
+      &:hover .title {
+        opacity: 0;
+      }
+
+      .texto {
+        font-size: 30px;
+        margin-top: 8px;
+        font-weight: 400;
+        z-index: 30;
+        filter: drop-shadow(5px 5px 6px #000000);
+      }
+    }
+
+    .title {
+      opacity: 1;
+
+      transition: all 0.3s linear;
+    }
+
+    .ver__mas {
+      position: absolute;
+      bottom: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      background-color: #000000ec;
+
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: space-around;
+      transition: all 0.3s linear 0.1s;
+    }
+
+    .card1 {
+      grid-area: card1;
+    }
+    .card2 {
+      grid-area: card2;
+    }
+    .card3 {
+      grid-area: card3;
+    }
+    .card4 {
+      grid-area: card4;
+    }
+    .card5 {
+      grid-area: card5;
+    }
+    .card6 {
+      grid-area: card6;
+    }
+  </style>
 </div>
-
-<style>
-  .grid__container {
-    position: relative;
-    z-index: 20;
-
-    grid:
-      "card1 card1 card1 card1 card1 card1 card2 card2 card2 card2 card2 card2" 1fr
-      "card3 card3 card3 card3 card3 card4 card4 card4 card4 card4 card4 card4" 1fr
-      "card5 card5 card5 card5 card5 card5 card5 card6 card6 card6 card6 card6" 1fr
-      / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 18px;
-  }
-
-  .grid__container:has(.card:hover) .card:not(:hover) {
-    filter: grayscale(70%);
-    opacity: 25%;
-  }
-
-  .card {
-    z-index: 20;
-    overflow: hidden;
-    display: flex;
-    position: relative;
-    width: 100%;
-    min-height: 400px;
-    max-height: 550px;
-
-    border-radius: 20px;
-
-    transition: all 0.3s linear;
-    cursor: pointer;
-    background-image: linear-gradient(
-      135deg,
-      #000000 0%,
-      #6fa29d 52%,
-      #96b6b3 100%
-    );
-
-    &:hover .ver__mas {
-      left: 0;
-    }
-
-    &:hover .title {
-      opacity: 0;
-    }
-
-    .texto {
-      font-size: 30px;
-      margin-top: 8px;
-      font-weight: 400;
-      z-index: 30;
-      filter: drop-shadow(5px 5px 6px #000000);
-    }
-  }
-
-  .title {
-    opacity: 1;
-
-    transition: all 0.3s linear;
-  }
-
-  .ver__mas {
-    position: absolute;
-    bottom: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    padding: 2rem;
-    background-color: #000000ec;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    transition: all 0.3s linear 0.1s;
-  }
-
-  .card1 {
-    grid-area: card1;
-  }
-  .card2 {
-    grid-area: card2;
-  }
-  .card3 {
-    grid-area: card3;
-  }
-  .card4 {
-    grid-area: card4;
-  }
-  .card5 {
-    grid-area: card5;
-  }
-  .card6 {
-    grid-area: card6;
-  }
-</style>

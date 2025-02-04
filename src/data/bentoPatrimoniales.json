@@ -1,23 +1,71 @@
 [
     {
         "title1": "AUTOMOTORES",
+        "datacontent1": "Asegurá tu auto y viaja tranquilo! ",
+        "databullet1": [
+            "Seguro automotor obligatorio.",
+            "Robo y hurto total o parcial.",
+            "Incendio y daño total o parcial.",
+            "Granizo, inundaciones y cristales.",
+            "Asistencias y beneficios adicionales."
+        ],
         "title2": "MOTOCICLETAS",
+        "datacontent2": "Tu moto 100% asegurada",
+        "databullet2": [
+            "Seguro obligatorio.",
+            "Robo y hurto total o parcial.",
+            "Incendio y daño total o parcial.",
+            "Granizo y cristales cubiertos",
+            "Asistencias y beneficios adicionales."
+        ],
         "title3": "ART",
+        "datacontent3": "Si tus empleados están bien asegurados, trabajan más y mejor. ",
+        "databullet3": [
+            "Asistencia multicanal para el asegurado y el empleador.",
+            "Atención personalizada en centros de alta complejidad.",
+            "Estudios, medicamentos, prótesis y procedimientos.",
+            "Seguimiento y gestión de siniestros."
+        ],
         "title4": "HOGAR",
+        "datacontent4": "Tu casa siempre debe ser un lugar seguro: ",
+        "databullet4": [
+            "Incendio, robo, hurto, daños, accidentes.",
+            "Daños por agua.",
+            "Todo riesgo electrodomesticos y electronicos.",
+            "Responsabilidad civil y asistencia en viajes."
+        ],
         "title5": "MOVILIDAD URBANA",
+        "datacontent5": "Movimiento asegurado que incluye: ",
+        "databullet5": [
+            "Robo y daños totales.",
+            "Objetos personales, electrónicos y accesorios del vehículo.",
+            "Responsabilidad civil.",
+            "Traslado por averías y servicio de mantenimiento."
+        ],
         "title6": "TELFONO MOVIL",
+        "datacontent6": "El celular es tu compañero de aventuras, tu herramienta de trabajo y tu enlace con el mundo. ¡Asegúrate!",
         "title7": "ASISTENCIA",
-        "title8": "I. COMERCIO",
-        "title9": "I. CONSORCIO",
-        "datacontent1": "AUTOMOTORES",
-        "datacontent2": "MOTOCICLETAS",
-        "datacontent3": "ART",
-        "datacontent4": "HOGAR",
-        "datacontent5": "Movilidad Urbana",
-        "datacontent6": "Telefono Movil",
         "datacontent7": "Asitencia",
-        "datacontent8": "I. COMERCIO",
-        "datacontent9": "I. CONSORCIO",
+        "databullet7": [
+            ""
+        ],
+        "title8": "I. COMERCIO",
+        "datacontent8": "",
+        "databullet8": [
+            "Incendio - Cristales - Robo - RC comprensiva.",
+            "Seguro técnico para equipos y herramientas.",
+            "Robo de valores en caja o tránsito.",
+            "Daños materiales o maquinarias",
+            "Interrupción de explotación"
+        ],
+        "title9": "I. CONSORCIO",
+        "datacontent9": "",
+        "databullet9": [
+            "Incendio - Cristales - Robo - RC comprensiva.",
+            "Seguro técnico para equipos y herramientas.",
+            "RC elevadores y calderas.",
+            "Daños por agua - RC por guarda de vehículos"
+        ],
         "dataform1": "/patrimoniales/automotoresForm",
         "dataform2": "/patrimoniales/motocicletaForm",
         "dataform3": "/patrimoniales/artForm",

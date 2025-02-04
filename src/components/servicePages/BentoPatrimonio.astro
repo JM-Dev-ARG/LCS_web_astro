@@ -22,6 +22,15 @@ type Props = {
   datacontent7: string;
   datacontent8: string;
   datacontent9: string;
+  databullet1?: Array<string>;
+  databullet2?: Array<string>;
+  databullet3?: Array<string>;
+  databullet4?: Array<string>;
+  databullet5?: Array<string>;
+  databullet6?: Array<string>;
+  databullet7?: Array<string>;
+  databullet8?: Array<string>;
+  databullet9?: Array<string>;
   dataform1: string;
   dataform2: string;
   dataform3: string;
@@ -51,7 +60,15 @@ const {
   datacontent7,
   datacontent8,
   datacontent9,
-
+  databullet1,
+  databullet2,
+  databullet3,
+  databullet4,
+  databullet5,
+  databullet6,
+  databullet7,
+  databullet8,
+  databullet9,
   dataform1,
   dataform2,
   dataform3,
@@ -83,6 +100,30 @@ const {
     >
       <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
         {datacontent1}
+        {
+          databullet1
+            ? databullet1.map((item) => (
+                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
+                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                    <svg
+                      xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        class="cls-1"
+                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+                      />
+                    </svg>
+                  </span>
+                  {item}
+                </p>
+              ))
+            : ""
+        }
       </p>
       <p
         class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
@@ -126,6 +167,30 @@ const {
     >
       <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
         {datacontent2}
+        {
+          databullet2
+            ? databullet2.map((item) => (
+                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
+                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                    <svg
+                      xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        class="cls-1"
+                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+                      />
+                    </svg>
+                  </span>
+                  {item}
+                </p>
+              ))
+            : ""
+        }
       </p>
       <p
         class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
@@ -170,6 +235,30 @@ const {
     >
       <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
         {datacontent3}
+        {
+          databullet3
+            ? databullet3.map((item) => (
+                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
+                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                    <svg
+                      xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        class="cls-1"
+                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+                      />
+                    </svg>
+                  </span>
+                  {item}
+                </p>
+              ))
+            : ""
+        }
       </p>
       <p
         class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
@@ -213,6 +302,30 @@ const {
     >
       <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
         {datacontent4}
+        {
+          databullet4
+            ? databullet4.map((item) => (
+                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
+                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                    <svg
+                      xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        class="cls-1"
+                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+                      />
+                    </svg>
+                  </span>
+                  {item}
+                </p>
+              ))
+            : ""
+        }
       </p>
       <p
         class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
@@ -247,7 +360,7 @@ const {
     </div>
 
     <div
-      class="absolute w-full h-full bg-[url('/img/urbano_movil.avif')] opacity-80 md:bg-[url('/img/urbano2.avif')] opacity-80 bg-cover bg-[center_bottom] bg-no-repeat"
+      class="absolute w-full h-full bg-[url('/img/urbano_movil.avif')] opacity-80 md:bg-[url('/img/urbano2.avif')] bg-cover bg-[center_bottom] bg-no-repeat"
     >
     </div>
     <a
@@ -256,6 +369,31 @@ const {
     >
       <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
         {datacontent5}
+
+        {
+          databullet5
+            ? databullet5.map((item) => (
+                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
+                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                    <svg
+                      xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        class="cls-1"
+                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+                      />
+                    </svg>
+                  </span>
+                  {item}
+                </p>
+              ))
+            : ""
+        }
       </p>
       <p
         class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
@@ -299,6 +437,30 @@ const {
     >
       <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
         {datacontent6}
+        {
+          databullet6
+            ? databullet6.map((item) => (
+                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
+                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                    <svg
+                      xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        class="cls-1"
+                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+                      />
+                    </svg>
+                  </span>
+                  {item}
+                </p>
+              ))
+            : ""
+        }
       </p>
       <p
         class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
@@ -342,6 +504,30 @@ const {
     >
       <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
         {datacontent7}
+        {
+          databullet7
+            ? databullet7.map((item) => (
+                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
+                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                    <svg
+                      xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        class="cls-1"
+                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+                      />
+                    </svg>
+                  </span>
+                  {item}
+                </p>
+              ))
+            : ""
+        }
       </p>
       <p
         class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
@@ -385,6 +571,30 @@ const {
     >
       <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
         {datacontent8}
+        {
+          databullet8
+            ? databullet8.map((item) => (
+                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
+                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                    <svg
+                      xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        class="cls-1"
+                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+                      />
+                    </svg>
+                  </span>
+                  {item}
+                </p>
+              ))
+            : ""
+        }
       </p>
       <p
         class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
@@ -428,6 +638,30 @@ const {
     >
       <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
         {datacontent9}
+        {
+          databullet9
+            ? databullet9.map((item) => (
+                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
+                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                    <svg
+                      xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        class="cls-1"
+                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+                      />
+                    </svg>
+                  </span>
+                  {item}
+                </p>
+              ))
+            : ""
+        }
       </p>
       <p
         class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
@@ -528,7 +762,7 @@ const {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: space-around;
     transition: all 0.3s linear 0.1s;
   }
