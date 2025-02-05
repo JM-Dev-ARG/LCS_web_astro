@@ -10,11 +10,6 @@
         "target": "_self"
     },
     {
-        "href": "/podcasts",
-        "label": "Podcasts",
-        "target": "_self"
-    },
-    {
         "href": "/#guia_descarga",
         "label": "Aprendé a leer tu poliza",
         "target": "_self"
