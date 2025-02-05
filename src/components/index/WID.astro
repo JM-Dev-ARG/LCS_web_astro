@@ -58,7 +58,7 @@ const textTitle = " Asegurarse es la nueva moda";
         /> -->
 
         <div
-          class="w-full md:hidden flex flex-col justify-center items-center gap-4 my-20 relative z-10"
+          class="w-full md:hidden flex flex-col justify-center items-center gap-4 mt-10 relative z-10"
         >
           <div class="texto">
             <p>{textGrid.text1}</p>
@@ -75,11 +75,9 @@ const textTitle = " Asegurarse es la nueva moda";
           </div>
         </div>
 
-        <div
-          class="w-full flex justify-center items-center my-14 relative z-10"
-        >
+        <div class="w-full flex justify-center items-center my-14 z-10">
           <div
-            class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 items-center w-full md:w-[70%] lg:w-[80%]"
+            class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 items-center w-full md:w-[70%]"
           >
             <div class="bg-[#fef0e9] rounded-full overflow-hidden min-w-fit">
               <img
@@ -89,20 +87,20 @@ const textTitle = " Asegurarse es la nueva moda";
               />
             </div>
 
-            <!--  <div
-              class="grid place-items-center w-auto md:flex flex-wrap lg:w-[70%] gap-x-3"
+            <div
+              class="grid place-items-center w-auto md:flex flex-wrap lg:w-[90%] xl:w-[70%] gap-x-3"
             >
               {
                 data.map((item, index) => {
                   return (
                     <span
-                      class="text-gray-50 text-[clamp(15px,2.1vw,18px)] 
-                historia-item opacity-30  flex items-center gap-2 whitespace-nowrap "
+                      class="text-gray-50 text-[clamp(16px,2.1vw,18px)] 
+                historia-item opacity-30 flex items-center gap-2 whitespace-nowrap text-wrap md:text-nowrap text-center "
                     >
                       {item.text}
                       {index !== data.length - 1 && (
                         <img
-                          class="h-[clamp(15px,2.1vw,18px)] min-w-[13px]"
+                          class="hidden md:block h-[clamp(15px,2.1vw,18px)] min-w-[13px]"
                           src="/resources/flecha-texto.svg"
                           alt=""
                         />
@@ -111,9 +109,9 @@ const textTitle = " Asegurarse es la nueva moda";
                   );
                 })
               }
-            </div> -->
+            </div>
 
-            <div
+            <!--       <div
               class="flex max-w-full items-center flex-wrap gap-x-2 w-full text-gray-50 text-[clamp(15px,2.1vw,18px)] bg-blue-500"
             >
               {
@@ -130,7 +128,7 @@ const textTitle = " Asegurarse es la nueva moda";
                   </span>
                 ))
               }
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -173,7 +171,7 @@ const textTitle = " Asegurarse es la nueva moda";
     .texto {
       padding-inline: 5px;
       width: 100%;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 300;
       color: azure;
       text-align: left;
