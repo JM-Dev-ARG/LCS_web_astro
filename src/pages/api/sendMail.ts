@@ -6,7 +6,6 @@ export const POST: APIRoute = async ({ request }) => {
   const data = await request.formData();
   const nombre = data.get("nombre");
   const email = data.get("email");
-  const tel = data.get("telefono");
   const msj = data.get("mensaje");
 
   // Configuración de Mailgun
@@ -29,7 +28,6 @@ export const POST: APIRoute = async ({ request }) => {
         text: `Los datos del formulario son:
         Nombre: ${nombre}
         Email: ${email}
-        Teléfono: ${tel}
         Mensaje: ${msj}`,
       }
     );
