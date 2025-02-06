@@ -1,17 +1,16 @@
 ---
 import FooterServices from "../components/servicePages/FooterServices.astro";
-import Hero from "../components/servicePages/hero.astro";
 import Presentacion from "../components/servicePages/Presentacion.astro";
 import Services from "../components/servicePages/Services.astro";
 import LayoutServicios from "../layouts/LayoutServicios.astro";
 import data from "../data/bentoPatrimoniales.json";
-
 import BentoPatrimonio from "../components/servicePages/BentoPatrimonio.astro";
+import HeroService from "../components/servicePages/HeroService.astro";
 ---
 
 <LayoutServicios title="LCS - Seguros Patrimoniales">
   <main>
-    <Hero
+    <HeroService
       title="Asegurarse es la nueva moda"
       subtitle="Seguros que Protegen tus Sueños"
       image="/img/img-patrimoniales.avif"

@@ -69,6 +69,7 @@ const Navbar = () => {
                         <div className="flex justify-end items-center flex-1 mr-8 ">
                             <label className="menu__toggle">
                                 <input
+                                    id="menu-toggle"
                                     type="checkbox"
                                     className="menu__input hidden "
                                     checked={menuOpen}

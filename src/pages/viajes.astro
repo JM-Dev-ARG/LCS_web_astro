@@ -1,18 +1,16 @@
 ---
 import FooterServices from "../components/servicePages/FooterServices.astro";
-import Hero from "../components/servicePages/hero.astro";
 import Presentacion from "../components/servicePages/Presentacion.astro";
 import Services from "../components/servicePages/Services.astro";
-import ViajesCard from "../components/servicePages/ViajesCard.astro";
 import LayoutServicios from "../layouts/LayoutServicios.astro";
 import data from "../data/viajesCardData.json";
-import ViajesCardMobile from "../components/servicePages/ViajesCardMobile.astro";
 import BentoViajes from "../components/servicePages/BentoViajes.astro";
+import HeroService from "../components/servicePages/HeroService.astro";
 ---
 
 <LayoutServicios title="LCS - Seguros de Viajes">
   <main>
-    <Hero
+    <HeroService
       title="Asegurarse es la nueva moda"
       subtitle="Seguros que Protegen tus Sueños"
       image="/img/img-viajes2.avif"

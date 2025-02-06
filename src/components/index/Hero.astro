@@ -6,56 +6,24 @@
   id="hero"
   class="sticky top-0 -z-10 h-[100vh] w-full overflow-hidden hero bg-[#ffefe9]"
 >
-  <!--  <div
-    class={"w-full h-full flex flex-col-reverse justify-center items-center md:items-end md:justify-end  "}
-  > -->
-  <!--     {
-      (
-        <div class="md:hidden h-1/2 lg:h-full w-full flex items-end relative img">
-          <img
-            class="h-[300px] w-full lg:h-1/2 lg:w-auto fotoHero object-contain object-center"
-            src="/img/e-saludando.avif"
-            alt=""
-          />
-        </div>
-      )
-    } -->
-  <div class="h-full w-full flex justify-center items-center relative">
-    <img
-      class="w-[70%]"
-      src="./resources/Logotipo-animado.svg"
-      alt="Logotipo animado La Chica del Seguro"
-    />
-    <!-- <picture class="w-[70%]">
-      <source
-        srcset="./resources/Logotipo-animado.svg"
-        type="image/svg+xml"
-        media="(min-width: 600px)"
-      />
+  <div class="h-full w-full flex flex-col justify-around items-center relative">
+    <div class="w-[70%] h-[calc(100%-80px)] flex justify-center items-center">
       <img
-        class="w-full h-auto"
-        src="./resources/isotipo-animado.svg"
-        alt=""
+        class="w-full"
+        src="./resources/Logotipo-animado.svg"
+        alt="Logotipo animado La Chica del Seguro"
       />
-    </picture> -->
+    </div>
+
+    <img
+      class="h-[80px] w-[80px] rotate-[-45deg] mb-10"
+      src="/resources/flechas-hero.svg"
+      alt="hero"
+    />
   </div>
-  <!--  </div> -->
 </section>
 
 <style>
-  .fotoHero {
-    opacity: 0;
-    transform: translateY(100%);
-    animation: aparecerFoto 1.5s ease-in-out 0.6s forwards;
-  }
-
-  @keyframes aparecerFoto {
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
   .hero::after {
     z-index: -1;
     content: "";
@@ -84,11 +52,11 @@
     content: "";
     opacity: 0;
     position: absolute;
-    top: 0;
-    left: 38%;
+    top: 50%;
+    left: 40%;
     width: 100%;
     height: 100%;
-    background-image: url("../../../public/resources/medio-asterisco-bold.svg");
+    background-image: url("../../../public/resources/medio-espiral.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
@@ -98,7 +66,7 @@
 
   @keyframes aparecerAsterisco {
     100% {
-      opacity: 40%;
+      opacity: 5%;
     }
   }
 </style>

@@ -81,6 +81,7 @@ export default function ContactForm() {
                     id="nombre"
                     name="nombre"
                     placeholder="Nombre"
+
                 />
             </div>
             <div className="flex flex-col gap-1 mt-3 lg:mt-6">
@@ -96,6 +97,7 @@ export default function ContactForm() {
                     id="email"
                     name="email"
                     placeholder="juanperez@tumail.com"
+                    autoComplete="on"
                 />
             </div>
             {/*             <div className="flex flex-col gap-1 mt-3 lg:mt-6">
