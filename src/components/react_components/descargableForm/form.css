@@ -1,0 +1,27 @@
+form .campo:focus {
+  outline: 2px solid #ed705fa4;
+  outline-offset: -4px;
+}
+
+form .campo::placeholder {
+  font-size: clamp(14px, 2vw, 20px);
+}
+.background {
+  background-image: linear-gradient(
+    180deg,
+    #557367 0%,
+    rgba(236, 133, 119, 0.67) 100%
+  );
+  box-shadow: 5px 5px 1px 0 #254542;
+
+  background-size: 100% 200%;
+  color: #f9fafb;
+  transition: all 0.3s linear;
+
+  &:hover {
+    box-shadow: 2px 2px 1px 0 #254542;
+    transform: translate(4px, 4px);
+    background-position: 0 100%;
+    color: #1d1e1c;
+  }
+}
