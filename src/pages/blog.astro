@@ -1,16 +1,140 @@
 ---
+import Container from "../components/reutilizables/Container.astro";
 import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("posts");
+const postsOrdered = posts.sort((a, b) => {
+  return b.data.id - a.data.id;
+  //eliminar el post mas reciente
+});
+const lastPost = postsOrdered[0];
+//eliminar lastPost de postsOrdered
+postsOrdered.shift();
 ---
 
 <Layout title="Blog">
   <main>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
-    <div class="h-[500px] bg-white"></div>
-    <div class="h-[500px] bg-black"></div>
+    <Container>
+      <div class="flex justify-center items-end gap-4 mt-8 mb-20">
+        <img
+          class="w-[300px] -rotate-[20deg]"
+          src="/resources/isotipo-animado.svg"
+          alt=""
+        />
+        <h1 class="text-8xl font-thin">Blog</h1>
+      </div>
+
+      <h2 class="font-extralight text-4xl text-left mb-6 w-[70%]">
+        Ultimo post
+      </h2>
+      <section
+        aria-label="Ultimo Post"
+        class="w-full flex justify-center items-center gap-4"
+      >
+        <article
+          class="flex items-center relative gap-4 w-[70%] h-[500px] my-5 bg-lcsPink3 bg-opacity-10"
+        >
+          <div
+            class="absolute top-0 right-0 w-fit h-fit bg-black text-white z-10 px-5 py-2 rotate-45"
+          >
+            <p>Ultimo Post</p>
+          </div>
+
+          <div class="w-1/2 h-full">
+            <img
+              class="object-cover w-full h-full border-y-[10px] border-lcsPink1"
+              src={lastPost.data.img}
+              alt={lastPost.data.title}
+            />
+          </div>
+          <div class="flex flex-col justify-between h-[90%] gap-2 w-1/2 px-5">
+            <div class="h-full flex flex-col justify-center gap-2">
+              <h2 class="text-4xl">{lastPost.data.title}</h2>
+              <p class="text-lg font-light">{lastPost.data.description}</p>
+              <div class="flex gap-2">
+                {
+                  lastPost.data.tags.map((tag) => (
+                    <span class="text-sm bg-lcsPink1 text-white px-2 py-1 rounded-full">
+                      {tag}
+                    </span>
+                  ))
+                }
+              </div>
+            </div>
+
+            <div class="w-full flex justify-end items-center pb-5">
+              <a href={`/blog/${lastPost.slug}`}>Leer articulo</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <sectcion
+        aria-label="Posts"
+        class="grid w-[70%] grid-cols-1 md:grid-cols-3 gap-4 mb-10"
+      >
+        {
+          postsOrdered.map((post) => {
+            const { slug, data } = post;
+            const { img, title, author, description, date } = data;
+            return (
+              <article class="flex flex-col justify-between  items-center gap-4 h-[550px] bg-lcsPink3 bg-opacity-10">
+                <div class="w-full min-h-[200px] ">
+                  <img
+                    class=" object-cover w-full h-full border-y-[6px] border-lcsPink1"
+                    src={img}
+                    alt={title}
+                  />
+                </div>
+
+                <div class="flex flex-col gap-2 px-5 ">
+                  <p>{date}</p>
+                  <h2 class="text-2xl">{title}</h2>
+                  <p class="text-sm">{description}</p>
+                  <p class="text-sm">Autor: {author}</p>
+                  <div class="flex items-center gap-2 flex-wrap">
+                    {data.tags.map((tag) => (
+                      <span class="text-sm bg-lcsPink1 text-white px-2 py-1 rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div class="flex justify-center items-center pb-5">
+                  <a href={`/blog/${slug}`}>Leer articulo</a>
+                </div>
+              </article>
+            );
+          })
+        }
+      </sectcion>
+    </Container>
   </main>
 </Layout>
+
+<style>
+  article {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  article img {
+    position: relative;
+    border-top-left-radius: 20px;
+  }
+
+  article a {
+    width: fit-content;
+    color: #fff;
+    background-color: #254542;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+  }
+  article a:hover {
+    transform: scale(1.1);
+    background-color: #ed6f5f;
+  }
+</style>
