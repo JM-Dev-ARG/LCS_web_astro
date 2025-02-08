@@ -65,13 +65,13 @@ async function submit(e) {
 export default function ServicesForm() {
     const date = `${new Date().getUTCDate()}/${new Date().getUTCMonth() + 1}/${new Date().getUTCFullYear()}`;
     return (
-        <div className="w-full h-full flex justify-center items-center ">
+        <div className="w-full  flex justify-center items-center flex-wrap">
             <form
                 onSubmit={submit}
-                className=" w-full h-full flex  gap-2 items-center justify-center"
+                className=" w-full h-full flex px-2 md:px-5 gap-2 items-center justify-center"
             >
-                <div className=" w-full lg:w-[80%]  flex flex-col md:flex-row justify-center items-center md:items-end  gap-4 ">
-                    <div className="w-full md:w-[40%]  flex flex-col gap-1 " >
+                <div className=" w-full   flex flex-col md:flex-row justify-center items-center md:items-end  gap-4 ">
+                    <div className="w-full  md:w-[40%] lg:w-[35%] flex flex-col gap-1 " >
                         <label
                             htmlFor="Nombre Completo"
                             className="font-extralight text-[clamp(14px,3vw,18px)] pl-2 text-gray-50"
@@ -87,7 +87,7 @@ export default function ServicesForm() {
                         />
                     </div>
 
-                    <div className="w-full  md:w-[40%]  flex flex-col gap-1">
+                    <div className="w-full  md:w-[40%] lg:w-[35%]  flex flex-col gap-1">
                         <label
                             htmlFor="Email"
                             className="font-extralight text-[clamp(14px,3vw,18px)] pl-2 text-gray-50"
@@ -105,7 +105,7 @@ export default function ServicesForm() {
                     <input type="text" name="sheetName" defaultValue="Descarga Guia" hidden />
                     <input type="text" name="Fecha" defaultValue={date} hidden />
                     <button
-                        className="background grid place-items-center w-[clamp(110px,10vw,150px)]   h-[40px] text-[clamp(18px,3vw,20px)] rounded-full "
+                        className="background grid place-items-center w-[clamp(110px,10vw,150px)]   h-[40px] text-[clamp(18px,10vw,20px)] rounded-full "
                         type="submit">
                         Enviar
                     </button>
