@@ -1,19 +1,20 @@
 ---
+import Button from "../reutilizables/Button.astro";
 import Container from "../reutilizables/Container.astro";
 import DescargableForm from "../react_components/descargableForm/DescargableForm";
 ---
 
 <section
   id="guia_descarga"
-  class="w-full grid place-items-center relative z-10 bg-[#fff5eb] pt-10 lg:pt-20 2xl:pt-24"
+  class="w-full relative z-10 bg-[#fff5eb] pt-10 lg:pt-20 2xl:pt-24"
 >
   <Container>
-    <div class="relative w-[90%] 3xl:w-[70%]">
+    <div class="relative w-[90%] 3xl:w-[70%] mx-auto">
       <div
         class="bg-lcsGreen1 w-full bg-opacity-85 rounded-[20px] shadow-xl flex justify-center overflow-y-hidden"
       >
         <div
-          class="hidden lg:block w-[50%] 2xl:w-[48%] absolute -bottom-36 xl:-bottom-44 -left-28"
+          class="hidden lg:block w-[60%] xl:w-[48%] absolute -bottom-28 xl:-bottom-44 -left-36 xl:-left-28"
         >
           <img
             class="w-full"
@@ -26,7 +27,7 @@ import DescargableForm from "../react_components/descargableForm/DescargableForm
         <div class="flex flex-col gap-5 px-2 md:px-5 py-5 w-full lg:w-[70%]">
           <div class="w-full">
             <h2
-              class="text-gray-50 text-center text-[clamp(20px,2vw,30px)] title uppercase px-1"
+              class="text-gray-50 text-center text-[clamp(20px,4vw,30px)] title uppercase px-3"
             >
               La póliza no tiene letra chica, es un idioma nuevo.
             </h2>

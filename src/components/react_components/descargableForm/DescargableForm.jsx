@@ -71,7 +71,7 @@ export default function ServicesForm() {
                 className=" w-full h-full flex px-2 md:px-5 gap-2 items-center justify-center"
             >
                 <div className=" w-full   flex flex-col md:flex-row justify-center items-center md:items-end  gap-4 ">
-                    <div className="w-full  md:w-[40%] lg:w-[35%] flex flex-col gap-1 " >
+                    <div className="w-[80%]  md:w-[30%]  flex flex-col gap-1 " >
                         <label
                             htmlFor="Nombre Completo"
                             className="font-extralight text-[clamp(14px,3vw,18px)] pl-2 text-gray-50"
@@ -87,7 +87,7 @@ export default function ServicesForm() {
                         />
                     </div>
 
-                    <div className="w-full  md:w-[40%] lg:w-[35%]  flex flex-col gap-1">
+                    <div className="w-[80%]  md:w-[30%]   flex flex-col gap-1">
                         <label
                             htmlFor="Email"
                             className="font-extralight text-[clamp(14px,3vw,18px)] pl-2 text-gray-50"
