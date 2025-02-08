@@ -65,10 +65,10 @@ async function submit(e) {
 export default function ServicesForm() {
     const date = `${new Date().getUTCDate()}/${new Date().getUTCMonth() + 1}/${new Date().getUTCFullYear()}`;
     return (
-        <div className=" w-full flex justify-center items-center ">
+        <div className=" w-full flex justify-center items-center  ">
             <form
                 onSubmit={submit}
-                className=" w-full h-full flex px-2 md:px-5 gap-2 items-center justify-center"
+                className=" w-full h-full flex  items-center justify-center"
             >
                 <div className=" w-full   flex flex-col md:flex-row justify-center items-center md:items-end  gap-4 ">
                     <div className="w-[80%]  md:w-[30%]  flex flex-col gap-1 " >
