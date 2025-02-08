@@ -68,7 +68,7 @@ export default function ServicesForm() {
         <div className="w-full h-full flex justify-center items-center ">
             <form
                 onSubmit={submit}
-                className=" ww-[70%] h-full flex  gap-2 items-center justify-center"
+                className=" w-[70%] h-full flex  gap-2 items-center justify-center"
             >
                 <div className="w-full   flex flex-col md:flex-row justify-center items-center md:items-end  gap-4 ">
                     <div className="w-full md:w-[40%]  flex flex-col gap-1 " >
