@@ -68,10 +68,10 @@ export default function ServicesForm() {
         <div className="w-full h-full flex justify-center items-center ">
             <form
                 onSubmit={submit}
-                className="w-full lg:w-[90%] h-full flex  gap-2 items-center justify-center"
+                className=" w-[90%] md:w-[70%] h-full flex  gap-2 items-center justify-center"
             >
-                <div className=" w-full flex flex-col md:flex-row justify-center items-center md:items-end  gap-4">
-                    <div className="w-full lg:w-[calc(40%-40px)] flex flex-col gap-1">
+                <div className="w-full   flex flex-col md:flex-row justify-center items-center md:items-end  gap-4">
+                    <div className="w-full md:w-[40%]  flex flex-col gap-1">
                         <label
                             htmlFor="Nombre Completo"
                             className="font-extralight text-[clamp(14px,5vw,20px)] pl-2 text-gray-50"
@@ -87,7 +87,7 @@ export default function ServicesForm() {
                         />
                     </div>
 
-                    <div className="w-full lg:w-[calc(40%-40px)] flex flex-col gap-1">
+                    <div className="w-full  md:w-[40%]  flex flex-col gap-1">
                         <label
                             htmlFor="Email"
                             className="font-extralight text-[clamp(14px,5vw,20px)] pl-2 text-gray-50"
