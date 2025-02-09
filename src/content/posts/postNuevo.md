@@ -1,7 +1,7 @@
 ---
 id: 5
 title: "Post 5"
-description: "La velocidad de carga de un sitio web es un factor clave para la experiencia del usuario y el posicionamiento en buscadores. Un sitio lento puede hacer que los visitantes se vayan antes de interactuar con el contenido. En este artículo, exploraremos algunas estrategias para optimizar la velocidad de tu web."
+description: "Hi! I’m your first Markdown file in StackEdit. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me."
 date: "2023-07-31"
 author: "Javier"
 img: "img/hogar2.avif"

@@ -1,7 +1,7 @@
 ---
 id: 1
 title: "Post 1"
-description: "Hi! I’m your first Markdown file in StackEdit. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the file explorer on the left corner of the navigation bar."
+description: "Hi! I’m your first Markdown file in StackEdit. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me."
 date: "01 Enero 2025"
 author: "Javier"
 img: "img/retiro2.avif"
