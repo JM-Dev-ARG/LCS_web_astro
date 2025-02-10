@@ -59,10 +59,10 @@ const { Content } = await render(post);
           alt={title}
         />
         <article
-          class="w-full max-w-xs md:max-w-full md:grid md:place-items-center"
+          class="max-w-xs md:max-w-full w-full flex justify-center items-center"
         >
           <div
-            class="prose prose-sm md:prose-base lg:prose-lg prose-stone font-light sm:prose-img:w-full md:prose-img:w-[70%] prose-img:place-self-center prose-img:mb-5 w-full"
+            class="prose prose-sm lg:prose-lg prose-stone font-light sm:prose-img:w-full md:prose-img:w-[70%] prose-img:place-self-center prose-img:mb-5 w-full"
           >
             <Content />
           </div>
@@ -92,3 +92,12 @@ const { Content } = await render(post);
 
   <FooterServices />
 </LayoutBlog>
+
+<style>
+  .prose {
+    width: 100%;
+    max-width: calc(100% - 10%);
+    margin: auto;
+    padding: 0 1.5rem;
+  }
+</style>
