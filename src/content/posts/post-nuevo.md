@@ -1,10 +1,11 @@
 ---
 id: 5
-title: "Post 5"
+title: "Hi! I’m your first Markdown file in StackEdit."
 description: "Hi! I’m your first Markdown file in StackEdit. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me."
 date: "2023-07-31"
 author: "Javier"
-img: "img/hogar2.avif"
+img: "/img/hogar2.avif"
+imgAuthor: "/img/foto-mock.avif"
 categories: ["Desarrollo", "Programacion"]
 tags: ["html", "css", "javascript"]
 ---
@@ -13,9 +14,11 @@ tags: ["html", "css", "javascript"]
 
 **Hi! I'm your first Markdown** file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
 
-# Files
+## Files
 
 StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+
+![imgen del hogar](/img/hogar2.avif "alt text")
 
 ## Create files and folders
 
@@ -51,6 +54,8 @@ There are two types of synchronization and they can complement each other:
   > Before starting to sync files, you must link an account in the **Synchronize** sub-menu.
 
 ## Open a file
+
+![imgen del hogar](/img/hogar2.avif "alt text")
 
 You can open a file from **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Open from**. Once opened in the workspace, any modification in the file will be automatically synced.
 

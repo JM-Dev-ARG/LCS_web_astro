@@ -1,0 +1,94 @@
+---
+import Container from "../../components/reutilizables/Container.astro";
+import FooterServices from "../../components/servicePages/FooterServices.astro";
+import LayoutBlog from "../../layouts/LayoutBlog.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts");
+  return posts.map((post) => ({
+    params: { id: post.slug },
+    props: { post },
+  }));
+}
+
+export const prerender = true;
+
+const { post } = Astro.props;
+const { data, slug } = post;
+const { title, img, imgAuthor, author, date } = data;
+
+const { Content } = await render(post);
+---
+
+<LayoutBlog title={`LCS Blog - ${title}`}>
+  <main class="relative w-full">
+    <div
+      class="h-[320px] md:h-[410px] lg:h-[550px] w-full top-0 left-0 bg-lcsGreen3 bg-opacity-10 border-b-2 border-lcsPink1 absolute"
+    >
+    </div>
+    <Container>
+      <section
+        aria-label={`Post ${title}`}
+        class="w-full lg-[80%] xl:w-[70%] flex flex-col justify-center items-center py-10 lg:py-20 2xl:py-24 gap-10"
+      >
+        <div class="w-full flex flex-col justify-center">
+          <h1
+            class="text-3xl md:text-5xl font-light w-full text-center text-pretty mb-10"
+            transition:name={`${title}`}
+          >
+            {title}
+          </h1>
+          <p class="text-md text-neutral-400 mb-3">
+            Fecha de publicacion: {date}
+          </p>
+          <div class="flex gap-2 items-center">
+            <img
+              src={imgAuthor}
+              alt={author}
+              class="w-10 h-10 rounded-full object-cover object-top"
+            />
+            <p class="text-md text-neutral-400">{author}</p>
+          </div>
+        </div>
+
+        <img
+          class="object-cover w-full h-[auto] lg:h-[500px] border-y-[6px] border-lcsPink1"
+          transition:name={`img-${slug}`}
+          src={img}
+          alt={title}
+        />
+        <article
+          class="w-full max-w-xs md:max-w-full md:grid md:place-items-center"
+        >
+          <div
+            class="prose prose-sm md:prose-base lg:prose-lg prose-stone font-light sm:prose-img:w-full md:prose-img:w-[70%] prose-img:place-self-center prose-img:mb-5 w-full"
+          >
+            <Content />
+          </div>
+        </article>
+
+        <p class="flex gap-2">
+          {
+            data.categories.map((tag) => (
+              <span class="text-sm bg-lcsGreen3 text-white px-3 py-1 rounded-full">
+                {tag}
+              </span>
+            ))
+          }
+        </p>
+        <p class="flex gap-2">
+          {
+            data.tags.map((tag) => (
+              <span class="text-sm bg-lcsPink1 text-white px-3 py-1 rounded-full">
+                {tag}
+              </span>
+            ))
+          }
+        </p>
+      </section>
+    </Container>
+  </main>
+
+  <FooterServices />
+</LayoutBlog>

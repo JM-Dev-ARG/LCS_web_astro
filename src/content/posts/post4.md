@@ -4,7 +4,8 @@ title: "Post 4"
 description: "Hi! I’m your first Markdown file in StackEdit. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me."
 date: "2023-07-31"
 author: "Javier"
-img: "img/auto2.avif"
+img: "/img/auto2.avif"
+imgAuthor: "/img/foto-mock.avif"
 categories: ["Desarrollo", "Programacion"]
 tags: ["html", "css", "javascript"]
 ---

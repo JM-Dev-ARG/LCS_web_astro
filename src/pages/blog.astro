@@ -1,5 +1,6 @@
 ---
 import Container from "../components/reutilizables/Container.astro";
+import FooterServices from "../components/servicePages/FooterServices.astro";
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
@@ -35,8 +36,9 @@ postsOrdered.shift();
         aria-label="Ultimo Post"
         class="w-full flex justify-center items-center gap-4"
       >
-        <article
-          class="flex flex-col md:flex-row justify-between items-center relative gap-4 w-full lg-[80%] xl:w-[70%] h-[600px] md:h-[500px] md:my-5 bg-lcsPink3 bg-opacity-10"
+        <a
+          href={`/blog/${lastPost.slug}`}
+          class="flex flex-col md:flex-row items-center relative gap-4 w-full lg-[80%] xl:w-[70%] h-[550px] md:h-[500px] md:my-5 bg-lcsPink3 bg-opacity-10 hover:scale-[1.03] transition-all duration-300"
         >
           <div
             class="absolute top-2 -right-[4%] w-fit h-fit bg-lcsOrange3 text-white z-10 px-5 py-2 rotate-45"
@@ -45,20 +47,24 @@ postsOrdered.shift();
           </div>
 
           <div class="w-full min-h-[230px] h-[230px] md:w-1/2 md:h-full">
-            <a href={`/blog/${lastPost.slug}`}>
-              <img
-                class="object-cover w-full h-full border-y-[6px] border-lcsPink1"
-                src={lastPost.data.img}
-                alt={lastPost.data.title}
-              />
-            </a>
+            <img
+              class="object-cover w-full h-full border-y-[6px] border-lcsPink1"
+              transition:name={`img-${lastPost.slug}`}
+              src={lastPost.data.img}
+              alt={lastPost.data.title}
+            />
           </div>
           <div
             class="flex flex-col justify-between md:h-[90%] gap-2 md:w-1/2 px-5"
           >
             <div class="h-full flex flex-col justify-center gap-2">
               <p class="text-sm text-neutral-400">{lastPost.data.date}</p>
-              <h2 class="text-4xl">{lastPost.data.title}</h2>
+              <h2
+                class="text-4xl"
+                transition:name={`${lastPost.data.title}`}
+              >
+                {lastPost.data.title}
+              </h2>
               <p class="text-sm md:text-lg font-light">
                 {lastPost.data.description}
               </p>
@@ -76,22 +82,22 @@ postsOrdered.shift();
               </div>
             </div>
 
-            <div class="hidden md:flex w-full justify-end items-center pb-5">
+            <!--   <div class="hidden md:flex w-full justify-end items-center pb-5">
               <a
                 href={`/blog/${lastPost.slug}`}
                 class="leer"
                 >Leer articulo</a
               >
-            </div>
+            </div> -->
           </div>
-          <div class="flex md:hidden w-full justify-center items-center pb-5">
+          <!-- <div class="flex md:hidden w-full justify-center items-center pb-5">
             <a
               href={`/blog/${lastPost.slug}`}
               class="leer"
               >Leer articulo</a
             >
-          </div>
-        </article>
+          </div> -->
+        </a>
       </section>
 
       <sectcion
@@ -103,18 +109,27 @@ postsOrdered.shift();
             const { slug, data } = post;
             const { img, title, author, description, date } = data;
             return (
-              <article class="flex flex-col justify-between  items-center gap-2 h-[600px] bg-lcsPink3 bg-opacity-10 ">
+              <a
+                href={`/blog/${slug}`}
+                class=" articulo flex flex-col justify-between  items-center gap-2 h-[550px] md:h-[500px] bg-lcsPink3 bg-opacity-10 hover:scale-[1.03] transition-all duration-300"
+              >
                 <div class="w-full min-h-[230px] h-[230px] ">
                   <img
                     class=" object-cover w-full h-full border-y-[6px] border-lcsPink1"
+                    transition:name={`img-${slug}`}
                     src={img}
                     alt={title}
                   />
                 </div>
 
-                <div class="flex flex-col gap-2 px-5 ">
+                <div class="flex justify-center flex-col gap-2 px-5  h-full ">
                   <p class="text-sm text-neutral-400">{date}</p>
-                  <h2 class="text-2xl">{title}</h2>
+                  <h2
+                    class="text-2xl"
+                    transition:name={`${title}`}
+                  >
+                    {title}
+                  </h2>
                   <p class="text-sm">{description}</p>
                   <p class="text-sm text-neutral-400">Autor: {author}</p>
                   <div class="flex items-center gap-2 flex-wrap">
@@ -126,30 +141,31 @@ postsOrdered.shift();
                   </div>
                 </div>
 
-                <div class="flex justify-center items-center pb-5">
+                {/* <div class="flex justify-center items-center pb-5">
                   <a
                     href={`/blog/${slug}`}
                     class="leer"
                   >
                     Leer articulo
                   </a>
-                </div>
-              </article>
+                </div> */}
+              </a>
             );
           })
         }
       </sectcion>
     </Container>
   </main>
+  <FooterServices />
 </Layout>
 
 <style>
-  article {
+  .articulo {
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
-  article img {
+  .articulo img {
     position: relative;
     border-top-left-radius: 20px;
   }
