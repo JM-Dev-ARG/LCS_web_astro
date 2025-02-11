@@ -15,7 +15,10 @@ postsOrdered.shift();
 <Layout title="Blog">
   <main>
     <Container>
-      <div class="flex justify-center items-end gap-4 mt-16 md:mt-8 md:mb-10">
+      <div
+        class="flex justify-center items-end gap-4 mt-16 md:mt-8 md:mb-10"
+        transition:name={`logoBlog`}
+      >
         <img
           class="w-[150px] md:w-[300px] -rotate-[20deg]"
           src="/resources/isotipo-animado.svg"
@@ -38,12 +41,16 @@ postsOrdered.shift();
       >
         <a
           href={`/blog/${lastPost.slug}`}
-          class="flex flex-col md:flex-row items-center relative gap-4 w-full lg-[80%] xl:w-[70%] h-[550px] md:h-[500px] md:my-5 bg-lcsPink3 bg-opacity-10 hover:scale-[1.03] transition-all duration-300"
+          class="flex flex-col md:flex-row items-center relative gap-4 w-full lg:w-[80%] xl:w-[70%] h-[550px] md:h-[500px] md:my-5 bg-lcsPink3 bg-opacity-10 hover:scale-[1.03] transition-all duration-300"
         >
           <div
-            class="absolute top-2 -right-[4%] w-fit h-fit bg-lcsOrange3 text-white z-10 px-5 py-2 rotate-45"
+            class="absolute -top-2 md:-top-2 -right-5 rotate-45 z-10 w-[clamp(80px,15vw,120px)] h-auto max-w-[120px]"
           >
-            <p class="text-lg md:text-xl">Ultimo Post</p>
+            <img
+              src="/resources/ultimo_post.svg"
+              alt=""
+              class="object-contain w-full h-full"
+            />
           </div>
 
           <div class="w-full min-h-[230px] h-[230px] md:w-1/2 md:h-full">

@@ -1,0 +1,90 @@
+---
+import Container from "../reutilizables/Container.astro";
+import { getCollection } from "astro:content";
+const posts = await getCollection("posts");
+const postsOrdered = posts.sort((a, b) => {
+  return b.data.id - a.data.id;
+});
+const lastPost = postsOrdered[0];
+---
+
+<section
+  id="blog"
+  class="relative overflow-hidden bg-[#fff5eb] z-10 pt-20"
+>
+  <Container classname="rounded-[50px] border-2 border-lcsOrange3">
+    <div
+      class="flex flex-col xl:flex-row justify-between items-center gap-10 p-5 md:p-10"
+    >
+      <a
+        href="/blog"
+        class="flex justify-center items-end gap-4 cursor-pointer px-20 mb-5"
+        transition:name={`logoBlog`}
+      >
+        <img
+          class="w-[150px] md:w-[250px] -rotate-[20deg]"
+          src="/resources/isotipo-animado.svg"
+          alt=""
+        />
+        <h1 class="text-5xl md:text-7xl font-thin">Blog</h1>
+      </a>
+
+      <article
+        aria-label="Ultimo Post"
+        class="w-full flex justify-center items-center gap-4"
+      >
+        <a
+          href={`/blog/${lastPost.slug}`}
+          class="flex flex-col md:flex-row items-center relative gap-4 w-full md:h-[500px] md:my-5 bg-lcsPink3 bg-opacity-20 hover:scale-[1.01] transition-all duration-300"
+        >
+          <div
+            class="absolute -top-2 md:-top-2 -right-5 rotate-45 z-10 w-[clamp(80px,15vw,120px)] h-auto max-w-[120px]"
+          >
+            <img
+              src="/resources/ultimo_post.svg"
+              alt=""
+              class="object-contain w-full h-full"
+            />
+          </div>
+
+          <div class="w-full min-h-[230px] h-[230px] md:w-1/2 md:h-full">
+            <img
+              class="object-cover w-full h-full border-y-[6px] border-lcsPink1"
+              transition:name={`img-${lastPost.slug}`}
+              src={lastPost.data.img}
+              alt={lastPost.data.title}
+            />
+          </div>
+          <div
+            class="flex flex-col justify-between md:h-[90%] gap-2 md:w-1/2 px-5 pb-5 md:pb-0"
+          >
+            <div class="h-full flex flex-col justify-center gap-2">
+              <p class="text-sm text-neutral-400">{lastPost.data.date}</p>
+              <h2
+                class="text-xl md:text-4xl"
+                transition:name={`${lastPost.data.title}`}
+              >
+                {lastPost.data.title}
+              </h2>
+              <p class="text-sm md:text-lg font-light">
+                {lastPost.data.description}
+              </p>
+              <p class="text-sm text-neutral-400">
+                Autor: {lastPost.data.author}
+              </p>
+              <div class="flex gap-2">
+                {
+                  lastPost.data.tags.map((tag) => (
+                    <span class="text-sm bg-lcsPink1 text-white px-2 py-1 rounded-full">
+                      {tag}
+                    </span>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+  </Container>
+</section>
