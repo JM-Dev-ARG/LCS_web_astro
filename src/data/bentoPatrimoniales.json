@@ -45,9 +45,11 @@
         "title6": "TELFONO MOVIL",
         "datacontent6": "El celular es tu compañero de aventuras, tu herramienta de trabajo y tu enlace con el mundo. ¡Asegúrate!",
         "title7": "ASISTENCIA",
-        "datacontent7": "Asitencia",
+        "datacontent7": "",
         "databullet7": [
-            ""
+            "Auxilio mecánico.",
+            "Salud mascotas.",
+            "Asitencia para el hogar"
         ],
         "title8": "I. COMERCIO",
         "datacontent8": "",

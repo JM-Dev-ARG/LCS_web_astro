@@ -44,7 +44,7 @@ async function submit(e) {
     const formData = new FormData(form);
 
     try {
-        const response = await fetch("/api/sendMail", {
+        const response = await fetch("/api/contactApi", {
             method: "POST",
             body: formData,
         });

@@ -1,32 +1,22 @@
 import type { APIRoute } from "astro";
 import formData from "form-data";
 import Mailgun from "mailgun.js";
+import { MailerSend, EmailParams, Sender, Recipient } from "mailersend";
 
 export const POST: APIRoute = async ({ request }) => {
   const data = await request.formData();
-
-  /* const nombre = data.get("nombre");
-  const email = data.get("email");
-  const tel = data.get("telefono");
-  const asunto = data.get("motivo");
-  const msj = data.get("mensaje"); */
-
-  // Configuración de Mailgun
-  /*   const mailgun = new Mailgun(formData);
-  const client = mailgun.client({
-    username: "api",
-    key: import.meta.env.MAILGUN_API_KEY, // API Key desde Mailgun
-  });
- */
   try {
+    const nombre = data.get("Nombre Completo");
+    const email = data.get("Email");
+
     let keyValuePairs = [];
     for (var pair of data.entries()) {
       keyValuePairs.push(pair[0] + "=" + pair[1]);
     }
 
     let formDataString = keyValuePairs.join("&");
-    console.log(formDataString);
 
+    // Enviar datos a la base de datos
     fetch(import.meta.env.DATA_BASE, {
       redirect: "follow",
       method: "POST",
@@ -36,25 +26,30 @@ export const POST: APIRoute = async ({ request }) => {
       },
     });
 
-    // Enviar el correo
-    /* const result = await client.messages.create(
-      import.meta.env.MAILGUN_DOMAIN,
-      {
-        from: `Formulario de Patrimoniales <noreply@${
-          import.meta.env.MAILGUN_DOMAIN
-        }>`,
-        to: [import.meta.env.MAIL_TO],
-        subject: "Nueva solicitud de cotizacion patrimoniales desde página web",
-        text: `Los datos del formulario son:
-        Nombre: ${nombre}
-        Email: ${email}
-        Teléfono: ${tel}
-        Asunto: ${asunto}
-        Mensaje: ${msj}`,
-      }
+    //enviar email
+    const mailerSend = new MailerSend({
+      apiKey: import.meta.env.MAILER_API,
+    });
+
+    const sentFrom = new Sender(
+      `noreply@${import.meta.env.MAILER_DOMAIN}`,
+      "Descarga la guía"
     );
 
-    console.log("Email enviado:", result.id); */
+    const recipients = [new Recipient(`${email}`, `${nombre}`)];
+
+    const emailParams = new EmailParams()
+      .setFrom(sentFrom)
+      .setTo(recipients)
+      .setSubject("Descarga la guía")
+      .setHtml(
+        " <h1 style='text-align: center; font-size: 2rem; margin-bottom: 1rem;' >Descarga la guía</h1> <p style='text-align: center; font-size: 1.2rem; margin-bottom: 1rem;'>Gracias por descargar la guía, puedes hacerlo a través del siguiente enlace:</p> <a style='text-align: center; font-size: 1.2rem; margin-bottom: 1rem; text-decoration: none;padding: 10px 20px; background-color: #4CAF50; color: white; border-radius: 4px;' href='https://drive.google.com/uc?export=download&id=1XOh4thN1W5vvjsolDBhU-gLcbOU5v8Ry'>descargar</a>"
+      )
+      .setText(
+        "Greetings from the team, you got this message through MailerSend."
+      );
+
+    await mailerSend.email.send(emailParams);
 
     return new Response(
       JSON.stringify({

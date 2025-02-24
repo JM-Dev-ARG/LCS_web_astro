@@ -10,8 +10,8 @@ const isMobile = window.matchMedia("(max-width: 430px)").matches;
 function saludo() {
     Swal.fire({
         width: isMobile ? 300 : undefined,
-        title: "Gracias por contactarnos 🫶",
-        text: "En breve nos estaremos comunicando con vos",
+        title: "Gracias por completar tus datos 🫶",
+        text: "En breve estaras recibiendo el enlace de descarga en tu email",
         showConfirmButton: false,
         timer: 5000,
     });
@@ -35,7 +35,7 @@ async function submit(e) {
     const formData = new FormData(form);
 
     try {
-        const response = await fetch("/api/sendMailServices", {
+        const response = await fetch("/api/downloadApi", {
             method: "POST",
             body: formData,
         });

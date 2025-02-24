@@ -8,14 +8,13 @@ type Props = {
 
 const { title, subtitle, image, className } = Astro.props;
 
-const url = new URL(Astro.url.href); // Convierte la URL en un objeto URL
-const path = url.pathname.split("/").filter(Boolean).pop(); // Obtiene el último segmento
-console.log(path);
+const url = new URL(Astro.url.href);
+const path = url.pathname.split("/").filter(Boolean).pop();
 ---
 
 <section class="hero__container h-[400px] md:h-[500px] lg:h-[600px]">
   <div
-    class=`text__wrapper bg-[bottom_center] ${className}`
+    class=`text__wrapper ${path === "patrimoniales" ? "bg-[bottom_center]": "bg-[top_-50px_center]"} ${className}`
     style=`background-image: url('${image}');`
   >
     <div class="z-10 w-full h-[70%] flex flex-col justify-center items-center">
