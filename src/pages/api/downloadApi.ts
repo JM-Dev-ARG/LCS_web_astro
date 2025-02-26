@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
-import formData from "form-data";
-import Mailgun from "mailgun.js";
+/* import formData from "form-data";
+import Mailgun from "mailgun.js"; */
 import { MailerSend, EmailParams, Sender, Recipient } from "mailersend";
 
 export const POST: APIRoute = async ({ request }) => {

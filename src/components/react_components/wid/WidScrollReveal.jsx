@@ -10,7 +10,7 @@ const content = [
         content: (
             <div className="h-full w-full  flex items-center justify-center text-white ">
                 <img
-                    src="/img/foto-mock.avif"
+                    src="/img/wid1.avif"
 
                     className="h-full w-full object-cover rounded-2xl overflow-hidden"
                     alt="linear board demo" />
@@ -24,7 +24,7 @@ const content = [
         content: (
             <div className="h-full w-full  flex items-center justify-center text-white">
                 <img
-                    src="/img/foto2-mock.avif "
+                    src="/img/wid2.avif "
 
                     className="h-full w-full object-cover rounded-2xl overflow-hidden"
                     alt="linear board demo" />
@@ -38,7 +38,7 @@ const content = [
         content: (
             <div className="h-full w-full  flex items-center justify-center text-white">
                 <img
-                    src="/img/foto-mock.avif"
+                    src="/img/wid3.avif"
 
                     className="h-full w-full object-cover rounded-2xl overflow-hidden"
                     alt="linear board demo" />
@@ -52,7 +52,7 @@ const content = [
         content: (
             <div className="h-full w-full  flex items-center justify-center text-white">
                 <img
-                    src="/img/foto2-mock.avif"
+                    src="/img/wid4.avif"
                     className="h-full w-full object-cover rounded-2xl overflow-hidden"
                     alt="linear board demo" />
             </div>

@@ -8,10 +8,5 @@
         "href": "/blog",
         "label": "Blog",
         "target": "_self"
-    },
-    {
-        "href": "/#guia_descarga",
-        "label": "Aprendé a leer tu poliza",
-        "target": "_self"
     }
 ]

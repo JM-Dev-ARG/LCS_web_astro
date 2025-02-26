@@ -108,7 +108,7 @@ function getEmail(path) {
     };
 
     const routeKey = path.split("/")[2];
-    return pathToEmail[routeKey] || "vacaciones@lcs.com.ar"; // Valor por defecto
+    return pathToEmail[routeKey]; // Valor por defecto
 }
 
 // Componente principal del formulario
