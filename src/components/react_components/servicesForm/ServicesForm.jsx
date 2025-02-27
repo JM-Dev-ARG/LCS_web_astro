@@ -79,6 +79,9 @@ function getSheetName(path) {
         "motocicletaForm": "Motocicleta",
         "movilForm": "Movil",
         "urbanoForm": "Urbano",
+        "otrosForm": "Otros",
+        "caucionForm": "Caucion",
+
     };
 
     const routeKey = path.split("/")[2];
@@ -136,10 +139,16 @@ export default function ServicesForm({ children, placeholderMensaje }) {
             >
                 <div className="w-full xl:w-[80%] justify-between items-center flex flex-col lg:flex-row gap-4 flex-wrap">
                     <InputForm
-                        name="Nombre Completo"
-                        placeholder="Juan Perez"
+                        name="Nombre"
+                        placeholder="Juan"
                         type="text"
-                        labelText="Nombre Completo"
+                        labelText="Nombre"
+                    />
+                    <InputForm
+                        name="Apellido"
+                        placeholder="Perez"
+                        type="text"
+                        labelText="Apellido"
                     />
                     <InputForm
                         name="Email"
