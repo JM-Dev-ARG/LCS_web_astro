@@ -18,7 +18,7 @@
             "Granizo y cristales cubiertos",
             "Asistencias y beneficios adicionales."
         ],
-        "title3": "ART",
+        "title3": "Caución",
         "datacontent3": "Si tus empleados están bien asegurados, trabajan más y mejor. ",
         "databullet3": [
             "Asistencia multicanal para el asegurado y el empleador.",
@@ -34,13 +34,14 @@
             "Todo riesgo electrodomesticos y electronicos.",
             "Responsabilidad civil y asistencia en viajes."
         ],
-        "title5": "MOVILIDAD URBANA",
-        "datacontent5": "Movimiento asegurado que incluye: ",
+        "title5": "MÁS COBERTURAS",
+        "datacontent5": "Todo lo que necesitas para estar tranquilo",
         "databullet5": [
-            "Robo y daños totales.",
-            "Objetos personales, electrónicos y accesorios del vehículo.",
-            "Responsabilidad civil.",
-            "Traslado por averías y servicio de mantenimiento."
+            "ART",
+            "Telefono movil",
+            "Asistencia mecanica, hogar y mascotas",
+            "I. Comercio",
+            "I. Consorcio"
         ],
         "title6": "TELFONO MOVIL",
         "datacontent6": "El celular es tu compañero de aventuras, tu herramienta de trabajo y tu enlace con el mundo. ¡Asegúrate!",
@@ -72,7 +73,7 @@
         "dataform2": "/patrimoniales/motocicletaForm",
         "dataform3": "/patrimoniales/artForm",
         "dataform4": "/patrimoniales/hogarForm",
-        "dataform5": "/patrimoniales/urbanoForm",
+        "dataform5": "/patrimoniales/otrosForm",
         "dataform6": "/patrimoniales/movilForm",
         "dataform7": "/patrimoniales/asistenciaForm",
         "dataform8": "/patrimoniales/comercioForm",

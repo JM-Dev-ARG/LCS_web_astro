@@ -156,7 +156,7 @@ export default function ServicesForm({ children, placeholderMensaje }) {
                     {children}
                 </div>
 
-                <div className="w-full xl:w-[80%] flex flex-col gap-1">
+                {/*                 <div className="w-full xl:w-[80%] flex flex-col gap-1">
                     <label
                         htmlFor="mensaje"
                         className="font-extralight text-[clamp(18px,5vw,24px)] pl-2 text-gray-50"
@@ -171,7 +171,7 @@ export default function ServicesForm({ children, placeholderMensaje }) {
                         name="Mensaje"
                         placeholder={msj}
                     ></textarea>
-                </div>
+                </div> */}
 
                 <input type="text" name="sheetName" defaultValue={sheetName} hidden />
                 <input type="text" name="Fecha" defaultValue={date} hidden />

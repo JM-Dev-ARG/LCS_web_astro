@@ -22,53 +22,49 @@ const result = `/${basePath}`;
         client:only="react"
         placeholderMensaje={""}
       >
-        <InputForm
-          name="Edad"
-          placeholder="25 años"
-          type="text"
-          labelText="Edad"
-        />
-
-        <InputForm
-          name="Codigo Postal"
-          placeholder="1424"
-          type="text"
-          labelText="Codigo Postal"
-          client:only="react"
-        />
-        <InputForm
-          name="Marca"
-          placeholder="Honda"
-          type="text"
-          labelText="Marca de la moto"
-          client:only="react"
-        />
-        <InputForm
-          name="Modelo"
-          placeholder="Navy (como figura en la cedula verde)"
-          type="text"
-          labelText="Modelo de la moto"
-          client:only="react"
-        />
-
         <SelectForm
-          name="Año"
-          labelText="Año de la moto"
+          name="Tipo de Seguro"
+          labelText="Tipo de Seguro"
           data={[
-            { value: "2025", labelText: "2025" },
-            { value: "2024", labelText: "2024" },
-            { value: "2023", labelText: "2023" },
-            { value: "2022", labelText: "2022" },
-            { value: "2021", labelText: "2021" },
-            { value: "2020", labelText: "2020" },
-            { value: "2019", labelText: "2019" },
-            { value: "2018", labelText: "2018" },
-            { value: "2017", labelText: "2017" },
-            { value: "2016", labelText: "2016" },
-            { value: "2015", labelText: "2015" },
+            { value: "ART", labelText: "ART" },
+            { value: "Telefono movil", labelText: "Telefono movil" },
+            {
+              value: "Asistencia",
+              labelText: "Asistencia mecanica, hogar y mascotas",
+            },
+            { value: "Comercio", labelText: "Integral de comercio" },
+            { value: "Consorcio", labelText: "Integral de consorcio" },
           ]}
           client:only="react"
         />
+        <!-- <InputForm
+          name="CUIT"
+          placeholder="20-12345678-9"
+          type="text"
+          labelText="CUIT"
+        />
+
+        <InputForm
+          name="Razon Social"
+          placeholder="Tu Empresa S.A."
+          type="text"
+          labelText="Razón Social"
+          client:only="react"
+        />
+        <InputForm
+          name="Cant Empleados"
+          placeholder="200"
+          type="number"
+          labelText="Cantidad de empleados"
+          client:only="react"
+        />
+        <InputForm
+          name="Masa Salarial"
+          placeholder="200000 (los valores se expresan en AR$)"
+          type="number"
+          labelText="Masa Salarial"
+          client:only="react"
+        /> -->
       </ServicesForm>
     </section>
   </main>

@@ -360,17 +360,37 @@ const {
   </div>
 
   <div
-    class="card5 card"
+    class="card card5"
     data-content={datacontent5}
   >
-    <div class="w-full h-full flex ml-4 title">
-      <p class="text-gray-50 texto font-light">{title5}</p>
+    <div class="w-full h-full flex flex-col justify-around ml-4 title mb-2">
+      <p class="text-gray-50 text-5xl font-light flex items-center gap-2">
+        {title5}
+      </p>
+
+      <div class="w-full flex items-center justify-end">
+        <span class="w-[48px] flex items-end fill-white stroke-white mr-2">
+          <svg
+            xmlns="
+          http:
+          www.w3.org
+          2000
+          svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              class="cls-1"
+              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
+            ></path></svg
+          ></span
+        >
+      </div>
     </div>
 
-    <div
+    <!-- <div
       class="absolute w-full h-full bg-[url('/img/urbano_movil.avif')] opacity-80 bg-cover bg-[center_bottom] bg-no-repeat"
     >
-    </div>
+    </div> -->
     <a
       href={dataform5}
       class="ver__mas"
@@ -429,7 +449,7 @@ const {
     </a>
   </div>
 
-  <div
+  <!--   <div
     class="card6 card"
     data-content={datacontent6}
   >
@@ -703,7 +723,7 @@ const {
         >
       </p>
     </a>
-  </div>
+  </div> -->
 </div>
 
 <style>
@@ -713,9 +733,9 @@ const {
 
     grid:
       "card1 card1 card1 card1 card1 card1 card2 card2 card2 card2 card2 card2" 1fr
-      "card3 card3 card3 card3 card3 card4 card4 card4 card4 card4 card4 card4" 1fr
-      "card5 card5 card5 card5 card6 card6 card6 card6 card7 card7 card7 card7" 1fr
-      "card8 card8 card8 card8 card8 card8 card8 card9 card9 card9 card9 card9" 1fr
+      "card3 card3 card3 card3 card4 card4 card4 card4 card5 card5 card5 card5" 1fr
+      /* "card5 card5 card5 card5 card6 card6 card6 card6 card7 card7 card7 card7" 1fr
+      "card8 card8 card8 card8 card8 card8 card8 card9 card9 card9 card9 card9" 1fr */
       / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 18px;
   }
@@ -799,6 +819,8 @@ const {
   }
   .card5 {
     grid-area: card5;
+    background-color: #000000;
+    background-image: none;
   }
   .card6 {
     grid-area: card6;
