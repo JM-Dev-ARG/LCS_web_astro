@@ -8,8 +8,8 @@ interface Props {
   title: string;
   path: string;
   metadata?: {
-    title: string;
-    description: string;
+    title?: string;
+    description?: string;
   };
 }
 
@@ -25,8 +25,8 @@ const { title, path, metadata } = Astro.props;
       content="Astro description"
     />
     <meta
-      name={metadata.title}
-      content={metadata.description}
+      name={metadata ? `${metadata.title}` : "title"}
+      content={metadata ? `${metadata.description}` : "description"}
     />
 
     <meta
