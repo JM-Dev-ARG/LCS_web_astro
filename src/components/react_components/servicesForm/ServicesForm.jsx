@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 
 const path = window.location.pathname;
 
+
+
 // Verificar viewport
 const isMobile = window.matchMedia("(max-width: 430px)").matches;
 
@@ -85,8 +87,13 @@ function getSheetName(path) {
     };
 
     const routeKey = path.split("/")[2];
-    return pathToSheetName[routeKey] || "Vacaciones"; // Valor por defecto
+    return pathToSheetName[routeKey];
 }
+
+function getOrigin(path) {
+    return path.split("/")[1];
+}
+
 
 function getEmail(path) {
     const pathToEmail = {
@@ -111,19 +118,21 @@ function getEmail(path) {
     };
 
     const routeKey = path.split("/")[2];
-    return pathToEmail[routeKey]; // Valor por defecto
+    return pathToEmail[routeKey];
 }
 
 // Componente principal del formulario
 export default function ServicesForm({ children, placeholderMensaje }) {
     const [sheetName, setSheetName] = useState("");
     const [email, setEmail] = useState("");
+    const [origin, setOrigin] = useState("");
     const path = window.location.pathname;
 
     // Obtener el nombre de la hoja basado en la ruta
     useEffect(() => {
         setSheetName(getSheetName(path));
         setEmail(getEmail(path));
+        setOrigin(getOrigin(path));
     }, [path]);
 
     // Obtener la fecha actual
@@ -182,6 +191,8 @@ export default function ServicesForm({ children, placeholderMensaje }) {
                     ></textarea>
                 </div> */}
 
+
+                <input type="text" name="Origen" defaultValue={origin} hidden />
                 <input type="text" name="sheetName" defaultValue={sheetName} hidden />
                 <input type="text" name="Fecha" defaultValue={date} hidden />
                 <input type="text" name="Email Destinatario" defaultValue={email} hidden />
