@@ -6,6 +6,8 @@ date: "01 Enero 2025"
 author: "Javier"
 img: "/img/retiro2.avif"
 imgAuthor: "/img/foto-mock.avif"
+altImg: "alt text"
+imgAuthorAlt: "alt author"
 categories: ["Desarrollo", "Programacion"]
 tags: ["html", "css", "javascript", "pepito"]
 ---

@@ -6,6 +6,8 @@ date: "2023-07-31"
 author: "Javier3"
 img: "/img/foto-mock.avif"
 imgAuthor: "/img/foto-mock.avif"
+altImg: "alt text"
+imgAuthorAlt: "alt author"
 categories: ["Desarrollo", "Programacion"]
 tags: ["html", "css", "javascript"]
 ---
