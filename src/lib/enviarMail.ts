@@ -9,6 +9,8 @@ export async function enviarMail(data: FormData) {
         return `${import.meta.env.MAIL_PERSONAS_TO}`;
       case "viajes":
         return `${import.meta.env.MAIL_VIAJES_TO}`;
+      case "patrimoniales":
+        return `${import.meta.env.MAIL_PATRIMONIO_TO}`;
       default:
         return `${import.meta.env.MAIL_DEFAULT_TO}`;
     }

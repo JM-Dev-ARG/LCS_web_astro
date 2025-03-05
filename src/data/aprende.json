@@ -3,10 +3,5 @@
         "href": "https://academia.lachicadelseguro.com.ar/",
         "label": "Academia de Seguros",
         "target": "_blank"
-    },
-    {
-        "href": "/blog",
-        "label": "Blog",
-        "target": "_self"
     }
 ]

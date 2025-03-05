@@ -23,8 +23,8 @@ export const POST: APIRoute = async ({ request }) => {
         from: `Formulario de Contacto <noreply@${
           import.meta.env.MAILGUN_DOMAIN
         }>`,
-        to: [import.meta.env.MAIL_TO],
-        subject: "Nuevo contacto desde página web",
+        to: [import.meta.env.MAIL_DEFAULT_TO],
+        subject: "Nuevo contacto desde página web - LCS",
         text: `Los datos del formulario son:
         Nombre: ${nombre}
         Email: ${email}
