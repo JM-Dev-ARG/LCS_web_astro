@@ -18,19 +18,20 @@ const result = `/${basePath}`;
     <section class="flex h-full w-[80%] justify-center items-center">
       <ServicesForm client:only="react">
         <InputForm
-          name="Edad"
-          placeholder="25 años"
-          type="text"
-          labelText="Edad"
-        />
-
-        <InputForm
           name="Codigo Postal"
           placeholder="1424"
           type="text"
           labelText="Codigo Postal"
           client:only="react"
         />
+
+        <InputForm
+          name="Edad"
+          placeholder="25 años"
+          type="text"
+          labelText="Edad"
+        />
+
         <InputForm
           name="Marca"
           placeholder="Honda"

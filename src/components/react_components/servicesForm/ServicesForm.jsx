@@ -2,7 +2,8 @@ import "./form.css";
 import Swal from "sweetalert2";
 import InputForm from "../formsComponents/InputForm";
 import { useEffect, useState } from "react";
-import { s } from "framer-motion/client";
+import { p } from "framer-motion/client";
+
 
 const path = window.location.pathname;
 
@@ -173,6 +174,27 @@ export default function ServicesForm({ children }) {
                         labelText="Telefono"
                     />
 
+                    {
+                        origin === "patrimoniales" ?
+                            <InputForm
+                                name="Provincia"
+                                placeholder="Buenos Aires"
+                                type="text"
+                                labelText="Provincia"
+                            />
+                            : ""
+                    }
+                    {
+                        origin === "patrimoniales" ?
+                            <InputForm
+                                name="Localidad"
+                                placeholder="La Plata"
+                                type="text"
+                                labelText="Localidad"
+                            />
+                            : ""
+                    }
+
                     {/* {
                         sheetName === "Automotores" ?
                             <InputForm
@@ -185,7 +207,7 @@ export default function ServicesForm({ children }) {
 
                     } */}
 
-                    {children}
+                    {children ? children : ""}
                 </div>
 
                 {/*                 <div className="w-full xl:w-[80%] flex flex-col gap-1">
