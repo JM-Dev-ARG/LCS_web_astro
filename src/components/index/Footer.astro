@@ -15,6 +15,7 @@ import redes from "../../data/redes.json";
 
   <div class="img__container">
     <img
+      loading="lazy"
       src="./resources/LOGOTIPO-CREMA.svg"
       alt=""
     />
@@ -32,6 +33,7 @@ import redes from "../../data/redes.json";
                 target={item.target}
               >
                 <img
+                  loading="lazy"
                   src={item.img}
                   alt={item.label}
                   class="size-[40px] p-2 group-hover:scale-[1.1] transition-all duration-200 ease-linear"

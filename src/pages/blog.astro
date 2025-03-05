@@ -20,6 +20,7 @@ postsOrdered.shift();
         transition:name={`logoBlog`}
       >
         <img
+          loading="lazy"
           class="w-[150px] md:w-[300px] -rotate-[20deg]"
           src="/resources/isotipo-animado.svg"
           alt=""
@@ -51,6 +52,7 @@ postsOrdered.shift();
 
           <div class="w-full min-h-[230px] h-[230px] md:w-1/2 md:h-full">
             <img
+              loading="lazy"
               class="object-cover w-full h-full border-y-[6px] border-lcsPink1"
               transition:name={`img-${lastPost.slug}`}
               src={lastPost.data.img}

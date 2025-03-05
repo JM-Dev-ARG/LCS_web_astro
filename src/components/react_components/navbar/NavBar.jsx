@@ -68,7 +68,7 @@ const Navbar = () => {
                     <div className="text-center lg:flex justify-end items-center lg:static z-10 flex-1  ">
                         <div className="flex justify-end items-center flex-1 mr-8 gap-4 ">
                             <a href="https://wa.me/5491131664971?text=Hola, quiero hacerles una consulta" target="_blank">
-                                <img src="./img/whatsapp.avif" alt="logo whatsapp" className="w-[35px] h-[35px]" />
+                                <img loading="lazy" src="./img/whatsapp.avif" alt="logo whatsapp" className="w-[35px] h-[35px]" />
                             </a>
                             <label className="menu__toggle">
                                 <input
