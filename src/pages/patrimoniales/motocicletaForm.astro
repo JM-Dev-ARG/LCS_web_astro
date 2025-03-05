@@ -1,8 +1,6 @@
 ---
-import CheckBoxForm from "../../components/react_components/formsComponents/CheckBoxForm";
 import InputForm from "../../components/react_components/formsComponents/InputForm";
 import { SelectForm } from "../../components/react_components/formsComponents/SelectForm";
-
 import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
 import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
 const path = Astro.url.pathname;
@@ -18,10 +16,7 @@ const result = `/${basePath}`;
     class="relative my-20 z-10 h-auto w-full grid place-items-center mx-auto"
   >
     <section class="flex h-full w-[80%] justify-center items-center">
-      <ServicesForm
-        client:only="react"
-        placeholderMensaje={""}
-      >
+      <ServicesForm client:only="react">
         <InputForm
           name="Edad"
           placeholder="25 años"
@@ -43,13 +38,6 @@ const result = `/${basePath}`;
           labelText="Marca de la moto"
           client:only="react"
         />
-        <InputForm
-          name="Modelo"
-          placeholder="Navy (como figura en la cedula verde)"
-          type="text"
-          labelText="Modelo de la moto"
-          client:only="react"
-        />
 
         <SelectForm
           name="Año"
@@ -67,6 +55,14 @@ const result = `/${basePath}`;
             { value: "2016", labelText: "2016" },
             { value: "2015", labelText: "2015" },
           ]}
+          client:only="react"
+        />
+
+        <InputForm
+          name="Modelo"
+          placeholder="NAVI 110"
+          type="text"
+          labelText="Modelo de la moto (como figura en la cedula verde)"
           client:only="react"
         />
       </ServicesForm>

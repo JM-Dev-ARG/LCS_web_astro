@@ -2,6 +2,7 @@ import "./form.css";
 import Swal from "sweetalert2";
 import InputForm from "../formsComponents/InputForm";
 import { useEffect, useState } from "react";
+import { s } from "framer-motion/client";
 
 const path = window.location.pathname;
 
@@ -122,7 +123,7 @@ function getEmail(path) {
 }
 
 // Componente principal del formulario
-export default function ServicesForm({ children, placeholderMensaje }) {
+export default function ServicesForm({ children }) {
     const [sheetName, setSheetName] = useState("");
     const [email, setEmail] = useState("");
     const [origin, setOrigin] = useState("");
@@ -138,7 +139,7 @@ export default function ServicesForm({ children, placeholderMensaje }) {
     // Obtener la fecha actual
     const date = `${new Date().getUTCDate()}/${new Date().getUTCMonth() + 1}/${new Date().getUTCFullYear()}`;
 
-    const msj = placeholderMensaje || "Dejanos tu mensaje o si elegiste otros en alguna opción, comentanos esa opción";
+
 
     return (
         <div className="w-full h-full">
@@ -171,6 +172,19 @@ export default function ServicesForm({ children, placeholderMensaje }) {
                         type="tel"
                         labelText="Telefono"
                     />
+
+                    {/* {
+                        sheetName === "Automotores" ?
+                            <InputForm
+                                name="papapapap"
+                                placeholder="1424"
+                                type="text"
+                                labelText="papapapap"
+                            />
+                            : ""
+
+                    } */}
+
                     {children}
                 </div>
 

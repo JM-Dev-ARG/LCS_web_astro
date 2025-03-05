@@ -5,15 +5,13 @@ import redes from "../data/redes.json";
 import NavBarFormularios from "../components/secciones/NavBarFormularios.astro";
 
 interface Props {
-  title: string;
   path: string;
-  metadata?: {
-    title?: string;
-    description?: string;
-  };
+  title: string;
+  keywords?: string;
+  description?: string;
 }
 
-const { title, path, metadata } = Astro.props;
+const { title, keywords, description, path } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,12 +19,13 @@ const { title, path, metadata } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta
-      name="description"
-      content="Astro description"
+      name="keywords"
+      content={keywords ? `${keywords}` : ""}
     />
+
     <meta
-      name={metadata ? `${metadata.title}` : "title"}
-      content={metadata ? `${metadata.description}` : "description"}
+      name="description"
+      content={description ? `${description}` : ""}
     />
 
     <meta

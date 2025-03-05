@@ -1,8 +1,6 @@
 ---
-import CheckBoxForm from "../../components/react_components/formsComponents/CheckBoxForm";
 import InputForm from "../../components/react_components/formsComponents/InputForm";
 import { SelectForm } from "../../components/react_components/formsComponents/SelectForm";
-
 import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
 import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
 const path = Astro.url.pathname;
@@ -18,10 +16,7 @@ const result = `/${basePath}`;
     class="relative my-20 z-10 h-auto w-full grid place-items-center mx-auto"
   >
     <section class="flex h-full w-[80%] justify-center items-center">
-      <ServicesForm
-        client:only="react"
-        placeholderMensaje={""}
-      >
+      <ServicesForm client:only="react">
         <InputForm
           name="Edad"
           placeholder="25 años"
@@ -43,20 +38,6 @@ const result = `/${basePath}`;
           labelText="Marca del automovil"
           client:only="react"
         />
-        <InputForm
-          name="Modelo"
-          placeholder="Focus"
-          type="text"
-          labelText="Modelo del automovil"
-          client:only="react"
-        />
-        <InputForm
-          name="Version"
-          placeholder="Titanium (como figura en la cedula verde)"
-          type="text"
-          labelText="Versión del automovil"
-          client:only="react"
-        />
 
         <SelectForm
           name="Año"
@@ -76,6 +57,20 @@ const result = `/${basePath}`;
           ]}
           client:only="react"
         />
+        <InputForm
+          name="Modelo"
+          placeholder="FOCUS L/16 2.0 4 P TITANIUM POWER "
+          type="text"
+          labelText="Modelo del automovil (como figura en la cedula verde)"
+          client:only="react"
+        />
+        <!-- <InputForm
+          name="Version"
+          placeholder="Titanium (como figura en la cedula verde)"
+          type="text"
+          labelText="Versión del automovil"
+          client:only="react"
+        /> -->
       </ServicesForm>
     </section>
   </main>
