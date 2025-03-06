@@ -6,9 +6,10 @@ interface Props {
   title: string;
   keywords?: string;
   description?: string;
+  url?: string;
 }
 
-const { title, keywords, description } = Astro.props;
+const { title, keywords, description, url } = Astro.props;
 ---
 
 <!doctype html>
@@ -24,10 +25,22 @@ const { title, keywords, description } = Astro.props;
       name="description"
       content={description ? `${description}` : ""}
     />
+    <link
+      rel="canonical"
+      href=`https://lachicadelseguro.com.ar/${url}`
+    />
+    <meta
+      name="robots"
+      content="index, follow"
+    />
 
     <meta
       name="viewport"
       content="width=device-width"
+    />
+    <meta
+      name="author"
+      content="Ice-Dev para Panambi"
     />
 
     <link
@@ -35,6 +48,11 @@ const { title, keywords, description } = Astro.props;
       type="image/svg+xml"
       href="/resources/ISO-BLANCO.svg"
     />
+    <link
+      rel="apple-touch-icon"
+      href="/resources/ISO-BLANCO.svg"
+    />
+
     <meta
       name="generator"
       content={Astro.generator}
@@ -83,6 +101,48 @@ const { title, keywords, description } = Astro.props;
     <title>{title}</title>
 
     <ClientRouter />
+
+    <script>
+      // @ts-ignore
+      !(function (f, b, e, v, n, t, s) {
+        // @ts-ignore
+        if (f.fbq) return;
+        // @ts-ignore
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        // @ts-ignore
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      // @ts-ignore
+      fbq("init", "647751594290477");
+      // @ts-ignore
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=647751594290477&ev=PageView&noscript=1"
+      /></noscript
+    >
   </head>
   <body>
     <NavBarServicios />

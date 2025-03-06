@@ -6,9 +6,17 @@ import LayoutServicios from "../layouts/LayoutServicios.astro";
 import data from "../data/bentoPatrimoniales.json";
 import BentoPatrimonio from "../components/servicePages/BentoPatrimonio.astro";
 import HeroService from "../components/servicePages/HeroService.astro";
+
+const url = new URL(Astro.url.href);
+const path = url.pathname.split("/").filter(Boolean).pop();
 ---
 
-<LayoutServicios title="LCS - Seguros Patrimoniales">
+<LayoutServicios
+  title="La Chica del Seguro - Seguros Patrimoniales"
+  description="Protege tus bienes con La Chica del Seguro. Ofrecemos seguros para automotores, motocicletas, hogar, caución y más, adaptados a tus necesidades."
+  keywords="Seguros patrimoniales, Seguro de automotores, Seguro de motocicletas, Seguro de hogar, Seguro de caución, Asistencia mecánica, Cobertura contra robo y hurto, Protección contra incendios, Seguros personalizados, La Chica del Seguro, CE Brokers, Asegurarse es la nueva moda, Seguros que protegen tus sueños"
+  url=`${path}`
+>
   <main>
     <HeroService
       title="Asegurarse es la nueva moda."
@@ -24,17 +32,6 @@ import HeroService from "../components/servicePages/HeroService.astro";
       border="border-[#0E206C]"
       bgColor="bg-[#3379f6]"
     >
-      <!--  <p>
-        Con más de <span class="resaltado">15 años de experiencia</span>, mas de
-        <span class="resaltado">40.000 clientes satisfechos</span>, más de <span
-          >20 aseguradoras</span
-        > líderes que nos avalan y un equipo jóven de más de <span
-          class="resaltado">50 expertos</span
-        >, te brindamos soluciones personalizadas e integrales. En <span
-          class="resaltado"
-          >CEBROKERS, aseguramos tu mundo y seguimos avanzando.</span
-        >
-      </p> -->
       <p>
         Con más de 15 años de experiencia,<span class="resaltado">
           + 40.000 clientes satisfechos</span

@@ -6,9 +6,17 @@ import LayoutServicios from "../layouts/LayoutServicios.astro";
 import data from "../data/viajesCardData.json";
 import BentoViajes from "../components/servicePages/BentoViajes.astro";
 import HeroService from "../components/servicePages/HeroService.astro";
+
+const url = new URL(Astro.url.href);
+const path = url.pathname.split("/").filter(Boolean).pop();
 ---
 
-<LayoutServicios title="LCS - Seguros de Viajes">
+<LayoutServicios
+  title="La Chica del Seguro - Seguros de Viajes"
+  description="Asegura tus viajes con La Chica del Seguro. Ofrecemos coberturas integrales para que disfrutes de tus aventuras con tranquilidad y respaldo en cualquier destino."
+  keywords="Seguros de viaje, Cobertura de viaje, Asistencia al viajero, Seguridad en viajes, Protección en viajes, Viajes seguros, Cobertura médica en el extranjero, Seguros internacionales, Asistencia en viajes, La Chica del Seguro"
+  url=`${path}`
+>
   <main>
     <HeroService
       title="Asegurarse es la nueva moda."

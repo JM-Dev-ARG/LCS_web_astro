@@ -6,9 +6,18 @@ import LayoutServicios from "../layouts/LayoutServicios.astro";
 import data from "../data/bentoPersonas.json";
 import BentoPersonas from "../components/servicePages/BentoPersonas.astro";
 import HeroService from "../components/servicePages/HeroService.astro";
+
+const url = new URL(Astro.url.href);
+const path = url.pathname.split("/").filter(Boolean).pop();
 ---
 
-<LayoutServicios title="LCS - Seguros de Personas">
+<LayoutServicios
+  title="La Chica del Seguro - Seguros de Personas"
+  description="Descubre los seguros personalizados de La Chica del Seguro: protección integral, planes de ahorro, independencia económica, fondos educativos, planes de retiro y apoyo a emprendedores."
+  keywords="Seguros personales,Protección financiera, Planes de ahorro
+Independencia económica, Fondo educativo, Planificación de retiro, Seguros para emprendedores, La Chica del Seguro, Estabilidad financiera, Seguros a medida"
+  url=`${path}`
+>
   <main>
     <HeroService
       title="Asegurarse es la nueva moda."
