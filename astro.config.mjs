@@ -22,5 +22,5 @@ export default defineConfig({
     }
   ), sitemap()],
   site: 'https://lcs-astro.netlify.app/',
-  adapter: netlify()
+  adapter: cloudflare()
 });
