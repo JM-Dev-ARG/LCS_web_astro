@@ -1,12 +1,12 @@
 [
     {
-        "href": "https://www.instagram.com/lachica.delseguro/?hl=es",
+        "href": "https://www.instagram.com/lachica.delseguro/",
         "img": "/resources/instagram.svg",
         "label": "Instagram de La Chica del Seguro",
         "target": "_blank"
     },
     {
-        "href": "https://www.linkedin.com/in/micaelatissieresgelsi/?originalSubdomain=ar",
+        "href": "https://www.linkedin.com/in/micaelatissieresgelsi/",
         "img": "/resources/linkedin.svg",
         "label": "Linkedin de Micaela Tissieres Gelsi - La Chica del Seguro",
         "target": "_blank"
