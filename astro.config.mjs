@@ -7,13 +7,13 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
+  output: 'hybrid',
 
   integrations: [tailwind(), react(
     {
       compat: true
     }
   ), sitemap()],
-  site: 'https://lcs-astro.netlify.app/',
+  /* site: 'https://lcs-astro.netlify.app/', */
   adapter: cloudflare()
 });
