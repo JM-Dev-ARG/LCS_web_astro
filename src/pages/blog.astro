@@ -24,6 +24,8 @@ postsOrdered.shift();
           class="w-[150px] md:w-[300px] -rotate-[20deg]"
           src="/resources/isotipo-animado.svg"
           alt="isologo de La Chica del Seguro"
+          height="auto"
+          width="auto"
         />
         <h1 class="text-6xl md:text-8xl font-thin">Blog</h1>
       </div>
@@ -57,6 +59,8 @@ postsOrdered.shift();
               transition:name={`img-${lastPost.slug}`}
               src={lastPost.data.img}
               alt={lastPost.data.title}
+              height="auto"
+              width="auto"
             />
           </div>
           <div
@@ -86,22 +90,7 @@ postsOrdered.shift();
                 }
               </div>
             </div>
-
-            <!--   <div class="hidden md:flex w-full justify-end items-center pb-5">
-              <a
-                href={`/blog/${lastPost.slug}`}
-                class="leer"
-                >Leer articulo</a
-              >
-            </div> -->
           </div>
-          <!-- <div class="flex md:hidden w-full justify-center items-center pb-5">
-            <a
-              href={`/blog/${lastPost.slug}`}
-              class="leer"
-              >Leer articulo</a
-            >
-          </div> -->
         </a>
       </section>
 

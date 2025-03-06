@@ -60,6 +60,8 @@ const Navbar = () => {
                                 className={`w-[50px] logo hover:rotate-[15deg] hover:scale-[1.1] transition duration-300 ease-in-out`}
                                 src="/resources/corazon-paragua.svg"
                                 alt="Logo La Chica del Seguro"
+                                height="auto"
+                                width="auto"
                             />
                         </a>
 
@@ -68,7 +70,13 @@ const Navbar = () => {
                     <div className="text-center lg:flex justify-end items-center lg:static z-10 flex-1  ">
                         <div className="flex justify-end items-center flex-1 mr-8 gap-4 ">
                             <a href="https://wa.me/5491131664971?text=Hola, quiero hacerles una consulta" target="_blank">
-                                <img loading="lazy" src="./img/whatsapp.avif" alt="logo whatsapp" className="w-[35px] h-[35px]" />
+                                <img
+                                    loading="lazy"
+                                    src="./img/whatsapp.avif"
+                                    alt="logo whatsapp"
+                                    className="w-[35px] h-[35px]"
+                                    height="auto"
+                                    width="auto" />
                             </a>
                             <label className="menu__toggle">
                                 <input
