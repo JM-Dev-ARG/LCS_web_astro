@@ -62,12 +62,12 @@ const lastPost = postsOrdered[0];
           >
             <div class="h-full flex flex-col justify-center gap-2">
               <p class="text-sm text-neutral-400">{lastPost.data.date}</p>
-              <h2
+              <p
                 class="text-xl md:text-4xl"
                 transition:name={`${lastPost.data.title}`}
               >
                 {lastPost.data.title}
-              </h2>
+              </p>
               <p class="text-sm md:text-lg font-light">
                 {lastPost.data.description}
               </p>

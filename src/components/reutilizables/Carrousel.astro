@@ -1,0 +1,111 @@
+---
+type Props = {
+  duration?: string;
+  direction?: string;
+  pause?: string;
+  className?: string;
+  classSlider?: string;
+};
+
+const { direction, duration, pause, className, classSlider } = Astro.props;
+---
+
+<div
+  class=`contenedor ${className}`
+  data-paused={pause}
+  data-duration={duration}
+  data-direction={direction}
+  data-animated="true"
+>
+  <div class=`slider ${classSlider}`>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .contenedor {
+    width: 100%;
+  }
+
+  .contenedor[data-animated="true"] {
+    overflow: hidden;
+
+    mask: linear-gradient(90deg, transparent, white 3%, white 97%, transparent);
+    -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      white 3%,
+      white 97%,
+      transparent
+    );
+  }
+  .contenedor[data-paused="true"]:hover .slider {
+    cursor: pointer;
+    animation-play-state: paused;
+  }
+
+  .contenedor[data-paused="true"]:focus .slider {
+    cursor: pointer;
+    animation-play-state: paused;
+  }
+  .contenedor[data-direction="right"] {
+    --_animation-direction: reverse;
+  }
+
+  .contenedor[data-direction="left"] {
+    --_animation-direction: forwards;
+  }
+
+  .contenedor[data-duration="fast"] {
+    --_animation-duration: 10s;
+  }
+
+  .contenedor[data-duration="slow"] {
+    --_animation-duration: 50s;
+  }
+
+  .contenedor[data-animated="true"] .slider {
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 30s)
+      var(--_animation-direction, forwards) linear infinite;
+  }
+  .slider {
+    width: max-content;
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translateX(calc(-50% - 0.5rem));
+    }
+  }
+</style>
+
+<!-- <script>
+  const contenedores = document.querySelectorAll(".contenedor");
+
+  if (!window.matchMedia("(prefers-reduce-motion: reduce)").matches) {
+    addAnimation();
+  } else {
+    console.log("Animation is disabled due to prefers-reduce-motion.");
+  }
+
+  function addAnimation() {
+    contenedores.forEach((contenedor) => {
+      contenedor.setAttribute("data-animated", "true");
+
+      const slider = contenedor.querySelector(".slider") as HTMLElement;
+      const sliderItems = Array.from(slider.children);
+
+      sliderItems.forEach((item) => {
+        const duplicarItem = item.cloneNode(true) as HTMLElement;
+        duplicarItem.setAttribute("aria-hidden", "true");
+
+        slider.appendChild(duplicarItem);
+      });
+    });
+  }
+</script>
+ -->
