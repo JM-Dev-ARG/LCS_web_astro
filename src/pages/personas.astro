@@ -14,8 +14,7 @@ const path = url.pathname.split("/").filter(Boolean).pop();
 <LayoutServicios
   title="La Chica del Seguro - Seguros de Personas"
   description="Descubre los seguros personalizados de La Chica del Seguro: protección integral, planes de ahorro, independencia económica, fondos educativos, planes de retiro y apoyo a emprendedores."
-  keywords="Seguros personales,Protección financiera, Planes de ahorro
-Independencia económica, Fondo educativo, Planificación de retiro, Seguros para emprendedores, La Chica del Seguro, Estabilidad financiera, Seguros a medida"
+  keywords="Seguros personales,Protección financiera, Planes de ahorro, Independencia económica, Fondo educativo, Planificación de retiro, Seguros para emprendedores, La Chica del Seguro, Estabilidad financiera, Seguros a medida"
   url=`${path}`
 >
   <main>
@@ -25,6 +24,7 @@ Independencia económica, Fondo educativo, Planificación de retiro, Seguros par
       image="/img/img-personas3.avif"
       className="bg-[top_center]"
     />
+
     <Services>
       {data.map((item) => <BentoPersonas {...item} />)}
     </Services>
@@ -35,10 +35,10 @@ Independencia económica, Fondo educativo, Planificación de retiro, Seguros par
       border="border-[#4cabad]"
     >
       <p>
-        <span class="font-medium text-[#386885]"
-          >Especialista en seguros de personas y desarrollo económico
-          multinivel.</span
-        ><br />
+        <span class="font-medium text-[#386885]">
+          Especialista en seguros de personas y desarrollo económico multinivel.
+        </span>
+        <br />
         La meta es lograr que las personas y empresas cumplan sus objetivos financieros
         utilizando planificaciones confiables y transparentes con el respaldo de
         aseguradoras de primera línea. El mejor aliado para lograr tu
