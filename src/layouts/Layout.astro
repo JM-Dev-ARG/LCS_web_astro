@@ -95,6 +95,8 @@ const { title } = Astro.props;
     <title>{title}</title>
 
     <ClientRouter />
+
+    <!-- Meta Pixel Code -->
     <script>
       // @ts-ignore
       !(function (f, b, e, v, n, t, s) {
@@ -136,6 +138,7 @@ const { title } = Astro.props;
         src="https://www.facebook.com/tr?id=647751594290477&ev=PageView&noscript=1"
       /></noscript
     >
+    <!-- End Meta Pixel Code -->
   </head>
   <body>
     <Navbar client:only="preact" />
