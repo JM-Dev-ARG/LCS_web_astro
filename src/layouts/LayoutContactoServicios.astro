@@ -37,6 +37,10 @@ const { title, keywords, description, path } = Astro.props;
       type="image/svg+xml"
       href="/resources/ISO-BLANCO.svg"
     />
+    <link
+      rel="apple-touch-icon"
+      href="/resources/ISO-BLANCO.svg"
+    />
     <meta
       name="generator"
       content={Astro.generator}
@@ -207,17 +211,22 @@ const { title, keywords, description, path } = Astro.props;
         </div>
       </div>
 
-      <p class="text-center text-xs font-thin text-gray-300">
+      <p class="text-center text-xs font-thin z-50 text-gray-300">
         Desarrollado por
         <a
-          class="cursor-pointer font-medium z-30"
+          class="cursor-pointer font-medium relative z-30"
           aria-label="Link al Github de JM-Dev"
           href="https://github.com/JM-Dev-ARG"
           target="_blank"
         >
           JM-DEV
         </a>
-        / Agencia Panambi
+        / <a
+          class="cursor-pointer font-medium relative z-30"
+          href="https://agenciapanambi.com/"
+          target="_blank"
+          >Agencia Panambi</a
+        >
       </p>
     </footer>
   </body>

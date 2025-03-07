@@ -35,6 +35,10 @@ const { title, keywords, description, path } = Astro.props;
       type="image/svg+xml"
       href="/resources/ISO-BLANCO.svg"
     />
+    <link
+      rel="apple-touch-icon"
+      href="/resources/ISO-BLANCO.svg"
+    />
     <meta
       name="generator"
       content={Astro.generator}
@@ -161,7 +165,7 @@ const { title, keywords, description, path } = Astro.props;
           class="flex p-5 justify-end items-center cursor-pointer"
         >
           <img
-            class="w-8 h-8"
+            class="w-8 h-8 hover:scale-125 ease-linear transition-all duration-300"
             src="./svg/menu_close.svg"
             alt="boton para cerrar ventana"
           /></button
