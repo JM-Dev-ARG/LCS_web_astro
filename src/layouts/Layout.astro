@@ -19,7 +19,7 @@ const { title } = Astro.props;
     />
     <link
       rel="canonical"
-      href="https://lachicadelseguro.com.ar/"
+      href="https://lachicadelseguro.com/"
     />
 
     <meta
@@ -139,6 +139,23 @@ const { title } = Astro.props;
       /></noscript
     >
     <!-- End Meta Pixel Code -->
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Z3S5K1WZQX"
+    ></script>
+    <script>
+      // @ts-ignore
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        // @ts-ignore
+        dataLayer.push(arguments);
+      }
+      // @ts-ignore
+      gtag("js", new Date());
+      // @ts-ignore
+      gtag("config", "G-Z3S5K1WZQX");
+    </script>
   </head>
   <body>
     <Navbar client:only="preact" />

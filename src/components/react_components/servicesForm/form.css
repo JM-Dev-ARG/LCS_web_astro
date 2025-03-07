@@ -6,6 +6,7 @@ form .campo:focus {
 form .campo::placeholder {
   font-size: clamp(14px, 2vw, 20px);
 }
+
 .background {
   background-image: linear-gradient(
     180deg,
@@ -18,10 +19,123 @@ form .campo::placeholder {
   color: #f9fafb;
   transition: all 0.3s linear;
 
+  &:disabled {
+    pointer-events: none;
+    filter: grayscale(50%);
+    opacity: 0.6;
+  }
+  &:disabled:hover {
+    box-shadow: 5px 5px 1px 0 #254542;
+    transform: none;
+    background-position: 0 0;
+    color: #f9fafb;
+  }
   &:hover {
     box-shadow: 2px 2px 1px 0 #254542;
     transform: translate(4px, 4px);
     background-position: 0 100%;
     color: #1d1e1c;
   }
+}
+
+.not__alowed {
+  pointer-events: none;
+}
+
+/* From Uiverse.io by catraco */
+/* Hide the default checkbox */
+.container__checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.container__checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 15px;
+  user-select: none;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  transition: 0.3s;
+  transform: scale(0);
+  border-radius: 50%;
+}
+
+.checkmark,
+.celebrate {
+  pointer-events: none; /* Evita que el clic en estos elementos afecte el input */
+}
+/* When the checkbox is checked, add a blue background */
+.container__checkbox input:checked ~ .checkmark {
+  background-color: #e69c99;
+  transform: scale(1);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 0.45em;
+  top: 0.35em;
+}
+
+/* Show the checkmark when checked */
+.container__checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container__checkbox input:checked ~ .celebrate {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container__checkbox .checkmark:after {
+  width: 0.3em;
+  height: 0.5em;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+.container__checkbox .celebrate {
+  position: absolute;
+  transform-origin: center;
+  animation: kfr-celebrate 0.4s;
+  animation-fill-mode: forwards;
+  display: none;
+  stroke: #e69c99;
+}
+
+@keyframes kfr-celebrate {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+    display: none;
+  }
+}
+
+.group:has(input:checked) .group p {
+  color: #e69c99;
 }

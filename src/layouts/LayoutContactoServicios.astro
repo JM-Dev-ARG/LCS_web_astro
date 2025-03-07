@@ -129,6 +129,23 @@ const { title, keywords, description, path } = Astro.props;
       /></noscript
     >
     <!-- End Meta Pixel Code -->
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Z3S5K1WZQX"
+    ></script>
+    <script>
+      // @ts-ignore
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        // @ts-ignore
+        dataLayer.push(arguments);
+      }
+      // @ts-ignore
+      gtag("js", new Date());
+      // @ts-ignore
+      gtag("config", "G-Z3S5K1WZQX");
+    </script>
   </head>
   <body class="back-forms">
     <div class="absolute w-full h-full opacity-[0.03] z-[1]">
@@ -145,16 +162,16 @@ const { title, keywords, description, path } = Astro.props;
       id="footerServices"
       class=""
     >
-      <div class="absolute w-full h-full"></div>
+      <!-- <div class="absolute w-full h-full"></div> -->
       <div
-        class="w-[70%] h-full flex flex-col md:flex-row justify-center md:justify-between items-center gap-y-5 py-6"
+        class="w-[70%] h-full flex flex-col md:flex-row justify-center md:justify-between items-center gap-y-5 py-6 relative z-20"
       >
         <a
-          class="img__container justify-center md:justify-start"
+          class="img__container justify-center md:justify-start w-full md:w-[40%] lg:w-[20%]"
           href="/"
         >
           <img
-            class="w-full md:w-[60%] lg:w-[40%]"
+            class="w-full"
             src="/resources/LOGOTIPO-CREMA.svg"
             alt=""
           />
@@ -193,7 +210,7 @@ const { title, keywords, description, path } = Astro.props;
       <p class="text-center text-xs font-thin text-gray-300">
         Desarrollado por
         <a
-          class="cursor-pointer"
+          class="cursor-pointer font-medium z-30"
           aria-label="Link al Github de JM-Dev"
           href="https://github.com/JM-Dev-ARG"
           target="_blank"
@@ -324,6 +341,7 @@ const { title, keywords, description, path } = Astro.props;
 
   footer {
     position: relative;
+    z-index: 30;
     height: max-content;
     width: 100%;
     display: flex;
@@ -332,7 +350,6 @@ const { title, keywords, description, path } = Astro.props;
     align-items: center;
   }
   .img__container {
-    width: 100%;
     display: flex;
 
     align-items: center;

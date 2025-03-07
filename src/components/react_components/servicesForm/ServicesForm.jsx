@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import InputForm from "../formsComponents/InputForm";
 import { useEffect, useState } from "react";
 import { p } from "framer-motion/client";
+import CheckBoxForm from "../formsComponents/CheckBoxForm";
 
 
 const path = window.location.pathname;
@@ -129,6 +130,14 @@ export default function ServicesForm({ children }) {
     const [email, setEmail] = useState("");
     const [origin, setOrigin] = useState("");
     const path = window.location.pathname;
+    const [checkedStates, setCheckedStates] = useState(false) // Estado inicial para todos los checkboxes
+
+    console.log(checkedStates);
+
+
+    const toggleCheckbox = (event) => {
+        setCheckedStates(event.target.checked);
+    };
 
     // Obtener el nombre de la hoja basado en la ruta
     useEffect(() => {
@@ -232,10 +241,36 @@ export default function ServicesForm({ children }) {
                 <input type="text" name="sheetName" defaultValue={sheetName} hidden />
                 <input type="text" name="Fecha" defaultValue={date} hidden />
                 <input type="text" name="Email Destinatario" defaultValue={email} hidden />
+                <div className="w-full flex justify-center items-center">
+                    <div className="group w-[20px]  flex justify-center gap-1 items-center text-[#e69c99]"
+                    >
+                        <label className="container__checkbox" htmlFor="Terminos y Condiciones" >
+                            <input type="checkbox"
+                                name="Terminos y Condiciones"
+                                checked={checkedStates}
+                                onChange={toggleCheckbox} />
+                            <div className="checkmark"></div>
+                            <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" className="celebrate">
+                                <polygon points="0,0 10,10"></polygon>
+                                <polygon points="0,25 10,25"></polygon>
+                                <polygon points="0,50 10,40"></polygon>
+                                <polygon points="50,0 40,10"></polygon>
+                                <polygon points="50,25 40,25"></polygon>
+                                <polygon points="50,50 40,40"></polygon>
+                            </svg>
 
-                <div className="w-full grid place-items-center mt-4" id="btn-send-form">
+                        </label>
+                        <p className={`font-extralight text-nowrap text-[clamp(10px,3vw,15px)] pl-2 ${checkedStates ? "text-[#e69c99]" : "text-gray-50"
+                            }`}> Acepto los <a href="/terminosycondiciones" target="_blank" rel="noopener noreferrer" className="font-medium">terminos y condiciones</a></p>
+                    </div>
+
+                </div>
+
+
+                <div className="w-full grid place-items-center mt-4" id="btn-send-form" >
                     <button
-                        className="background w-[200px] text-[clamp(18px,3vw,30px)] rounded-full px-4 py-3"
+                        disabled={!checkedStates}
+                        className={`background w-[200px] text-[clamp(18px,3vw,30px)] rounded-full px-4 py-3 ${!checkedStates ? "opacity-50 cursor-not-allowed" : ""}`}
                         type="submit"
                     >
                         Enviar
