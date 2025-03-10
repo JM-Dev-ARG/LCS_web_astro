@@ -6,7 +6,7 @@ import redes from "../../data/redes.json";
 
 <footer
   id="footer"
-  class="sticky opacity-0 bottom-0 flex justify-end"
+  class="opacity-0 bottom-0 left-0 right-0"
 >
   <div
     class="absolute w-full h-full bg-[url('/resources/amo-asegurar.svg')] bg-cover bg-center opacity-[0.03] z-[1]"
@@ -104,7 +104,7 @@ import redes from "../../data/redes.json";
   <p class="text-center text-xs font-thin z-50 text-gray-300">
     Desarrollado por
     <a
-      class="cursor-pointer font-medium relative z-30"
+      class="cursor-pointer font-medium z-30"
       aria-label="Link al Github de JM-Dev"
       href="https://github.com/JM-Dev-ARG"
       target="_blank"
@@ -112,7 +112,7 @@ import redes from "../../data/redes.json";
       JM-DEV
     </a>
     / <a
-      class="cursor-pointer font-medium relative z-30"
+      class="cursor-pointer font-medium z-30"
       href="https://agenciapanambi.com/"
       target="_blank"
       >Agencia Panambi</a
@@ -129,8 +129,7 @@ import redes from "../../data/redes.json";
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    z-index: 30;
+    position: sticky;
   }
   .img__container {
     width: 80%;

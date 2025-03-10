@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import NavBarServicios from "../components/secciones/NavBarServicios.astro";
+import FooterServices from "../components/servicePages/FooterServices.astro";
 
 interface Props {
   title: string;
@@ -167,6 +168,7 @@ const { title, keywords, description, url } = Astro.props;
   <body>
     <NavBarServicios />
     <slot />
+    <FooterServices />
   </body>
 </html>
 <style is:global>
