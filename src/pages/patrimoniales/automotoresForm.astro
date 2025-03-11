@@ -1,5 +1,6 @@
 ---
 import InputForm from "../../components/react_components/formsComponents/InputForm";
+import SelectAutoMotoForm from "../../components/react_components/formsComponents/SelectMarcaForm";
 import { SelectForm } from "../../components/react_components/formsComponents/SelectForm";
 import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
 import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
@@ -30,9 +31,11 @@ const result = `/${basePath}`;
           placeholder="25 años"
           type="text"
           labelText="Edad"
+          client:only="react"
         />
-
-        <InputForm
+        <!-- <SelectAutoMotoForm client:only="react" />
+ -->
+        <!--         <InputForm
           name="Marca"
           placeholder="Ford"
           type="text"
@@ -64,7 +67,7 @@ const result = `/${basePath}`;
           type="text"
           labelText="Modelo del automovil (como figura en la cedula verde)"
           client:only="react"
-        />
+        /> -->
         <!-- <InputForm
           name="Version"
           placeholder="Titanium (como figura en la cedula verde)"

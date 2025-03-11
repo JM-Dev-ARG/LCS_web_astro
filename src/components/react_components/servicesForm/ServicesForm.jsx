@@ -4,6 +4,10 @@ import InputForm from "../formsComponents/InputForm";
 import { useEffect, useState } from "react";
 import { p } from "framer-motion/client";
 import CheckBoxForm from "../formsComponents/CheckBoxForm";
+import SelectMarcaForm from "../formsComponents/SelectMarcaForm";
+import SelectModelosForm from "../formsComponents/SelectModelosForm";
+import SelectVersionForm from "../formsComponents/SelectVersionForm";
+import SelectYearsForm from "../formsComponents/SelectYearsForm";
 
 
 const path = window.location.pathname;
@@ -126,13 +130,21 @@ function getEmail(path) {
 
 // Componente principal del formulario
 export default function ServicesForm({ children }) {
+
     const [sheetName, setSheetName] = useState("");
     const [email, setEmail] = useState("");
     const [origin, setOrigin] = useState("");
     const path = window.location.pathname;
     const [checkedStates, setCheckedStates] = useState(false) // Estado inicial para todos los checkboxes
+    const [selectMarca, setSelectMarca] = useState("");
+    const [modelosServices, setModelosServices] = useState([]);
+    const [selectModelo, setSelectModelo] = useState("");
+    const [modeloVersion, setModeloVersion] = useState([]);
+    const [selectVersion, setSelectVersion] = useState("");
+    const [years, setYears] = useState([]);
+    const [selectYear, setSelectYear] = useState("");
 
-    console.log(checkedStates);
+
 
 
     const toggleCheckbox = (event) => {
@@ -144,11 +156,47 @@ export default function ServicesForm({ children }) {
         setSheetName(getSheetName(path));
         setEmail(getEmail(path));
         setOrigin(getOrigin(path));
+
+
     }, [path]);
+
+
+    useEffect(() => {
+        setModelosServices([]);
+        setSelectModelo("");
+        setModeloVersion([]);
+        setSelectVersion("");
+        setYears([]);
+        setSelectYear("");
+    }, [selectMarca]);
+
+    useEffect(() => {
+        const selectedModel = modelosServices.find((item) => item.slug === selectModelo);
+        if (selectedModel) {
+            setModeloVersion(selectedModel.versions);
+        } else {
+            return;
+        }
+    }, [selectModelo]);
+
+
+
+    useEffect(() => {
+        if (selectVersion) {
+            const selectedVersion = modeloVersion.find((item) => item.slug === selectVersion);
+            if (selectedVersion) {
+                setYears(selectedVersion.years);
+            }
+
+        } else {
+            return;
+        }
+    }, [selectVersion]);
+
+
 
     // Obtener la fecha actual
     const date = `${new Date().getUTCDate()}/${new Date().getUTCMonth() + 1}/${new Date().getUTCFullYear()}`;
-
 
 
     return (
@@ -204,44 +252,39 @@ export default function ServicesForm({ children }) {
                             : ""
                     }
 
-                    {/* {
-                        sheetName === "Automotores" ?
-                            <InputForm
-                                name="papapapap"
-                                placeholder="1424"
-                                type="text"
-                                labelText="papapapap"
-                            />
-                            : ""
 
-                    } */}
 
                     {children ? children : ""}
+
+                    {
+                        sheetName === "Automotores" || sheetName === "Motocicleta" ?
+                            <SelectMarcaForm selectMarca={selectMarca} setSelectMarca={setSelectMarca} /> : ""
+                    }
+                    {
+                        sheetName === "Automotores" || sheetName === "Motocicleta" ?
+                            <SelectModelosForm selectModelo={selectModelo} setSelectModelo={setSelectModelo} marca={selectMarca} setModelosServices={setModelosServices} /> : ""
+                    }
+                    {
+                        sheetName === "Automotores" || sheetName === "Motocicleta" ?
+                            <SelectVersionForm selectVersion={selectVersion} setSelectVersion={setSelectVersion} version={modeloVersion} /> : ""
+                    }
+
+                    {
+                        sheetName === "Automotores" || sheetName === "Motocicleta" ?
+                            <SelectYearsForm selectYear={selectYear} setSelectYear={setSelectYear} years={years} /> : ""
+                    }
+
+
                 </div>
 
-                {/*                 <div className="w-full xl:w-[80%] flex flex-col gap-1">
-                    <label
-                        htmlFor="mensaje"
-                        className="font-extralight text-[clamp(18px,5vw,24px)] pl-2 text-gray-50"
-                    >
-                        Tu Mensaje
-                    </label>
-                    <textarea
-                        rows="5"
-                        draggable="false"
-                        className="rounded-3xl px-4 py-2 campo"
-                        id="mensaje"
-                        name="Mensaje"
-                        placeholder={msj}
-                    ></textarea>
-                </div> */}
+
 
 
                 <input type="text" name="Origen" defaultValue={origin} hidden />
                 <input type="text" name="sheetName" defaultValue={sheetName} hidden />
                 <input type="text" name="Fecha" defaultValue={date} hidden />
                 <input type="text" name="Email Destinatario" defaultValue={email} hidden />
-                <div className="w-full flex justify-center items-center">
+                <div className="w-full flex justify-center items-center mt-5">
                     <div className="group w-[20px]  flex justify-center gap-1 items-center text-[#e69c99]"
                     >
                         <label className="container__checkbox" htmlFor="Terminos y Condiciones" >

@@ -11,6 +11,7 @@ import netlify from '@astrojs/netlify';
 export default defineConfig({
   output: 'server',
 
+
   integrations: [tailwind(), react(
     {
       compat: true
@@ -19,4 +20,5 @@ export default defineConfig({
 
   site: 'https://lcs-astro.netlify.app/',
   adapter: netlify(),
+
 });

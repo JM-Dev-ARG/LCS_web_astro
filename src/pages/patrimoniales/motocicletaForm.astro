@@ -31,41 +31,6 @@ const result = `/${basePath}`;
           type="text"
           labelText="Edad"
         />
-
-        <InputForm
-          name="Marca"
-          placeholder="Honda"
-          type="text"
-          labelText="Marca de la moto"
-          client:only="react"
-        />
-
-        <SelectForm
-          name="Año"
-          labelText="Año de la moto"
-          data={[
-            { value: "2025", labelText: "2025" },
-            { value: "2024", labelText: "2024" },
-            { value: "2023", labelText: "2023" },
-            { value: "2022", labelText: "2022" },
-            { value: "2021", labelText: "2021" },
-            { value: "2020", labelText: "2020" },
-            { value: "2019", labelText: "2019" },
-            { value: "2018", labelText: "2018" },
-            { value: "2017", labelText: "2017" },
-            { value: "2016", labelText: "2016" },
-            { value: "2015", labelText: "2015" },
-          ]}
-          client:only="react"
-        />
-
-        <InputForm
-          name="Modelo"
-          placeholder="NAVI 110"
-          type="text"
-          labelText="Modelo de la moto (como figura en la cedula verde)"
-          client:only="react"
-        />
       </ServicesForm>
     </section>
   </main>
