@@ -1,7 +1,9 @@
 import type { APIRoute } from "astro";
 
 export const GET: APIRoute = async ({ url }) => {
-  const marca = url.searchParams.get("marca"); // Obtiene la marca de los query params
+  const marca = url.searchParams.get("marca");
+
+  const fetchURL = import.meta.env.API_CEBROKERS;
 
   if (!marca) {
     return new Response(
@@ -11,9 +13,7 @@ export const GET: APIRoute = async ({ url }) => {
   }
 
   try {
-    const response = await fetch(
-      `https://api.quotes.cebrokers.com.ar/api/models/${marca}`
-    );
+    const response = await fetch(`${fetchURL}models/${marca}`);
     if (!response.ok) throw new Error("Error al obtener los modelos");
 
     const data = await response.json();

@@ -22,6 +22,8 @@ const SelectMarcaForm = ({ selectMarca, setSelectMarca }) => {
     const [marcas, setMarcas] = useState([]);
 
     useEffect(() => {
+        if (marcas.length > 0) return;
+
         const data = fetchMarcas();
         data.then((data) => {
             setMarcas(data.data
@@ -35,7 +37,7 @@ const SelectMarcaForm = ({ selectMarca, setSelectMarca }) => {
             <label htmlFor="marca" className="font-extralight text-[clamp(20px,2.5vw,30px)] pl-2 text-gray-50">Marca</label>
             <select
                 id="marca"
-                name="marca"
+                name="Marca"
                 required
                 className="flex-1 rounded-full px-4 py-2  max-h-[40px]"
                 value={selectMarca}

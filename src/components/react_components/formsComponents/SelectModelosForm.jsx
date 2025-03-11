@@ -38,10 +38,10 @@ const SelectModelosForm = ({ selectModelo, setSelectModelo, marca, setModelosSer
 
     return (
         <div className="w-full lg:w-[calc(50%-40px)] flex flex-col gap-1">
-            <label htmlFor="marca" className="font-extralight text-[clamp(20px,2.5vw,30px)] pl-2 text-gray-50">Modelo</label>
+            <label htmlFor="modelo" className="font-extralight text-[clamp(20px,2.5vw,30px)] pl-2 text-gray-50">Modelo</label>
             <select
                 id="modelo"
-                name="modelo"
+                name="Modelo"
                 required
                 className="flex-1 rounded-full px-4 py-2  max-h-[40px]"
                 value={selectModelo}

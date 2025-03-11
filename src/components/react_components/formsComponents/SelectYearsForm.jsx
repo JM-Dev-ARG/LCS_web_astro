@@ -11,10 +11,10 @@ const SelectYearsForm = ({ selectYear, setSelectYear, years }) => {
 
     return (
         <div className="w-full lg:w-[calc(50%-40px)] flex flex-col gap-1">
-            <label htmlFor="version" className="font-extralight text-[clamp(20px,2.5vw,30px)] pl-2 text-gray-50">Año</label>
+            <label htmlFor="año" className="font-extralight text-[clamp(20px,2.5vw,30px)] pl-2 text-gray-50">Año</label>
             <select
                 id="año"
-                name="año"
+                name="Año"
                 required
                 className="flex-1 rounded-full px-4 py-2  max-h-[40px]"
                 value={selectYear}
