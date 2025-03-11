@@ -143,8 +143,7 @@ export default function ServicesForm({ children }) {
     const [selectVersion, setSelectVersion] = useState("");
     const [years, setYears] = useState([]);
     const [selectYear, setSelectYear] = useState("");
-
-
+    const [modelCode, setModelCode] = useState("");
 
 
     const toggleCheckbox = (event) => {
@@ -156,10 +155,7 @@ export default function ServicesForm({ children }) {
         setSheetName(getSheetName(path));
         setEmail(getEmail(path));
         setOrigin(getOrigin(path));
-
-
     }, [path]);
-
 
     useEffect(() => {
         setModelosServices([]);
@@ -179,25 +175,21 @@ export default function ServicesForm({ children }) {
         }
     }, [selectModelo]);
 
-
-
     useEffect(() => {
         if (selectVersion) {
             const selectedVersion = modeloVersion.find((item) => item.slug === selectVersion);
             if (selectedVersion) {
                 setYears(selectedVersion.years);
+                setModelCode(selectedVersion.code);
             }
-
         } else {
             return;
         }
     }, [selectVersion]);
 
 
-
     // Obtener la fecha actual
     const date = `${new Date().getUTCDate()}/${new Date().getUTCMonth() + 1}/${new Date().getUTCFullYear()}`;
-
 
     return (
         <div className="w-full h-full">
@@ -284,6 +276,7 @@ export default function ServicesForm({ children }) {
                 <input type="text" name="sheetName" defaultValue={sheetName} hidden />
                 <input type="text" name="Fecha" defaultValue={date} hidden />
                 <input type="text" name="Email Destinatario" defaultValue={email} hidden />
+                <input type="text" name="Codigo Modelo" defaultValue={modelCode} hidden />
                 <div className="w-full flex justify-center items-center mt-5">
                     <div className="group w-[20px]  flex justify-center gap-1 items-center text-[#e69c99]"
                     >
