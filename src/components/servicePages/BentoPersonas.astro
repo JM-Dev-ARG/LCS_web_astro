@@ -57,7 +57,12 @@ const {
 } = Astro.props;
 ---
 
-<div class="flex flex-col lg:grid grid__container w-full xl:w-[70%] my-10">
+<div
+  class="flex flex-col lg:grid grid__container w-full xl:w-[70%] my-10"
+  data-aos="fade-up"
+  data-aos-duration="800"
+  data-aos-once="true"
+>
   <div class="card1 card">
     <div class="w-full h-full flex ml-4 title">
       <p class="text-gray-50 texto font-light">{title1}</p>

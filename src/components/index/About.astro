@@ -18,6 +18,10 @@ import Container from "../reutilizables/Container.astro";
           alt="foto Micaela Tissieres Gelsi - La Chica del Seguro"
           height="auto"
           width="auto"
+          data-aos="zoom-in"
+          data-aos-duration="800"
+          data-aos-once="true"
+          ,
         />
         <div
           class="hidden md:block absolute size-[40%] -top-[20%] -left-[20%] -z-10"
@@ -29,25 +33,95 @@ import Container from "../reutilizables/Container.astro";
             alt="asterisco fino verde"
             height="auto"
             width="auto"
+            data-aos="zoom-in"
+            data-aos-duration="700"
+            data-aos-delay="850"
+            data-aos-once="true"
           />
         </div>
 
         <div
           class="absolute -top-32 left-1/2 -translate-x-1/2 md:translate-x-0 md:top-4 md:left-[calc(100%-150px)] lg:left-[calc(100%-100px)] leading-none"
         >
-          <h2 class="title">¡HOLA!</h2>
-          <h3 class="saludo text-nowrap font-thin">Soy Mica</h3>
+          <h2 class="title">
+            <span
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="500"
+              data-aos-once="true"
+              >¡</span
+            ><span
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="600"
+              data-aos-once="true"
+              >H</span
+            ><span
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="700"
+              data-aos-once="true"
+              >O</span
+            ><span
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="800"
+              data-aos-once="true"
+              >L</span
+            ><span
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="900"
+              data-aos-once="true"
+              >A</span
+            ><span
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="1000"
+              data-aos-once="true"
+              >!</span
+            >
+          </h2>
+          <h3
+            class="saludo text-nowrap font-thin"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            data-aos-delay="1000"
+            data-aos-once="true"
+          >
+            Soy Mica
+          </h3>
         </div>
       </div>
 
       <div class="w-[80%] mx-auto lg:mx-0 lg:w-1/2 lg:mt-52 xl:mt-60 h-auto">
         <div class="leading-none mb-6">
-          <p class="title2 title2--light mb-2">Tu nueva aliada en el</p>
-          <p class="title2 title2--bold">Mundo Asegurador.</p>
+          <p
+            class="title2 title2--light mb-2"
+            data-aos="fade-right"
+            data-aos-duration="700"
+            data-aos-delay="1000"
+            data-aos-once="true"
+          >
+            Tu nueva aliada en el
+          </p>
+          <p
+            class="title2 title2--bold"
+            data-aos="fade-right"
+            data-aos-duration="800"
+            data-aos-delay="1200"
+            data-aos-once="true"
+          >
+            Mundo Asegurador.
+          </p>
         </div>
 
         <div
           class="mb-4 md:mb-8 text-pretty text-justify text-[clamp(14px,3vw,20px)] font-light"
+          data-aos="zoom-in"
+          data-aos-duration="800"
+          data-aos-delay="1000"
+          data-aos-once="true"
         >
           <p class="mb-2">
             Hace unos años me animé a abrir un espacio libre y gratuito para que
@@ -62,6 +136,10 @@ import Container from "../reutilizables/Container.astro";
         </div>
         <div
           class="flex flex-col md:flex-row items-center justify-center md:justify-around gap-6 md:gap-0 w-full"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-delay="1000"
+          data-aos-once="true"
         >
           <div class="w-fit md:w-[70%] lg:w-[50%] font-medium">
             <p
@@ -125,3 +203,9 @@ import Container from "../reutilizables/Container.astro";
     border-radius: 20px;
   }
 </style>
+<script>
+  import AOS from "aos";
+  import "aos/dist/aos.css"; // You can also use <link> for styles
+  // ..
+  AOS.init();
+</script>

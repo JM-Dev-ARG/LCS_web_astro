@@ -20,12 +20,19 @@ const path = url.pathname.split("/").filter(Boolean).pop();
     <div class="z-10 w-full h-[70%] flex flex-col justify-center items-center">
       <h1
         class="text-[clamp(40px,6vw,100px)] text-center text-wrap font-normal text-gray-50 drop-shadow-2xl"
+        data-aos="zoom-in"
+        data-aos-once="true"
+        data-aos-duration="1000"
       >
         {title}
       </h1>
 
       <h2
         class="text-[clamp(20px,4vw,80px)] text-center text-wrap font-extralight text-gray-50 drop-shadow-xl"
+        data-aos="zoom-in"
+        data-aos-once="true"
+        data-aos-duration="1000"
+        data-aos-delay="200"
       >
         {subtitle}
       </h2>
@@ -82,3 +89,9 @@ const path = url.pathname.split("/").filter(Boolean).pop();
     }
   }
 </style>
+<script>
+  import AOS from "aos";
+  import "aos/dist/aos.css"; // You can also use <link> for styles
+  // ..
+  AOS.init();
+</script>

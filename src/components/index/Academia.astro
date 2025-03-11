@@ -23,19 +23,42 @@ import data from "../../data/academia.json";
     <div
       class="w-full xl:w-[80%] flex flex-col items-start justify-start leading-tight mb-4"
     >
-      <p class="font-extralight text-[clamp(22px,6vw,70px)]">
+      <p
+        class="font-extralight text-[clamp(22px,6vw,70px)]"
+        data-aos="fade-right"
+        data-aos-duration="800"
+        data-aos-once="true"
+      >
         ¿Queres convertire en un
       </p>
       <p
         class="font-normal bg-[url('/resources/resaltado.svg')] bg-contain bg-no-repeat bg-center text-[clamp(28px,6vw,80px)]"
+        data-aos="fade-right"
+        data-aos-duration="800"
+        data-aos-delay="500"
+        data-aos-once="true"
       >
         Asesor de Seguros
       </p>
-      <p class="font-extralight text-[clamp(22px,6vw,70px)]">100% digital?</p>
+      <p
+        class="font-extralight text-[clamp(22px,6vw,70px)]"
+        data-aos="fade-right"
+        data-aos-duration="800"
+        data-aos-delay="700"
+        data-aos-once="true"
+      >
+        100% digital?
+      </p>
     </div>
     <div class="w-full xl:w-[80%] flex z-10 mb-2">
       <div class="w-full md:w-[60%]">
-        <p class="text-[clamp(16px,3vw,22px)] font-light text-pretty">
+        <p
+          class="text-[clamp(16px,3vw,22px)] font-light text-pretty"
+          data-aos="fade-right"
+          data-aos-duration="800"
+          data-aos-delay="800"
+          data-aos-once="true"
+        >
           Los programas educativos sobre seguros actuales no te preparan para
           ser asesor profesional y digital. Pero la <strong
             class="font-semibold text-lcsOrange3"
@@ -50,8 +73,14 @@ import data from "../../data/academia.json";
         </p>
         <div class="flex flex-col gap-4 my-5 w-full md:w-[90%]">
           {
-            data.map((item) => (
-              <div class="inline-flex w-full items-center justify-center gap-2 ">
+            data.map((item, index) => (
+              <div
+                class="inline-flex w-full items-center justify-center gap-2 "
+                data-aos="fade-right"
+                data-aos-duration="800"
+                data-aos-delay={index * 100 + 1000}
+                data-aos-once="true"
+              >
                 <span>
                   <img
                     loading="lazy"
@@ -70,7 +99,12 @@ import data from "../../data/academia.json";
           }
         </div>
       </div>
-      <div class="hidden md:flex relative w-1/2 justify-center items-center">
+      <div
+        class="hidden md:flex relative w-1/2 justify-center items-center"
+        data-aos="fade-left"
+        data-aos-duration="1500"
+        data-aos-once="true"
+      >
         <div
           class="absolute top-0 lg:-top-[15%] xl:-top-[30%] 2xl:-top-[50%] 3xl:-top-[65%] lg:right-0 xl:-right-20"
         >
@@ -85,7 +119,12 @@ import data from "../../data/academia.json";
         </div>
       </div>
     </div>
-    <div class="z-10">
+    <div
+      class="z-10"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-once="true"
+    >
       <Button
         href="https://academia.lachicadelseguro.com.ar/"
         title1="Comenza"
@@ -100,3 +139,10 @@ import data from "../../data/academia.json";
     filter: drop-shadow(-10px 12px 8px rgb(68, 68, 68));
   }
 </style>
+
+<script>
+  import AOS from "aos";
+  import "aos/dist/aos.css"; // You can also use <link> for styles
+  // ..
+  AOS.init();
+</script>

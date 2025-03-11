@@ -44,6 +44,9 @@ import CardServices from "../reutilizables/CardServices.astro";
         />
         <h2
           class="text-[clamp(28px,7vw,80px)] font-light md:font-extralight z-10"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
         >
           Contrata un Seguro
         </h2>
@@ -60,19 +63,28 @@ import CardServices from "../reutilizables/CardServices.astro";
       <div
         class="text-[clamp(80px,15vw,180px)] w-full h-[clamp(80px,20vw,200px)] font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 text-lcsPink3 tracking-wide opacity-60 text-center flex justify-center items-center"
       >
-        <p>B B B</p>
+        <p
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          data-aos-delay="700"
+          data-aos-once="true"
+        >
+          B B B
+        </p>
       </div>
     </div>
 
     <div
       class="relative w-full text__animated__container z-10 flex justify-center items-center h-[clamp(30px,7vw,50px)] my-5"
+      data-aos="fade-up"
+      data-aos-once="true"
     >
-      <p
+      <div
         data-delay="2s"
         class="text-[clamp(30px,7vw,50px)] font-semibold text-pretty text-center my-0 absolute opacity-0 text-[#518d87]"
       >
         BUENO
-      </p>
+      </div>
       <p
         class="text-[clamp(30px,7vw,50px)] font-semibold text-pretty text-center my-0 absolute opacity-0 text-[#518d87]"
       >
@@ -92,57 +104,67 @@ import CardServices from "../reutilizables/CardServices.astro";
 
     <div
       class="w-full md:w-[70%] lg:w-full flex flex-col lg:flex-row gap-4 mx-auto justify-center items-center"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-once="true"
     >
       {data.map((item) => <CardServices {...item} />)}
     </div>
   </Container>
+
+  <style>
+    .sub__container {
+      position: relative;
+    }
+    .sub::after {
+      content: "";
+      background-image: url("/resources/surayado.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: clamp(-35px, 4vw, -42px);
+      right: 0;
+      width: 100%;
+      height: 40px;
+    }
+
+    .text__animated__container p {
+      opacity: 0;
+      animation: fadeInOut 12s linear infinite;
+    }
+
+    .text__animated__container p:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .text__animated__container p:nth-child(2) {
+      animation-delay: 4s;
+    }
+
+    .text__animated__container p:nth-child(3) {
+      animation-delay: 8s;
+    }
+
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+      }
+      25% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+
+  <script>
+    import AOS from "aos";
+    import "aos/dist/aos.css"; // You can also use <link> for styles
+    // ..
+    AOS.init();
+  </script>
 </section>
-
-<style>
-  .sub__container {
-    position: relative;
-  }
-  .sub::after {
-    content: "";
-    background-image: url("/resources/surayado.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: clamp(-35px, 4vw, -42px);
-    right: 0;
-    width: 100%;
-    height: 40px;
-  }
-
-  .text__animated__container p {
-    opacity: 0;
-    animation: fadeInOut 12s linear infinite;
-  }
-
-  .text__animated__container p:nth-child(1) {
-    animation-delay: 0s;
-  }
-
-  .text__animated__container p:nth-child(2) {
-    animation-delay: 4s;
-  }
-
-  .text__animated__container p:nth-child(3) {
-    animation-delay: 8s;
-  }
-
-  @keyframes fadeInOut {
-    0% {
-      opacity: 0;
-    }
-    25% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-</style>

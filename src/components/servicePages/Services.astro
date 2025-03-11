@@ -6,7 +6,7 @@ import Container from "../reutilizables/Container.astro";
   <div>
     <img
       loading="lazy"
-      class="hidden xl:block w-auto h-[calc(100%/2)] absolute top-1/2 -left-[20%] xl:-left-[16%] 2xl:-left-[10%] translate-y-[-50%] opacity-70"
+      class="hidden xl:block w-auto lg:h-[400px] xl:h-[500px] absolute top-1/2 -left-[20%] xl:-left-[16%] 2xl:-left-[10%] translate-y-[-50%] opacity-70"
       src="/resources/asterisco-fino.svg"
       alt="asterisco fino verde"
       height="auto"
@@ -27,3 +27,10 @@ import Container from "../reutilizables/Container.astro";
     <slot />
   </Container>
 </section>
+
+<script>
+  import AOS from "aos";
+  import "aos/dist/aos.css"; // You can also use <link> for styles
+  // ..
+  AOS.init();
+</script>

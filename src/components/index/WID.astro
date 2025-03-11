@@ -8,6 +8,9 @@ import { WidScrollReveal } from "../react_components/wid/WidScrollReveal";
 <section
   id="wid"
   class="z-10 relative w-full h-auto place-content-center mx-auto overflow-hidden bg-[#fff5eb]"
+  data-aos="fade-up"
+  data-aos-duration="800"
+  data-aos-once="true"
 >
   <div
     class="wid relative w-full h-auto place-content-center mx-auto overflow-hidden rounded-[60px] md:rounded-[100px] bg-slate-600"
@@ -157,6 +160,11 @@ import { WidScrollReveal } from "../react_components/wid/WidScrollReveal";
     }
   </style>
   <script>
+    import AOS from "aos";
+    import "aos/dist/aos.css"; // You can also use <link> for styles
+    // ..
+    AOS.init();
+
     document.addEventListener("astro:page-load", () => {
       const historiaItems = document.querySelectorAll(".historia-item");
       let currentIndex = 0;
