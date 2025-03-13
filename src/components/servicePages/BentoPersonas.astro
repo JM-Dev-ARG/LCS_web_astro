@@ -84,7 +84,7 @@ const {
           databullet1
             ? databullet1.map((item) => (
                 <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
-                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                  <span class="span__arrow">
                     <svg
                       xmlns="
           http:
@@ -150,7 +150,7 @@ const {
           databullet2
             ? databullet2.map((item) => (
                 <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
-                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                  <span class="span__arrow">
                     <svg
                       xmlns="
           http:
@@ -215,7 +215,7 @@ const {
           databullet5
             ? databullet5.map((item) => (
                 <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
-                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                  <span class="span__arrow">
                     <svg
                       xmlns="
           http:
@@ -285,7 +285,7 @@ const {
           databullet4
             ? databullet4.map((item) => (
                 <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
-                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                  <span class="span__arrow">
                     <svg
                       xmlns="
           http:
@@ -355,7 +355,7 @@ const {
           databullet3
             ? databullet3.map((item) => (
                 <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
-                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                  <span class="span__arrow">
                     <svg
                       xmlns="
           http:
@@ -425,7 +425,7 @@ const {
           databullet6
             ? databullet6.map((item) => (
                 <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
-                  <span class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white">
+                  <span class="span__arrow">
                     <svg
                       xmlns="
           http:
@@ -545,6 +545,16 @@ const {
       align-items: start;
       justify-content: space-around;
       transition: all 0.3s linear 0.1s;
+    }
+
+    .span__arrow {
+      width: 16px;
+      max-width: 16px;
+      min-width: 16px;
+      display: grid;
+      place-items: center;
+      fill: white;
+      stroke: white;
     }
 
     .card1 {

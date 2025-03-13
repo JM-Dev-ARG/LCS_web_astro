@@ -2,22 +2,14 @@ import "./form.css";
 import Swal from "sweetalert2";
 import InputForm from "../formsComponents/InputForm";
 import { useEffect, useState } from "react";
-import { p } from "framer-motion/client";
-import CheckBoxForm from "../formsComponents/CheckBoxForm";
 import SelectMarcaForm from "../formsComponents/SelectMarcaForm";
 import SelectModelosForm from "../formsComponents/SelectModelosForm";
 import SelectVersionForm from "../formsComponents/SelectVersionForm";
 import SelectYearsForm from "../formsComponents/SelectYearsForm";
 
 
-const path = window.location.pathname;
-
-
-
-// Verificar viewport
 const isMobile = window.matchMedia("(max-width: 430px)").matches;
 
-// Función para mostrar un mensaje de éxito
 function saludo() {
     Swal.fire({
         width: isMobile ? 300 : undefined,
@@ -38,104 +30,12 @@ function saludoError() {
     });
 }
 
-// Función para manejar el envío del formulario
-async function submit(e) {
-    e.preventDefault();
-
-    const form = e.target;
-    const formData = new FormData(form);
-
-    try {
-        const response = await fetch("/api/servicesApi", {
-            method: "POST",
-            body: formData,
-        });
-        const data = await response.json();
-
-        if (data.message) {
-            saludo();
-            form.reset();
-            setTimeout(() => {
-                window.location.href = `/${path.split("/")[1]}`;
-            }, 5100);
-        } else {
-            saludoError();
-        }
-    } catch (error) {
-        console.error("Error:", error);
-        saludoError();
-    }
-}
-
-// Función para obtener el nombre de la hoja basado en la ruta
-function getSheetName(path) {
-    const pathToSheetName = {
-        "vacacionesForm": "Vacaciones",
-        "w&hForm": "WorkHoliday",
-        "enViajeForm": "Pasajero en Viaje",
-        "feducativoForm": "Fondo Educativo",
-        "libreForm": "Ahorro Libre",
-        "proteccionForm": "Proteccion",
-        "retiroForm": "Retiro",
-        "independenciaForm": "Independencia",
-        "emprendedorForm": "Emprendedor",
-        "artForm": "ART",
-        "asistenciaForm": "Asistencia",
-        "automotoresForm": "Automotores",
-        "comercioForm": "Comercio",
-        "consorcioForm": "Consorcio",
-        "hogarForm": "Hogar",
-        "motocicletaForm": "Motocicleta",
-        "movilForm": "Movil",
-        "urbanoForm": "Urbano",
-        "otrosForm": "Otros",
-        "caucionForm": "Caucion",
-
-    };
-
-    const routeKey = path.split("/")[2];
-    return pathToSheetName[routeKey];
-}
-
-function getOrigin(path) {
-    return path.split("/")[1];
-}
-
-
-function getEmail(path) {
-    const pathToEmail = {
-        "vacacionesForm": "viajes@lachicadelseguro.com",
-        "w&hForm": "viajes@lachicadelseguro.com",
-        "enViajeForm": "viajes@lachicadelseguro.com",
-        "feducativoForm": "personas@lachicadelseguro.com",
-        "libreForm": "personas@lachicadelseguro.com",
-        "proteccionForm": "personas@lachicadelseguro.com",
-        "retiroForm": "personas@lachicadelseguro.com",
-        "independenciaForm": "personas@lachicadelseguro.com",
-        "emprendedorForm": "personas@lachicadelseguro.com",
-        "artForm": "ignacio.b@cebrokers.com.ar",
-        "asistenciaForm": "micaela.d@cebrokers.com.ar",
-        "automotoresForm": "micaela.d@cebrokers.com.ar",
-        "comercioForm": "ignacio.b@cebrokers.com.ar",
-        "consorcioForm": "ignacio.b@cebrokers.com.ar",
-        "hogarForm": "micaela.d@cebrokers.com.ar",
-        "motocicletaForm": "micaela.d@cebrokers.com.ar",
-        "movilForm": "micaela.d@cebrokers.com.ar",
-        "urbanoForm": "micaela.d@cebrokers.com.ar",
-    };
-
-    const routeKey = path.split("/")[2];
-    return pathToEmail[routeKey];
-}
-
-// Componente principal del formulario
-export default function ServicesForm({ children }) {
-
+export default function ServicesForm({ children, urlFetchPatrimonieales, urlFetchDefault }) {
     const [sheetName, setSheetName] = useState("");
     const [email, setEmail] = useState("");
     const [origin, setOrigin] = useState("");
     const path = window.location.pathname;
-    const [checkedStates, setCheckedStates] = useState(false) // Estado inicial para todos los checkboxes
+    const [checkedStates, setCheckedStates] = useState(false)
     const [selectMarca, setSelectMarca] = useState("");
     const [modelosServices, setModelosServices] = useState([]);
     const [selectModelo, setSelectModelo] = useState("");
@@ -150,8 +50,109 @@ export default function ServicesForm({ children }) {
         setCheckedStates(event.target.checked);
     };
 
+
+
+    // Función para manejar el envío del formulario
+    async function submit(e) {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+
+        try {
+            const urlBase = getOrigin(path)
+            const fetchURL = urlBase === "patrimoniales"
+                ? urlFetchPatrimonieales
+                : urlFetchDefault;
+
+
+
+            const response = await fetch(fetchURL, {
+                method: "POST",
+                body: formData,
+            });
+            const data = await response.json();
+
+
+            if (data.success === true) {
+                saludo();
+                form.reset();
+                setTimeout(() => {
+                    window.location.href = `/${path.split("/")[1]}`;
+                }, 5100);
+            } else {
+                saludoError();
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            saludoError();
+        }
+    }
+
+    // Función para obtener el nombre de la hoja basado en la ruta
+    function getSheetName(path) {
+        const pathToSheetName = {
+            "vacacionesForm": "Vacaciones",
+            "w&hForm": "WorkHoliday",
+            "enViajeForm": "Pasajero en Viaje",
+            "feducativoForm": "Fondo Educativo",
+            "libreForm": "Ahorro Libre",
+            "proteccionForm": "Proteccion",
+            "retiroForm": "Retiro",
+            "independenciaForm": "Independencia",
+            "emprendedorForm": "Emprendedor",
+            "artForm": "ART",
+            "asistenciaForm": "Asistencia",
+            "automotoresForm": "Automotores",
+            "comercioForm": "Comercio",
+            "consorcioForm": "Consorcio",
+            "hogarForm": "Hogar",
+            "motocicletaForm": "Motocicleta",
+            "movilForm": "Movil",
+            "urbanoForm": "Urbano",
+            "otrosForm": "Otros",
+            "caucionForm": "Caucion",
+
+        };
+
+        const routeKey = path.split("/")[2];
+        return pathToSheetName[routeKey];
+    }
+
+    function getOrigin(path) {
+        return path.split("/")[1];
+    }
+
+
+    function getEmail(path) {
+        const pathToEmail = {
+            "vacacionesForm": "viajes@lachicadelseguro.com",
+            "w&hForm": "viajes@lachicadelseguro.com",
+            "enViajeForm": "viajes@lachicadelseguro.com",
+            "feducativoForm": "personas@lachicadelseguro.com",
+            "libreForm": "personas@lachicadelseguro.com",
+            "proteccionForm": "personas@lachicadelseguro.com",
+            "retiroForm": "personas@lachicadelseguro.com",
+            "independenciaForm": "personas@lachicadelseguro.com",
+            "emprendedorForm": "personas@lachicadelseguro.com",
+            "artForm": "ignacio.b@cebrokers.com.ar",
+            "asistenciaForm": "micaela.d@cebrokers.com.ar",
+            "automotoresForm": "micaela.d@cebrokers.com.ar",
+            "comercioForm": "ignacio.b@cebrokers.com.ar",
+            "consorcioForm": "ignacio.b@cebrokers.com.ar",
+            "hogarForm": "micaela.d@cebrokers.com.ar",
+            "motocicletaForm": "micaela.d@cebrokers.com.ar",
+            "movilForm": "micaela.d@cebrokers.com.ar",
+            "urbanoForm": "micaela.d@cebrokers.com.ar",
+        };
+
+        const routeKey = path.split("/")[2];
+        return pathToEmail[routeKey];
+    }
+
+
     // Obtener el nombre de la hoja basado en la ruta
     useEffect(() => {
+
         setSheetName(getSheetName(path));
         setEmail(getEmail(path));
         setOrigin(getOrigin(path));
@@ -164,6 +165,9 @@ export default function ServicesForm({ children }) {
         setSelectVersion("");
         setYears([]);
         setSelectYear("");
+
+
+
     }, [selectMarca]);
 
     useEffect(() => {
@@ -297,7 +301,7 @@ export default function ServicesForm({ children }) {
 
                         </label>
                         <p className={`font-extralight text-nowrap text-[clamp(10px,3vw,15px)] pl-2 ${checkedStates ? "text-[#e69c99]" : "text-gray-50"
-                            }`}> Acepto los <a href="/terminosycondiciones" target="_blank" rel="noopener noreferrer" className="font-medium">terminos y condiciones</a></p>
+                            }`}> Acepto los <a href="/terms/terms" target="_blank" rel="noopener noreferrer" className="font-medium">terminos y condiciones</a></p>
                     </div>
 
                 </div>

@@ -1,9 +1,21 @@
 ---
 import { ClientRouter } from "astro:transitions";
-import redes from "../data/redes.json";
+import Container from "../../components/reutilizables/Container.astro";
+import redes from "../../data/redes.json";
 import { getCollection, render } from "astro:content";
-import * as contenido from "../content/posts/post-nuevo.md";
-console.log(contenido.file);
+export async function getStaticPaths() {
+  const terms = await getCollection("terms");
+  return terms.map((term) => ({
+    params: { id: term.slug },
+    props: { term },
+  }));
+}
+
+export const prerender = true;
+
+const { term } = Astro.props;
+
+const { Content } = await render(term);
 ---
 
 <!doctype html>
@@ -90,20 +102,32 @@ console.log(contenido.file);
         if (f.fbq) return;
         // @ts-ignore
         n = f.fbq = function () {
+          // @ts-ignore
           n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
+            ? // @ts-ignore
+              n.callMethod.apply(n, arguments)
+            : // @ts-ignore
+              n.queue.push(arguments);
         };
         // @ts-ignore
         if (!f._fbq) f._fbq = n;
+        // @ts-ignore
         n.push = n;
+        // @ts-ignore
         n.loaded = !0;
+        // @ts-ignore
         n.version = "2.0";
+        // @ts-ignore
         n.queue = [];
+        // @ts-ignore
         t = b.createElement(e);
+        // @ts-ignore
         t.async = !0;
+        // @ts-ignore
         t.src = v;
+        // @ts-ignore
         s = b.getElementsByTagName(e)[0];
+        // @ts-ignore
         s.parentNode.insertBefore(t, s);
       })(
         window,
@@ -160,14 +184,18 @@ console.log(contenido.file);
         >
           <img
             class="w-8 h-8 hover:scale-125 ease-linear transition-all duration-300"
-            src="./svg/menu_close.svg"
+            src="/svg/menu_close.svg"
             alt="boton para cerrar ventana"
           /></button
         >
       </div>
 
       <div>
-        {contenido.compiledContent()}
+        <Container>
+          <div class="text-white text-[clamp(1rem,3vw,1.2rem)]">
+            <Content />
+          </div>
+        </Container>
       </div>
     </main>
 
@@ -183,7 +211,7 @@ console.log(contenido.file);
           <img
             class="w-full"
             src="/resources/LOGOTIPO-CREMA.svg"
-            alt=""
+            alt="logo La chica del seguro"
           />
         </a>
         <div
@@ -217,7 +245,7 @@ console.log(contenido.file);
         </div>
       </div>
 
-      <p class="text-center text-xs font-thin text-gray-300">
+      <div class="text-center text-xs font-thin text-gray-300">
         Desarrollado por
         <a
           class="cursor-pointer font-medium z-30"
@@ -226,9 +254,15 @@ console.log(contenido.file);
           target="_blank"
         >
           JM-DEV
-        </a>
-        / Agencia Panambi
-      </p>
+        </a> /
+        <a
+          href="https://panambi.net/"
+          target="_blank"
+          class="cursor-pointer font-medium z-30"
+          aria-label="Link a Agencia Panambi"
+          >Agencia Panambi</a
+        >
+      </div>
     </footer>
   </body>
 </html>
@@ -373,6 +407,7 @@ console.log(contenido.file);
 
 <script>
   const close = document.getElementById("close");
+  // @ts-ignore
   close.addEventListener("click", () => {
     window.close();
   });

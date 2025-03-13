@@ -16,4 +16,12 @@ const posts = defineCollection({
   }),
 });
 
-export const collections = { posts };
+const terms = defineCollection({
+  schema: z.object({
+    id: z.string(),
+    title: z.string(),
+    description: z.string(),
+  }),
+});
+
+export const collections = { posts, terms };

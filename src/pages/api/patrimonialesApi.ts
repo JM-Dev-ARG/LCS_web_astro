@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 import postDataMailer from "../../lib/postDataMailer";
 import { postDataDDBB } from "../../lib/postDataDDBB";
-import { enviarMail } from "../../lib/enviarMail";
+import { postDataDDBBCB } from "../../lib/postDDBBCB";
 
 export const POST: APIRoute = async ({ request }) => {
   const data = await request.formData();
@@ -9,13 +9,12 @@ export const POST: APIRoute = async ({ request }) => {
   try {
     const mailerResponse = await postDataMailer(data);
     const dbResponse = await postDataDDBB(data);
-    const mailgunResponse = await enviarMail(data);
-    /*   const dbCBResponse = await postDataDDBBCB(data); */
+    const dbCBResponse = await postDataDDBBCB(data);
 
     if (
       (mailerResponse === 200 || mailerResponse === 201) &&
       dbResponse.status === 200 &&
-      mailgunResponse === 200
+      dbCBResponse.status === 200
     ) {
       return new Response(
         JSON.stringify({
