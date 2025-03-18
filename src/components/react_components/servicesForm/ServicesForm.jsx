@@ -30,9 +30,10 @@ function saludoError() {
     });
 }
 
+
+
 export default function ServicesForm({ children, urlFetchPatrimonieales, urlFetchDefault }) {
     const [sheetName, setSheetName] = useState("");
-    const [email, setEmail] = useState("");
     const [origin, setOrigin] = useState("");
     const path = window.location.pathname;
     const [checkedStates, setCheckedStates] = useState(false)
@@ -57,21 +58,16 @@ export default function ServicesForm({ children, urlFetchPatrimonieales, urlFetc
         e.preventDefault();
         const form = e.target;
         const formData = new FormData(form);
-
         try {
             const urlBase = getOrigin(path)
             const fetchURL = urlBase === "patrimoniales"
                 ? urlFetchPatrimonieales
                 : urlFetchDefault;
-
-
-
             const response = await fetch(fetchURL, {
                 method: "POST",
                 body: formData,
             });
             const data = await response.json();
-
 
             if (data.success === true) {
                 saludo();
@@ -118,43 +114,12 @@ export default function ServicesForm({ children, urlFetchPatrimonieales, urlFetc
         return pathToSheetName[routeKey];
     }
 
-    function getOrigin(path) {
-        return path.split("/")[1];
-    }
-
-
-    function getEmail(path) {
-        const pathToEmail = {
-            "vacacionesForm": "viajes@lachicadelseguro.com",
-            "w&hForm": "viajes@lachicadelseguro.com",
-            "enViajeForm": "viajes@lachicadelseguro.com",
-            "feducativoForm": "personas@lachicadelseguro.com",
-            "libreForm": "personas@lachicadelseguro.com",
-            "proteccionForm": "personas@lachicadelseguro.com",
-            "retiroForm": "personas@lachicadelseguro.com",
-            "independenciaForm": "personas@lachicadelseguro.com",
-            "emprendedorForm": "personas@lachicadelseguro.com",
-            "artForm": "ignacio.b@cebrokers.com.ar",
-            "asistenciaForm": "micaela.d@cebrokers.com.ar",
-            "automotoresForm": "micaela.d@cebrokers.com.ar",
-            "comercioForm": "ignacio.b@cebrokers.com.ar",
-            "consorcioForm": "ignacio.b@cebrokers.com.ar",
-            "hogarForm": "micaela.d@cebrokers.com.ar",
-            "motocicletaForm": "micaela.d@cebrokers.com.ar",
-            "movilForm": "micaela.d@cebrokers.com.ar",
-            "urbanoForm": "micaela.d@cebrokers.com.ar",
-        };
-
-        const routeKey = path.split("/")[2];
-        return pathToEmail[routeKey];
-    }
 
 
     // Obtener el nombre de la hoja basado en la ruta
     useEffect(() => {
 
         setSheetName(getSheetName(path));
-        setEmail(getEmail(path));
         setOrigin(getOrigin(path));
     }, [path]);
 
@@ -270,6 +235,10 @@ export default function ServicesForm({ children, urlFetchPatrimonieales, urlFetc
                             <SelectYearsForm selectYear={selectYear} setSelectYear={setSelectYear} years={years} /> : ""
                     }
 
+                    {
+                        sheetName === "Automotores" || sheetName === "Motocicleta" ?
+                            <input type="text" name="Codigo Modelo" defaultValue={modelCode} hidden /> : ""
+                    }
 
                 </div>
 
@@ -279,8 +248,7 @@ export default function ServicesForm({ children, urlFetchPatrimonieales, urlFetc
                 <input type="text" name="Origen" defaultValue={origin} hidden />
                 <input type="text" name="sheetName" defaultValue={sheetName} hidden />
                 <input type="text" name="Fecha" defaultValue={date} hidden />
-                <input type="text" name="Email Destinatario" defaultValue={email} hidden />
-                <input type="text" name="Codigo Modelo" defaultValue={modelCode} hidden />
+
                 <div className="w-full flex justify-center items-center mt-5">
                     <div className="group w-[20px]  flex justify-center gap-1 items-center text-[#e69c99]"
                     >
