@@ -69,49 +69,73 @@ export default function ServicesForm() {
         <div className=" w-full flex justify-center items-center  ">
             <form
                 onSubmit={submit}
-                className=" w-full h-full flex  items-center justify-center"
+                className=" w-full h-full flex  items-center justify-center "
             >
-                <div className=" w-full   flex flex-col md:flex-row justify-center items-center md:items-end  gap-4 ">
-                    <div className="w-[80%]  md:w-[30%]  flex flex-col gap-1 " >
-                        <label
-                            htmlFor="Nombre Completo"
-                            className="font-extralight text-[clamp(14px,3vw,18px)] pl-2 text-gray-50"
-                        >Tu nombre
-                        </label>
-                        <input
-                            required
-                            className="flex-1 rounded-full px-4 py-2 max-h-[40px]"
-                            type="text"
-                            id="Nombre Completo"
-                            name="Nombre Completo"
-                            placeholder="Juan Perez"
-                        />
+                <div className=" w-full   flex flex-col  justify-center items-center   gap-4 ">
+                    <div className="flex flex-col lg:flex-row gap-4 w-[90%] ">
+                        <div className=" flex flex-col gap-1 flex-1" >
+                            <label
+                                htmlFor="Nombre"
+                                className="font-extralight text-[clamp(14px,3vw,18px)] pl-2 text-gray-50"
+                            >Tu nombre
+                            </label>
+                            <input
+                                required
+                                className="flex-1 rounded-full px-4 py-2 max-h-[40px]"
+                                type="text"
+                                id="Nombre"
+                                name="Nombre"
+                                placeholder="Juan"
+                            />
+                        </div>
+                        <div className="flex flex-col gap-1 flex-1" >
+                            <label
+                                htmlFor="Apellido"
+                                className="font-extralight text-[clamp(14px,3vw,18px)] pl-2 text-gray-50"
+                            >Tu apellido
+                            </label>
+                            <input
+                                required
+                                className="flex-1 rounded-full px-4 py-2 max-h-[40px]"
+                                type="text"
+                                id="Apellido"
+                                name="Apellido"
+                                placeholder="Perez"
+                            />
+                        </div>
+
                     </div>
 
-                    <div className="w-[80%]  md:w-[30%]   flex flex-col gap-1">
-                        <label
-                            htmlFor="Email"
-                            className="font-extralight text-[clamp(14px,3vw,18px)] pl-2 text-gray-50"
-                        >Tu email
-                        </label>
-                        <input
-                            required
-                            className="flex-1 rounded-full px-4 py-2 max-h-[40px]"
-                            type="email"
-                            id="Email"
-                            name="Email"
-                            placeholder="juanperez@tumail.com"
-                        />
+                    <div className="flex flex-col gap-4 w-[90%] ">
+                        <div className=" flex flex-col gap-1">
+                            <label
+                                htmlFor="Email"
+                                className="font-extralight text-[clamp(14px,3vw,18px)] pl-2 text-gray-50"
+                            >Tu email
+                            </label>
+                            <input
+                                required
+                                className="flex-1 rounded-full px-4 py-2 max-h-[40px]"
+                                type="email"
+                                id="Email"
+                                name="Email"
+                                placeholder="juanperez@tumail.com"
+                            />
+                        </div>
+                        <input type="text" name="sheetName" defaultValue="Descarga Guia" hidden />
+                        <input type="text" name="Fecha" defaultValue={date} hidden />
+
+                        <div className="w-full flex justify-center ">
+                            <button
+                                className="background grid place-items-center w-[clamp(110px,10vw,150px)]   h-[40px] text-[clamp(18px,10vw,20px)] rounded-full "
+                                type="submit">
+                                Enviar
+                            </button>
+                        </div>
+
                     </div>
-                    <input type="text" name="sheetName" defaultValue="Descarga Guia" hidden />
-                    <input type="text" name="Fecha" defaultValue={date} hidden />
 
 
-                    <button
-                        className="background grid place-items-center w-[clamp(110px,10vw,150px)]   h-[40px] text-[clamp(18px,10vw,20px)] rounded-full "
-                        type="submit">
-                        Enviar
-                    </button>
                 </div>
 
 
