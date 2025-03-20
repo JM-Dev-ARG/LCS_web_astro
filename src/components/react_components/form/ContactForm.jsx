@@ -100,21 +100,7 @@ export default function ContactForm() {
                     autoComplete="on"
                 />
             </div>
-            {/*             <div className="flex flex-col gap-1 mt-3 lg:mt-6">
-                <label
-                    for="telefono"
-                    className="font-extralight text-[clamp(20px,5vw,30px)] pl-2 text-gray-50"
-                >Tu telefono
-                </label>
-                <input
-                    required
-                    className="flex-1 rounded-full px-4 py-2 campo"
-                    type="number"
-                    id="telefono"
-                    name="telefono"
-                    placeholder="(011) 12345 6789"
-                />
-            </div> */}
+
             <div className="flex flex-col gap-1 mt-3 lg:mt-6">
                 <label
                     htmlFor="mensaje"

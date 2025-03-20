@@ -1,50 +1,38 @@
 import type { APIRoute } from "astro";
-import formData from "form-data";
-import Mailgun from "mailgun.js";
+import { enviarMailContacto } from "../../lib/enviarMailContacto";
 
 export const POST: APIRoute = async ({ request }) => {
   const data = await request.formData();
-  const nombre = data.get("nombre");
-  const email = data.get("email");
-  const msj = data.get("mensaje");
 
   // Configuración de Mailgun
-  const mailgun = new Mailgun(formData);
-  const client = mailgun.client({
-    username: "api",
-    key: import.meta.env.MAILGUN_API_KEY, // API Key desde Mailgun
-  });
 
   try {
     // Enviar el correo
-    const result = await client.messages.create(
-      import.meta.env.MAILGUN_DOMAIN,
-      {
-        from: `Formulario de Contacto <noreply@${
-          import.meta.env.MAILGUN_DOMAIN
-        }>`,
-        to: [import.meta.env.MAIL_DEFAULT_TO],
-        subject: "Nuevo contacto desde página web - LCS",
-        text: `Los datos del formulario son:
-        Nombre: ${nombre}
-        Email: ${email}
-        Mensaje: ${msj}`,
-      }
-    );
-
-    console.log("Email enviado:", result.id);
-
+    const mailgunResponse = await enviarMailContacto(data);
+    if (mailgunResponse === 200) {
+      return new Response(
+        JSON.stringify({
+          success: true,
+          message: "Datos enviados correctamente.",
+        }),
+        { status: 200 }
+      );
+    } else {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          message: "Hubo un problema con alguna de las operaciones.",
+        }),
+        { status: 500 }
+      );
+    }
+  } catch (error) {
+    console.error("Error en servicesApi:", error);
     return new Response(
       JSON.stringify({
-        message: "Email enviado exitosamente.",
-      }),
-      { status: 200 }
-    );
-  } catch (error: any) {
-    console.error("Error al enviar el email:", error.message);
-    return new Response(
-      JSON.stringify({
-        message: error.message || "Hubo un error al enviar el email.",
+        success: false,
+        message: "Error interno del servidor.",
+        error: error.message,
       }),
       { status: 500 }
     );
