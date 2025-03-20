@@ -51,6 +51,9 @@ export default function ServicesForm({ children, urlFetchPatrimonieales, urlFetc
         setCheckedStates(event.target.checked);
     };
 
+    function getOrigin(path) {
+        return path.split("/")[1];
+    }
 
 
     // Función para manejar el envío del formulario
