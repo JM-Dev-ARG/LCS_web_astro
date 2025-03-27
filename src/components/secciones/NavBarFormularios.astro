@@ -16,7 +16,10 @@ const { path } = Astro.props;
     class="flex items-center justify-between lg:justify-center w-full mx-auto lg:px-3 2xl:px-0 py-3"
   >
     <div class="flex justify-left items-center flex-1 ml-8">
-      <a href="/">
+      <a
+        href="/"
+        title="Logo paragua corazon de La Chica Del Seguro - volver a la página principal"
+      >
         <img
           loading="lazy"
           class="w-[50px] hover:rotate-[15deg] hover:scale-[1.1] transition duration-300 ease-in-out"
@@ -24,6 +27,7 @@ const { path } = Astro.props;
           alt="Logo paragua corazon de La Chica Del Seguro"
           height="auto"
           width="auto"
+          title="Logo paragua corazon de La Chica Del Seguro"
         /></a
       >
     </div>
@@ -31,7 +35,9 @@ const { path } = Astro.props;
     <div>
       <div class="flex justify-end items-center flex-1 mr-8 gap-4">
         <Whatsapp />
-        <a href=`${path}`
+        <a
+          href=`${path}`
+          title="boton de whatapp para contacto con LCS"
           ><svg
             class="w-[50px] stroke-[#ed6f5f] hover:scale-[1.1] hover:stroke-[#ea4d50] transition duration-300"
             xmlns="http://www.w3.org/2000/svg"

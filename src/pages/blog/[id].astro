@@ -49,6 +49,7 @@ const { Content } = await render(post);
               class="w-14 h-14 rounded-full object-cover object-top"
               height="auto"
               width="auto"
+              title={imgAuthorAlt}
             />
             <p class="text-md text-neutral-400">{author}</p>
           </div>
@@ -61,6 +62,7 @@ const { Content } = await render(post);
           alt={altImg}
           height="auto"
           width="auto"
+          title={altImg}
         />
         <div
           class="max-w-xs md:max-w-full w-full flex justify-center items-center"

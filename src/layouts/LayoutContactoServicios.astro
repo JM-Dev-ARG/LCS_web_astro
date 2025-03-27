@@ -130,6 +130,7 @@ const { title, keywords, description, path } = Astro.props;
         width="1"
         style="display:none"
         src="https://www.facebook.com/tr?id=647751594290477&ev=PageView&noscript=1"
+        title="img pixel facebook"
       /></noscript
     >
     <!-- End Meta Pixel Code -->
@@ -173,6 +174,7 @@ const { title, keywords, description, path } = Astro.props;
         <a
           class="img__container justify-center md:justify-start w-full md:w-[40%] lg:w-[20%]"
           href="/"
+          title="Logo La chica del seguro - volver a la página principal"
         >
           <img
             class="w-full"
@@ -191,12 +193,16 @@ const { title, keywords, description, path } = Astro.props;
                     <a
                       href={item.href}
                       target={item.target}
+                      title={item.label}
                     >
                       <img
                         src={item.img}
                         alt={item.label}
                         class="size-[40px] p-2 group-hover:scale-[1.1] transition-all duration-200 ease-linear"
                         style="filter: invert(100%) "
+                        height="auto"
+                        width="auto"
+                        title={item.label}
                       />
                     </a>
                   </div>

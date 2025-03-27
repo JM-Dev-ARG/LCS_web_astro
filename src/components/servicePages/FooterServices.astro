@@ -17,11 +17,15 @@ import Container from "../reutilizables/Container.astro";
     <a
       class="img__container justify-center md:justify-start w-full md:w-[40%] lg:w-[20%]"
       href="/"
+      title="Logo La chica del seguro - volver a la página principal"
     >
       <img
         class="w-full"
         src="/resources/LOGOTIPO-CREMA.svg"
-        alt=""
+        alt="Logo La chica del seguro"
+        height="auto"
+        width="auto"
+        title="Logo La chica del seguro"
       />
     </a>
     <div
@@ -35,6 +39,7 @@ import Container from "../reutilizables/Container.astro";
                 <a
                   href={item.href}
                   target={item.target}
+                  title={item.label}
                 >
                   <img
                     loading="lazy"
@@ -44,6 +49,7 @@ import Container from "../reutilizables/Container.astro";
                     style="filter: invert(100%) "
                     height="auto"
                     width="auto"
+                    title={item.label}
                   />
                 </a>
               </div>
@@ -61,17 +67,19 @@ import Container from "../reutilizables/Container.astro";
   <p class="text-center text-xs font-thin z-50 text-gray-300">
     Desarrollado por
     <a
-      class="cursor-pointer font-medium relative z-30"
+      class="cursor-pointer font-medium z-30"
       aria-label="Link al Github de JM-Dev"
       href="https://github.com/JM-Dev-ARG"
       target="_blank"
+      title="Link al Github de JM-Dev"
     >
       JM-DEV
     </a>
     / <a
-      class="cursor-pointer font-medium relative z-30"
+      class="cursor-pointer font-medium z-30"
       href="https://agenciapanambi.com/"
       target="_blank"
+      title="Link a la Agencia Panambi"
       >Agencia Panambi</a
     >
   </p>

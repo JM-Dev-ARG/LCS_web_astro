@@ -3,6 +3,7 @@ import "./navbar.css"
 
 import navega from "../../../data/navega.json";
 import aprende from "../../../data/aprende.json";
+import { i } from "framer-motion/client";
 
 let url = window.location.pathname;
 
@@ -55,13 +56,14 @@ const Navbar = () => {
             >
                 <div className="flex items-center justify-between lg:justify-center w-full mx-auto lg:px-3 2xl:px-0 py-3 ">
                     <div className="flex justify-left items-center flex-1 ml-8 ">
-                        <a onClick={handleScrollToTop} href="/" >
+                        <a onClick={handleScrollToTop} href="/" title="boton volver al inicio" >
                             <img
                                 className={`w-[50px] logo hover:rotate-[15deg] hover:scale-[1.1] transition duration-300 ease-in-out`}
                                 src="/resources/corazon-paragua.svg"
-                                alt="Logo La Chica del Seguro"
+                                alt="Logo Paragua Corazon de La Chica del Seguroo"
                                 height="auto"
                                 width="auto"
+                                title="Logo Paragua Corazon de La Chica del Seguro"
                             />
                         </a>
 
@@ -69,14 +71,16 @@ const Navbar = () => {
 
                     <div className="text-center lg:flex justify-end items-center lg:static z-10 flex-1  ">
                         <div className="flex justify-end items-center flex-1 mr-8 gap-4 ">
-                            <a href="https://wa.me/5491170627152?text=Hola, quiero hacerles una consulta" target="_blank" className="hover:scale-[1.1] transition-all ease-linear duration-300">
+                            <a title="whatsapp" href="https://wa.me/5491170627152?text=Hola, quiero hacerles una consulta" target="_blank" className="hover:scale-[1.1] transition-all ease-linear duration-300">
                                 <img
                                     loading="lazy"
                                     src="./img/whatsapp.avif"
                                     alt="logo whatsapp"
                                     className="w-[35px] h-[35px]"
                                     height="auto"
-                                    width="auto" />
+                                    width="auto"
+                                    title="logo whatsapp"
+                                />
                             </a>
                             <label className="menu__toggle hover:scale-[1.1] transition-all ease-linear duration-300">
                                 <input
@@ -119,6 +123,7 @@ const Navbar = () => {
                                             href={item.href}
                                             target={item.target}
                                             onClick={handleScrollToTop}
+                                            title={item.label}
 
                                         >
                                             {item.label}
@@ -141,6 +146,7 @@ const Navbar = () => {
                                             className="text-zinc-500 hover:text-zinc-100 duration-300 ease-linear"
                                             href={item.href}
                                             target={item.target}
+                                            title={item.label}
                                         >
                                             {item.label}
                                         </a>

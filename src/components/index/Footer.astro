@@ -20,6 +20,7 @@ import redes from "../../data/redes.json";
       alt="Logo La Chica del Seguro"
       height="auto"
       width="auto"
+      title="Logo La Chica del Seguro"
     />
   </div>
   <div
@@ -33,6 +34,7 @@ import redes from "../../data/redes.json";
               <a
                 href={item.href}
                 target={item.target}
+                title={item.label}
               >
                 <img
                   loading="lazy"
@@ -42,6 +44,7 @@ import redes from "../../data/redes.json";
                   style="filter: invert(100%) "
                   height="auto"
                   width="auto"
+                  title={item.label}
                 />
               </a>
             </div>
@@ -69,6 +72,7 @@ import redes from "../../data/redes.json";
                     id="navItem"
                     class="text-zinc-500 hover:text-zinc-100 duration-300 ease-linear"
                     href={item.href}
+                    target={item.label}
                   >
                     {item.label}
                   </a>
@@ -90,6 +94,7 @@ import redes from "../../data/redes.json";
                     class="text-zinc-500 hover:text-zinc-100 duration-300 ease-linear"
                     href={item.href}
                     target={item.target}
+                    title={item.label}
                   >
                     {item.label}
                   </a>
@@ -108,6 +113,7 @@ import redes from "../../data/redes.json";
       aria-label="Link al Github de JM-Dev"
       href="https://github.com/JM-Dev-ARG"
       target="_blank"
+      title="Link al Github de JM-Dev"
     >
       JM-DEV
     </a>
@@ -115,6 +121,7 @@ import redes from "../../data/redes.json";
       class="cursor-pointer font-medium z-30"
       href="https://agenciapanambi.com/"
       target="_blank"
+      title="Link a la Agencia Panambi"
       >Agencia Panambi</a
     >
   </p>

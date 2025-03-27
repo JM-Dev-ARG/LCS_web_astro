@@ -12,6 +12,7 @@ const { href, title1, title2 } = Astro.props;
   href={href}
   class="button px-2 md:px-4"
   target="_blank"
+  title={title2}
 >
   <div class="text-gray-50">
     <p>{title1}</p>
@@ -22,6 +23,9 @@ const { href, title1, title2 } = Astro.props;
       class="h-[25px] w-[25px] md:h-[40px] md:w-[40px] rotate-[-45deg]"
       src="/resources/flechas-button.svg"
       alt="flechas blancas animadas"
+      height="auto"
+      width="auto"
+      title="flechas blancas animadas"
     />
   </div>
 </a>

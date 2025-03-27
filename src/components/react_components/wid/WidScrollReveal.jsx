@@ -15,7 +15,9 @@ const content = [
                     className="h-full w-full object-cover rounded-2xl overflow-hidden"
                     alt="foto La Chica del Seguro sentada en un escritorio"
                     height="auto"
-                    width="auto" />
+                    width="auto"
+                    title="foto La Chica del Seguro sentada en un escritorio"
+                />
             </div>
         ),
     },
@@ -31,7 +33,10 @@ const content = [
                     className="h-full w-full object-cover rounded-2xl overflow-hidden"
                     alt="foto La Chica del Seguro en el Foro Nacional de Seguros"
                     height="auto"
-                    width="auto" />
+                    width="auto"
+                    title="foto La Chica del Seguro en el Foro Nacional de Seguros"
+
+                />
             </div>
         ),
     },
@@ -46,7 +51,9 @@ const content = [
                     className="h-full w-full object-cover rounded-2xl overflow-hidden"
                     alt="Foto La Chica del Seguro invitada al podcast CNP"
                     height="auto"
-                    width="auto" />
+                    width="auto"
+                    title="Foto La Chica del Seguro invitada al podcast CNP"
+                />
             </div>
         ),
     },
@@ -61,7 +68,9 @@ const content = [
                     className="h-full w-full object-cover rounded-2xl overflow-hidden"
                     alt="Foto La Chica del Seguro invitada al programa televisivo Pool Economico"
                     height="auto"
-                    width="auto" />
+                    width="auto"
+                    title="Foto La Chica del Seguro invitada al programa televisivo Pool Economico"
+                />
             </div>
         ),
     },
