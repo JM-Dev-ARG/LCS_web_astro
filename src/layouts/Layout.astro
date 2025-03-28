@@ -209,35 +209,38 @@ const { title } = Astro.props;
     </script>
 
     <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">{`{
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "La Chica del Seguro",
-      "url": "https://lachicadelseguro.com",
-      "logo": "https://lachicadelseguro.com/resources/Logotipo.svg",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+54-9-11-7062-7152",
-        "contactType": "customer service",
-        "areaServed": "AR",
-        "availableLanguage": "Spanish"
-      },
-      "sameAs": [
-        "https://www.instagram.com/lachicadelseguro",
-        "https://www.linkedin.com/company/lachicadelseguro",
-        "https://www.facebook.com/lachicadelseguro",
-        "https://www.youtube.com/channel/lachicadelseguro"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Bolivar 75",
-        "addressLocality": "Chivilcoy",
-        "addressRegion": "Buenos Aires",
-        "postalCode": "6620",
-        "addressCountry": "AR"
-      },
-      "description": "La Chica del Seguro es una plataforma educativa y de asesoramiento en seguros, dirigida a mejorar el conocimiento y acceso a seguros para individuos y empresas."
-    }`}</script>
+<script type="application/ld+json">
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "La Chica del Seguro",
+    "url": "https://lachicadelseguro.com",
+    "logo": "https://lachicadelseguro.com/resources/Logotipo.svg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+54-9-11-7062-7152",
+      "contactType": "customer service",
+      "areaServed": "AR",
+      "availableLanguage": "Spanish"
+    },
+    "sameAs": [
+      "https://www.instagram.com/lachicadelseguro",
+      "https://www.linkedin.com/company/lachicadelseguro",
+      "https://www.facebook.com/lachicadelseguro",
+      "https://www.youtube.com/channel/lachicadelseguro"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bolivar 75",
+      "addressLocality": "Chivilcoy",
+      "addressRegion": "Buenos Aires",
+      "postalCode": "6620",
+      "addressCountry": "AR"
+    },
+    "description": "La Chica del Seguro es una plataforma educativa y de asesoramiento en seguros, dirigida a mejorar el conocimiento y acceso a seguros para individuos y empresas."
+  })}
+</script>
+
     
   </head>
   <body>
