@@ -4,106 +4,61 @@ title: "Terminos y Condiciones"
 description: "Terminos y Condiciones del servicio"
 ---
 
-# Welcome to StackEdit!
+# **Términos y Condiciones de Uso**
 
-**Hi! I'm your first Markdown** file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
+## 1. Introducción
 
-## Files
+El presente documento establece los términos y condiciones de uso del sitio web **La Chica del Seguro** (en adelante, "el Sitio"), que opera como una plataforma de intermediación entre usuarios interesados en obtener asesoramiento sobre seguros (en adelante, "el Usuario") y empresas o profesionales del sector asegurador (en adelante, "las Empresas").
 
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+Al acceder y utilizar el Sitio, el Usuario acepta los términos y condiciones aquí expuestos. Si no está de acuerdo con alguno de ellos, le solicitamos que se abstenga de utilizar el Sitio.
 
-## Create files and folders
+---
 
-The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
+## 2. Objeto del Servicio
 
-## Switch to another file
+La Chica del Seguro actúa exclusivamente como un conducto de conexión entre el Usuario y las Empresas, facilitando el contacto entre ambas partes mediante formularios de solicitud de información o asesoramiento.
 
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
+La Chica del Seguro **no es una aseguradora, agente de seguros, broker o prestador de servicios de asesoramiento financiero o legal**. Nuestro servicio se limita a derivar los datos de contacto del Usuario a Empresas del sector asegurador para que estas puedan brindar la información y asesoramiento solicitado.
 
-## Rename a file
+---
 
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
+## 3. Exclusión de Responsabilidad
 
-## Delete a file
+Dado que La Chica del Seguro **no participa en la prestación del servicio de asesoramiento ni en la gestión de pólizas de seguros**, el Usuario acepta que:
 
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
+- Cualquier relación contractual, comercial o de otra índole que surja entre el Usuario y la Empresa será exclusiva entre dichas partes, sin que La Chica del Seguro tenga responsabilidad alguna sobre las condiciones, garantías, cumplimiento o calidad del servicio brindado.
+- La Chica del Seguro no garantiza la veracidad, idoneidad o legalidad de la información proporcionada por las Empresas.
+- No seremos responsables por daños, pérdidas o perjuicios derivados de la relación entre el Usuario y la Empresa.
 
-## Export a file
+---
 
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
+## 4. Uso de Datos Personales
 
-# Synchronization
+Los datos personales ingresados por el Usuario en el Sitio serán utilizados únicamente con la finalidad de ponerlo en contacto con las Empresas.
 
-Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your **Google Drive**, your **Dropbox** and your **GitHub** accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.
+- **No utilizaremos los datos personales para fines comerciales, publicitarios ni los cederemos a terceros fuera del marco de conexión con las Empresas.**
+- El Usuario declara que la información proporcionada es veraz y se responsabiliza por la exactitud de los datos ingresados.
+- Para más información sobre el tratamiento de los datos, consulte nuestra **Política de Privacidad**.
 
-There are two types of synchronization and they can complement each other:
+---
 
-- The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.
+## 5. Modificaciones a los Términos y Condiciones
 
-  > To start syncing your workspace, just sign in with Google in the menu.
+Nos reservamos el derecho de modificar los presentes términos y condiciones en cualquier momento. Las modificaciones entrarán en vigencia desde su publicación en el Sitio. Se recomienda al Usuario revisar periódicamente esta sección para estar informado sobre posibles cambios.
 
-- The file synchronization will keep one file of the workspace synced with one or multiple files in **Google Drive**, **Dropbox** or **GitHub**.
-  > Before starting to sync files, you must link an account in the **Synchronize** sub-menu.
+---
 
-## Open a file
+## 6. Legislación Aplicable y Jurisdicción
 
-You can open a file from **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Open from**. Once opened in the workspace, any modification in the file will be automatically synced.
+Los presentes términos y condiciones se rigen por las leyes de la República Argentina. Cualquier controversia derivada de su aplicación o interpretación será sometida a la jurisdicción de los tribunales competentes de la Ciudad de Buenos Aires, Argentina.
 
-## Save a file
+---
 
-You can save any file of the workspace to **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Save on**. Even if a file in the workspace is already synced, you can save it to another location. StackEdit can sync one file with multiple locations and accounts.
+## 7. Contacto
 
-## Synchronize a file
+Si tiene preguntas sobre estos Términos y Condiciones, puede contactarnos a través de:
 
-Once your file is linked to a synchronized location, StackEdit will periodically synchronize it by downloading/uploading any modification. A merge will be performed if necessary and conflicts will be resolved.
+- Email: [hola@lachicadelseguro.com](mailto:hola@lachicadelseguro.com)
+- Teléfono: +54-9-11-7062-7152
 
-If you just have modified your file and you want to force syncing, click the **Synchronize now** button in the navigation bar.
-
-> **Note:** The **Synchronize now** button is disabled if you have no file to synchronize.
-
-## Manage file synchronization
-
-Since one file can be synced with multiple locations, you can list and manage synchronized locations by clicking **File synchronization** in the **Synchronize** sub-menu. This allows you to list and remove synchronized locations that are linked to your file.
-
-# Publication
-
-Publishing in StackEdit makes it simple for you to publish online your files. Once you're happy with a file, you can publish it to different hosting platforms like **Blogger**, **Dropbox**, **Gist**, **GitHub**, **Google Drive**, **WordPress** and **Zendesk**. With [Handlebars templates](http://handlebarsjs.com/), you have full control over what you export.
-
-> Before starting to publish, you must link an account in the **Publish** sub-menu.
-
-## Publish a File
-
-You can publish your file by opening the **Publish** sub-menu and by clicking **Publish to**. For some locations, you can choose between the following formats:
-
-- Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
-- HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
-
-## Update a publication
-
-After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the **Publish now** button in the navigation bar.
-
-> **Note:** The **Publish now** button is disabled if your file has not been published yet.
-
-## Manage file publication
-
-Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
-
-# Markdown extensions
-
-StackEdit extends the standard Markdown syntax by adding extra **Markdown extensions**, providing you with some nice features.
-
-## KaTeX
-
-You can render LaTeX mathematical expressions using [KaTeX](https://khan.github.io/KaTeX/):
-
-The _Gamma function_ satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
-
-> You can find more information about **LaTeX** mathematical expressions [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
-
-## UML diagrams
-
-You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
+**Fecha de última actualización:** [31/03/2025]
