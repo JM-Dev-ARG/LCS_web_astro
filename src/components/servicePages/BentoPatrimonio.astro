@@ -1,4 +1,7 @@
 ---
+import ButtonBentoCard from "./ButtonBentoCard.astro";
+import DataBulletBentoCard from "./DataBulletBentoCard.astro";
+
 const path = Astro.url.pathname;
 const basePath = path.split("/")[1];
 const result = `/${basePath}`;
@@ -104,56 +107,15 @@ const {
       class="ver__mas"
       title={datacontent1}
     >
-      <p
-        class="text-gray-50 text-pretty text-left font-semibold text-[clamp(16px,3vw,18px)]"
-      >
+      <p class="detail">
         {datacontent1}
         {
           databullet1
-            ? databullet1.map((item) => (
-                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
-                  <span class="w-[16px] max-w-[16px] min-w-[16px] grid place-items-center fill-white stroke-white">
-                    <svg
-                      xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        class="cls-1"
-                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-                      />
-                    </svg>
-                  </span>
-                  {item}
-                </p>
-              ))
+            ? databullet1.map((item) => <DataBulletBentoCard text={item} />)
             : ""
         }
       </p>
-      <p
-        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
-      >
-        Cotizá <span
-          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
-        >
-          <svg
-            xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              class="cls-1"
-              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-            ></path></svg
-          ></span
-        >
-      </p>
+      <ButtonBentoCard text="Cotizá" />
     </a>
   </div>
 
@@ -174,56 +136,15 @@ const {
       class="ver__mas"
       title={datacontent2}
     >
-      <p
-        class="text-gray-50 text-pretty text-left font-semibold text-[clamp(16px,3vw,18px)]"
-      >
+      <p class="detail">
         {datacontent2}
         {
           databullet2
-            ? databullet2.map((item) => (
-                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
-                  <span class="w-[16px] max-w-[16px] min-w-[16px] grid place-items-center fill-white stroke-white">
-                    <svg
-                      xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        class="cls-1"
-                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-                      />
-                    </svg>
-                  </span>
-                  {item}
-                </p>
-              ))
+            ? databullet2.map((item) => <DataBulletBentoCard text={item} />)
             : ""
         }
       </p>
-      <p
-        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
-      >
-        Cotizá <span
-          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
-        >
-          <svg
-            xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              class="cls-1"
-              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-            ></path></svg
-          ></span
-        >
-      </p>
+      <ButtonBentoCard text="Cotizá" />
     </a>
   </div>
 
@@ -251,50 +172,11 @@ const {
         {datacontent3}
         {
           databullet3
-            ? databullet3.map((item) => (
-                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
-                  <span class="w-[16px] max-w-[16px] min-w-[16px] grid place-items-center fill-white stroke-white">
-                    <svg
-                      xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        class="cls-1"
-                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-                      />
-                    </svg>
-                  </span>
-                  {item}
-                </p>
-              ))
+            ? databullet3.map((item) => <DataBulletBentoCard text={item} />)
             : ""
         }
       </p>
-      <p
-        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
-      >
-        Cotizá <span
-          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
-        >
-          <svg
-            xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              class="cls-1"
-              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-            ></path></svg
-          ></span
-        >
-      </p>
+      <ButtonBentoCard text="Cotizá" />
     </a>
   </div>
 
@@ -315,56 +197,15 @@ const {
       class="ver__mas"
       title={datacontent4}
     >
-      <p
-        class="text-gray-50 text-pretty text-left font-semibold text-[clamp(16px,3vw,18px)]"
-      >
+      <p class="detail">
         {datacontent4}
         {
           databullet4
-            ? databullet4.map((item) => (
-                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
-                  <span class="w-[16px] max-w-[16px] min-w-[16px] grid place-items-center fill-white stroke-white">
-                    <svg
-                      xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        class="cls-1"
-                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-                      />
-                    </svg>
-                  </span>
-                  {item}
-                </p>
-              ))
+            ? databullet4.map((item) => <DataBulletBentoCard text={item} />)
             : ""
         }
       </p>
-      <p
-        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
-      >
-        Cotizá <span
-          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
-        >
-          <svg
-            xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              class="cls-1"
-              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-            ></path></svg
-          ></span
-        >
-      </p>
+      <ButtonBentoCard text="Cotizá" />
     </a>
   </div>
 
@@ -407,57 +248,16 @@ const {
       class="ver__mas"
       title={datacontent5}
     >
-      <p
-        class="text-gray-50 text-pretty text-left font-semibold text-[clamp(16px,3vw,18px)]"
-      >
+      <p class="detail">
         {datacontent5}
 
         {
           databullet5
-            ? databullet5.map((item) => (
-                <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)] flex gap-2 items-center ">
-                  <span class="w-[16px] max-w-[16px] min-w-[16px] grid place-items-center fill-white stroke-white">
-                    <svg
-                      xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        class="cls-1"
-                        d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-                      />
-                    </svg>
-                  </span>
-                  {item}
-                </p>
-              ))
+            ? databullet5.map((item) => <DataBulletBentoCard text={item} />)
             : ""
         }
       </p>
-      <p
-        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
-      >
-        Cotizá <span
-          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
-        >
-          <svg
-            xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              class="cls-1"
-              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-            ></path></svg
-          ></span
-        >
-      </p>
+      <ButtonBentoCard text="Cotizá" />
     </a>
   </div>
 
@@ -852,5 +652,13 @@ const {
   }
   .card9 {
     grid-area: card9;
+  }
+
+  .detail {
+    color: #f9fafb;
+    font-size: clamp(16px, 3vw, 18px);
+    text-wrap: pretty;
+    text-align: left;
+    font-weight: 600;
   }
 </style>

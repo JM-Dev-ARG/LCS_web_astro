@@ -1,4 +1,6 @@
 ---
+import ButtonBentoCard from "./ButtonBentoCard.astro";
+
 const path = Astro.url.pathname;
 const basePath = path.split("/")[1];
 const result = `/${basePath}`;
@@ -39,7 +41,7 @@ const {
 >
   <div class="card1 card">
     <div class="w-full h-full flex ml-4 title">
-      <p class="text-gray-50 texto font-light">{title1}</p>
+      <p class="texto">{title1}</p>
     </div>
 
     <div
@@ -54,33 +56,13 @@ const {
       <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
         {datacontent1}
       </p>
-      <p
-        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
-      >
-        Cotizá <span
-          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
-        >
-          <svg
-            xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              class="cls-1"
-              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-            ></path></svg
-          ></span
-        >
-      </p>
+      <ButtonBentoCard text="Cotizá" />
     </a>
   </div>
 
   <div class="card2 card">
     <div class="w-full h-full flex ml-4 title">
-      <p class="text-gray-50 texto font-light">{title2}</p>
+      <p class="texto">{title2}</p>
     </div>
 
     <div
@@ -95,33 +77,13 @@ const {
       <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
         {datacontent3}
       </p>
-      <p
-        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
-      >
-        Cotizá <span
-          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
-        >
-          <svg
-            xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              class="cls-1"
-              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-            ></path></svg
-          ></span
-        >
-      </p>
+      <ButtonBentoCard text="Cotizá" />
     </a>
   </div>
 
   <div class="card3 card">
     <div class="w-full h-full flex ml-4 title">
-      <p class="text-gray-50 texto font-light">{title3}</p>
+      <p class="texto">{title3}</p>
     </div>
 
     <div
@@ -137,284 +99,9 @@ const {
       <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
         {datacontent3}
       </p>
-      <p
-        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
-      >
-        Cotizá <span
-          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
-        >
-          <svg
-            xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              class="cls-1"
-              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-            ></path></svg
-          ></span
-        >
-      </p>
+      <ButtonBentoCard text="Cotizá" />
     </a>
   </div>
-
-  <!--   <div
-    class="card4 card"
-    data-content={datacontent4}
-  >
-    <div class="w-full h-full flex ml-4 title">
-      <p class="text-gray-50 texto font-light">{title4}</p>
-    </div>
-
-    <div
-      class=`absolute  w-full h-full bg-[url('/img/hogar.avif')] opacity-80 bg-cover bg-[right_30%_top] md:bg-contain md:bg-[right_bottom]  bg-no-repeat`
-    >
-    </div>
-    <a
-      href={dataform4}
-      class="ver__mas"
-    >
-      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
-        {datacontent4}
-      </p>
-      <p
-        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
-      >
-        Cotizá <span
-          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
-        >
-          <svg
-            xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              class="cls-1"
-              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-            ></path></svg
-          ></span
-        >
-      </p>
-    </a>
-  </div>
-  <div
-    class="card5 card"
-    data-content={datacontent5}
-  >
-    <div class="w-full h-full flex ml-4 title">
-      <p class="text-gray-50 texto font-light">{title5}</p>
-    </div>
-
-    <div
-      class="absolute w-full h-full bg-[url('/img/urbano.avif')] opacity-80 bg-cover md:bg-contain lg:bg-cover md:bg-[right_bottom] bg-[right_20%_bottom] bg-no-repeat"
-    >
-    </div>
-    <a
-      href={dataform5}
-      class="ver__mas"
-    >
-      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
-        {datacontent5}
-      </p>
-      <p
-        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
-      >
-        Cotizá <span
-          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
-        >
-          <svg
-            xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              class="cls-1"
-              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-            ></path></svg
-          ></span
-        >
-      </p>
-    </a>
-  </div>
-  <div
-    class="card6 card"
-    data-content={datacontent6}
-  >
-    <div class="w-full h-full flex ml-4 title">
-      <p class="text-gray-50 texto font-light">{title6}</p>
-    </div>
-
-    <div
-      class="absolute w-full h-full bg-[url('/img/celular.avif')] opacity-80 bg-cover md:bg-contain lg:bg-cover bg-[right_20%_bottom] md:bg-[right_bottom] bg-no-repeat"
-    >
-    </div>
-    <a
-      href={dataform6}
-      class="ver__mas"
-    >
-      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
-        {datacontent6}
-      </p>
-      <p
-        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
-      >
-        Cotizá <span
-          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
-        >
-          <svg
-            xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              class="cls-1"
-              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-            ></path></svg
-          ></span
-        >
-      </p>
-    </a>
-  </div>
-  <div
-    class="card7 card"
-    data-content={datacontent7}
-  >
-    <div class="w-full h-full flex ml-4 title">
-      <p class="text-gray-50 texto font-light">{title7}</p>
-    </div>
-
-    <div
-      class=`absolute  w-full h-full bg-[url('/img/asistencia.avif')] opacity-80 bg-cover bg-[right_40%_bottom] md:bg-[right_40%_bottom_-70px] lg:bg-[right_40%_bottom]  bg-no-repeat`
-    >
-    </div>
-    <a
-      href={dataform7}
-      class="ver__mas"
-    >
-      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
-        {datacontent7}
-      </p>
-      <p
-        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
-      >
-        Cotizá <span
-          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
-        >
-          <svg
-            xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              class="cls-1"
-              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-            ></path></svg
-          ></span
-        >
-      </p>
-    </a>
-  </div>
-
-  <div
-    class="card8 card"
-    data-content={datacontent8}
-  >
-    <div class="w-full h-full flex ml-4 title">
-      <p class="text-gray-50 texto font-light">{title8}</p>
-    </div>
-
-    <div
-      class="absolute w-full h-full bg-[url('/img/comercio.avif')] opacity-80 bg-contain bg-[right_bottom] md:bg-[right_bottom_-10px] bg-no-repeat"
-    >
-    </div>
-    <a
-      href={dataform8}
-      class="ver__mas"
-    >
-      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
-        {datacontent8}
-      </p>
-      <p
-        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
-      >
-        Cotizá <span
-          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
-        >
-          <svg
-            xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              class="cls-1"
-              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-            ></path></svg
-          ></span
-        >
-      </p>
-    </a>
-  </div>
-
-  <div
-    class="card9 card"
-    data-content={datacontent9}
-  >
-    <div class="w-full h-full flex ml-4 title">
-      <p class="text-gray-50 texto font-light">{title9}</p>
-    </div>
-
-    <div
-      class=`absolute  w-full h-full bg-[url('/img/consorcio.avif')] opacity-80 bg-cover bg-center md:bg-[right_bottom_-100px] lg:bg-center 2xl:bg-[right_-40px_bottom_-20px] bg-no-repeat`
-    >
-    </div>
-    <a
-      href={dataform9}
-      class="ver__mas"
-    >
-      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
-        {datacontent9}
-      </p>
-      <p
-        class="text-gray-50 text-[clamp(16px,3vw,20px)] text-right w-full flex justify-end gap-2 items-center hover:text-lcsPink3 transition-all duration-300 group"
-      >
-        Cotizá <span
-          class="w-[clamp(16px,3vw,20px)] grid place-items-center fill-white stroke-white group-hover:fill-lcsPink3 group-hover:stroke-lcsPink3 transition-all duration-300"
-        >
-          <svg
-            xmlns="
-          http:
-          www.w3.org
-          2000
-          svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              class="cls-1"
-              d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"
-            ></path></svg
-          ></span
-        >
-      </p>
-    </a>
-  </div> -->
 </div>
 
 <style>
@@ -465,9 +152,10 @@ const {
     }
 
     .texto {
+      color: #f9fafb;
       font-size: 30px;
       margin-top: 8px;
-      font-weight: 400;
+      font-weight: 300;
       z-index: 30;
       filter: drop-shadow(5px 5px 6px #000000);
     }
