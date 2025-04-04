@@ -10,7 +10,7 @@ export default async function postDataMailer(data: FormData) {
       case "viajes":
         return `${import.meta.env.MAILER_VIAJES_GROUP_ID}`;
       default:
-        return `${import.meta.env.MAILER_PERSONAS_GROUP_ID}`;
+        return `${import.meta.env.MAILER_APRENDE_GROUP_ID}`;
     }
   }
   const formatDate = (date: Date) => {

@@ -1,67 +1,43 @@
 import type { APIRoute } from "astro";
-/* import formData from "form-data";
-import Mailgun from "mailgun.js"; */
-import { MailerSend, EmailParams, Sender, Recipient } from "mailersend";
+import postDataMailer from "../../lib/postDataMailer";
+import { postDataDDBB } from "../../lib/postDataDDBB";
 
 export const POST: APIRoute = async ({ request }) => {
   const data = await request.formData();
+
   try {
-    const nombre = data.get("Nombre Completo");
-    const email = data.get("Email");
+    const mailerResponse = await postDataMailer(data);
+    const dbResponse = await postDataDDBB(data);
 
-    let keyValuePairs = [];
-    for (var pair of data.entries()) {
-      keyValuePairs.push(pair[0] + "=" + pair[1]);
-    }
-
-    let formDataString = keyValuePairs.join("&");
-
-    // Enviar datos a la base de datos
-    fetch(import.meta.env.DATA_BASE, {
-      redirect: "follow",
-      method: "POST",
-      body: formDataString,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    });
-
-    //enviar email
-    const mailerSend = new MailerSend({
-      apiKey: import.meta.env.MAILER_API,
-    });
-
-    const sentFrom = new Sender(
-      `noreply@${import.meta.env.MAILER_DOMAIN}`,
-      "Descarga la guía"
-    );
-
-    const recipients = [new Recipient(`${email}`, `${nombre}`)];
-
-    const emailParams = new EmailParams()
-      .setFrom(sentFrom)
-      .setTo(recipients)
-      .setSubject("Descarga la guía")
-      .setHtml(
-        " <h1 style='text-align: center; font-size: 2rem; margin-bottom: 1rem;' >Descarga la guía</h1> <p style='text-align: center; font-size: 1.2rem; margin-bottom: 1rem;'>Gracias por descargar la guía, puedes hacerlo a través del siguiente enlace:</p> <a style='text-align: center; font-size: 1.2rem; margin-bottom: 1rem; text-decoration: none;padding: 10px 20px; background-color: #4CAF50; color: white; border-radius: 4px;' href='https://drive.google.com/uc?export=download&id=1XOh4thN1W5vvjsolDBhU-gLcbOU5v8Ry'>descargar</a>"
-      )
-      .setText(
-        "Greetings from the team, you got this message through MailerSend."
+    if (
+      (mailerResponse === 200 || mailerResponse === 201) &&
+      dbResponse.status === 200
+    ) {
+      return new Response(
+        JSON.stringify({
+          success: true,
+          message: "Datos enviados correctamente.",
+        }),
+        { status: 200 }
       );
-
-    await mailerSend.email.send(emailParams);
-
+    } else {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          message: "Hubo un problema con alguna de las operaciones.",
+          mailerResponse,
+          dbResponse,
+        }),
+        { status: 500 }
+      );
+    }
+  } catch (error) {
+    console.error("Error en servicesApi:", error);
     return new Response(
       JSON.stringify({
-        message: "Email enviado exitosamente.",
-      }),
-      { status: 200 }
-    );
-  } catch (error: any) {
-    console.error("Error al enviar el email:", error.message);
-    return new Response(
-      JSON.stringify({
-        message: error.message || "Hubo un error al enviar el email.",
+        success: false,
+        message: "Error interno del servidor.",
+        error: error.message,
       }),
       { status: 500 }
     );

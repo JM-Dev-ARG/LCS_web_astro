@@ -3,5 +3,9 @@
         "href": "https://academia.lachicadelseguro.com.ar/",
         "label": "Academia de Seguros",
         "target": "_blank"
+    },
+    {
+        "href": "/#guia_descarga",
+        "label": "Aprendé a leer tu póliza"
     }
 ]
