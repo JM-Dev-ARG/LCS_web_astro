@@ -45,9 +45,7 @@ async function submit(e) {
         if (data.message) {
             saludo();
             form.reset();
-            setTimeout(() => {
-                window.location.href = `/${path.split("/")[1]}`;
-            }, 5100);
+
         } else {
             saludoError();
         }
