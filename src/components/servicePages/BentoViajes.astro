@@ -53,7 +53,7 @@ const {
       class="ver__mas"
       title={datacontent1}
     >
-      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
+      <p class="contenido__card">
         {datacontent1}
       </p>
       <ButtonBentoCard text="Cotizá" />
@@ -74,7 +74,7 @@ const {
       class="ver__mas"
       title={datacontent2}
     >
-      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
+      <p class="contenido__card">
         {datacontent2}
       </p>
       <ButtonBentoCard text="Cotizá" />
@@ -96,7 +96,7 @@ const {
       class="ver__mas"
       title={datacontent3}
     >
-      <p class="text-gray-50 text-pretty text-left text-[clamp(14px,3vw,16px)]">
+      <p class="contenido__card">
         {datacontent3}
       </p>
       <ButtonBentoCard text="Cotizá" />
@@ -182,6 +182,13 @@ const {
     transition: all 0.3s linear 0.1s;
   }
 
+  .contenido__card {
+    color: #f9fafb;
+    text-align: left;
+    text-wrap: pretty;
+    font-size: clamp(12px, 3vw, 16px);
+    font-weight: 300;
+  }
   .card1 {
     grid-area: card1;
   }
