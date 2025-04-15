@@ -4,7 +4,7 @@ title: "Post 3"
 description: "Hi! I’m your first Markdown file in StackEdit. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me."
 date: "2023-07-31"
 author: "Javier3"
-img: "/img/foto-mock.avif"
+img: "/img/auto2.avif"
 imgAuthor: "/img/foto-mock.avif"
 altImg: "alt text"
 imgAuthorAlt: "alt author"
@@ -16,7 +16,7 @@ tags: ["html", "css", "javascript"]
 
 **Hi! I'm your first Markdown** file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
 
-# Files
+## Files
 
 StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
 

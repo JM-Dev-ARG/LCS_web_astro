@@ -1,4 +1,6 @@
 ---
+import InputForm from "../../components/react_components/formsComponents/InputForm";
+import { SelectForm } from "../../components/react_components/formsComponents/SelectForm";
 import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
 import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
 const path = Astro.url.pathname;
@@ -21,7 +23,38 @@ const apiDefault = import.meta.env.DEFAULT_API_URL;
         urlFetchDefault={apiDefault}
         urlFetchPatrimonieales={apiPatrimoniales}
       >
-        <div class="w-full"></div>
+        <InputForm
+          name="Nacionalidad"
+          type="text"
+          labelText="Nacionalidad"
+          placeholder="Argentino"
+        />
+        <InputForm
+          name="Fecha Inicio"
+          type="date"
+          labelText="Fecha de Inicio del viaje"
+          placeholder="22/10/2025"
+        />
+
+        <InputForm
+          name="Destino"
+          type="text"
+          labelText="Pais de destino"
+          placeholder="Holanda"
+        />
+
+        <SelectForm
+          name="Periodo"
+          labelText="Tiempo de viaje"
+          data={[
+            { value: "3 meses", labelText: "3 meses" },
+            { value: "6 meses", labelText: "6 meses" },
+            { value: "9 meses", labelText: "9 meses" },
+            { value: "12 meses", labelText: "12 meses" },
+          ]}
+        >
+          <div class="w-full"></div>
+        </SelectForm>
       </ServicesForm>
     </section>
   </main>
