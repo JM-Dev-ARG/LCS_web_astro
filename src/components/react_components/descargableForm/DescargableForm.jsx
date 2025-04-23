@@ -79,7 +79,7 @@ export default function ServicesForm() {
                             </label>
                             <input
                                 required
-                                className="flex-1 rounded-full px-4 py-2 max-h-[40px]"
+                                className="flex-1 rounded-full px-4 py-2 max-h-[30px] lg:max-h-[40px]"
                                 type="text"
                                 id="Nombre"
                                 name="Nombre"
@@ -94,7 +94,7 @@ export default function ServicesForm() {
                             </label>
                             <input
                                 required
-                                className="flex-1 rounded-full px-4 py-2 max-h-[40px]"
+                                className="flex-1 rounded-full px-4 py-2 max-h-[30px] lg:max-h-[40px]"
                                 type="text"
                                 id="Apellido"
                                 name="Apellido"
@@ -113,7 +113,7 @@ export default function ServicesForm() {
                             </label>
                             <input
                                 required
-                                className="flex-1 rounded-full px-4 py-2 max-h-[40px]"
+                                className="flex-1 rounded-full px-4 py-2 max-h-[30px] lg:max-h-[40px]"
                                 type="email"
                                 id="Email"
                                 name="Email"
