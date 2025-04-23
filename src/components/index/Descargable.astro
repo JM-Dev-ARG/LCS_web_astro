@@ -5,22 +5,22 @@ import DescargableForm from "../react_components/descargableForm/DescargableForm
 
 <section
   id="guia_descarga"
-  class="w-full relative z-10 bg-[#fff5eb] pt-10 lg:pt-20 2xl:pt-32"
+  class="w-full relative z-10 bg-[#fff5eb] pt-32 lg:pt-20 2xl:pt-32"
 >
   <Container>
-    <div class="relative mx-auto w-[90%]">
+    <div class="relative mx-auto w-[90%] lg:w-full xl:w-[90%]">
       <div
         class="bg-lcsGreen1 w-full bg-opacity-85 rounded-[20px] shadow-xl flex justify-center lg:justify-end overflow-y-hidden"
       >
         <div
-          class="hidden absolute lg:block w-[30%] h-full top-0 left-0"
+          class="absolute block w-full lg:w-[35%] xl:w-[30%] h-full top-0 left-0 right-0"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-once="true"
         >
           <img
             loading="lazy"
-            class="w-full h-full object-contain object-center absolute lg:top-[10%] xl:top-[10%] -left-10 scale-[170%]"
+            class="h-[40%] w-full lg:h-full object-contain object-center absolute -top-24 rotate-[27deg] lg:rotate-0 lg:top-[10%] xl:top-[10%] lg:-left-10 scale-[170%]"
             src="/img/libro.avif"
             alt="Imagen tapa y hojas de la guía Aprendé a leer tu poliza"
             height="auto"
@@ -31,7 +31,7 @@ import DescargableForm from "../react_components/descargableForm/DescargableForm
         <!--  <div class="hidden lg:block w-[30%]"></div> -->
 
         <div
-          class="flex flex-col gap-5 px-2 md:px-5 py-5 w-full lg:w-[70%] overflow-hidden"
+          class="flex flex-col gap-5 px-2 md:px-5 py-5 w-full lg:w-[65%] xl:w-[70%] overflow-hidden"
         >
           <!-- <div
             class="w-full"
@@ -51,9 +51,9 @@ import DescargableForm from "../react_components/descargableForm/DescargableForm
             data-aos-duration="1000"
             data-aos-once="true"
           >
-            <div class="w-full">
+            <div class="w-full pt-32 lg:pt-0">
               <h3
-                class="text-gray-50 text-center text-pretty text-[clamp(20px,3vw,30px)] font-light px-3"
+                class="text-gray-50 text-center text-pretty text-[clamp(18px,3vw,30px)] font-light px-3"
               >
                 Todo lo que necesitas saber para contratar un seguro está en
                 esta guía <strong class="font-semibold text-lcsOrange3">
@@ -61,7 +61,7 @@ import DescargableForm from "../react_components/descargableForm/DescargableForm
                 >
               </h3>
               <p
-                class="text-[clamp(18px,3vw,22px)] text-gray-50 text-center font-semibold pt-3"
+                class="text-[clamp(16px,3vw,22px)] text-gray-50 text-center font-semibold pt-3"
               >
                 ¡Completá el formulario y es tuya!
               </p>

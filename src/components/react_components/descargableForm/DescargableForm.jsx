@@ -75,11 +75,11 @@ export default function ServicesForm() {
                             <label
                                 htmlFor="Nombre"
                                 className="font-extralight text-[clamp(14px,3vw,18px)] pl-2 text-gray-50"
-                            >Tu nombre
+                            >Nombre
                             </label>
                             <input
                                 required
-                                className="flex-1 rounded-full px-4 py-2 max-h-[40px]"
+                                className="flex-1 rounded-full px-4 py-2 max-h-[30px] lg:max-h-[40px]"
                                 type="text"
                                 id="Nombre"
                                 name="Nombre"
@@ -90,11 +90,11 @@ export default function ServicesForm() {
                             <label
                                 htmlFor="Apellido"
                                 className="font-extralight text-[clamp(14px,3vw,18px)] pl-2 text-gray-50"
-                            >Tu apellido
+                            >Apellido
                             </label>
                             <input
                                 required
-                                className="flex-1 rounded-full px-4 py-2 max-h-[40px]"
+                                className="flex-1 rounded-full px-4 py-2 max-h-[30px] lg:max-h-[40px]"
                                 type="text"
                                 id="Apellido"
                                 name="Apellido"
@@ -107,11 +107,11 @@ export default function ServicesForm() {
                             <label
                                 htmlFor="Email"
                                 className="font-extralight text-[clamp(14px,3vw,18px)] pl-2 text-gray-50"
-                            >Tu email
+                            >Email
                             </label>
                             <input
                                 required
-                                className="flex-1 rounded-full px-4 py-2 max-h-[40px]"
+                                className="flex-1 rounded-full px-4 py-2 max-h-[30px] lg:max-h-[40px]"
                                 type="email"
                                 id="Email"
                                 name="Email"
