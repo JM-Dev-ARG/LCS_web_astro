@@ -75,7 +75,7 @@ export default function ServicesForm() {
                             <label
                                 htmlFor="Nombre"
                                 className="font-extralight text-[clamp(14px,3vw,18px)] pl-2 text-gray-50"
-                            >Tu nombre
+                            >Nombre
                             </label>
                             <input
                                 required
@@ -90,7 +90,7 @@ export default function ServicesForm() {
                             <label
                                 htmlFor="Apellido"
                                 className="font-extralight text-[clamp(14px,3vw,18px)] pl-2 text-gray-50"
-                            >Tu apellido
+                            >Apellido
                             </label>
                             <input
                                 required
@@ -109,7 +109,7 @@ export default function ServicesForm() {
                             <label
                                 htmlFor="Email"
                                 className="font-extralight text-[clamp(14px,3vw,18px)] pl-2 text-gray-50"
-                            >Tu email
+                            >Email
                             </label>
                             <input
                                 required
