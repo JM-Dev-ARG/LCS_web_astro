@@ -101,9 +101,7 @@ export default function ServicesForm() {
                                 placeholder="Perez"
                             />
                         </div>
-
                     </div>
-
                     <div className="flex flex-col gap-4 w-[90%] ">
                         <div className=" flex flex-col gap-1">
                             <label
@@ -130,13 +128,8 @@ export default function ServicesForm() {
                                 Enviar
                             </button>
                         </div>
-
                     </div>
-
-
                 </div>
-
-
             </form>
         </div>
     );
