@@ -10,11 +10,5 @@
         "description": "La vida es eso que pasa mientras estás dudando en asegurarla.",
         "image": "../img/img-personas3.avif",
         "url": "/personas"
-    },
-    {
-        "title": "VIAJES",
-        "description": "Aseguramos cualquier viaje, 24hs en todo el planeta. Cotiza tu aventura!",
-        "image": "../img/img-viajes2.avif",
-        "url": "/viajes"
     }
 ]

@@ -14,9 +14,5 @@
     {
         "href": "/personas",
         "label": "Seguros de Personas"
-    },
-    {
-        "href": "/viajes",
-        "label": "Seguros de Viajes"
     }
 ]
