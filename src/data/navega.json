@@ -1,18 +1,6 @@
 [
-    {
-        "href": "/",
-        "label": "Inicio"
-    },
-    {
-        "href": "/#servicios",
-        "label": "Servicios"
-    },
-    {
-        "href": "/patrimoniales",
-        "label": "Seguros Patrimoniales"
-    },
-    {
-        "href": "/personas",
-        "label": "Seguros de Personas"
-    }
+  {
+    "href": "/",
+    "label": "Inicio"
+  }
 ]
