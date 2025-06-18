@@ -1,0 +1,69 @@
+---
+import InputForm from "../../components/react_components/formsComponents/InputForm";
+import { SelectForm } from "../../components/react_components/formsComponents/SelectForm";
+import CheckBoxForm from "../../components/react_components/formsComponents/CheckBoxForm";
+import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
+import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
+const path = Astro.url.pathname;
+const basePath = path.split("/")[1];
+const result = `/${basePath}`;
+const apiPatrimoniales = import.meta.env.PATRIMONIALES_API_URL;
+const apiDefault = import.meta.env.DEFAULT_API_URL;
+---
+
+<LayoutContactoServicios
+  title="Formulario de contacto para Protección-Seguros de Vida"
+  path={result}
+>
+  <main
+    class="relative my-20 z-10 h-auto w-full grid place-items-center mx-auto"
+  >
+    <section class="flex h-full w-[80%] justify-center items-center">
+      <ServicesForm
+        client:only="react"
+        urlFetchDefault={apiDefault}
+        urlFetchPatrimonieales={apiPatrimoniales}
+      >
+        <InputForm
+          name="Fecha Nacimiento"
+          placeholder="Juan Perez"
+          type="date"
+          labelText="Fecha de Nacimiento"
+        />
+        <SelectForm
+          name="Situacion laboral"
+          labelText="Situación Laboral"
+          data={[
+            { value: "Empleado", labelText: "Relación de dependencia" },
+            { value: "Monotributo", labelText: "Monotributista" },
+            { value: "Autonomo", labelText: "Autonomo" },
+            { value: "Inscripto", labelText: "Responsable inscripto" },
+            { value: "Otro", labelText: "Otro" },
+          ]}
+        />
+        <SelectForm
+          name="Estado Civil"
+          labelText="Estado Civil"
+          data={[
+            { value: "soltero", labelText: "Soltero" },
+            { value: "casado", labelText: "Casado" },
+            { value: "divorciado", labelText: "Divorciado" },
+            { value: "separado", labelText: "Separado de hecho" },
+            { value: "viudo", labelText: "Viudo" },
+            { value: "otro", labelText: "Otro" },
+          ]}
+          client:only="react"
+        />
+        <SelectForm
+          name="Otro Seguro"
+          labelText="¿Tiene contratado alguno de estos seguros? (Retiro - Vida - Ahorro)"
+          data={[
+            { value: "si", labelText: "Si" },
+            { value: "no", labelText: "No" },
+          ]}
+          client:only="react"
+        />
+      </ServicesForm>
+    </section>
+  </main>
+</LayoutContactoServicios>

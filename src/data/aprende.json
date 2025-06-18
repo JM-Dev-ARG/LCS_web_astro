@@ -1,8 +1,7 @@
 [
     {
-        "href": "https://academia.lachicadelseguro.com.ar/",
-        "label": "Academia de Seguros",
-        "target": "_blank"
+        "href": "/academia",
+        "label": "Academia de Seguros"
     },
     {
         "href": "/#guia_descarga",

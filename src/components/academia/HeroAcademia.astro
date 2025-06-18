@@ -1,0 +1,33 @@
+---
+import ButtonAcademia from "./ButtonAcademia.astro";
+---
+
+<section
+  class="hero__container h-dvh bg-[url('img/img_academia/banner_web.avif')] bg-cover w-full"
+>
+  <div class="w-full h-[calc(100%-50px)] flex justify-center items-end">
+    <ButtonAcademia
+      title1="¿Estas preparado?"
+      title2="Comencemos!!"
+      target="_blank"
+      href="https://academia.lachicadelseguro.com.ar/"
+    />
+  </div>
+</section>
+
+<style>
+  .cls-1 {
+    opacity: 0.6;
+    fill: #1463b3;
+  }
+  .cls-1_2 {
+    opacity: 0.3;
+    fill: #f9fafb;
+  }
+</style>
+<script>
+  import AOS from "aos";
+  import "aos/dist/aos.css"; // You can also use <link> for styles
+  // ..
+  AOS.init();
+</script>

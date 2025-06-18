@@ -1,0 +1,28 @@
+---
+import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
+import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
+const path = Astro.url.pathname;
+const basePath = path.split("/")[1];
+const result = `/${basePath}`;
+const apiPatrimoniales = import.meta.env.PATRIMONIALES_API_URL;
+const apiDefault = import.meta.env.DEFAULT_API_URL;
+---
+
+<LayoutContactoServicios
+  title="Formulario de contacto para Seguros Automotores"
+  path={result}
+>
+  <main
+    class="relative my-20 z-10 h-auto w-full grid place-items-center mx-auto"
+  >
+    <section class="flex h-full w-[80%] justify-center items-center">
+      <ServicesForm
+        client:only="react"
+        urlFetchDefault={apiDefault}
+        urlFetchPatrimonieales={apiPatrimoniales}
+      >
+        <span class="w-full"></span>
+      </ServicesForm>
+    </section>
+  </main>
+</LayoutContactoServicios>

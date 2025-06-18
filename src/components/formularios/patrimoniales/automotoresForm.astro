@@ -1,0 +1,86 @@
+---
+import InputForm from "../../components/react_components/formsComponents/InputForm";
+import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
+import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
+const path = Astro.url.pathname;
+const basePath = path.split("/")[1];
+const result = `/${basePath}`;
+
+const apiPatrimoniales = import.meta.env.PATRIMONIALES_API_URL;
+const apiDefault = import.meta.env.DEFAULT_API_URL;
+---
+
+<LayoutContactoServicios
+  title="Formulario de contacto para Seguros Automotores"
+  path={result}
+>
+  <main
+    class="relative my-20 z-10 h-auto w-full grid place-items-center mx-auto"
+  >
+    <section class="flex h-full w-[80%] justify-center items-center">
+      <ServicesForm
+        client:only="react"
+        urlFetchDefault={apiDefault}
+        urlFetchPatrimonieales={apiPatrimoniales}
+      >
+        <InputForm
+          name="Codigo Postal"
+          placeholder="1424"
+          type="text"
+          labelText="Codigo Postal"
+          client:only="react"
+        />
+
+        <InputForm
+          name="Edad"
+          placeholder="25 años"
+          type="text"
+          labelText="Edad"
+          client:only="react"
+        />
+        <!-- <SelectAutoMotoForm client:only="react" />
+ -->
+        <!--         <InputForm
+          name="Marca"
+          placeholder="Ford"
+          type="text"
+          labelText="Marca del automovil"
+          client:only="react"
+        />
+
+        <SelectForm
+          name="Año"
+          labelText="Año del automovil"
+          data={[
+            { value: "2025", labelText: "2025" },
+            { value: "2024", labelText: "2024" },
+            { value: "2023", labelText: "2023" },
+            { value: "2022", labelText: "2022" },
+            { value: "2021", labelText: "2021" },
+            { value: "2020", labelText: "2020" },
+            { value: "2019", labelText: "2019" },
+            { value: "2018", labelText: "2018" },
+            { value: "2017", labelText: "2017" },
+            { value: "2016", labelText: "2016" },
+            { value: "2015", labelText: "2015" },
+          ]}
+          client:only="react"
+        />
+        <InputForm
+          name="Modelo"
+          placeholder="FOCUS L/16 2.0 4 P TITANIUM POWER "
+          type="text"
+          labelText="Modelo del automovil (como figura en la cedula verde)"
+          client:only="react"
+        /> -->
+        <!-- <InputForm
+          name="Version"
+          placeholder="Titanium (como figura en la cedula verde)"
+          type="text"
+          labelText="Versión del automovil"
+          client:only="react"
+        /> -->
+      </ServicesForm>
+    </section>
+  </main>
+</LayoutContactoServicios>

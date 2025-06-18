@@ -1,0 +1,49 @@
+---
+import InputForm from "../../components/react_components/formsComponents/InputForm";
+import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
+import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
+const path = Astro.url.pathname;
+const basePath = path.split("/")[1];
+const result = `/${basePath}`;
+const apiPatrimoniales = import.meta.env.PATRIMONIALES_API_URL;
+const apiDefault = import.meta.env.DEFAULT_API_URL;
+---
+
+<LayoutContactoServicios
+  title="Formulario de contacto para Seguros Hogar"
+  path={result}
+>
+  <main
+    class="relative my-20 z-10 h-auto w-full grid place-items-center mx-auto"
+  >
+    <section class="flex h-full w-[80%] justify-center items-center">
+      <ServicesForm
+        client:only="react"
+        urlFetchDefault={apiDefault}
+        urlFetchPatrimonieales={apiPatrimoniales}
+      >
+        <InputForm
+          name="Codigo Postal"
+          placeholder="1424"
+          type="text"
+          labelText="Codigo Postal"
+          client:only="react"
+        />
+        <InputForm
+          name="Edad"
+          placeholder="25 años"
+          type="text"
+          labelText="Edad"
+        />
+
+        <!-- <InputForm
+          name="Provincia"
+          placeholder="Buenos Aires"
+          type="text"
+          labelText="Provincia"
+          client:only="react"
+        /> -->
+      </ServicesForm>
+    </section>
+  </main>
+</LayoutContactoServicios>

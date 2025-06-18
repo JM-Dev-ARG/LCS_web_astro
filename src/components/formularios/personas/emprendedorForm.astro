@@ -1,0 +1,53 @@
+---
+import InputForm from "../../components/react_components/formsComponents/InputForm";
+import { SelectForm } from "../../components/react_components/formsComponents/SelectForm";
+
+import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
+import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
+const path = Astro.url.pathname;
+const basePath = path.split("/")[1];
+const result = `/${basePath}`;
+const apiPatrimoniales = import.meta.env.PATRIMONIALES_API_URL;
+const apiDefault = import.meta.env.DEFAULT_API_URL;
+---
+
+<LayoutContactoServicios
+  title="Formulario de contacto para Fondo Educativo"
+  path={result}
+>
+  <main
+    class="relative my-20 z-10 h-auto w-full grid place-items-center mx-auto"
+  >
+    <section class="flex h-full w-[80%] justify-center items-center">
+      <ServicesForm
+        client:only="react"
+        urlFetchDefault={apiDefault}
+        urlFetchPatrimonieales={apiPatrimoniales}
+      >
+        <SelectForm
+          name="Tipo Emprendimiento"
+          labelText="Tipo de Emprendimiento"
+          data={[
+            { value: "Producto", labelText: "Producto" },
+            { value: "Servicio", labelText: "Servicio" },
+            { value: "otro", labelText: "Otro" },
+          ]}
+        />
+        <InputForm
+          name="Tiempo de lanzamiento"
+          placeholder="6 meses"
+          type="text"
+          labelText="Tiempo en que tiene planeado lanzar el producto o servicio"
+          client:only="react"
+        />
+        <InputForm
+          name="Capital Necesario"
+          placeholder="AR$200000 / U$S50000 / no lo tengo definido aún"
+          type="text"
+          labelText="Capital necesario para lanzar el producto o servicio"
+          client:only="react"
+        />
+      </ServicesForm>
+    </section>
+  </main>
+</LayoutContactoServicios>

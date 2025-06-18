@@ -33,12 +33,10 @@ const { href, title1, title2, target } = Astro.props;
 
 <style>
   .button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 10px;
+    transform: skewX(50deg);
+
     height: clamp(80px, 10vw, 100px);
-    width: clamp(240px, 50vw, 500px);
+    width: clamp(240px, 50vw, 350px);
     background-image: linear-gradient(
       135deg,
       #518d87 0%,
@@ -46,8 +44,5 @@ const { href, title1, title2, target } = Astro.props;
     );
     transition: all 0.2s linear;
     cursor: pointer;
-    &:hover {
-      transform: scale(1.05);
-    }
   }
 </style>

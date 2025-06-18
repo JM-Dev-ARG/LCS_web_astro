@@ -1,0 +1,59 @@
+---
+import InputForm from "../../components/react_components/formsComponents/InputForm";
+import { SelectForm } from "../../components/react_components/formsComponents/SelectForm";
+import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
+import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
+const path = Astro.url.pathname;
+const basePath = path.split("/")[1];
+const result = `/${basePath}`;
+const apiPatrimoniales = import.meta.env.PATRIMONIALES_API_URL;
+const apiDefault = import.meta.env.DEFAULT_API_URL;
+---
+
+<LayoutContactoServicios
+  title="Formulario de contacto para Seguro de viaje por Work and Holiday"
+  path={result}
+>
+  <main
+    class="relative my-20 z-10 h-auto w-full grid place-items-center mx-auto"
+  >
+    <section class="flex h-full w-[80%] justify-center items-center">
+      <ServicesForm
+        client:only="react"
+        urlFetchDefault={apiDefault}
+        urlFetchPatrimonieales={apiPatrimoniales}
+      >
+        <InputForm
+          name="Nacionalidad"
+          type="text"
+          labelText="Nacionalidad"
+          placeholder="Argentino"
+        />
+        <InputForm
+          name="Fecha Inicio"
+          type="date"
+          labelText="Fecha de Inicio del viaje"
+          placeholder="22/10/2025"
+        />
+
+        <InputForm
+          name="Destino"
+          type="text"
+          labelText="Pais de destino"
+          placeholder="Holanda"
+        />
+
+        <SelectForm
+          name="Periodo"
+          labelText="Tiempo de viaje"
+          data={[
+            { value: "3 meses", labelText: "3 meses" },
+            { value: "6 meses", labelText: "6 meses" },
+            { value: "9 meses", labelText: "9 meses" },
+            { value: "12 meses", labelText: "12 meses" },
+          ]}
+        />
+      </ServicesForm>
+    </section>
+  </main>
+</LayoutContactoServicios>
