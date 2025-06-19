@@ -1,0 +1,22 @@
+---
+interface Props {
+  titulo: string;
+  texto: string;
+}
+const { titulo, texto } = Astro.props;
+
+import corazon from "@/assets/resources/corazon-paragua.svg";
+---
+
+<div class="flex gap-2 items-top text-left text-[clamp(1rem,3vw,1.2rem)]">
+  <img
+    loading="lazy"
+    class="w-[40px] inline-block"
+    src={corazon.src}
+    alt="logo Logo la chica del seguro corazon paragua"
+    height="1"
+    width="1"
+    title="Logo la chica del seguro corazon paragua"
+  />
+  <span> <strong class="font-semibold text-xl">{titulo} </strong>{texto}</span>
+</div>

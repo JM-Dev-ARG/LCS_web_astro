@@ -1,0 +1,31 @@
+---
+import Container from "../reutilizables/Container.astro";
+import TituloAcademia from "./TituloAcademia.astro";
+---
+
+<section
+  id="retos"
+  class="pt-10 md:pt-20 w-full relative before:absolute before:top-0 before:right-0 before:w-full before:h-[clamp(150px,20vw,300px)] before:opacity-[0.07] before:z-[-1] before:text-[#190f59] before:text-[clamp(100px,15vw,300px)] before:font-light before:tracking-tighter before:text-right md:before:content-['Solución'] before:flex before:items-center before:justify-end"
+>
+  <Container classname="relative top-0">
+    <TituloAcademia
+      classname="mb-4"
+      titulo1="Transformamos tu"
+      titulo2=" forma de capacitarte"
+    />
+    <div class="w-full flex flex-col justify-center items-start gap-4">
+      <div class="w-[80%]">
+        <div
+          class="text-center md:text-left text-[clamp(1rem,3vw,1.5rem)] grid gap-5 text-gray-800 text-pretty"
+        >
+          <span
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum
+            alias atque voluptatibus recusandae? Quam, expedita. Quisquam
+            quibusdam ea, nihil deleniti maiores aspernatur in unde non illum
+            aliquid placeat autem?
+          </span>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

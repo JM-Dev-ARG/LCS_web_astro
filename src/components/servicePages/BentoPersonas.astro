@@ -1,6 +1,12 @@
 ---
 import ButtonBentoCard from "./ButtonBentoCard.astro";
 import DataBulletBentoCard from "./DataBulletBentoCard.astro";
+import independencia from "@/assets/personas/independencia2.avif";
+import educativo from "@/assets/personas/educativo2.avif";
+import retiro from "@/assets/personas/retiro2.avif";
+import emprendedor from "@/assets/personas/emprendedor2.avif";
+import libre from "@/assets/personas/libre2.avif";
+import proteccion from "@/assets/personas/proteccion2.avif";
 
 const path = Astro.url.pathname;
 const basePath = path.split("/")[1];
@@ -72,7 +78,8 @@ const {
     </div>
 
     <div
-      class="absolute w-full h-full bg-[url('/img/proteccion2.avif')] opacity-80 bg-cover bg-[right_-90px_bottom] md:bg-[right_bottom] lg:bg-[right_-40px_bottom] bg-no-repeat"
+      class="absolute w-full h-full opacity-80 bg-cover bg-[right_-90px_bottom] md:bg-[right_bottom] lg:bg-[right_-40px_bottom] bg-no-repeat"
+      style={`background-image: url(${proteccion.src})`}
     >
     </div>
     <a
@@ -98,7 +105,8 @@ const {
     </div>
 
     <div
-      class="absolute w-full h-full bg-[url('/img/libre2.avif')] opacity-80 bg-cover bg-[right_-90px_bottom] md:bg-[right_bottom] bg-no-repeat"
+      class="absolute w-full h-full opacity-80 bg-cover bg-[right_-90px_bottom] md:bg-[right_bottom] bg-no-repeat"
+      style={`background-image: url(${libre.src})`}
     >
     </div>
     <a
@@ -123,7 +131,8 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('/img/independencia2.avif')] opacity-80 bg-cover bg-[center_bottom]  lg:bg-[center_bottom] bg-no-repeat`
+      class=`absolute  w-full h-full opacity-80 bg-cover bg-[center_bottom]  lg:bg-[center_bottom] bg-no-repeat`
+      style={`background-image: url(${independencia.src})`}
     >
     </div>
     <a
@@ -154,7 +163,8 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('/img/educativo2.avif')] opacity-80 bg-cover bg-[right_-150px_bottom] md:bg-[center_bottom] lg:bg-[right_-40px_bottom] bg-no-repeat`
+      class=`absolute  w-full h-full opacity-80 bg-cover bg-[right_-150px_bottom] md:bg-[center_bottom] lg:bg-[right_-40px_bottom] bg-no-repeat`
+      style={`background-image: url(${educativo.src})`}
     >
     </div>
     <a
@@ -183,7 +193,8 @@ const {
     </div>
 
     <div
-      class="absolute w-full h-full bg-[url('/img/retiro2.avif')] opacity-80 bg-cover bg-[right_30%_center] md:bg-[right_center] bg-no-repeat"
+      class="absolute w-full h-full opacity-80 bg-cover bg-[right_30%_center] md:bg-[right_center] bg-no-repeat"
+      style={`background-image: url(${retiro.src})`}
     >
     </div>
 
@@ -214,7 +225,8 @@ const {
     </div>
 
     <div
-      class=`absolute  w-full h-full bg-[url('/img/emprendedor2.avif')] opacity-80 bg-cover bg-[right_-150px_bottom] md:bg-[right_bottom] lg:bg-[right_-120px_bottom] bg-no-repeat`
+      class=`absolute  w-full h-full opacity-80 bg-cover bg-[right_-150px_bottom] md:bg-[right_bottom] lg:bg-[right_-120px_bottom] bg-no-repeat`
+      style={`background-image: url(${emprendedor.src})`}
     >
     </div>
     <a

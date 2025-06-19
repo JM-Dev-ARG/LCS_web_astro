@@ -1,33 +1,30 @@
 ---
-import ButtonAcademia from "./ButtonAcademia.astro";
+import flechas from "@/assets/resources/flechas-hero-academia.svg";
 ---
 
 <section
-  class="hero__container h-dvh bg-[url('img/img_academia/banner_web.avif')] bg-cover w-full"
+  class=`w-full h-dvh md:h-[400px] lg:h-[520px] xl:h-dvh bg-center bg-cover md:bg-top xl:bg-cover bg-no-repeat back`
 >
   <div class="w-full h-[calc(100%-50px)] flex justify-center items-end">
-    <ButtonAcademia
-      title1="¿Estas preparado?"
-      title2="Comencemos!!"
-      target="_blank"
-      href="https://academia.lachicadelseguro.com.ar/"
+    <img
+      loading="lazy"
+      class="h-[80px] w-[80px] rotate-[-45deg] mb-10"
+      src={flechas.src}
+      alt="flechas verdes animadas"
+      height="1"
+      width="1"
+      title="flechas verdes animadas"
     />
   </div>
 </section>
 
 <style>
-  .cls-1 {
-    opacity: 0.6;
-    fill: #1463b3;
+  .back {
+    background-image: url("../../assets/img_academia/hero_movil.avif");
   }
-  .cls-1_2 {
-    opacity: 0.3;
-    fill: #f9fafb;
+  @media (min-width: 768px) {
+    .back {
+      background-image: url("../../assets/img_academia/hero_web.avif");
+    }
   }
 </style>
-<script>
-  import AOS from "aos";
-  import "aos/dist/aos.css"; // You can also use <link> for styles
-  // ..
-  AOS.init();
-</script>

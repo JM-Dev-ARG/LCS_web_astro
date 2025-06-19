@@ -1,0 +1,41 @@
+---
+interface Props {
+  titulo1?: string;
+  titulo2?: string;
+  titulo3?: string;
+  classname?: string;
+}
+
+const { titulo1, titulo2, titulo3, classname } = Astro.props;
+---
+
+<h2
+  class=`w-full flex flex-col items-start justify-center leading-tight ${classname}`
+>
+  <p
+    class="font-extralight text-[clamp(26px,6vw,70px)]"
+    data-aos="fade-right"
+    data-aos-duration="800"
+    data-aos-once="true"
+  >
+    {titulo1}
+  </p>
+  <p
+    class="relative font-bold text-[clamp(30px,7vw,80px)] before:absolute before:w-[calc(100%+3%)] before:h-[80%] before:inset-0 before:top-3 before:-left-1 md:before:top-5 md:before:-left-2 lg:before:top-6 lg:before:-left-3 xl:before:top-9 before:bg-[#dcef10ff] before:z-[-1] before:skew-x-[30deg]"
+    data-aos="fade-right"
+    data-aos-duration="800"
+    data-aos-delay="500"
+    data-aos-once="true"
+  >
+    {titulo2}
+  </p>
+  <p
+    class="font-extralight text-[clamp(26px,6vw,70px)] mt-4"
+    data-aos="fade-right"
+    data-aos-duration="800"
+    data-aos-delay="700"
+    data-aos-once="true"
+  >
+    {titulo3}
+  </p>
+</h2>
