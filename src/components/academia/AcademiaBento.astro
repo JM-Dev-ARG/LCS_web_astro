@@ -1,0 +1,95 @@
+<div class="parent">
+  <div class="div1 flex justify-between items-center bg-academia-amarillo1">
+    <div class="-skew-x-[10deg] h-full w-full relative">
+      <p
+        class="text-academia-violeta2 text-center text-[clamp(60px,5.3vw,80px)] leading-[1.1] w-full absolute -top-[15%] md:-top-[13%] lg:-top-[15%] xl:-top-[17%] -left-5 font-bold"
+      >
+        100% Online
+      </p>
+      <p
+        class="text-academia-violeta2 text-center text-[clamp(1rem,1.3vw,1.2rem)] h-full w-full flex items-center justify-center px-5 mt-7"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias
+        atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea,
+        nihil deleniti maiores aspernatur in unde non illum aliquid placeat
+        autem?
+      </p>
+    </div>
+  </div>
+  <div class="div2 flex justify-between items-center bg-academia-violeta1">
+    <div class="-skew-x-[10deg] h-full w-full relative">
+      <p
+        class="text-academia-amarillo2 text-center text-[clamp(40px,5.3vw,80px)] w-full absolute md:-top-[13%] lg:-top-[15%] xl:-top-[17%] -left-5 font-bold"
+      >
+        100% Online
+      </p>
+      <p
+        class="text-academia-amarillo2 text-center text-[clamp(1rem,1.3vw,1.2rem)] h-full w-full flex items-center justify-center px-5"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias
+        atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea,
+        nihil deleniti maiores aspernatur in unde non illum aliquid placeat
+        autem?
+      </p>
+    </div>
+  </div>
+  <div class="div3 flex justify-between items-center bg-academia-violeta3">
+    <div class="-skew-x-[10deg] h-full w-full relative">
+      <p
+        class="text-academia-negro text-center text-[clamp(30px,5vw,80px)] w-full absolute md:-top-[15%] lg:-top-[20%] xl:-top-[25%] 2xl:-top-[30%] left-1/2 -translate-x-1/2 font-bold"
+      >
+        100% Online
+      </p>
+      <p
+        class="text-academia-negro text-center text-[clamp(1rem,1.3vw,1.2rem)] h-full w-full flex items-center justify-center px-5"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias
+        atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea,
+        nihil deleniti maiores aspernatur in unde non illum aliquid placeat
+        autem?
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .parent {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 64px;
+    column-gap: 30px;
+    margin-top: 30px;
+
+    @media (min-width: 1025px) {
+      width: 80%;
+    }
+  }
+
+  .parent > div {
+    width: 100%;
+    transform: skewX(10deg);
+    box-shadow: 10px 10px 0px #857993;
+  }
+
+  .div1 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    height: 300px;
+  }
+
+  .div2 {
+    height: 300px;
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 4;
+  }
+
+  .div3 {
+    height: 200px;
+    grid-column: span 6 / span 6;
+    grid-row: span 3 / span 3;
+    grid-row-start: 4;
+  }
+</style>

@@ -4,54 +4,45 @@ import CardRetos from "./CardRetos.astro";
 import retos from "@/assets/img_academia/retos_academia.avif";
 import data from "../../data/cardRetos.json";
 import TituloAcademia from "./TituloAcademia.astro";
+import SeccionCompleta from "./SeccionCompleta.astro";
 ---
 
-<section
+<SeccionCompleta
   id="retos"
-  class="pt-10 md:pt-20 w-full relative before:absolute before:top-0 before:right-0 before:w-full before:h-[clamp(150px,20vw,300px)] before:opacity-[0.07] before:z-[-1] before:text-[#190f59] before:text-[clamp(100px,15vw,300px)] before:font-light before:tracking-tighter before:text-right md:before:content-['Retos'] before:flex before:items-center before:justify-end"
+  titulo1="¿Queres convertire en un"
+  titulo2="Asesor de Seguros"
+  titulo3="100% digital?"
+  contenido_before="Retos"
+  descripcion="Tenés el propósito, las ganas y la energía para realizarlo, pero te enfrentas con múltiples inconvenientes a diario que te impiden avanzar:"
 >
-  <Container>
-    <TituloAcademia
-      titulo1="¿Queres convertire en un"
-      titulo2="Asesor de Seguros"
-      titulo3="100% digital?"
-    />
-    <div class="grid grid-cols-1 xl:grid-cols-2 gap-5 items-center">
-      <div class="flex flex-col gap-4 p-4 order-2 xl:order-1">
-        <div
-          class="text-center md:text-left text-[clamp(1rem,3vw,1.5rem)] grid gap-5 text-gray-800 text-pretty"
-        >
-          <span
-            >Tenés el propósito, las ganas y la energía para realizarlo, pero te
-            enfrentas con múltiples inconvenientes a diario que te impiden
-            avanzar:
-          </span>
-
-          {
-            data.map((item) => (
-              <CardRetos
-                titulo={item.titulo}
-                texto={item.texto}
-              />
-            ))
-          }
-        </div>
-      </div>
-      <div
-        class="flex justify-center items-center xl:order-2 drop-shadow-2xl iconos my-10"
-      >
-        <div class="size-[80%] lg:size-[calc(100%-25%)]">
-          <img
-            src={retos.src}
-            alt=""
-            class="w-full h-full rounded-tl-[100px] rounded-br-[100px] object-cover object-center"
-          />
-        </div>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
+    <div
+      class="flex flex-col h-full justify-center items-start gap-4 p-4 order-2 lg:order-1"
+    >
+      <div class="grid gap-5">
+        {
+          data.map((item) => (
+            <CardRetos
+              titulo={item.titulo}
+              texto={item.texto}
+            />
+          ))
+        }
       </div>
     </div>
-  </Container>
-</section>
-
+    <div
+      class="flex justify-center items-center lg:order-2 drop-shadow-2xl iconos"
+    >
+      <div class="size-full md:size-[60%] lg:size-full">
+        <img
+          src={retos.src}
+          alt=""
+          class="w-full h-full rounded-tl-[100px] rounded-br-[100px] object-cover object-center"
+        />
+      </div>
+    </div>
+  </div>
+</SeccionCompleta>
 <style>
   .iconos {
     position: relative;
@@ -71,13 +62,29 @@ import TituloAcademia from "./TituloAcademia.astro";
 
   .iconos::before {
     top: -6%;
-    right: -2%;
+    right: -8%;
     background-image: url("../../assets/img_academia/retos_icono_1.avif");
     filter: invert(1);
+
+    @media (min-width: 768px) {
+      right: -2%;
+    }
+
+    @media (min-width: 1024px) {
+      right: -8%;
+    }
   }
   .iconos::after {
     bottom: -6%;
-    left: -2%;
+    left: -8%;
     background-image: url("../../assets/img_academia/retos_icono_2.avif");
+
+    @media (min-width: 768px) {
+      left: -2%;
+    }
+
+    @media (min-width: 1024px) {
+      left: -8%;
+    }
   }
 </style>

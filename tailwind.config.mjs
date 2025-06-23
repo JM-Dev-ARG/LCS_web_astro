@@ -26,6 +26,17 @@ export default {
 				lcsPink1: "#e69c99",
 				lcsPink2: "#fcded0",
 				lcsPink3: "#f2a9b1",
+				academia: {
+					negro: "#1D1D1B",
+					amarillo1: "#C6D300",
+					amarillo2: "#DBDF5B",
+					amarillo3: "#EDEEB2",
+					amarillo4: "#F9F6E8",
+					violeta1: "#5D4495",
+					violeta2: "#7B63B0",
+					violeta3: "#CBB2D7",
+					violeta4: "#857993",
+				}
 
 			},
 			screens: {
