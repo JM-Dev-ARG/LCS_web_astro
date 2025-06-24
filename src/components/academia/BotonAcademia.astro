@@ -1,4 +1,5 @@
 ---
+import flechas from "@/assets/resources/flechas-boton-academia.svg";
 export interface Props {
   href?: string;
   title1?: string;
@@ -15,14 +16,14 @@ const { href, title1, title2, target } = Astro.props;
   target={target ? target : "_blank"}
   title={title2}
 >
-  <div class="text-gray-50">
+  <div class="text-academia-negro skew-x-[-10deg]">
     <p>{title1}</p>
     <p class="font-semibold text-[clamp(16px,3vw,25px)]">{title2}</p>
   </div>
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col items-center skew-x-[-10deg]">
     <img
       class="h-[25px] w-[25px] md:h-[40px] md:w-[40px] rotate-[-45deg]"
-      src="/resources/flechas-button.svg"
+      src={flechas.src}
       alt="flechas blancas animadas"
       height="auto"
       width="auto"
@@ -36,18 +37,28 @@ const { href, title1, title2, target } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 10px;
+    transform: skewX(10deg);
     height: clamp(80px, 10vw, 100px);
     width: clamp(240px, 50vw, 500px);
-    background-image: linear-gradient(
-      135deg,
-      #518d87 0%,
-      rgba(126, 232, 221, 0.9) 100%
-    );
-    transition: all 0.2s linear;
+    background-image: linear-gradient(135deg, #cbb2d7 0%, #dbdf5b 100%);
+    transition: all 0.3s linear;
     cursor: pointer;
+
+    p,
+    img {
+      transition: all 0.3s linear;
+    }
+
     &:hover {
-      transform: scale(1.05);
+      transform: skewX(10deg) scale(1.2);
+
+      p,
+      img {
+        transform: scale(1.5);
+      }
+      img {
+        transform: rotate(-45deg) scale(1.5) translateX(20px) translateY(10px);
+      }
     }
   }
 </style>

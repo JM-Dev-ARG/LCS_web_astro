@@ -17,7 +17,7 @@ const { id, titulo1, titulo2, titulo3, descripcion, contenido_before } =
 
 <section
   id={id}
-  class="py-10 md:py-20 w-full relative before:absolute before:top-0 before:right-0 before:w-full before:h-[clamp(150px,20vw,300px)] before:opacity-[0.07] before:z-[-1] before:text-[#190f59] before:text-[clamp(100px,15vw,300px)] before:font-light before:tracking-tighter before:text-right before:flex before:items-center before:justify-end"
+  class="py-10 md:py-20 w-full relative before:absolute before:top-0 before:right-0 before:w-full before:h-[clamp(150px,20vw,300px)] before:opacity-[0.07] before:z-[-1] before:text-[#190f59] before:text-[clamp(100px,15vw,300px)] before:font-light before:tracking-tighter before:text-right before:flex before:items-center before:justify-end overflow-hidden"
   style={`--contenido-before: \"${contenido_before}\";`}
 >
   <Container classname="relative top-0 pt-10 md:pt-20">
@@ -28,12 +28,11 @@ const { id, titulo1, titulo2, titulo3, descripcion, contenido_before } =
     />
     <div class={`${descripcion ? "grid gap-2 pt-4" : "hidden"}`}>
       <span
-        class="text-center md:text-left text-[clamp(1rem,2.2vw,1.3rem)] text-academia-negro text-pretty w-[80%]"
+        class="text-left text-[clamp(1rem,2.2vw,1.3rem)] text-academia-negro text-pretty w-full lg:w-[80%]"
         >{descripcion}
       </span>
-
-      <slot />
     </div>
+    <slot />
   </Container>
 </section>
 
