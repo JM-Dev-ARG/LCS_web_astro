@@ -11,7 +11,7 @@ import SeccionCompleta from "../SeccionCompleta.astro";
   titulo2="Asesor de Seguros"
   titulo3="100% digital?"
   contenido_before="Retos"
-  descripcion="Tenés el propósito, las ganas y la energía para realizarlo, pero te enfrentas con múltiples inconvenientes a diario que te impiden avanzar:"
+  descripcion="Tenés el propósito, las ganas y la energía para realizarlo, pero te enfrentas con múltiples inconvenientes a diario que te impiden avanzar"
 >
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mt-4">
     <div
@@ -20,7 +20,10 @@ import SeccionCompleta from "../SeccionCompleta.astro";
       <div class="grid gap-5">
         {
           data.map((item) => (
-            <CardRetos titulo={item.titulo} texto={item.texto} />
+            <CardRetos
+              titulo={item.titulo}
+              texto={item.texto}
+            />
           ))
         }
       </div>
