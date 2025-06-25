@@ -1,8 +1,10 @@
 ---
-import Retos from "../components/academia/Retos.astro";
+import Retos from "../components/academia/secciones/Retos.astro";
 import HeroAcademia from "../components/academia/HeroAcademia.astro";
 import Layout from "../layouts/Layout.astro";
-import Solucion from "@/components/academia/Solucion.astro";
+import Solucion from "@/components/academia/secciones/Solucion.astro";
+import Beneficios from "@/components/academia/secciones/Beneficios.astro";
+import Publico from "@/components/academia/secciones/Publico.astro";
 ---
 
 <Layout title="La Chica del Seguro - Academia de Seguros">
@@ -10,5 +12,7 @@ import Solucion from "@/components/academia/Solucion.astro";
     <HeroAcademia />
     <Retos />
     <Solucion />
+    <Publico />
+    <Beneficios />
   </main>
 </Layout>
