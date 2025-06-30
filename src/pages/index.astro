@@ -11,7 +11,9 @@ import Hero from "../components/index/Hero.astro";
 import Footer from "../components/index/Footer.astro";
 import Descargable from "../components/index/Descargable.astro";
 import Blog from "../components/index/Blog.astro";
-/* import Hero from "../components/preact/hero/Hero"; */
+
+import libro from "@/assets/img_generales/libro.avif";
+import DescargableForm from "../components/react_components/descargableForm/DescargableForm.jsx";
 ---
 
 <Layout title="La Chica del Seguro - Asegurarse es la nueva moda">
@@ -24,7 +26,17 @@ import Blog from "../components/index/Blog.astro";
 
       <WID />
 
-      <Descargable />
+      <Descargable
+        titulo="Todo lo que necesitas saber para contratar un seguro está en esta guía"
+        titulo_strong="digital y gratuita."
+        subtitulo="¡Completá el formulario y es tuya!"
+        imgURL={libro.src}
+        img_alt="Imagen tapa y hojas de la guía Aprendé a leer tu poliza"
+        color_background="lcsGreen1"
+        color_strong="lcsOrange3"
+      >
+        <DescargableForm client:only="react" />
+      </Descargable>
 
       <!--       <Blog /> -->
 

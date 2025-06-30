@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import "./navbar.css"
 
+import whatsapp from "@/assets/img_generales/whatsapp.avif"
+import corazon from "@/assets/resources/corazon-paragua.svg"
+
 import navega from "../../../data/navega.json";
 import aprende from "../../../data/aprende.json";
-import { i } from "framer-motion/client";
 
 let url = window.location.pathname;
 
@@ -59,7 +61,7 @@ const Navbar = () => {
                         <a onClick={handleScrollToTop} href="/" title="boton volver al inicio" >
                             <img
                                 className={`w-[50px] logo hover:rotate-[15deg] hover:scale-[1.1] transition duration-300 ease-in-out`}
-                                src="/resources/corazon-paragua.svg"
+                                src={corazon.src}
                                 alt="Logo Paragua Corazon de La Chica del Seguroo"
                                 height="auto"
                                 width="auto"
@@ -74,7 +76,7 @@ const Navbar = () => {
                             <a title="whatsapp" href="https://wa.me/5491170627152?text=Hola, quiero hacerles una consulta" target="_blank" className="hover:scale-[1.1] transition-all ease-linear duration-300">
                                 <img
                                     loading="lazy"
-                                    src="./img/whatsapp.avif"
+                                    src={whatsapp.src}
                                     alt="logo whatsapp"
                                     className="w-[35px] h-[35px]"
                                     height="auto"

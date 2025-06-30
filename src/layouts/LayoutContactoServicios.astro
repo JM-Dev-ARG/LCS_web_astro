@@ -3,6 +3,7 @@ import { ClientRouter } from "astro:transitions";
 import redes from "../data/redes.json";
 
 import NavBarFormularios from "../components/secciones/NavBarFormularios.astro";
+import logo from "@/assets/resources/LOGOTIPO-CREMA.svg";
 
 interface Props {
   path: string;
@@ -142,7 +143,7 @@ const { title, keywords, description, path } = Astro.props;
         >
           <img
             class="w-full"
-            src="/resources/LOGOTIPO-CREMA.svg"
+            src={logo.src}
             alt=""
           />
         </a>
