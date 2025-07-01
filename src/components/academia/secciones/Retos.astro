@@ -42,19 +42,43 @@ import SeccionCompleta from "../SeccionCompleta.astro";
       </div>
     </div> -->
 
-    <div class="card card__disponible" data-state="active">
+    <div
+      class="card card__disponible"
+      data-state="active"
+    >
+      <div class="imagen"></div>
+      <div class="descripcion relative">
+        <span
+          class="text-[clamp(20px,1.2vw,28px)] font-bold text-academia-negro bg-academia-amarillo1 skew-x-[30deg] w-full absolute top-0 left-0"
+          ><p class="-skew-x-[30deg]">Negocio de Seguros Digital</p>
+        </span>
+        <span class="text-[clamp(1rem,3vw,20px)]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse eos
+          assumenda quas nesciunt explicabo, in exercitationem debitis maxime
+          ipsum, obcaecati similique dolorum provident nostrum nihil vel
+          facilis, ea eum placeat.
+        </span>
+        <button>hola</button>
+      </div>
+    </div>
+    <div
+      class="card card__disponible"
+      data-state="inactive"
+    >
       <div class="imagen"></div>
       <div class="descripcion"></div>
     </div>
-    <div class="card card__disponible" data-state="inactive">
+    <div
+      class="card card__disponible"
+      data-state="active"
+    >
       <div class="imagen"></div>
       <div class="descripcion"></div>
     </div>
-    <div class="card card__disponible" data-state="active">
-      <div class="imagen"></div>
-      <div class="descripcion"></div>
-    </div>
-    <div class="card card__disponible" data-state="active">
+    <div
+      class="card card__disponible"
+      data-state="active"
+    >
       <div class="imagen"></div>
       <div class="descripcion"></div>
     </div>
@@ -64,19 +88,18 @@ import SeccionCompleta from "../SeccionCompleta.astro";
 <style>
   .card__disponible {
     width: 100%;
-    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
+    background-color: #cbb2d738;
+    box-shadow: 10px 10px 0px #857993;
   }
 
   .card__no__disponible {
     filter: grayscale(1);
     width: 100%;
-    height: 500px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -86,82 +109,23 @@ import SeccionCompleta from "../SeccionCompleta.astro";
 
   .card__disponible .imagen {
     width: 100%;
-    height: 100%;
-    background-color: blueviolet;
+    height: 500px;
+    background-image: url("../../../assets/img_academia/hero_movil.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     animation: img_unactive 0.5s ease-in-out forwards allow-discrete;
   }
 
   .card__disponible .descripcion {
-    height: 0;
-    width: 0;
-    background: red;
-    transform: translateY(-100%);
-  }
-
-  .card__disponible.active .imagen {
-    animation: img_active 0.5s ease-in-out forwards;
-  }
-
-  .card__disponible.active .descripcion {
-    animation: descripcion_active 0.5s 0.3s ease-in-out forwards;
-  }
-
-  .card__disponible.unactive .imagen {
-    animation: img_unactive 0.5s ease-in-out 0.3s backwards;
-  }
-
-  .card__disponible.unactive .descripcion {
-    animation: descripcion_unactive 0.5s ease-in-out backwards;
-  }
-
-  @keyframes img_active {
-    0% {
-      width: 100%;
-      height: 100%;
-    }
-    100% {
-      width: 90%;
-      height: 70%;
-      margin-bottom: 16px;
-    }
-  }
-
-  @keyframes descripcion_active {
-    0% {
-      transform: translateY(-100%);
-      width: 0;
-      height: 0;
-    }
-    100% {
-      transform: translateY(0);
-      width: 100%;
-      height: calc(30% - 16px);
-    }
-  }
-  @keyframes img_unactive {
-    0% {
-      width: 90%;
-      height: 70%;
-      margin-bottom: 16px;
-    }
-    100% {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 0;
-    }
-  }
-
-  @keyframes descripcion_unactive {
-    0% {
-      width: 100%;
-      height: calc(30% - 16px);
-      transform: translateY(0);
-    }
-    100% {
-      width: 0;
-      height: 0;
-      transform: translateY(-100%);
-    }
+    height: 250px;
+    width: 100%;
+    padding-inline: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 8px;
   }
 
   /* .iconos {
