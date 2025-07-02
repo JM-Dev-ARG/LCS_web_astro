@@ -42,43 +42,31 @@ import SeccionCompleta from "../SeccionCompleta.astro";
       </div>
     </div> -->
 
-    <div
-      class="card card__disponible"
-      data-state="active"
-    >
+    <div class="card card__disponible" data-state="active">
       <div class="imagen"></div>
       <div class="descripcion relative">
         <span
-          class="text-[clamp(20px,1.2vw,28px)] font-bold text-academia-negro bg-academia-amarillo1 skew-x-[30deg] w-full absolute top-0 left-0"
-          ><p class="-skew-x-[30deg]">Negocio de Seguros Digital</p>
+          class="text-[clamp(20px,1.2vw,28px)] font-bold text-academia-negro bg-academia-amarillo1 skew-x-[30deg] w-full absolute -top-4 left-0"
+        >
+          <p class="-skew-x-[30deg] ml-2">Negocio de Seguros Digital</p>
         </span>
-        <span class="text-[clamp(1rem,3vw,20px)]">
+        <span class="text-base tracking-tight leading-tight">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse eos
           assumenda quas nesciunt explicabo, in exercitationem debitis maxime
-          ipsum, obcaecati similique dolorum provident nostrum nihil vel
-          facilis, ea eum placeat.
+          ipsum, obcaecati similique.
         </span>
-        <button>hola</button>
+        <a href="/academia/negocio_de_seguros_digital">hola</a>
       </div>
     </div>
-    <div
-      class="card card__disponible"
-      data-state="inactive"
-    >
+    <div class="card card__disponible" data-state="inactive">
       <div class="imagen"></div>
       <div class="descripcion"></div>
     </div>
-    <div
-      class="card card__disponible"
-      data-state="active"
-    >
+    <div class="card card__disponible" data-state="active">
       <div class="imagen"></div>
       <div class="descripcion"></div>
     </div>
-    <div
-      class="card card__disponible"
-      data-state="active"
-    >
+    <div class="card card__disponible" data-state="active">
       <div class="imagen"></div>
       <div class="descripcion"></div>
     </div>
@@ -109,7 +97,7 @@ import SeccionCompleta from "../SeccionCompleta.astro";
 
   .card__disponible .imagen {
     width: 100%;
-    height: 500px;
+    height: 350px;
     background-image: url("../../../assets/img_academia/hero_movil.avif");
     background-position: center;
     background-repeat: no-repeat;
@@ -118,9 +106,9 @@ import SeccionCompleta from "../SeccionCompleta.astro";
   }
 
   .card__disponible .descripcion {
-    height: 250px;
+    height: 200px;
     width: 100%;
-    padding-inline: 8px;
+    padding-inline: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
