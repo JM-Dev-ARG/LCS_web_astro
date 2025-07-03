@@ -27,7 +27,8 @@ import Container from "../reutilizables/Container.astro";
   <Container>
     <div class="relative mx-auto w-[90%] lg:w-full xl:w-[90%]">
       <div
-        class={`w-full bg-opacity-85 rounded-[20px] flex justify-center lg:justify-end overflow-y-hidden bg-${color_background} `}
+        class={`w-full bg-opacity-85 rounded-[20px] flex justify-center lg:justify-end overflow-y-hidden`}
+        style=`background-color:${color_background};`
       >
         <div
           class="absolute block w-full lg:w-[35%] xl:w-[30%] h-full top-0 left-0 right-0 skew-y-3"

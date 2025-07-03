@@ -45,7 +45,12 @@ export default {
 			},
 			cursor: {
 				'scroll': 'url(/resources/scroll-icon.svg), pointer',
+			},
+			boxShadow: {
+				'academia-boton': '5px 5px 0px #857993'
 			}
+
+
 		},
 
 	},
