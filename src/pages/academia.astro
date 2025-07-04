@@ -1,35 +1,42 @@
 ---
 import HeroAcademia from "@/components/academia/secciones/HeroAcademia.astro";
 import Layout from "@/layouts/Layout.astro";
-import Solucion from "@/components/academia/secciones/Solucion.astro";
-import Beneficios from "@/components/academia/secciones/Beneficios.astro";
-import Publico from "@/components/academia/secciones/Publico.astro";
+import Equipo from "@/components/academia/secciones/Equipo.astro";
 import Descargable from "@/components/index/Descargable.astro";
 import libro from "@/assets/img_generales/libro.avif";
+import Soluciones from "@/components/academia/secciones/Soluciones.astro";
 import DescargableForm from "@/components/react_components/descargableForm/DescargableForm.jsx";
 import Cursos from "@/components/academia/secciones/Cursos.astro";
+import Empresa from "@/components/academia/secciones/Empresa.astro";
+import Presentacion from "@/components/academia/secciones/Presentacion.astro";
+import Preguntas from "@/components/academia/secciones/Preguntas.astro";
+import Opiniones from "@/components/academia/secciones/Opiniones.astro";
 ---
 
 <Layout title="La Chica del Seguro - Academia de Seguros">
   <main>
     <HeroAcademia />
-    <!-- <div class="overflow-hidden">
+
+    <Presentacion />
+    <div class="overflow-hidden my-8">
       <Descargable
         titulo="Todo lo que necesitas saber para contratar un seguro está en esta guía"
         titulo_strong="digital y gratuita."
         subtitulo="¡Completá el formulario y es tuya!"
         imgURL={libro.src}
         img_alt="Imagen tapa y hojas de la guía Aprendé a leer tu poliza"
-        color_background="academia-violeta1"
+        color_background="#7B63B0"
         color_strong="academia-amarillo2"
       >
         <DescargableForm client:only="react" />
       </Descargable>
     </div>
- -->
+
+    <Soluciones />
     <Cursos />
-    <Solucion />
-    <Publico />
-    <Beneficios />
+    <Empresa />
+    <Equipo />
+    <Preguntas />
+    <Opiniones />
   </main>
 </Layout>

@@ -1,5 +1,5 @@
 ---
-import Button from "../../reutilizables/Button.astro";
+import flechas from "@/assets/resources/flechas-hero-academia.svg";
 import AcademiaBento from "../AcademiaBento.astro";
 import BotonAcademia from "../BotonAcademia.astro";
 import SeccionCompleta from "../SeccionCompleta.astro";
@@ -16,10 +16,22 @@ import SeccionCompleta from "../SeccionCompleta.astro";
     <AcademiaBento />
   </div>
 
-  <BotonAcademia
+  <!-- <BotonAcademia
     title1="Comienza ahora"
     title2="Comienza ahora"
     href="/academia/negocio_de_seguros_digital"
     target="_self"
-  />
+  /> -->
+
+  <div class="w-full h-[calc(100%-50px)] flex justify-center items-end">
+    <img
+      loading="lazy"
+      class="h-[100px] w-[100px] rotate-[-45deg] mt-5"
+      src={flechas.src}
+      alt="flechas verdes animadas"
+      height="1"
+      width="1"
+      title="flechas verdes animadas"
+    />
+  </div>
 </SeccionCompleta>

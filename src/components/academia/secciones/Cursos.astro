@@ -1,8 +1,4 @@
 ---
-import CardRetos from "../CardRetos.astro";
-import retos from "@/assets/img_academia/retos_academia.avif";
-import cardImg from "@/assets/img_academia/hero_movil.avif";
-import proximamente from "@/assets/img_academia/proximamente.avif";
 import data from "../../../data/cursos.json";
 import SeccionCompleta from "../SeccionCompleta.astro";
 import CardCursos from "../CardCursos.astro";
@@ -10,14 +6,14 @@ import CardCursos from "../CardCursos.astro";
 
 <SeccionCompleta
   id="cursos"
-  titulo1="¿Queres convertire en un"
-  titulo2="Asesor de Seguros"
-  titulo3="100% digital?"
+  titulo1="Conoce nuestros"
+  titulo2="Cursos y Mentorias"
+  titulo3="para potenciar tu negocio"
   contenido_before="Cursos"
   descripcion="Transformá tu forma de comercializar seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus ventas con nuestros cursos,  mentorías y asesorías diseñadas para el nuevo mercado."
 >
   <div
-    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-center mt-8 w-full"
+    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 place-items-center mt-8 mb-12 w-full"
   >
     {
       data.map((item) => (

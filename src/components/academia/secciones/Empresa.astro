@@ -1,0 +1,29 @@
+---
+import SeccionCompleta from "../SeccionCompleta.astro";
+import data from "../../../data/empresas.json";
+import CardEmpresas from "../CardEmpresas.astro";
+---
+
+<SeccionCompleta
+  id="empresas"
+  titulo1="¿Queres potenciar a tus productores?"
+  titulo2="las mejores soluciones"
+  titulo3="para lograr ese objetivo"
+  contenido_before="Empresas"
+  descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea, nihil deleniti maiores aspernatur in unde non illum aliquid placeat autem?"
+>
+  <div
+    class="grid grid-cols-1 xl:grid-cols-3 gap-6 mt-8 mb-12 w-full place-items-center"
+  >
+    {
+      data.map((item) => (
+        <CardEmpresas
+          titulo={item.titulo}
+          img_curso={item.img_curso}
+          url_curso={item.url_curso}
+          descripcion={item.descripcion}
+        />
+      ))
+    }
+  </div>
+</SeccionCompleta>

@@ -1,0 +1,76 @@
+---
+interface Props {
+  pregunta?: string;
+  respuesta?: string;
+}
+
+const { pregunta, respuesta } = Astro.props;
+---
+
+<details class="custom-details">
+  <summary>
+    {pregunta}
+    <span class="custom-marker">▶</span>
+  </summary>
+  <p class="text-left text-[clamp(1rem,1.5vw,1.5rem)]">
+    {
+      respuesta
+        ? respuesta
+        : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae modi nesciunt minus corrupti voluptates error, ea Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae modi nesciunt minus corrupti voluptates error, ea."
+    }
+  </p>
+</details>
+
+<style>
+  details {
+    background-color: #f2e8df;
+    box-shadow: 5px 5px 0px #857993;
+    color: #1d1d1b;
+
+    padding-inline: 16px;
+    padding-block: 8px;
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    width: 100%;
+    overflow: hidden;
+    & p {
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      padding-block: 10px;
+    }
+  }
+
+  details::details-content {
+    block-size: 0;
+    transition:
+      block-size 0.3s ease-in-out,
+      content-visibility 0.3s ease-in-out;
+    transition-behavior: allow-discrete;
+  }
+
+  details[open]::details-content {
+    block-size: auto;
+  }
+
+  details summary {
+    list-style: none; /* oculta el ::marker original */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    list-style-position: outside;
+  }
+
+  details summary::-webkit-details-marker {
+    display: none; /* oculta el ::marker en WebKit */
+  }
+
+  .custom-marker {
+    font-size: 0.8em;
+    color: #5d4495;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Girar la flecha cuando está abierto */
+  .custom-details[open] .custom-marker {
+    transform: rotate(90deg);
+  }
+</style>

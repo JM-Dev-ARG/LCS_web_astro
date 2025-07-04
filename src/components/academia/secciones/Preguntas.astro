@@ -1,0 +1,24 @@
+---
+import SeccionCompleta from "../SeccionCompleta.astro";
+import data from "../../../data/preguntas.json";
+import PregFrecuentes from "../PregFrecuentes.astro";
+---
+
+<SeccionCompleta
+  id="preguntas_frecuentes"
+  titulo1="¿Tenes preguntas?"
+  titulo2="Tenemos las respuestas"
+  contenido_before="Preguntas"
+  descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea, nihil deleniti maiores aspernatur in unde non illum aliquid placeat autem?"
+>
+  <div class="grid mt-8 gap-6 mb-12 w-[80%] place-items-center">
+    {
+      data.map((item) => (
+        <PregFrecuentes
+          pregunta={item.pregunta}
+          respuesta={item.respuesta}
+        />
+      ))
+    }
+  </div>
+</SeccionCompleta>

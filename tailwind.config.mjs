@@ -47,7 +47,11 @@ export default {
 				'scroll': 'url(/resources/scroll-icon.svg), pointer',
 			},
 			boxShadow: {
+				'academia': '10px 10px 0px #857993',
 				'academia-boton': '5px 5px 0px #857993'
+			},
+			dropShadow: {
+				'academia': '10px 0px 0px #857993',
 			}
 
 

@@ -1,36 +1,26 @@
 ---
-import proximamente from "@/assets/img_academia/proximamente.avif";
-
 interface Props {
-  estado?: string;
   titulo: string;
   descripcion: string;
   img_curso: string;
   url_curso: string;
 }
-const { estado, titulo, descripcion, img_curso, url_curso } = Astro.props;
+const { titulo, descripcion, img_curso, url_curso } = Astro.props;
 ---
 
 <div
-  class="card relative w-full flex flex-col justify-between items-center shadow-[10px_10px_0px_#857993] max-w-[400px]"
-  data-state={estado ? estado : "active"}
+  class="card w-full flex flex-col md:flex-row xl:flex-col justify-between items-center shadow-academia xl:max-w-[400px]"
 >
   <div
-    class="proximamente z-10 w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat"
-    style=`background-image: url(${proximamente.src});`
-  >
-  </div>
-
-  <div
-    class="card_img w-full h-[450px] xl:h-[500px] bg-center bg-no-repeat bg-cover"
+    class="card_img w-full h-[400px] bg-center bg-no-repeat bg-cover"
     style=`background-image: url(${img_curso});`
   >
   </div>
   <div
-    class="descripcion relative h-[200px] xl:h-[250px] w-full px-4 flex flex-col justify-center items-start gap-2 bg-black bg-opacity-5"
+    class="descripcion relative h-[250px] md:h-[400px] xl:h-[250px] w-full px-4 flex flex-col justify-center items-start gap-2 bg-black bg-opacity-5"
   >
     <span
-      class="text-[clamp(20px,1.2vw,28px)] grid place-items-center font-bold text-academia-negro bg-academia-amarillo1 skew-x-[30deg] w-[90%] absolute -top-4 left-1/2 -translate-x-1/2"
+      class="text-[clamp(20px,1.2vw,28px)] grid place-items-center font-bold text-academia-negro bg-academia-amarillo1 skew-x-[30deg] w-[90%] absolute -top-4 md:top-[15%] xl:-top-4 left-1/2 -translate-x-1/2"
     >
       <p class="-skew-x-[30deg]">{titulo}</p>
     </span>
@@ -49,7 +39,7 @@ const { estado, titulo, descripcion, img_curso, url_curso } = Astro.props;
   </div>
 </div>
 
-<script>
+<!-- <script>
   const cards = document.querySelectorAll(".card");
 
   cards.forEach((card: HTMLElement) => {
@@ -75,4 +65,4 @@ const { estado, titulo, descripcion, img_curso, url_curso } = Astro.props;
       }
     }
   });
-</script>
+</script> -->

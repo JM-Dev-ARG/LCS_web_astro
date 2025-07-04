@@ -1,0 +1,30 @@
+---
+import Carrousel from "@/components/reutilizables/Carrousel.astro";
+import SeccionCompleta from "../SeccionCompleta.astro";
+import data from "../../../data/opiniones.json";
+import CardOpiniones from "../CardOpiniones.astro";
+---
+
+<SeccionCompleta
+  id="opiniones"
+  titulo1="Algunos de nuestros clientes"
+  titulo2="opinan de nosotros"
+  contenido_before="Opiniones"
+  descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea, nihil deleniti maiores aspernatur in unde non illum aliquid placeat autem?"
+>
+  <div class="grid gap-4 mt-8 mb-12 w-full place-items-center">
+    <Carrousel
+      duration="slow"
+      classSlider="flex gap-6"
+    >
+      {
+        data.map((item) => (
+          <CardOpiniones
+            nombre={item.nombre}
+            opinion={item.opinion}
+          />
+        ))
+      }
+    </Carrousel>
+  </div>
+</SeccionCompleta>

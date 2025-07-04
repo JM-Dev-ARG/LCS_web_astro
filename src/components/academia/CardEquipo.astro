@@ -1,0 +1,34 @@
+---
+interface Props {
+  titulo: string;
+  descripcion: string;
+  img: string;
+}
+const { titulo, descripcion, img } = Astro.props;
+---
+
+<div
+  class="card w-full flex flex-col justify-between items-center max-w-[400px]"
+>
+  <div class="card_img w-full">
+    <img
+      class="drop-shadow-academia object-cover"
+      src="/img/img_academia/micaela.avif"
+      alt="equipo"
+    />
+  </div>
+  <div
+    class="descripcion relative h-[200px] w-full px-4 flex flex-col justify-center items-start gap-2 bg-black bg-opacity-5 shadow-academia"
+  >
+    <span
+      class="text-[clamp(20px,1.2vw,28px)] grid place-items-center font-bold text-academia-negro bg-academia-amarillo1 skew-x-[30deg] w-[90%] absolute -top-4 left-1/2 -translate-x-1/2"
+    >
+      <p class="-skew-x-[30deg]">{titulo}</p>
+    </span>
+    <span
+      class="text-[clamp(1rem,1.2vw,1.2rem)] tracking-tight leading-tight mt-2"
+    >
+      {descripcion}
+    </span>
+  </div>
+</div>

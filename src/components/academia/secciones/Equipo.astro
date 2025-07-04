@@ -1,0 +1,28 @@
+---
+import SeccionCompleta from "../SeccionCompleta.astro";
+import data from "../../../data/equipo.json";
+import { date } from "astro:schema";
+import CardEquipo from "../CardEquipo.astro";
+---
+
+<SeccionCompleta
+  id="equipo"
+  titulo1="Te presentamos a"
+  titulo2="Nuestros expertos"
+  contenido_before="Equipo"
+  descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea, nihil deleniti maiores aspernatur in unde non illum aliquid placeat autem?"
+>
+  <div
+    class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center mt-8 mb-12 w-full place-items-center"
+  >
+    {
+      data.map((item) => (
+        <CardEquipo
+          titulo={item.titulo}
+          descripcion={item.descripcion}
+          img={item.img}
+        />
+      ))
+    }
+  </div>
+</SeccionCompleta>
