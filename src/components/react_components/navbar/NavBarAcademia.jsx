@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import "./navbar.css"
 
 import whatsapp from "@/assets/img_generales/whatsapp.avif"
-import corazon from "@/assets/img_academia/logo.avif"
+import corazon from "@/assets/img_academia/logo_centro.avif"
 
 import navega from "@/data/navegaAcademia.json";
 import aprende from "@/data/aprendeAcademia.json";
@@ -60,12 +60,12 @@ const NavbarAcademia = () => {
                     <div className="flex justify-left items-center flex-1 ml-8 ">
                         <a onClick={handleScrollToTop} href="/academia" title="boton volver al inicio" >
                             <img
-                                className={`w-[55px] logo hover:rotate-[15deg] hover:scale-[1.1] transition duration-300 ease-in-out`}
+                                className={`w-[70px] scale-150  logo hover:rotate-[15deg] hover:scale-125 transition duration-300 ease-in-out`}
                                 src={corazon.src}
-                                alt="Logo Academia de Seguros por LCS"
+                                alt="Logo Academia de Seguros por La Chica del Seguro"
                                 height="auto"
                                 width="auto"
-                                title="Logo Academia de Seguros por LCS"
+                                title="Logo Academia de Seguros por La Chica del Seguro"
                             />
                         </a>
 
@@ -73,7 +73,7 @@ const NavbarAcademia = () => {
 
                     <div className="text-center lg:flex justify-end items-center lg:static z-10 flex-1  ">
                         <div className="flex justify-end items-center flex-1 mr-8 gap-4 ">
-                            <a title="whatsapp" href="https://wa.me/5491170627152?text=Hola, quiero hacerles una consulta" target="_blank" className="hover:scale-[1.1] transition-all ease-linear duration-300">
+                            <a title="whatsapp" href="https://wa.me/5491170627152?text=Hola, quiero hacerles una consulta de la academia" target="_blank" className="hover:scale-[1.1] transition-all ease-linear duration-300">
                                 <img
                                     loading="lazy"
                                     src={whatsapp.src}
