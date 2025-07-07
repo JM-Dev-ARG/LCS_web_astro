@@ -12,10 +12,15 @@ import CardOpiniones from "../CardOpiniones.astro";
   contenido_before="Opiniones"
   descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea, nihil deleniti maiores aspernatur in unde non illum aliquid placeat autem?"
 >
-  <div class="grid gap-4 mt-8 mb-12 w-full place-items-center">
+  <div
+    class="grid gap-4 mt-8 mb-12 w-full place-items-center"
+    data-aos="fade-left"
+    data-aos-duration="800"
+    data-aos-once="true"
+  >
     <Carrousel
       duration="slow"
-      classSlider="flex gap-6"
+      classSlider="flex gap-12"
     >
       {
         data.map((item) => (

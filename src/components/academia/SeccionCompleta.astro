@@ -29,6 +29,10 @@ const { id, titulo1, titulo2, titulo3, descripcion, contenido_before } =
     <div class={`${descripcion ? "grid w-full pt-4 " : "hidden"}`}>
       <span
         class="text-left text-[clamp(1rem,2.2vw,1.3rem)] text-academia-negro text-pretty w-full lg:w-[80%]"
+        data-aos="fade-right"
+        data-aos-duration="800"
+        data-aos-delay="400"
+        data-aos-once="true"
         >{descripcion}
       </span>
     </div>

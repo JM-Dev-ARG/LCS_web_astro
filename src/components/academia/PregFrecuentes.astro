@@ -2,12 +2,19 @@
 interface Props {
   pregunta?: string;
   respuesta?: string;
+  delay?: string;
 }
 
-const { pregunta, respuesta } = Astro.props;
+const { pregunta, respuesta, delay } = Astro.props;
 ---
 
-<details class="custom-details">
+<details
+  class="custom-details"
+  data-aos={(parseInt(delay) / 200) % 2 == 0 ? "fade-right" : "fade-left"}
+  data-aos-duration="800"
+  data-aos-delay={delay ? delay : "0"}
+  data-aos-once="true"
+>
   <summary>
     {pregunta}
     <span class="custom-marker">▶</span>

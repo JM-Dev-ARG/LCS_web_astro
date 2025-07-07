@@ -16,13 +16,14 @@ import CardCursos from "../CardCursos.astro";
     class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 place-items-center mt-8 mb-12 w-full"
   >
     {
-      data.map((item) => (
+      data.map((item, index) => (
         <CardCursos
           estado={item.estado}
           titulo={item.titulo}
           img_curso={item.img_curso}
           url_curso={item.url_curso}
           descripcion={item.descripcion}
+          delay={(index * 200).toString()}
         />
       ))
     }

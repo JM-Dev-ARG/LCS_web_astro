@@ -16,12 +16,13 @@ import CardEmpresas from "../CardEmpresas.astro";
     class="grid grid-cols-1 xl:grid-cols-3 gap-6 mt-8 mb-12 w-full place-items-center"
   >
     {
-      data.map((item) => (
+      data.map((item, index) => (
         <CardEmpresas
           titulo={item.titulo}
           img_curso={item.img_curso}
           url_curso={item.url_curso}
           descripcion={item.descripcion}
+          delay={(index * 200).toString()}
         />
       ))
     }

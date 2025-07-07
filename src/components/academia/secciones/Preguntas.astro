@@ -13,10 +13,11 @@ import PregFrecuentes from "../PregFrecuentes.astro";
 >
   <div class="grid mt-8 gap-6 mb-12 w-[80%] place-items-center">
     {
-      data.map((item) => (
+      data.map((item, index) => (
         <PregFrecuentes
           pregunta={item.pregunta}
           respuesta={item.respuesta}
+          delay={(index * 200).toString()}
         />
       ))
     }

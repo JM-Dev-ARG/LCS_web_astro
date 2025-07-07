@@ -3,12 +3,17 @@ interface Props {
   titulo: string;
   descripcion: string;
   img: string;
+  delay?: string;
 }
-const { titulo, descripcion, img } = Astro.props;
+const { titulo, descripcion, img, delay } = Astro.props;
 ---
 
 <div
   class="card w-full flex flex-col justify-between items-center max-w-[400px]"
+  data-aos="fade-right"
+  data-aos-duration="800"
+  data-aos-delay={delay ? delay : "0"}
+  data-aos-once="true"
 >
   <div class="card_img w-full">
     <img

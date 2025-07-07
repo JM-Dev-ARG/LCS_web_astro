@@ -7,13 +7,19 @@ interface Props {
   descripcion: string;
   img_curso: string;
   url_curso: string;
+  delay?: string;
 }
-const { estado, titulo, descripcion, img_curso, url_curso } = Astro.props;
+const { estado, titulo, descripcion, img_curso, url_curso, delay } =
+  Astro.props;
 ---
 
 <div
   class="card relative w-full flex flex-col justify-between items-center shadow-[10px_10px_0px_#857993] max-w-[400px]"
   data-state={estado ? estado : "active"}
+  data-aos="fade-up"
+  data-aos-duration="800"
+  data-aos-delay={delay ? delay : "0"}
+  data-aos-once="true"
 >
   <div
     class="proximamente z-10 w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat"

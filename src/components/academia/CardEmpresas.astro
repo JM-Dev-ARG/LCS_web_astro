@@ -4,12 +4,17 @@ interface Props {
   descripcion: string;
   img_curso: string;
   url_curso: string;
+  delay?: string;
 }
-const { titulo, descripcion, img_curso, url_curso } = Astro.props;
+const { titulo, descripcion, img_curso, url_curso, delay } = Astro.props;
 ---
 
 <div
   class="card w-full flex flex-col md:flex-row xl:flex-col justify-between items-center shadow-academia xl:max-w-[400px]"
+  data-aos="fade-up"
+  data-aos-duration="800"
+  data-aos-delay={delay ? delay : "0"}
+  data-aos-once="true"
 >
   <div
     class="card_img w-full h-[400px] bg-center bg-no-repeat bg-cover"

@@ -1,4 +1,9 @@
-<div class="parent">
+<div
+  class="parent"
+  data-aos="fade-up"
+  data-aos-duration="800"
+  data-aos-once="true"
+>
   <div class="div1 flex justify-between items-center bg-academia-amarillo1">
     <div class="-skew-x-[10deg] h-full w-full relative">
       <p
@@ -83,14 +88,13 @@
   }
 
   .parent > div {
+    height: 250px;
     width: 100%;
     transform: skewX(10deg);
     box-shadow: 10px 10px 0px #857993;
   }
 
   .div1 {
-    height: 250px;
-
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
 
@@ -101,7 +105,6 @@
   }
 
   .div2 {
-    height: 250px;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
     grid-column-start: 4;
@@ -113,7 +116,6 @@
   }
 
   .div3 {
-    height: 250px;
     grid-column: span 6 / span 6;
     grid-row: span 3 / span 3;
     grid-row-start: 4;
