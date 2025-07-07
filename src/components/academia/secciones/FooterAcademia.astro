@@ -1,26 +1,23 @@
 ---
-import redes from "@/data/redes.json";
+import redes from "@/data/academiaRedes.json";
+import logo from "@/assets/img_academia/logo.avif";
 ---
 
 <footer
   id="footerServices"
-  class=""
+  class="mt-8"
 >
   <div
-    class="absolute w-full h-full bg-[url('/resources/amo-asegurar.svg')] bg-cover bg-center opacity-[0.03]"
-  >
-  </div>
-  <div
-    class="w-[70%] h-full flex flex-col md:flex-row justify-center md:justify-between items-center gap-y-5 py-6"
+    class="w-[70%] h-full flex flex-col md:flex-row justify-center md:justify-between items-center gap-y-5 py-6 border-t-2 border-academia-violeta1"
   >
     <a
-      class="img__container justify-center md:justify-start w-full md:w-[40%] lg:w-[20%]"
+      class="img__container justify-center md:justify-start w-full md:w-[40%] lg:w-[10%]"
       href="/"
       title="Logo La chica del seguro - volver a la página principal"
     >
       <img
         class="w-full"
-        src="/resources/LOGOTIPO-CREMA.svg"
+        src={logo.src}
         alt="Logo La chica del seguro"
         height="auto"
         width="auto"
@@ -34,7 +31,7 @@ import redes from "@/data/redes.json";
         <div class="flex justify-center items-center gap-4">
           {
             redes.map((item) => (
-              <div class="border-2 border-zinc-50 size-[40px] rounded-full flex justify-center items-center hover:scale-[1.1] transition-all duration-200 ease-linear group">
+              <div class="border-2 border-academia-violeta1 bg-academia-violeta3 size-[40px] rounded-full flex justify-center items-center hover:scale-[1.1] transition-all duration-200 ease-linear group">
                 <a
                   href={item.href}
                   target={item.target}
@@ -55,7 +52,9 @@ import redes from "@/data/redes.json";
             ))
           }
         </div>
-        <div class="flex flex-col gap-0 text-xs text-gray-50 text-center">
+        <div
+          class="flex flex-col gap-0 text-xs text-academia-violeta1 text-center"
+        >
           <p>Copyright © 2025 La Chica del Seguro</p>
           <p>Reservados todos los derechos</p>
         </div>
@@ -63,7 +62,7 @@ import redes from "@/data/redes.json";
     </div>
   </div>
 
-  <p class="text-center text-xs font-thin z-50 text-gray-300">
+  <p class="text-center text-xs font-light z-50 text-academia-violeta1">
     Desarrollado por
     <a
       class="cursor-pointer font-medium z-30"
@@ -86,7 +85,6 @@ import redes from "@/data/redes.json";
 
 <style>
   footer {
-    background-color: #202022;
     position: relative;
     height: max-content;
     width: 100%;
@@ -101,10 +99,5 @@ import redes from "@/data/redes.json";
     align-items: center;
     height: 60%;
     z-index: 10;
-
-    & img {
-      mask-image: linear-gradient(#202022 60%, transparent 100%);
-      -webkit-mask-image: linear-gradient(#222020 60%, transparent 100%);
-    }
   }
 </style>

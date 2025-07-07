@@ -2,5 +2,13 @@
   {
     "href": "/",
     "label": "Inicio"
+  },
+  {
+    "href": "/#academia",
+    "label": "Academia de Seguros"
+  },
+  {
+    "href": "/#contacto",
+    "label": "Contacto"
   }
 ]

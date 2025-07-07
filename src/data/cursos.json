@@ -2,28 +2,28 @@
     {
         "titulo": "Negocio de Seguros Digital",
         "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium",
-        "img_curso": "./img/img_academia/hero_movil.avif",
+        "img_curso": "../img/img_academia/hero_movil.avif",
         "url_curso": "/academia/negocio_de_seguros_digital"
     },
     {
         "estado": "inactive",
         "titulo": "Negocio de Seguros Digital",
         "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium",
-        "img_curso": "./img/img_academia/hero_movil.avif",
+        "img_curso": "../img/img_academia/hero_movil.avif",
         "url_curso": "/academia/negocio_de_seguros_digital"
     },
     {
         "estado": "inactive",
         "titulo": "Negocio de Seguros Digital",
         "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium",
-        "img_curso": "./img/img_academia/hero_movil.avif",
+        "img_curso": "../img/img_academia/hero_movil.avif",
         "url_curso": "/academia/negocio_de_seguros_digital"
     },
     {
         "estado": "inactive",
         "titulo": "Negocio de Seguros Digital",
         "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium",
-        "img_curso": "./img/img_academia/hero_movil.avif",
+        "img_curso": "../img/img_academia/hero_movil.avif",
         "url_curso": "/academia/negocio_de_seguros_digital"
     }
 ]

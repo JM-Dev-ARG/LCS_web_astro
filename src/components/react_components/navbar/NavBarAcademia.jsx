@@ -2,16 +2,16 @@ import { useState, useEffect, useRef } from "react";
 import "./navbar.css"
 
 import whatsapp from "@/assets/img_generales/whatsapp.avif"
-import corazon from "@/assets/resources/corazon-paragua.svg"
+import corazon from "@/assets/img_academia/logo.avif"
 
-import navega from "../../../data/navega.json";
-import aprende from "../../../data/aprende.json";
+import navega from "@/data/navegaAcademia.json";
+import aprende from "@/data/aprendeAcademia.json";
 
 let url = window.location.pathname;
 
 
 
-const Navbar = () => {
+const NavbarAcademia = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const navbarMovilRef = useRef();
 
@@ -21,7 +21,7 @@ const Navbar = () => {
         // Obtenemos el href del enlace clickeado (usando currentTarget para mayor precisión)
         const linkHref = e.currentTarget.getAttribute('href');
         // Verificamos si la página actual es la de inicio
-        const isHomePage = window.location.pathname === '/';
+        const isHomePage = window.location.pathname === '/academia';
 
         // Si el enlace es hacia la página de inicio y ya estamos en ella
         if (linkHref === '/' && isHomePage) {
@@ -35,6 +35,7 @@ const Navbar = () => {
 
 
     useEffect(() => {
+
         const closeMenuOnLinkClick = () => setMenuOpen(false);
         const navbarMovilLinks = navbarMovilRef.current.querySelectorAll("a");
 
@@ -57,14 +58,14 @@ const Navbar = () => {
             >
                 <div className="flex items-center justify-between lg:justify-center w-full mx-auto lg:px-3 2xl:px-0 py-3 ">
                     <div className="flex justify-left items-center flex-1 ml-8 ">
-                        <a onClick={handleScrollToTop} href="/" title="boton volver al inicio" >
+                        <a onClick={handleScrollToTop} href="/academia" title="boton volver al inicio" >
                             <img
-                                className={`w-[50px] logo hover:rotate-[15deg] hover:scale-[1.1] transition duration-300 ease-in-out`}
+                                className={`w-[55px] logo hover:rotate-[15deg] hover:scale-[1.1] transition duration-300 ease-in-out`}
                                 src={corazon.src}
-                                alt="Logo Paragua Corazon de La Chica del Seguroo"
+                                alt="Logo Academia de Seguros por LCS"
                                 height="auto"
                                 width="auto"
-                                title="Logo Paragua Corazon de La Chica del Seguro"
+                                title="Logo Academia de Seguros por LCS"
                             />
                         </a>
 
@@ -101,11 +102,11 @@ const Navbar = () => {
                 id="navbar-movil"
                 ref={navbarMovilRef}
 
-                className={`w-full fixed top-0 h-screen flex justify-start items-start bg-[#1d1e1c] z-50 ${menuOpen ? "translate-y-0 bg-opacity-25 " : "-translate-y-full bg-opacity-0"
+                className={`w-full fixed top-0 h-screen flex justify-start items-start bg-academia-negro z-50 ${menuOpen ? "translate-y-0 bg-opacity-25 " : "-translate-y-full bg-opacity-0"
                     } transition-all duration-500 backdrop-grayscale-[.7] backdrop-blur-[10px]`}
             >
                 <div
-                    className={`flex justify-center items-center w-full bg-[#1d1e1c] h-full lg:h-[60%] ${menuOpen ? "opacity-100" : "opacity-0"
+                    className={`flex justify-center items-center w-full bg-academia-negro h-full lg:h-[60%] ${menuOpen ? "opacity-100" : "opacity-0"
                         } transition-opacity duration-500`}
 
                 >
@@ -162,4 +163,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default NavbarAcademia;

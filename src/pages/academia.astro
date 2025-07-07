@@ -11,9 +11,11 @@ import Empresa from "@/components/academia/secciones/Empresa.astro";
 import Presentacion from "@/components/academia/secciones/Presentacion.astro";
 import Preguntas from "@/components/academia/secciones/Preguntas.astro";
 import Opiniones from "@/components/academia/secciones/Opiniones.astro";
+import FooterAcademia from "@/components/academia/secciones/FooterAcademia.astro";
+import LayoutAcademia from "@/layouts/LayoutAcademia.astro";
 ---
 
-<Layout title="La Chica del Seguro - Academia de Seguros">
+<LayoutAcademia title="La Chica del Seguro - Academia de Seguros">
   <main>
     <HeroAcademia />
 
@@ -38,5 +40,6 @@ import Opiniones from "@/components/academia/secciones/Opiniones.astro";
     <Equipo />
     <Preguntas />
     <Opiniones />
+    <FooterAcademia />
   </main>
-</Layout>
+</LayoutAcademia>

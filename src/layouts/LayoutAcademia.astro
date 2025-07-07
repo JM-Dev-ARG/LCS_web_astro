@@ -1,0 +1,230 @@
+---
+import { ClientRouter } from "astro:transitions";
+import Navbar from "../components/react_components/navbar/NavBar";
+import NavbarAcademia from "@/components/react_components/navbar/NavBarAcademia";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>{title}</title>
+
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "La Chica del Seguro",
+        "url": "https://lachicadelseguro.com",
+        "logo": "https://lachicadelseguro.com/resources/Logotipo.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+54-9-11-7062-7152",
+          "contactType": "customer service",
+          "areaServed": "AR",
+          "availableLanguage": "Spanish"
+        },
+        "sameAs": [
+          "https://www.instagram.com/lachica.delseguro",
+          "https://www.linkedin.com/in/micaelatissieresgelsi/",
+          "https://www.facebook.com/lachica.delseguro",
+          "https://www.youtube.com/@lachicadelseguro"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Bolivar 75",
+          "addressLocality": "Chivilcoy",
+          "addressRegion": "Buenos Aires",
+          "postalCode": "6620",
+          "addressCountry": "Argentina"
+        },
+        "description": "La Chica del Seguro es una plataforma educativa y de asesoramiento en seguros, dirigida a mejorar el conocimiento y acceso a seguros para individuos y empresas."
+      }
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Descubre La Chica del Seguro: tu aliada en seguros. Aprende con nuestra Academia de Seguros y conviértete en un asesor digital exitoso."
+    />
+
+    <!-- Facebook Meta Tags -->
+    <meta
+      property="og:url"
+      content="https://lachicadelseguro.com"
+    />
+    <meta
+      property="og:type"
+      content="website"
+    />
+    <meta
+      property="og:title"
+      content="La Chica del Seguro - Inicio"
+    />
+    <meta
+      property="og:description"
+      content="Descubre La Chica del Seguro: tu aliada en seguros. Aprende con nuestra Academia de Seguros y conviértete en un asesor digital exitoso."
+    />
+    <meta
+      property="og:image"
+      content="/resources/ISOTIPO.svg"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+    <meta
+      property="twitter:domain"
+      content="lachicadelseguro.com"
+    />
+    <meta
+      property="twitter:url"
+      content="https://lachicadelseguro.com"
+    />
+    <meta
+      name="twitter:title"
+      content="La Chica del Seguro - Inicio"
+    />
+    <meta
+      name="twitter:description"
+      content="Descubre La Chica del Seguro: tu aliada en seguros. Aprende con nuestra Academia de Seguros y conviértete en un asesor digital exitoso."
+    />
+    <meta
+      name="twitter:image"
+      content="/resources/ISOTIPO.svg"
+    />
+
+    <link
+      rel="canonical"
+      href="https://lachicadelseguro.com/"
+    />
+
+    <meta
+      name="keywords"
+      content="La Chica del Seguro, Conciencia aseguradora, Asesor de seguros digital, Academia de seguros online, Formación en seguros, Seguros patrimoniales,Seguros de personas, Seguros de viajes, Consultoría en seguros, Marketing en seguros"
+    />
+
+    <meta
+      name="robots"
+      content="index, follow"
+    />
+    <meta
+      name="author"
+      content="Ice-Dev para Panambi"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/resources/ISO-BLANCO.svg"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/resources/ISO-BLANCO.svg"
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
+
+    <link
+      rel="stylesheet"
+      href="../../src/fonts.css"
+    />
+
+    <ClientRouter />
+
+    <!-- Meta Pixel Code -->
+    <script>
+      // @ts-ignore
+      !(function (f, b, e, v, n, t, s) {
+        // @ts-ignore
+        if (f.fbq) return;
+        // @ts-ignore
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        // @ts-ignore
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      // @ts-ignore
+      fbq("init", "647751594290477");
+      // @ts-ignore
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=647751594290477&ev=PageView&noscript=1"
+        title="img pixel facebook"
+      /></noscript
+    >
+    <!-- End Meta Pixel Code -->
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Z3S5K1WZQX"
+    ></script>
+    <script>
+      // @ts-ignore
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        // @ts-ignore
+        dataLayer.push(arguments);
+      }
+      // @ts-ignore
+      gtag("js", new Date());
+      // @ts-ignore
+      gtag("config", "G-Z3S5K1WZQX");
+    </script>
+  </head>
+  <body class="font-sans font-light">
+    <NavbarAcademia client:only="preact" />
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    interpolate-size: allow-keywords;
+    scrollbar-color: #cbb2d7 #edeeb279;
+  }
+
+  html {
+    background-color: #fff5eb;
+    scroll-behavior: smooth;
+  }
+</style>

@@ -2,19 +2,19 @@
     {
         "titulo": "Regala un curso",
         "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium",
-        "img_curso": "./img/img_academia/regalo.avif",
+        "img_curso": "../img/img_academia/regalo.avif",
         "url_curso": "/academia/negocio_de_seguros_digital"
     },
     {
         "titulo": "Regala un descuento",
         "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium",
-        "img_curso": "./img/img_academia/descuento.avif",
+        "img_curso": "../img/img_academia/descuento.avif",
         "url_curso": "/academia/negocio_de_seguros_digital"
     },
     {
         "titulo": "In-Company",
         "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium",
-        "img_curso": "./img/img_academia/capacitacion.avif",
+        "img_curso": "../img/img_academia/capacitacion.avif",
         "url_curso": "/academia/negocio_de_seguros_digital"
     }
 ]

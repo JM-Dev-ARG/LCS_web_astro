@@ -50,29 +50,31 @@ const { estado, titulo, descripcion, img_curso, url_curso } = Astro.props;
 </div>
 
 <script>
-  const cards = document.querySelectorAll(".card");
+  document.addEventListener("astro:page-load", () => {
+    const cards = document.querySelectorAll(".card");
 
-  cards.forEach((card: HTMLElement) => {
-    const estado = card.dataset.state;
+    cards.forEach((card: HTMLElement) => {
+      const estado = card.dataset.state;
 
-    if (estado === "inactive") {
-      // Solo selecciona los elementos dentro de esta tarjeta
-      const proximamenteEls = card.querySelectorAll(".proximamente");
-      const descripcion = card.querySelector(".descripcion");
-      const cardImg = card.querySelector(".card_img");
+      if (estado === "inactive") {
+        // Solo selecciona los elementos dentro de esta tarjeta
+        const proximamenteEls = card.querySelectorAll(".proximamente");
+        const descripcion = card.querySelector(".descripcion");
+        const cardImg = card.querySelector(".card_img");
 
-      // Agrega la clase `absolute` solo si está inactiva
-      proximamenteEls.forEach((el) => {
-        el.classList.add("absolute");
-      });
+        // Agrega la clase `absolute` solo si está inactiva
+        proximamenteEls.forEach((el) => {
+          el.classList.add("absolute");
+        });
 
-      if (cardImg) {
-        cardImg.classList.add("grayscale", "opacity-50");
+        if (cardImg) {
+          cardImg.classList.add("grayscale", "opacity-50");
+        }
+
+        if (descripcion) {
+          descripcion.classList.add("grayscale", "opacity-50");
+        }
       }
-
-      if (descripcion) {
-        descripcion.classList.add("grayscale", "opacity-50");
-      }
-    }
+    });
   });
 </script>

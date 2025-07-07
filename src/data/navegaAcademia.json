@@ -1,0 +1,26 @@
+[
+    {
+        "href": "./",
+        "label": "LCS - Inicio"
+    },
+    {
+        "href": "/academia/#cursos",
+        "label": "Cursos, mentorias y más"
+    },
+    {
+        "href": "/academia/#empresas",
+        "label": "Servicios para empresas"
+    },
+    {
+        "href": "/academia/#equipo",
+        "label": "Los que saben"
+    },
+    {
+        "href": "/academia/#preguntas_frecuentes",
+        "label": "Preguntas frecuentes"
+    },
+    {
+        "href": "/academia/#opiniones",
+        "label": "Opiniones"
+    }
+]

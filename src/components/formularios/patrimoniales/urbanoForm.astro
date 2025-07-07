@@ -1,10 +1,12 @@
 ---
-import InputForm from "../../components/react_components/formsComponents/InputForm";
-import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
-import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
+import InputForm from "@/components/react_components/formsComponents/InputForm";
+import ServicesForm from "@/components/react_components/servicesForm/ServicesForm";
+import LayoutContactoServicios from "@/layouts/LayoutContactoServicios.astro";
 const path = Astro.url.pathname;
 const basePath = path.split("/")[1];
 const result = `/${basePath}`;
+const apiPatrimoniales = import.meta.env.PATRIMONIALES_API_URL;
+const apiDefault = import.meta.env.DEFAULT_API_URL;
 ---
 
 <LayoutContactoServicios
@@ -17,7 +19,8 @@ const result = `/${basePath}`;
     <section class="flex h-full w-[80%] justify-center items-center">
       <ServicesForm
         client:only="react"
-        placeholderMensaje={""}
+        urlFetchDefault={apiDefault}
+        urlFetchPatrimonieales={apiPatrimoniales}
       >
         <InputForm
           name="Edad"

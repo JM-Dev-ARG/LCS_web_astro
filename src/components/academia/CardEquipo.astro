@@ -13,8 +13,8 @@ const { titulo, descripcion, img } = Astro.props;
   <div class="card_img w-full">
     <img
       class="drop-shadow-academia object-cover"
-      src="/img/img_academia/micaela.avif"
-      alt="equipo"
+      src={img}
+      alt={"Imagen de " + titulo}
     />
   </div>
   <div
