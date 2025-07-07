@@ -1,6 +1,7 @@
 ---
 import redes from "@/data/academiaRedes.json";
 import logo from "@/assets/img_academia/logo.avif";
+import logoCentro from "@/assets/img_academia/logo_centro.avif";
 ---
 
 <footer
@@ -11,17 +12,17 @@ import logo from "@/assets/img_academia/logo.avif";
     class="w-[70%] h-full flex flex-col md:flex-row justify-center md:justify-between items-center gap-y-5 py-6 border-t-2 border-academia-violeta1"
   >
     <a
-      class="img__container justify-center md:justify-start w-full md:w-[40%] lg:w-[10%]"
-      href="/"
-      title="Logo La chica del seguro - volver a la página principal"
+      class="img__container relative justify-center md:justify-start w-[40%] md:w-[30%] lg:w-[20%] xl:w-[12%]"
+      href="/academia"
+      title="Logo Academia de Seguros de La Chica del Seguro - volver al inicio"
     >
       <img
-        class="w-full"
-        src={logo.src}
-        alt="Logo La chica del seguro"
+        class="w-full relative img__animado"
+        src={logoCentro.src}
+        alt="Logo Academia de Seguros de La Chica del Seguro"
         height="auto"
         width="auto"
-        title="Logo La chica del seguro"
+        title="Logo Academia de Seguros de La Chica del Seguro"
       />
     </a>
     <div
@@ -99,5 +100,28 @@ import logo from "@/assets/img_academia/logo.avif";
     align-items: center;
     height: 60%;
     z-index: 10;
+  }
+
+  .img__container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../../public/img/img_academia/borde.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: rotar 40s linear infinite;
+  }
+
+  @keyframes rotar {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 </style>
