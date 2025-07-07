@@ -61,7 +61,7 @@ async function submit(e) {
 
 
 // Componente principal del formulario
-export default function DescargableForm() {
+export default function DescargableAcademiaForm() {
     const date = `${new Date().getUTCDate()}/${new Date().getUTCMonth() + 1}/${new Date().getUTCFullYear()}`;
     return (
         <div className=" w-full flex justify-center items-center  z-10">
@@ -79,7 +79,7 @@ export default function DescargableForm() {
                             </label>
                             <input
                                 required
-                                className="flex-1 rounded-full px-4 py-2 max-h-[30px] lg:max-h-[40px]"
+                                className="campo flex-1 shadow-academia-boton px-4 py-2 max-h-[30px] lg:max-h-[40px]"
                                 type="text"
                                 id="Nombre"
                                 name="Nombre"
@@ -94,7 +94,7 @@ export default function DescargableForm() {
                             </label>
                             <input
                                 required
-                                className="flex-1 rounded-full px-4 py-2 max-h-[30px] lg:max-h-[40px]"
+                                className="campo flex-1 shadow-academia-boton px-4 py-2 max-h-[30px] lg:max-h-[40px]"
                                 type="text"
                                 id="Apellido"
                                 name="Apellido"
@@ -111,7 +111,7 @@ export default function DescargableForm() {
                             </label>
                             <input
                                 required
-                                className="flex-1 rounded-full px-4 py-2 max-h-[30px] lg:max-h-[40px]"
+                                className="campo flex-1 shadow-academia-boton px-4 py-2 max-h-[30px] lg:max-h-[40px] "
                                 type="email"
                                 id="Email"
                                 name="Email"
@@ -123,7 +123,7 @@ export default function DescargableForm() {
 
                         <div className="w-full flex justify-center ">
                             <button
-                                className="background grid place-items-center w-[clamp(110px,10vw,150px)]   h-[40px] text-[clamp(18px,10vw,20px)] rounded-full "
+                                className="bg-academia-amarillo1 px-8 py-2 text-academia-negro font-semibold text-xl shadow-academia-boton hover:translate-x-[5px] hover:translate-y-[5px] hover:shadow-none transition-all duration-300 ease-in"
                                 type="submit">
                                 Enviar
                             </button>
