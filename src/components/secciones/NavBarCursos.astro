@@ -1,0 +1,68 @@
+---
+import Whatsapp from "../reutilizables/whatsapp.astro";
+import logo from "@/assets/img_academia/logo_centro.avif";
+
+interface Props {
+  url_curso?: string;
+}
+const { url_curso } = Astro.props;
+---
+
+<nav
+  id="navbar"
+  class="w-full grid place-items-center fixed z-50"
+>
+  <div
+    class="flex items-center justify-between lg:justify-center w-full mx-auto lg:px-3 2xl:px-0 py-3"
+  >
+    <div class="flex justify-left items-center flex-1 ml-8">
+      <a
+        href="/academia"
+        title="Logo Academia de Seguros de La Chica del Seguro  - volver a la página Academia de Seguros de La Chica del Seguro"
+      >
+        <img
+          loading="lazy"
+          class="w-[70px] scale-150 logo hover:rotate-[15deg] hover:scale-125 transition duration-300 ease-in-out"
+          src={logo.src}
+          alt="Logo Academia de Seguros de La Chica del Seguro"
+          height="auto"
+          width="auto"
+          title="Logo Academia de Seguros de La Chica del Seguro"
+        /></a
+      >
+    </div>
+
+    <div>
+      <div class="flex justify-end items-center flex-1 mr-8 gap-8">
+        <a
+          href=`${url_curso}`
+          class="bg-academia-violeta1 px-8 py-2 text-gray-50 font-normal text-xl shadow-academia-boton hover:translate-x-[5px] hover:translate-y-[5px] hover:shadow-none transition-all duration-300 ease-in"
+          >Adquirir</a
+        >
+
+        <Whatsapp />
+
+        <a
+          href="/academia"
+          title="Ir a la sección Academia de Seguros"
+          ><svg
+            class="w-[50px] stroke-academia-violeta2 hover:scale-[1.1] hover:stroke-academia-violeta1 transition duration-300"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-back-up"
+            ><path
+              stroke="none"
+              d="M0 0h24v24H0z"
+              fill="none"
+            ></path><path d="M9 14l-4 -4l4 -4"></path><path
+              d="M5 10h11a4 4 0 1 1 0 8h-1"></path></svg
+          ></a
+        >
+      </div>
+    </div>
+  </div>
+</nav>

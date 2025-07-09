@@ -12,6 +12,9 @@ import FooterAcademia from "@/components/academia/secciones/FooterAcademia.astro
 import LayoutAcademia from "@/layouts/LayoutAcademia.astro";
 import DescargableAcademia from "@/components/academia/DescargableAcademia.astro";
 import DescargableAcademiaForm from "../components/react_components/descargableAcademia/DescargableAcademiaForm.jsx";
+import dataOpiniones from "@/data/opiniones.json";
+import dataPreguntas from "@/data/preguntas.json";
+import dataEquipo from "@/data/equipo.json";
 ---
 
 <LayoutAcademia title="La Chica del Seguro - Academia de Seguros">
@@ -36,9 +39,36 @@ import DescargableAcademiaForm from "../components/react_components/descargableA
     <Soluciones />
     <Cursos />
     <Empresa />
-    <Equipo />
-    <Preguntas />
-    <Opiniones />
+    <Equipo
+      data={dataEquipo}
+      id="equipo"
+      titulo1="Te presentamos a"
+      titulo2="Nuestros expertos"
+      contenido_before="Equipo"
+      descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea, nihil deleniti maiores aspernatur in unde non illum aliquid placeat autem?"
+    />
+    <Preguntas
+      data={dataPreguntas}
+      id="preguntas_frecuentes"
+      titulo1="¿Tenes preguntas?"
+      titulo2="Tenemos las respuestas"
+      contenido_before="Preguntas"
+      descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea, nihil deleniti maiores aspernatur in unde non illum aliquid placeat autem?"
+    />
+    <Opiniones
+      data={dataOpiniones}
+      id="opiniones"
+      titulo1="Algunos de nuestros clientes"
+      titulo2="opinan de nosotros"
+      contenido_before="Opiniones"
+      descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea, nihil deleniti maiores aspernatur in unde non illum aliquid placeat autem?"
+    />
     <FooterAcademia />
   </main>
 </LayoutAcademia>
+
+id="equipo" titulo1="Te presentamos a" titulo2="Nuestros expertos"
+contenido_before="Equipo" descripcion="Lorem ipsum dolor sit amet consectetur
+adipisicing elit. Nemo cum alias atque voluptatibus recusandae? Quam, expedita.
+Quisquam quibusdam ea, nihil deleniti maiores aspernatur in unde non illum
+aliquid placeat autem?"

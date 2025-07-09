@@ -1,15 +1,25 @@
 ---
 import SeccionCompleta from "../SeccionCompleta.astro";
-import data from "@/data/equipo.json";
 import CardEquipo from "../CardEquipo.astro";
+
+interface Props {
+  data?: { titulo: string; descripcion: string; img: string }[];
+  id: string;
+  titulo1: string;
+  titulo2: string;
+  contenido_before: string;
+  descripcion?: string; // Define any props if needed
+}
+const { data, id, titulo1, titulo2, contenido_before, descripcion } =
+  Astro.props;
 ---
 
 <SeccionCompleta
-  id="equipo"
-  titulo1="Te presentamos a"
-  titulo2="Nuestros expertos"
-  contenido_before="Equipo"
-  descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea, nihil deleniti maiores aspernatur in unde non illum aliquid placeat autem?"
+  id={id}
+  titulo1={titulo1}
+  titulo2={titulo2}
+  contenido_before={contenido_before}
+  descripcion={descripcion}
 >
   <div
     class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center mt-8 mb-12 w-full place-items-center"

@@ -1,10 +1,52 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import LayoutServicios from "@/layouts/LayoutServicios.astro";
+//data
+import dataPreguntas from "@/data/preguntas.json";
+import dataOpiniones from "@/data/opiniones.json";
+import dataEquipo from "@/data/equipo.json";
+
+//components
+import LayoutCursos from "@/layouts/LayoutCursos.astro";
+import FooterAcademia from "@/components/academia/secciones/FooterAcademia.astro";
+import Opiniones from "@/components/academia/secciones/Opiniones.astro";
+import Preguntas from "@/components/academia/secciones/Preguntas.astro";
+import Equipo from "@/components/academia/secciones/Equipo.astro";
+
+const profesor = "Micaela Tissieres Gelsi";
+function getProfesor(data, profesor) {
+  const arrayProfesores = [];
+  const profesorData = data.find((item) => item.titulo === profesor);
+  if (!profesorData) {
+    return null;
+  }
+  arrayProfesores.push(profesorData);
+  return arrayProfesores;
+}
+const profesorData = getProfesor(dataEquipo, profesor);
 ---
 
-<Layout title="La Chica del Seguro - Negocio de Seguros Digital">
+<LayoutCursos title="LCS - Academia de Seguros - Negocio de Seguros Digital">
   <main>
-    <h1>Negocio de Seguros Digital</h1>
+    <Equipo
+      data={profesorData}
+      id="equipo"
+      titulo1="Te presentamos a"
+      titulo2="Nuestros expertos"
+      contenido_before="Equipo"
+    />
+    <Preguntas
+      data={dataPreguntas}
+      id="preguntas_frecuentes"
+      titulo1="¿Tenes preguntas?"
+      titulo2="Tenemos las respuestas"
+      contenido_before="Preguntas"
+    />
+    <Opiniones
+      data={dataOpiniones}
+      id="opiniones"
+      titulo1="Algunos de nuestros clientes"
+      titulo2="opinan de nosotros"
+      contenido_before="Opiniones"
+    />
+    <FooterAcademia />
   </main>
-</Layout>
+</LayoutCursos>
