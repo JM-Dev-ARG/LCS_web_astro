@@ -2,7 +2,7 @@
 //data
 import dataPreguntas from "@/data/preguntas.json";
 import dataOpiniones from "@/data/opiniones.json";
-import dataEquipo from "@/data/equipo.json";
+import dataProfesor from "@/data/profesor.json";
 
 //components
 import LayoutCursos from "@/layouts/LayoutCursos.astro";
@@ -10,6 +10,7 @@ import FooterAcademia from "@/components/academia/secciones/FooterAcademia.astro
 import Opiniones from "@/components/academia/secciones/Opiniones.astro";
 import Preguntas from "@/components/academia/secciones/Preguntas.astro";
 import Equipo from "@/components/academia/secciones/Equipo.astro";
+import PresentacionCurso from "@/components/academia/PresentacionCurso.astro";
 
 const profesor = "Micaela Tissieres Gelsi";
 function getProfesor(data, profesor) {
@@ -21,17 +22,24 @@ function getProfesor(data, profesor) {
   arrayProfesores.push(profesorData);
   return arrayProfesores;
 }
-const profesorData = getProfesor(dataEquipo, profesor);
+const profesorData = getProfesor(dataProfesor, profesor);
 ---
 
 <LayoutCursos title="LCS - Academia de Seguros - Negocio de Seguros Digital">
   <main>
+    <PresentacionCurso
+      id="presentacion"
+      titulo1="Curso de "
+      titulo2="Negocio de Seguros Digital"
+      titulo3="100% digital?"
+      contenido_before="Bienvenido"
+    />
     <Equipo
       data={profesorData}
-      id="equipo"
-      titulo1="Te presentamos a"
-      titulo2="Nuestros expertos"
-      contenido_before="Equipo"
+      id="profesor"
+      titulo1="Conoce a tu proximo"
+      titulo2="Profesor"
+      contenido_before="Profesor"
     />
     <Preguntas
       data={dataPreguntas}

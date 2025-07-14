@@ -1,6 +1,7 @@
 ---
 import SeccionCompleta from "../SeccionCompleta.astro";
 import CardEquipo from "../CardEquipo.astro";
+import CardProfesor from "../CardProfesor.astro";
 
 interface Props {
   data?: { titulo: string; descripcion: string; img: string }[];
@@ -21,18 +22,26 @@ const { data, id, titulo1, titulo2, contenido_before, descripcion } =
   contenido_before={contenido_before}
   descripcion={descripcion}
 >
-  <div
-    class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center mt-8 mb-12 w-full place-items-center"
-  >
-    {
-      data.map((item, index) => (
-        <CardEquipo
-          titulo={item.titulo}
-          descripcion={item.descripcion}
-          img={item.img}
-          delay={(index * 200).toString()}
+  {
+    data.length > 1 ? (
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center mt-8 mb-12 w-full place-items-center">
+        {data.map((item, index) => (
+          <CardEquipo
+            titulo={item.titulo}
+            descripcion={item.descripcion}
+            img={item.img}
+            delay={(index * 200).toString()}
+          />
+        ))}
+      </div>
+    ) : (
+      <div class="w-full flex justify-center items-center mt-8 mb-12">
+        <CardProfesor
+          titulo={data[0].titulo}
+          descripcion={data[0].descripcion}
+          img={data[0].img}
         />
-      ))
-    }
-  </div>
+      </div>
+    )
+  }
 </SeccionCompleta>
