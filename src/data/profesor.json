@@ -1,7 +1,20 @@
 [
   {
     "titulo": "Micaela Tissieres Gelsi",
-    "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium ",
+    "descripcion": [
+      {
+        "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium"
+      },
+      {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+      },
+      {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+      },
+      {
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+      }
+    ],
     "img": "../img/img_academia/micaela.avif"
   },
   {

@@ -1,5 +1,6 @@
 ---
 import Container from "../reutilizables/Container.astro";
+import BotonAcademia from "./BotonAcademia.astro";
 import TituloAcademia from "./TituloAcademia.astro";
 import img from "@/assets/img_academia/hero_movil.avif";
 
@@ -9,7 +10,7 @@ interface Props {
   titulo2: string;
   titulo3?: string;
   descripcion?: string;
-  contenido_before: string;
+  contenido_before?: string;
 }
 
 const { id, titulo1, titulo2, titulo3, descripcion, contenido_before } =
@@ -21,9 +22,13 @@ const { id, titulo1, titulo2, titulo3, descripcion, contenido_before } =
   class="pt-10 w-full relative before:absolute before:top-0 before:right-0 before:w-full before:h-[clamp(150px,20vw,300px)] before:opacity-[0.04] before:z-[-1] before:text-[#190f59] before:text-[clamp(100px,13vw,300px)] before:font-light before:tracking-tighter before:text-right before:flex before:items-center before:justify-end overflow-hidden"
   style={`--contenido-before: \"${contenido_before}\";`}
 >
-  <Container classname="relative top-0 md:pt-5 lg:pt-10 xl:pt-20">
-    <div class="w-full flex justify-between items-center bg-red-200">
-      <div class="w-2/3 h-full flex justify-start items-center">
+  <Container classname="relative top-0 py-12 lg:py-14 ">
+    <div
+      class="w-full flex flex-col-reverse lg:flex-row gap-4 justify-between items-center"
+    >
+      <div
+        class="w-full lg:w-2/3 h-full flex flex-col justify-start items-center"
+      >
         <h2
           class=`w-full flex flex-col items-start justify-center leading-tight  text-academia-negro`
         >
@@ -57,7 +62,7 @@ const { id, titulo1, titulo2, titulo3, descripcion, contenido_before } =
         <!-- <TituloAcademia titulo1={titulo1} titulo2={titulo2} titulo3={titulo3} /> -->
         <div class={`${descripcion ? "grid w-full pt-4 " : "hidden"}`}>
           <span
-            class="text-left text-[clamp(1rem,2.2vw,1.3rem)] text-academia-negro text-pretty w-full lg:w-[80%]"
+            class="text-left text-[clamp(1rem,2.2vw,1.3rem)] text-academia-negro text-pretty w-full lg:w-[80%] mt-4"
             data-aos="fade-right"
             data-aos-duration="800"
             data-aos-delay="400"
@@ -65,8 +70,15 @@ const { id, titulo1, titulo2, titulo3, descripcion, contenido_before } =
             >{descripcion}
           </span>
         </div>
+        <div class="flex justify-center items-center w-full mt-8">
+          <a
+            href=`/academia`
+            class="bg-academia-violeta1 px-8 py-2 text-gray-50 font-normal text-3xl shadow-academia-boton hover:translate-x-[5px] hover:translate-y-[5px] hover:shadow-none transition-all duration-300 ease-in"
+            >¿Empezamos?</a
+          >
+        </div>
       </div>
-      <div class="w-1/3 flex justify-center items-center">
+      <div class="w-full lg:w-1/3 flex justify-center items-center">
         <img
           src={img.src}
           alt="imagen de presentacion"
