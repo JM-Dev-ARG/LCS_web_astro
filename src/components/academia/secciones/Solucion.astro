@@ -1,0 +1,42 @@
+---
+import data from "../../../data/cursos.json";
+import SeccionCompleta from "../SeccionCompleta.astro";
+import CardCursos from "../CardCursos.astro";
+import CardRetos from "../CardRetos.astro";
+import imagen from "@/assets/img_academia/hero_web.avif";
+---
+
+<SeccionCompleta
+  id="retos"
+  titulo1="Sabemos que te enfrentas"
+  titulo2="Nuevos Retos y Desafíos"
+  contenido_before="Retos"
+  descripcion="Transformá tu forma de comercializar seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus ventas con nuestros cursos,  mentorías y asesorías diseñadas para el nuevo mercado."
+>
+  <div
+    class="grid grid-cols-1 lg:grid-cols-2 gap-6 place-items-center mt-8 mb-12 w-full xl:w-[80%]"
+  >
+    <div class="w-full flex flex-col justify-center items-center gap-4">
+      {
+        data.map((item, index) => (
+          <CardRetos
+            titulo={item.titulo}
+            texto={item.descripcion}
+            delay={(index * 200).toString()}
+          />
+        ))
+      }
+    </div>
+    <div class="w-full h-full hidden lg:grid place-items-center mx-auto">
+      <img
+        loading="lazy"
+        class="size-[80%] object-cover object-center shadow-academia"
+        src={imagen.src}
+        alt="Imagen del curso Negocio de Seguros Digital"
+        height="auto"
+        width="auto"
+        title="Imagen del curso Negocio de Seguros Digital"
+      />
+    </div>
+  </div>
+</SeccionCompleta>

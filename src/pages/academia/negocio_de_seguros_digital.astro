@@ -11,6 +11,7 @@ import Opiniones from "@/components/academia/secciones/Opiniones.astro";
 import Preguntas from "@/components/academia/secciones/Preguntas.astro";
 import Equipo from "@/components/academia/secciones/Equipo.astro";
 import PresentacionCurso from "@/components/academia/PresentacionCurso.astro";
+import Retos from "@/components/academia/secciones/Retos.astro";
 
 const profesor = "Micaela Tissieres Gelsi";
 function getProfesor(data, profesor) {
@@ -31,10 +32,11 @@ const profesorData = getProfesor(dataProfesor, profesor);
       id="presentacion"
       titulo1="Curso de "
       titulo2="Negocio de Seguros Digital"
-      titulo3="100% digital?"
       descripcion="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium"
       contenido_before=""
     />
+    <Retos />
+
     <Equipo
       data={profesorData}
       id="profesor"
