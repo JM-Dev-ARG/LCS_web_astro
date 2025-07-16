@@ -20,9 +20,9 @@ import Retos from "@/components/academia/secciones/Retos.astro";
 import Solucion from "@/components/academia/secciones/Solucion.astro";
 
 const profesor = "Micaela Tissieres Gelsi";
-function getProfesor(data, profesor) {
+function getProfesor(data: any, profesor: string) {
   const arrayProfesores = [];
-  const profesorData = data.find((item) => item.titulo === profesor);
+  const profesorData = data.find((item: any) => item.titulo === profesor);
   if (!profesorData) {
     return null;
   }
@@ -84,9 +84,3 @@ const profesorData = getProfesor(dataProfesor, profesor);
     <FooterAcademia />
   </main>
 </LayoutCursos>
-
-id="solucion" titulo1="En este curso" titulo2="Vas a aprender"
-contenido_before="Solución" descripcion="Transformá tu forma de comercializar
-seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus
-ventas con nuestros cursos, mentorías y asesorías diseñadas para el nuevo
-mercado."
