@@ -19,24 +19,28 @@ type Props = {
   title4: string;
   title5: string;
   title6: string;
+  title7: string;
   datacontent1: string;
   datacontent2: string;
   datacontent3: string;
   datacontent4: string;
   datacontent5: string;
   datacontent6: string;
+  datacontent7: string;
   databullet1?: Array<string>;
   databullet2?: Array<string>;
   databullet3?: Array<string>;
   databullet4?: Array<string>;
   databullet5?: Array<string>;
   databullet6?: Array<string>;
+  databullet7?: Array<string>;
   dataform1: string;
   dataform2: string;
   dataform3: string;
   dataform4: string;
   dataform5: string;
   dataform6: string;
+  dataform7: string;
 };
 const {
   title1,
@@ -45,24 +49,28 @@ const {
   title4,
   title5,
   title6,
+  title7,
   datacontent1,
   datacontent2,
   datacontent3,
   datacontent4,
   datacontent5,
   datacontent6,
+  datacontent7,
   databullet1,
   databullet2,
   databullet3,
   databullet4,
   databullet5,
   databullet6,
+  databullet7,
   dataform1,
   dataform2,
   dataform3,
   dataform4,
   dataform5,
   dataform6,
+  dataform7,
 } = Astro.props;
 ---
 
@@ -246,6 +254,37 @@ const {
     </a>
   </div>
 
+  <div
+    class="card7 card"
+    data-content={datacontent7}
+    data-form={dataform7}
+  >
+    <div class="w-full h-full flex ml-4 title">
+      <p class="text-gray-50 texto font-light">{title7}</p>
+    </div>
+
+    <div
+      class=`absolute  w-full h-full opacity-80 bg-cover bg-center bg-no-repeat`
+      style={`background-image: url(${emprendedor.src})`}
+    >
+    </div>
+    <a
+      href={dataform7}
+      class="ver__mas"
+      title={datacontent7}
+    >
+      <p class="detail">
+        {datacontent7}
+        {
+          databullet6
+            ? databullet6.map((item) => <DataBulletBentoCard text={item} />)
+            : ""
+        }
+        <ButtonBentoCard text="Agenda tu cita" />
+      </p>
+    </a>
+  </div>
+
   <style>
     .grid__container {
       position: relative;
@@ -254,8 +293,9 @@ const {
       grid:
         "card1 card1 card1 card1 card1 card1 card2 card2 card2 card2 card2 card2" 1fr
         "card3 card3 card3 card3 card3 card4 card4 card4 card4 card4 card4 card4" 1fr
-        "card5 card5 card5 card5 card5 card5 card5 card6 card6 card6 card6 card6" 1fr
-        / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        "card7 card7 card7 card7 card7 card7 card7 card7 card7 card7 card7 card7" 1fr
+        "card5 card5 card5 card5 card5 card5 card6 card6 card6 card6 card6 card6" 1fr
+        / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       gap: 18px;
     }
 
@@ -350,6 +390,9 @@ const {
     }
     .card6 {
       grid-area: card6;
+    }
+    .card7 {
+      grid-area: card7;
     }
 
     .detail {

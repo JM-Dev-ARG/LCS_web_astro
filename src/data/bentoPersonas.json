@@ -6,6 +6,7 @@
         "title4": "FONDO EDUCATIVO",
         "title5": "INDEPENDENCIA ECONOMICA",
         "title6": "EMPRENDEDOR",
+        "title7": "FONDO DE CESE",
         "datacontent1": "Sólo construimos futuro cuando aseguramos bien el presente. Protección 100% y todos riesgo. ",
         "datacontent2": "Ahorrar es el hábito de la abundancia y es garantizar tu estabilidad financiera. ",
         "databullet2": [
@@ -19,11 +20,13 @@
         "datacontent4": "Sabías que acompañar a tu hijo en su escolaridad cuesta desde 50 mil dólares? Si querés tener todo resuelto y disfrutar de ese viaje comenzá planificando hoy.",
         "datacontent5": "¿Vivir para trabajar o trabajar para vivir? El tiempo es el recurso más valioso, invertilo en vos. Si pones tus esfuerzos y tu dinero en la dirección correcta todo es más fácil. ",
         "datacontent6": "Emprender es un camino excitante pero difícil. Nadie planea fracasar pero fracasan por no planificar. Tiempo y dinero son los recursos más importantes. Podemos acompañarte asegurando tu emprendimiento 100%.",
+        "datacontent7": "El fondo de cesantía es un ahorro que te permite enfrentar situaciones inesperadas. Es un respaldo económico que te da tranquilidad y seguridad en momentos difíciles.",
         "dataform1": "/personas/proteccionForm",
         "dataform2": "/personas/libreForm",
         "dataform3": "/personas/retiroForm",
         "dataform4": "/personas/feducativoForm",
         "dataform5": "/personas/independenciaForm",
-        "dataform6": "/personas/emprendedorForm"
+        "dataform6": "/personas/emprendedorForm",
+        "dataform7": "/personas/ceseForm"
     }
 ]
