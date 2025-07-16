@@ -1,7 +1,5 @@
 ---
 import { ClientRouter } from "astro:transitions";
-import Navbar from "../components/react_components/navbar/NavBar";
-import NavbarAcademia from "@/components/react_components/navbar/NavBarAcademia";
 import NavBarCursos from "@/components/secciones/NavBarCursos.astro";
 
 interface Props {
@@ -229,3 +227,9 @@ const { title } = Astro.props;
     scroll-behavior: smooth;
   }
 </style>
+
+<script>
+  import AOS from "aos";
+  import "aos/dist/aos.css";
+  AOS.init();
+</script>

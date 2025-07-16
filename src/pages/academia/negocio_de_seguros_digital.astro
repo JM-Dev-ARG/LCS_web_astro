@@ -17,7 +17,7 @@ import Preguntas from "@/components/academia/secciones/Preguntas.astro";
 import Equipo from "@/components/academia/secciones/Equipo.astro";
 import PresentacionCurso from "@/components/academia/PresentacionCurso.astro";
 import Retos from "@/components/academia/secciones/Retos.astro";
-import Solucion from "@/components/academia/secciones/Solucion.astro";
+import SolucionCursos from "@/components/academia/secciones/SolucionCursos.astro";
 
 const profesor = "Micaela Tissieres Gelsi";
 function getProfesor(data: any, profesor: string) {
@@ -51,7 +51,7 @@ const profesorData = getProfesor(dataProfesor, profesor);
       img={imagenRetos.src}
     />
 
-    <Solucion
+    <SolucionCursos
       data={dataSolucion}
       id="solucion"
       titulo1="En este curso"
