@@ -3,6 +3,11 @@
 import dataPreguntas from "@/data/preguntas.json";
 import dataOpiniones from "@/data/opiniones.json";
 import dataProfesor from "@/data/profesor.json";
+import dataRetos from "@/data/cursos.json";
+import dataSolucion from "@/data/solucion.json";
+
+//imagenes
+import imagenRetos from "@/assets/img_academia/hero_web.avif";
 
 //components
 import LayoutCursos from "@/layouts/LayoutCursos.astro";
@@ -12,6 +17,7 @@ import Preguntas from "@/components/academia/secciones/Preguntas.astro";
 import Equipo from "@/components/academia/secciones/Equipo.astro";
 import PresentacionCurso from "@/components/academia/PresentacionCurso.astro";
 import Retos from "@/components/academia/secciones/Retos.astro";
+import Solucion from "@/components/academia/secciones/Solucion.astro";
 
 const profesor = "Micaela Tissieres Gelsi";
 function getProfesor(data, profesor) {
@@ -30,15 +36,32 @@ const profesorData = getProfesor(dataProfesor, profesor);
   <main>
     <PresentacionCurso
       id="presentacion"
-      titulo1="Curso de "
+      titulo1="Curso de"
       titulo2="Negocio de Seguros Digital"
       descripcion="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium"
       contenido_before=""
     />
-    <Retos />
+    <Retos
+      data={dataRetos}
+      id="retos"
+      titulo1="Sabemos que te enfrentas"
+      titulo2="Nuevos Retos y Desafíos"
+      contenido_before="Retos"
+      descripcion="Transformá tu forma de comercializar seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus ventas con nuestros cursos, mentorías y asesorías diseñadas para el nuevo mercado."
+      img={imagenRetos.src}
+    />
+
+    <Solucion
+      data={dataSolucion}
+      id="solucion"
+      titulo1="En este curso"
+      titulo2="Vas a aprender"
+      contenido_before="Solución"
+      descripcion="Transformá tu forma de comercializar seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus ventas con nuestros cursos, mentorías y asesorías diseñadas para el nuevo mercado."
+    />
 
     <Equipo
-      data={profesorData}
+      dataProfesor={profesorData}
       id="profesor"
       titulo1="Conoce a tu"
       titulo2="Instructor"
@@ -61,3 +84,9 @@ const profesorData = getProfesor(dataProfesor, profesor);
     <FooterAcademia />
   </main>
 </LayoutCursos>
+
+id="solucion" titulo1="En este curso" titulo2="Vas a aprender"
+contenido_before="Solución" descripcion="Transformá tu forma de comercializar
+seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus
+ventas con nuestros cursos, mentorías y asesorías diseñadas para el nuevo
+mercado."

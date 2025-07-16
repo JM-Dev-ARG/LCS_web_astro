@@ -1,42 +1,42 @@
 ---
-import data from "../../../data/cursos.json";
 import SeccionCompleta from "../SeccionCompleta.astro";
-import CardCursos from "../CardCursos.astro";
-import CardRetos from "../CardRetos.astro";
-import imagen from "@/assets/img_academia/hero_web.avif";
+import CardSoluciones from "../CardSoluciones.astro";
+
+interface Props {
+  id: string;
+  titulo1: string;
+  titulo2: string;
+  contenido_before: string;
+  descripcion: string;
+  data: {
+    titulo: string;
+    texto: string;
+    numero: number;
+  }[];
+}
+const { id, titulo1, titulo2, contenido_before, descripcion, data } =
+  Astro.props;
 ---
 
 <SeccionCompleta
-  id="retos"
-  titulo1="Sabemos que te enfrentas"
-  titulo2="Nuevos Retos y Desafíos"
-  contenido_before="Retos"
-  descripcion="Transformá tu forma de comercializar seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus ventas con nuestros cursos,  mentorías y asesorías diseñadas para el nuevo mercado."
+  id={id}
+  titulo1={titulo1}
+  titulo2={titulo2}
+  contenido_before={contenido_before}
+  descripcion={descripcion}
 >
   <div
-    class="grid grid-cols-1 lg:grid-cols-2 gap-6 place-items-center mt-8 mb-12 w-full xl:w-[80%]"
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-cols-auto gap-6 place-items-start mt-8 mb-12 w-full xl:w-[80%]"
   >
-    <div class="w-full flex flex-col justify-center items-center gap-4">
-      {
-        data.map((item, index) => (
-          <CardRetos
-            titulo={item.titulo}
-            texto={item.descripcion}
-            delay={(index * 200).toString()}
-          />
-        ))
-      }
-    </div>
-    <div class="w-full h-full hidden lg:grid place-items-center mx-auto">
-      <img
-        loading="lazy"
-        class="size-[80%] object-cover object-center shadow-academia"
-        src={imagen.src}
-        alt="Imagen del curso Negocio de Seguros Digital"
-        height="auto"
-        width="auto"
-        title="Imagen del curso Negocio de Seguros Digital"
-      />
-    </div>
+    {
+      data.map((item, index) => (
+        <CardSoluciones
+          titulo={item.titulo}
+          texto={item.texto}
+          numero={item.numero}
+          delay={(index * 200).toString()}
+        />
+      ))
+    }
   </div>
 </SeccionCompleta>

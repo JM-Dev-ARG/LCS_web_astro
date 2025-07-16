@@ -4,15 +4,27 @@ import CardEquipo from "../CardEquipo.astro";
 import CardProfesor from "../CardProfesor.astro";
 
 interface Props {
-  data?: { titulo: string; descripcion: string; img: string }[];
+  dataEquipo?: { titulo: string; descripcion: string; img: string }[];
+  dataProfesor?: {
+    titulo: string;
+    descripcion: { text: string }[];
+    img: string;
+  }[];
   id: string;
   titulo1: string;
   titulo2: string;
   contenido_before: string;
   descripcion?: string; // Define any props if needed
 }
-const { data, id, titulo1, titulo2, contenido_before, descripcion } =
-  Astro.props;
+const {
+  dataEquipo,
+  dataProfesor,
+  id,
+  titulo1,
+  titulo2,
+  contenido_before,
+  descripcion,
+} = Astro.props;
 ---
 
 <SeccionCompleta
@@ -23,9 +35,9 @@ const { data, id, titulo1, titulo2, contenido_before, descripcion } =
   descripcion={descripcion}
 >
   {
-    data.length > 1 ? (
+    dataEquipo ? (
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center mt-8 mb-12 w-full place-items-center">
-        {data.map((item, index) => (
+        {dataEquipo.map((item, index) => (
           <CardEquipo
             titulo={item.titulo}
             descripcion={item.descripcion}
@@ -37,9 +49,9 @@ const { data, id, titulo1, titulo2, contenido_before, descripcion } =
     ) : (
       <div class="w-full flex justify-center items-center mt-8 mb-12">
         <CardProfesor
-          titulo={data[0].titulo}
-          descripcion={data[0].descripcion}
-          img={data[0].img}
+          titulo={dataProfesor[0].titulo}
+          descripcion={dataProfesor[0].descripcion}
+          img={dataProfesor[0].img}
         />
       </div>
     )
