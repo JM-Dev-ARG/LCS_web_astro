@@ -4,9 +4,10 @@ type Props = {
   subtitle: string;
   image: string;
   className?: string;
+  transitionName?: string;
 };
 
-const { title, subtitle, image, className } = Astro.props;
+const { title, subtitle, image, className, transitionName } = Astro.props;
 
 const url = new URL(Astro.url.href);
 const path = url.pathname.split("/").filter(Boolean).pop();
@@ -16,6 +17,7 @@ const path = url.pathname.split("/").filter(Boolean).pop();
   <div
     class=`text__wrapper ${path === "patrimoniales" ? "bg-[bottom_center]": "bg-[top_-50px_center]"} ${className}`
     style=`background-image: url('${image}');`
+    transition:name={transitionName}
   >
     <div class="z-10 w-full h-[70%] flex flex-col justify-center items-center">
       <h1

@@ -1,98 +1,105 @@
 ---
 type Props = {
   title: string;
-  description: string;
+
   image: string;
   url: string;
 };
 
-const { title, description, image, url } = Astro.props;
+const { title, image, url } = Astro.props;
 ---
 
-<div class="card__container w-full h-[300px] lg:h-[450px] xl:h-[600px]">
-  <div
-    class="card"
-    style=`background-image: url('${image}');`
+<a
+  class="card__container w-full h-[300px] lg:h-[450px] relative overflow-hidden cursor-pointer group rounded-[20px]"
+  href=`${url}`
+>
+  <img
+    class="card__img absolute top-0 left-0 w-full h-full object-cover"
+    src=`${image}`
+    alt={`imagen referenciada de ${title}`}
+    loading="lazy"
+    height="auto"
+    width="auto"
+    title={`imagen referenciada de ${title}`}
+    transition:name={`${title}`}
+  />
+  <h2 class="z-[2] font-medium text-[clamp(50px,6vw,80px)] pb-2">
+    {title}
+  </h2>
+  <p
+    class="z-[2] text-[clamp(20px,3vw,40px)] font-normal text-lcsPink3 transition-all delay-300 duration-500 ease-linear lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:translate-y-10 lg:group-[:not(:hover)]:delay-0"
   >
-    <h2 class="z-[2] font-light text-[clamp(30px,3vw,40px)] pb-2">
-      {title}
-    </h2>
-  </div>
-  <a
-    class="card__content group"
-    href=`${url}`
-  >
-    <p
-      class="text-pretty text-center text-gray-50 text-[clamp(14px,1.5vw,24px)] font-light"
-    >
-      {description}
-    </p>
-    <p
-      class="text-gray-50 text-[clamp(20px,3vw,30px)] hover:text-lcsPink3 transition-all duration-500 ease-linear"
-    >
-      Ver Más +
-    </p>
-  </a>
-</div>
+    Ver Más +
+  </p>
+</a>
 
 <style>
   .card__container {
+    width: 100%;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    width: 100%;
 
-    border-radius: 20px;
-
-    & .card {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: end;
-      color: aliceblue;
-      width: 100%;
-      height: 100%;
+    & h2 {
       transition: all 0.5s linear;
-      background-position: center;
-      background-size: cover;
-
-      & h2 {
-        transition: all 0.3s linear;
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(transparent 1%, #101616 100%);
-        -webkit-mask-image: linear-gradient(transparent 1%, #101616 100%);
-      }
     }
 
-    & .card__content {
+    &::before {
+      z-index: 1;
+      content: "";
       position: absolute;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
       top: 0;
-      right: 100%;
+      left: 0;
       width: 100%;
       height: 100%;
-      background-color: #101616d0;
-      opacity: 1;
-      transition: all 0.4s linear;
+      background-image: linear-gradient(transparent 1%, #101616 100%);
+      -webkit-mask-image: linear-gradient(transparent 1%, #101616 100%);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .card__img {
+      transform: scale(1);
+      filter: grayscale(1);
+      transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
     }
 
-    &:hover .card__content {
-      right: 0;
+    .card__container:hover .card__img {
+      transform: scale(1.1);
+      filter: grayscale(0);
+      transition-delay: 0s;
     }
 
-    &:hover .card h2 {
-      opacity: 0;
+    .card__container:hover h2 {
+      transform: scale(1.5);
+      transition-delay: 0s;
+    }
+
+    .card__container:not(:hover) .card__img {
+      transition-delay: 0.5s;
+    }
+    .card__container:not(:hover) h2 {
+      transform: scale(1);
+      transition-delay: 0.5s;
+    }
+  }
+
+  @keyframes animacion_imagen_entrada {
+    to {
+      transform: scale(1.1);
+      filter: grayscale(0);
+    }
+  }
+  @keyframes animacion_imagen_salida {
+    to {
+      transform: scale(1);
+      filter: grayscale(1);
     }
   }
 </style>
