@@ -1,5 +1,11 @@
 [
     {
+        "titulo": "In-Company",
+        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium",
+        "img_curso": "../img/img_academia/capacitacion.avif",
+        "url_curso": "/academia/empresas"
+    },
+    {
         "titulo": "Regala un curso",
         "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium",
         "img_curso": "../img/img_academia/regalo.avif",
@@ -9,12 +15,6 @@
         "titulo": "Regala un descuento",
         "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium",
         "img_curso": "../img/img_academia/descuento.avif",
-        "url_curso": "/academia/empresas"
-    },
-    {
-        "titulo": "In-Company",
-        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium",
-        "img_curso": "../img/img_academia/capacitacion.avif",
         "url_curso": "/academia/empresas"
     }
 ]

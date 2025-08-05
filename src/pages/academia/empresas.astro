@@ -2,32 +2,17 @@
 //data
 import dataPreguntas from "@/data/preguntas.json";
 import dataOpiniones from "@/data/opiniones.json";
-import dataProfesor from "@/data/profesor.json";
-import dataRetos from "@/data/cursos.json";
 import dataSolucion from "@/data/solucion.json";
+import dataCursos from "@/data/cursos.json";
 
 //components
 import LayoutCursos from "@/layouts/LayoutCursos.astro";
 import FooterAcademia from "@/components/academia/secciones/FooterAcademia.astro";
 import Opiniones from "@/components/academia/secciones/Opiniones.astro";
 import Preguntas from "@/components/academia/secciones/Preguntas.astro";
-import Equipo from "@/components/academia/secciones/Equipo.astro";
 import PresentacionCurso from "@/components/academia/PresentacionCurso.astro";
-import Retos from "@/components/academia/secciones/Retos.astro";
 import SolucionCursos from "@/components/academia/secciones/SolucionCursos.astro";
 import RegalaCurso from "@/components/academia/secciones/RegalaCurso.astro";
-
-const profesor = "Micaela Tissieres Gelsi";
-function getProfesor(data: any, profesor: string) {
-  const arrayProfesores = [];
-  const profesorData = data.find((item: any) => item.titulo === profesor);
-  if (!profesorData) {
-    return null;
-  }
-  arrayProfesores.push(profesorData);
-  return arrayProfesores;
-}
-const profesorData = getProfesor(dataProfesor, profesor);
 ---
 
 <LayoutCursos title="LCS - Academia de Seguros - Negocio de Seguros Digital">
@@ -39,17 +24,15 @@ const profesorData = getProfesor(dataProfesor, profesor);
       descripcion="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium"
       contenido_before=""
     />
-    <!-- <Retos
-      data={dataRetos}
-      id="retos"
-      titulo1="Sabemos que te enfrentas"
-      titulo2="Nuevos Retos y Desafíos"
-      contenido_before="Retos"
-      descripcion="Transformá tu forma de comercializar seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus ventas con nuestros cursos, mentorías y asesorías diseñadas para el nuevo mercado."
-      img={imagenRetos.src}
-    /> -->
 
-    <RegalaCurso />
+    <RegalaCurso
+      data={dataCursos}
+      id="regala_curso"
+      titulo1="Regalá a tus empleados"
+      titulo2="un Curso y Mentoria"
+      contenido_before="Capacitá"
+      descripcion="Transformá tu forma de comercializar seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus ventas con nuestros cursos,  mentorías y asesorías diseñadas para el nuevo mercado."
+    />
 
     <SolucionCursos
       data={dataSolucion}
@@ -60,13 +43,6 @@ const profesorData = getProfesor(dataProfesor, profesor);
       descripcion="Transformá tu forma de comercializar seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus ventas con nuestros cursos, mentorías y asesorías diseñadas para el nuevo mercado."
     />
 
-    <Equipo
-      dataProfesor={profesorData}
-      id="profesor"
-      titulo1="Conoce a tu"
-      titulo2="Instructor"
-      contenido_before="Instructor"
-    />
     <Preguntas
       data={dataPreguntas}
       id="preguntas_frecuentes"
