@@ -1,0 +1,86 @@
+---
+//data
+import dataPreguntas from "@/data/preguntas.json";
+import dataOpiniones from "@/data/opiniones.json";
+import dataProfesor from "@/data/profesor.json";
+import dataRetos from "@/data/cursos.json";
+import dataSolucion from "@/data/solucion.json";
+
+//components
+import LayoutCursos from "@/layouts/LayoutCursos.astro";
+import FooterAcademia from "@/components/academia/secciones/FooterAcademia.astro";
+import Opiniones from "@/components/academia/secciones/Opiniones.astro";
+import Preguntas from "@/components/academia/secciones/Preguntas.astro";
+import Equipo from "@/components/academia/secciones/Equipo.astro";
+import PresentacionCurso from "@/components/academia/PresentacionCurso.astro";
+import Retos from "@/components/academia/secciones/Retos.astro";
+import SolucionCursos from "@/components/academia/secciones/SolucionCursos.astro";
+import RegalaCurso from "@/components/academia/secciones/RegalaCurso.astro";
+
+const profesor = "Micaela Tissieres Gelsi";
+function getProfesor(data: any, profesor: string) {
+  const arrayProfesores = [];
+  const profesorData = data.find((item: any) => item.titulo === profesor);
+  if (!profesorData) {
+    return null;
+  }
+  arrayProfesores.push(profesorData);
+  return arrayProfesores;
+}
+const profesorData = getProfesor(dataProfesor, profesor);
+---
+
+<LayoutCursos title="LCS - Academia de Seguros - Negocio de Seguros Digital">
+  <main>
+    <PresentacionCurso
+      id="presentacion"
+      titulo1="Servicios y Beneficios"
+      titulo2="para Empresas"
+      descripcion="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium"
+      contenido_before=""
+    />
+    <!-- <Retos
+      data={dataRetos}
+      id="retos"
+      titulo1="Sabemos que te enfrentas"
+      titulo2="Nuevos Retos y Desafíos"
+      contenido_before="Retos"
+      descripcion="Transformá tu forma de comercializar seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus ventas con nuestros cursos, mentorías y asesorías diseñadas para el nuevo mercado."
+      img={imagenRetos.src}
+    /> -->
+
+    <RegalaCurso />
+
+    <SolucionCursos
+      data={dataSolucion}
+      id="solucion"
+      titulo1="En este curso"
+      titulo2="Vas a aprender"
+      contenido_before="Solución"
+      descripcion="Transformá tu forma de comercializar seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus ventas con nuestros cursos, mentorías y asesorías diseñadas para el nuevo mercado."
+    />
+
+    <Equipo
+      dataProfesor={profesorData}
+      id="profesor"
+      titulo1="Conoce a tu"
+      titulo2="Instructor"
+      contenido_before="Instructor"
+    />
+    <Preguntas
+      data={dataPreguntas}
+      id="preguntas_frecuentes"
+      titulo1="¿Tenes preguntas?"
+      titulo2="Tenemos las respuestas"
+      contenido_before="Preguntas"
+    />
+    <Opiniones
+      data={dataOpiniones}
+      id="opiniones"
+      titulo1="Algunos de nuestros clientes"
+      titulo2="opinan de nosotros"
+      contenido_before="Opiniones"
+    />
+    <FooterAcademia />
+  </main>
+</LayoutCursos>

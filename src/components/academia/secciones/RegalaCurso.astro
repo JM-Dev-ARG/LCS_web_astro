@@ -1,0 +1,36 @@
+---
+import data from "../../../data/cursos.json";
+import SeccionCompleta from "../SeccionCompleta.astro";
+import CardCursos from "../CardCursos.astro";
+import CardCursosEmpresas from "../CardCursosEmpresas.astro";
+---
+
+<SeccionCompleta
+  id="regala_curso"
+  titulo1="Regalá a tus empleados"
+  titulo2="un Curso y Mentoria"
+  contenido_before="Capacitá"
+  descripcion="Transformá tu forma de comercializar seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus ventas con nuestros cursos,  mentorías y asesorías diseñadas para el nuevo mercado."
+>
+  <div
+    class="grid  gap-6 place-items-center mt-8 mb-12 w-full"
+  >
+    {
+      data.map((item) => (
+        item.estado != "inactive" ?
+        <CardCursosEmpresas
+          titulo={item.titulo}
+          img={item.img_empresa}
+          url_curso={item.url_curso}
+          descripcion={item.descripcion}
+          url_compra={item.url_compra}
+          
+        />
+         <span class="w-1/2 border border-b-academia-negro"  data-aos="fade-up"
+    data-aos-duration="400"
+    data-aos-once="true"></span> :""
+      ))
+    }
+   
+  </div>
+</SeccionCompleta>
