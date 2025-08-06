@@ -1,14 +1,14 @@
 [
-    {
-        "title": "PATRIMONIALES",
-        "description": "Todo lo que tenés o construiste te ha costado muchísimo esfuerzo y dinero. Mirá si no vas a asegurarlo bien!",
-        "image": "../img/img-patrimoniales.avif",
-        "url": "/patrimoniales"
-    },
-    {
-        "title": "PERSONAS",
-        "description": "La vida es eso que pasa mientras estás dudando en asegurarla.",
-        "image": "../img/img-personas3.avif",
-        "url": "/personas"
-    }
+  {
+    "title": "PERSONAS",
+    "description": "La vida es eso que pasa mientras estás dudando en asegurarla.",
+    "image": "../img/img-personas3.avif",
+    "url": "/personas"
+  },
+  {
+    "title": "VIAJES",
+    "description": "La vida es eso que pasa mientras estás dudando en asegurarla.",
+    "image": "../img/img-viajes2.avif",
+    "url": "/viajes"
+  }
 ]
