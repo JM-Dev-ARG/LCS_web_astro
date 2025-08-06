@@ -8,9 +8,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['"Cormorant Garamond"', "serif"],
-        sans: ['"Poppins"', "sans-serif"],
-        /* display: ['"Darker Grotesque"', "sans-serif"], */
+        serif: ["Cormorant Garamond", "serif"],
+        sans: ["Poppins", "sans-serif"],
+        display: ["Darker Grotesque", "sans-serif"],
       },
       colors: {
         lcsBlack: "#1d1e1c",
