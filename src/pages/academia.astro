@@ -4,7 +4,6 @@ import Equipo from "@/components/academia/secciones/Equipo.astro";
 import libro from "@/assets/img_generales/libro.avif";
 import Soluciones from "@/components/academia/secciones/Soluciones.astro";
 import Cursos from "@/components/academia/secciones/Cursos.astro";
-import Empresa from "@/components/academia/secciones/Empresa.astro";
 import Presentacion from "@/components/academia/secciones/Presentacion.astro";
 import Preguntas from "@/components/academia/secciones/Preguntas.astro";
 import Opiniones from "@/components/academia/secciones/Opiniones.astro";
@@ -15,6 +14,7 @@ import DescargableAcademiaForm from "../components/react_components/descargableA
 import dataOpiniones from "@/data/opiniones.json";
 import dataPreguntas from "@/data/preguntas.json";
 import dataEquipo from "@/data/equipo.json";
+import ServiciosEmpresa from "@/components/academia/secciones/Servicios_empresa.astro";
 ---
 
 <LayoutAcademia title="La Chica del Seguro - Academia de Seguros">
@@ -38,7 +38,7 @@ import dataEquipo from "@/data/equipo.json";
 
     <Soluciones />
     <Cursos />
-    <Empresa />
+    <ServiciosEmpresa />
     <Equipo
       dataEquipo={dataEquipo}
       id="equipo"

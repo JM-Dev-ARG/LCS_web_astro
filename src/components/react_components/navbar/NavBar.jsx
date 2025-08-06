@@ -105,12 +105,12 @@ const Navbar = () => {
                     } transition-all duration-500 backdrop-grayscale-[.7] backdrop-blur-[10px]`}
             >
                 <div
-                    className={`flex justify-center items-center w-full bg-[#1d1e1c] h-full lg:h-[60%] ${menuOpen ? "opacity-100" : "opacity-0"
+                    className={`flex justify-center items-center w-full bg-[#1d1e1c] h-full lg:h-[80%] xl:h-[60%] ${menuOpen ? "opacity-100" : "opacity-0"
                         } transition-opacity duration-500`}
 
                 >
                     <div className="flex flex-col lg:flex-row  justify-center items-center lg:justify-start lg:items-start w-full lg:w-[80%] gap-10 lg:gap-20 my-6 lg:my-0">
-                        <div className="w-[80%] lg:w-[30%]">
+                        <div className="w-[80%] lg:w-[40%]">
                             <p className="text-[clamp(26px,2vw,32px)] font-medium pl-1 pb-[6px] text-zinc-200">
                                 Navega
                             </p>
@@ -134,7 +134,7 @@ const Navbar = () => {
                             </ul>
                         </div>
 
-                        <div className="w-[80%] lg:w-[30%]">
+                        <div className="w-[80%] lg:w-[40%]">
                             <p className="text-[clamp(26px,2vw,32px)] font-medium pl-1 pb-[6px] text-zinc-200">
                                 Aprende
                             </p>

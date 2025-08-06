@@ -48,7 +48,8 @@ export default {
 			},
 			boxShadow: {
 				'academia': '10px 10px 0px #857993',
-				'academia-boton': '5px 5px 0px #857993'
+				'academia-boton': '5px 5px 0px #CBB2D7',
+				'academia-boton-2': '5px 5px 0px #DBDF5B'
 			},
 			dropShadow: {
 				'academia': '10px 0px 0px #857993',
