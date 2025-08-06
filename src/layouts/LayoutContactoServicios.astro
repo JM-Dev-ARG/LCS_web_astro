@@ -18,37 +18,15 @@ const { title, keywords, description, path } = Astro.props;
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="keywords"
-      content={keywords ? `${keywords}` : ""}
-    />
+    <meta name="keywords" content={keywords ? `${keywords}` : ""} />
 
-    <meta
-      name="description"
-      content={description ? `${description}` : ""}
-    />
+    <meta name="description" content={description ? `${description}` : ""} />
 
-    <meta
-      name="viewport"
-      content="width=device-width"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/resources/ISO-BLANCO.svg"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="/resources/ISO-BLANCO.svg"
-    />
-    <meta
-      name="generator"
-      content={Astro.generator}
-    />
-    <link
-      rel="stylesheet"
-      href="/src/fonts.css"
-    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/resources/ISO-BLANCO.svg" />
+    <link rel="apple-touch-icon" href="/resources/ISO-BLANCO.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/src/fonts.css" />
 
     <title>{title}</title>
 
@@ -99,9 +77,7 @@ const { title, keywords, description, path } = Astro.props;
     >
     <!-- End Meta Pixel Code -->
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-Z3S5K1WZQX"
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3S5K1WZQX"
     ></script>
     <script>
       // @ts-ignore
@@ -115,6 +91,24 @@ const { title, keywords, description, path } = Astro.props;
       // @ts-ignore
       gtag("config", "G-Z3S5K1WZQX");
     </script>
+
+    <!-- Metricool tracker -->
+    <script>
+      function loadScript(a) {
+        var b = document.getElementsByTagName("head")[0],
+          c = document.createElement("script");
+        (c.type = "text/javascript"),
+          (c.src = "https://tracker.metricool.com/resources/be.js"),
+          // @ts-ignore
+          (c.onreadystatechange = a),
+          (c.onload = a),
+          b.appendChild(c);
+      }
+      loadScript(function () {
+        // @ts-ignore
+        beTracker.t({ hash: "694825ac0cb8e427491e13af73a80251" });
+      });
+    </script>
   </head>
   <body class="back-forms">
     <div class="absolute w-full h-full opacity-[0.03] z-[1]">
@@ -127,10 +121,7 @@ const { title, keywords, description, path } = Astro.props;
 
     <NavBarFormularios path={path} />
     <slot />
-    <footer
-      id="footerServices"
-      class=""
-    >
+    <footer id="footerServices" class="">
       <!-- <div class="absolute w-full h-full"></div> -->
       <div
         class="w-[70%] h-full flex flex-col md:flex-row justify-center md:justify-between items-center gap-y-5 py-6 relative z-20"
@@ -140,11 +131,7 @@ const { title, keywords, description, path } = Astro.props;
           href="/"
           title="Logo La chica del seguro - volver a la página principal"
         >
-          <img
-            class="w-full"
-            src="/resources/LOGOTIPO-CREMA.svg"
-            alt=""
-          />
+          <img class="w-full" src="/resources/LOGOTIPO-CREMA.svg" alt="" />
         </a>
         <div
           class="flex flex-col justify-center items-center md:items-end gap-6 md:gap-0 w-full relative"
@@ -154,11 +141,7 @@ const { title, keywords, description, path } = Astro.props;
               {
                 redes.map((item) => (
                   <div class="border-2 border-zinc-50 size-[40px] rounded-full flex justify-center items-center hover:scale-[1.1] transition-all duration-200 ease-linear group">
-                    <a
-                      href={item.href}
-                      target={item.target}
-                      title={item.label}
-                    >
+                    <a href={item.href} target={item.target} title={item.label}>
                       <img
                         src={item.img}
                         alt={item.label}
@@ -194,8 +177,7 @@ const { title, keywords, description, path } = Astro.props;
         / <a
           class="cursor-pointer font-medium relative z-30"
           href="https://agenciapanambi.com/"
-          target="_blank"
-          >Agencia Panambi</a
+          target="_blank">Agencia Panambi</a
         >
       </p>
     </footer>

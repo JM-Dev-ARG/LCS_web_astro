@@ -15,51 +15,20 @@ const { title, keywords, description } = Astro.props;
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="keywords"
-      content={keywords ? `${keywords}` : ""}
-    />
+    <meta name="keywords" content={keywords ? `${keywords}` : ""} />
 
-    <meta
-      name="description"
-      content={description ? `${description}` : ""}
-    />
+    <meta name="description" content={description ? `${description}` : ""} />
 
-    <link
-      rel="canonical"
-      href="https://lachicadelseguro.com/blog"
-    />
-    <meta
-      name="robots"
-      content="index, follow"
-    />
+    <link rel="canonical" href="https://lachicadelseguro.com/blog" />
+    <meta name="robots" content="index, follow" />
 
-    <meta
-      name="viewport"
-      content="width=device-width"
-    />
-    <meta
-      name="author"
-      content="Ice-Dev para Panambi"
-    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Ice-Dev para Panambi" />
 
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/resources/ISO-BLANCO.svg"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="/resources/ISO-BLANCO.svg"
-    />
-    <meta
-      name="generator"
-      content={Astro.generator}
-    />
-    <link
-      rel="stylesheet"
-      href="../src/fonts.css"
-    />
+    <link rel="icon" type="image/svg+xml" href="/resources/ISO-BLANCO.svg" />
+    <link rel="apple-touch-icon" href="/resources/ISO-BLANCO.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="../src/fonts.css" />
 
     <title>{title}</title>
 
@@ -110,9 +79,7 @@ const { title, keywords, description } = Astro.props;
     >
     <!-- End Meta Pixel Code -->
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-Z3S5K1WZQX"
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3S5K1WZQX"
     ></script>
     <script>
       // @ts-ignore
@@ -125,6 +92,24 @@ const { title, keywords, description } = Astro.props;
       gtag("js", new Date());
       // @ts-ignore
       gtag("config", "G-Z3S5K1WZQX");
+    </script>
+
+    <!-- Metricool tracker -->
+    <script>
+      function loadScript(a) {
+        var b = document.getElementsByTagName("head")[0],
+          c = document.createElement("script");
+        (c.type = "text/javascript"),
+          (c.src = "https://tracker.metricool.com/resources/be.js"),
+          // @ts-ignore
+          (c.onreadystatechange = a),
+          (c.onload = a),
+          b.appendChild(c);
+      }
+      loadScript(function () {
+        // @ts-ignore
+        beTracker.t({ hash: "694825ac0cb8e427491e13af73a80251" });
+      });
     </script>
   </head>
   <body>
