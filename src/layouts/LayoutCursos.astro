@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import NavBarCursos from "@/components/secciones/NavBarCursos.astro";
+import "../fonts.css";
 
 interface Props {
   title: string;
@@ -54,93 +55,41 @@ const { title } = Astro.props;
     />
 
     <!-- Facebook Meta Tags -->
-    <meta
-      property="og:url"
-      content="https://lachicadelseguro.com"
-    />
-    <meta
-      property="og:type"
-      content="website"
-    />
-    <meta
-      property="og:title"
-      content="La Chica del Seguro - Inicio"
-    />
+    <meta property="og:url" content="https://lachicadelseguro.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="La Chica del Seguro - Inicio" />
     <meta
       property="og:description"
       content="Descubre La Chica del Seguro: tu aliada en seguros. Aprende con nuestra Academia de Seguros y conviértete en un asesor digital exitoso."
     />
-    <meta
-      property="og:image"
-      content="/resources/ISOTIPO.svg"
-    />
+    <meta property="og:image" content="/resources/ISOTIPO.svg" />
 
     <!-- Twitter Meta Tags -->
-    <meta
-      name="twitter:card"
-      content="summary_large_image"
-    />
-    <meta
-      property="twitter:domain"
-      content="lachicadelseguro.com"
-    />
-    <meta
-      property="twitter:url"
-      content="https://lachicadelseguro.com"
-    />
-    <meta
-      name="twitter:title"
-      content="La Chica del Seguro - Inicio"
-    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="lachicadelseguro.com" />
+    <meta property="twitter:url" content="https://lachicadelseguro.com" />
+    <meta name="twitter:title" content="La Chica del Seguro - Inicio" />
     <meta
       name="twitter:description"
       content="Descubre La Chica del Seguro: tu aliada en seguros. Aprende con nuestra Academia de Seguros y conviértete en un asesor digital exitoso."
     />
-    <meta
-      name="twitter:image"
-      content="/resources/ISOTIPO.svg"
-    />
+    <meta name="twitter:image" content="/resources/ISOTIPO.svg" />
 
-    <link
-      rel="canonical"
-      href="https://lachicadelseguro.com/"
-    />
+    <link rel="canonical" href="https://lachicadelseguro.com/" />
 
     <meta
       name="keywords"
       content="La Chica del Seguro, Conciencia aseguradora, Asesor de seguros digital, Academia de seguros online, Formación en seguros, Seguros patrimoniales,Seguros de personas, Seguros de viajes, Consultoría en seguros, Marketing en seguros"
     />
 
-    <meta
-      name="robots"
-      content="index, follow"
-    />
-    <meta
-      name="author"
-      content="Ice-Dev para Panambi"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/resources/ISO-BLANCO.svg"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="/resources/ISO-BLANCO.svg"
-    />
-    <meta
-      name="generator"
-      content={Astro.generator}
-    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Ice-Dev para Panambi" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/resources/ISO-BLANCO.svg" />
+    <link rel="apple-touch-icon" href="/resources/ISO-BLANCO.svg" />
+    <meta name="generator" content={Astro.generator} />
 
-    <link
-      rel="stylesheet"
-      href="../../src/fonts.css"
-    />
+    <link rel="stylesheet" href="../../src/fonts.css" />
 
     <ClientRouter />
 
@@ -190,9 +139,7 @@ const { title } = Astro.props;
     <!-- End Meta Pixel Code -->
 
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-Z3S5K1WZQX"
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3S5K1WZQX"
     ></script>
     <script>
       // @ts-ignore
