@@ -22,6 +22,7 @@ const path = url.pathname.split("/").filter(Boolean).pop();
       subtitle="Seguros que protegen tus sueños."
       image="/img/img-viajes2.avif"
       className="bg-[top_center]"
+      transitionName="VIAJES"
     />
     <Services>
       {data.map((item) => <BentoViajes {...item} />)}
