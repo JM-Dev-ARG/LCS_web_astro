@@ -1,14 +1,14 @@
 [
-    {
-        "title": "PERSONAS",
-        "description": "La vida es eso que pasa mientras estás dudando en asegurarla.",
-        "image": "../img/img-personas3.avif",
-        "url": "/personas"
-    },
-    {
-        "title": "VIAJES",
-        "description": "El viaje es lo que nos hace humanos.",
-        "image": "../img/img-viajes2.avif",
-        "url": "/viajes"
-    }
+  {
+    "title": "PERSONAS",
+    "description": "La vida es eso que pasa mientras estás dudando en asegurarla.",
+    "image": "../img/img-personas3.avif",
+    "url": "/personas"
+  },
+  {
+    "title": "VIAJES",
+    "description": "La vida es eso que pasa mientras estás dudando en asegurarla.",
+    "image": "../img/img-viajes2.avif",
+    "url": "/viajes"
+  }
 ]
