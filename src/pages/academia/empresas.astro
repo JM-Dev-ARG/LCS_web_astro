@@ -4,6 +4,10 @@ import dataPreguntas from "@/data/preguntas.json";
 import dataOpiniones from "@/data/opiniones.json";
 import dataSolucion from "@/data/solucion.json";
 import dataCursos from "@/data/cursos.json";
+import dataRetos from "@/data/cursos.json";
+
+//imagenes
+import imagenRetos from "@/assets/img_academia/descuento.avif";
 
 //components
 import LayoutCursos from "@/layouts/LayoutCursos.astro";
@@ -13,6 +17,7 @@ import Preguntas from "@/components/academia/secciones/Preguntas.astro";
 import PresentacionCurso from "@/components/academia/PresentacionCurso.astro";
 import SolucionCursos from "@/components/academia/secciones/SolucionCursos.astro";
 import RegalaCurso from "@/components/academia/secciones/RegalaCurso.astro";
+import Retos from "@/components/academia/secciones/Retos.astro";
 ---
 
 <LayoutCursos title="LCS - Academia de Seguros - Negocio de Seguros Digital">
@@ -25,6 +30,15 @@ import RegalaCurso from "@/components/academia/secciones/RegalaCurso.astro";
       contenido_before=""
     />
 
+    <SolucionCursos
+      data={dataSolucion}
+      id="in_company"
+      titulo1="Capacitaciones diseñadas"
+      titulo2="a la medida de tu empresa"
+      contenido_before="In Company"
+      descripcion="Transformá tu forma de comercializar seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus ventas con nuestros cursos, mentorías y asesorías diseñadas para el nuevo mercado."
+    />
+
     <RegalaCurso
       data={dataCursos}
       id="regala_curso"
@@ -34,13 +48,15 @@ import RegalaCurso from "@/components/academia/secciones/RegalaCurso.astro";
       descripcion="Transformá tu forma de comercializar seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus ventas con nuestros cursos,  mentorías y asesorías diseñadas para el nuevo mercado."
     />
 
-    <SolucionCursos
-      data={dataSolucion}
-      id="solucion"
-      titulo1="En este curso"
-      titulo2="Vas a aprender"
-      contenido_before="Solución"
+    <Retos
+      data={dataRetos}
+      id="descuentos"
+      titulo1="Acompaña a tus colaboradores "
+      titulo2="en sus nuevos retos"
+      contenido_before="Descuentos"
       descripcion="Transformá tu forma de comercializar seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus ventas con nuestros cursos, mentorías y asesorías diseñadas para el nuevo mercado."
+      img={imagenRetos.src}
+      href_contacto="https://api.whatsapp.com/send?phone=+5491122345678&text=Hola!%20Quisiera%20saber%20m%C3%A1s%20sobre%20los%20cursos%20de%20Negocio%20de%20Seguros%20Digital"
     />
 
     <Preguntas

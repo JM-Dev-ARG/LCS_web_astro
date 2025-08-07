@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import "./navbar.css"
 
 import whatsapp from "@/assets/img_generales/whatsapp.avif"
-import corazon from "@/assets/img_academia/logo_centro.avif"
+import logoAcademia from "@/assets/img_academia/logo_centro.avif"
 
 import navega from "@/data/navegaAcademia.json";
 import aprende from "@/data/aprendeAcademia.json";
@@ -14,8 +14,16 @@ import aprende from "@/data/aprendeAcademia.json";
 const NavbarAcademia = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const navbarMovilRef = useRef();
+    const [expandedItem, setExpandedItem] = useState(null);
 
-    const toggleMenu = () => setMenuOpen((prev) => !prev);
+    const toggleSubmenu = (label) => {
+        setExpandedItem((prev) => (prev === label ? null : label));
+    };
+
+    const toggleMenu = () => {
+        setMenuOpen((prev) => !prev);
+        menuOpen === false && setExpandedItem(null);
+    };
 
     const handleScrollToTop = (e) => {
         // Obtenemos el href del enlace clickeado (usando currentTarget para mayor precisión)
@@ -61,7 +69,7 @@ const NavbarAcademia = () => {
                         <a onClick={handleScrollToTop} href="/academia" title="boton volver al inicio" >
                             <img
                                 className={`w-[70px] scale-150  logo hover:rotate-[15deg] hover:scale-125 transition duration-300 ease-in-out`}
-                                src={corazon.src}
+                                src={logoAcademia.src}
                                 alt="Logo Academia de Seguros por La Chica del Seguro"
                                 height="auto"
                                 width="auto"
@@ -106,17 +114,17 @@ const NavbarAcademia = () => {
                     } transition-all duration-500 backdrop-grayscale-[.7] backdrop-blur-[10px]`}
             >
                 <div
-                    className={`flex justify-center items-center w-full bg-academia-negro h-full lg:h-[80%] xl:h-[60%] ${menuOpen ? "opacity-100" : "opacity-0"
+                    className={`flex justify-center items-center w-full bg-academia-negro h-full lg:min-h-[80%] lg:h-auto  ${menuOpen ? "opacity-100" : "opacity-0"
                         } transition-opacity duration-500`}
 
                 >
-                    <div className="flex flex-col lg:flex-row  justify-center items-center lg:justify-start lg:items-start w-full lg:w-[80%] gap-10 lg:gap-20 my-6 lg:my-0">
-                        <div className="w-[80%] lg:w-[40%]">
+                    <div className="h-full flex flex-col lg:flex-row  justify-center items-center lg:justify-around lg:items-start w-full lg:w-[80%] gap-10 lg:gap-20 my-6 lg:my-0">
+                        <div className="w-[80%] lg:w-[40%] ">
                             <p className="text-[clamp(26px,2vw,32px)] font-medium pl-1 pb-[6px] text-zinc-200">
                                 Navega
                             </p>
                             <div className="border-b  border-zinc-200 h-auto mb-3 w-[60%] lg:w-auto"></div>
-                            <ul className="flex flex-col gap-[6px]">
+                            <ul className="flex flex-col gap-[6px] ">
                                 {navega.map((item) => (
                                     <li key={item.href} className="group text-[clamp(22px,2vw,28px)] leading-8 w-fit">
                                         <a
@@ -135,25 +143,68 @@ const NavbarAcademia = () => {
                             </ul>
                         </div>
 
-                        <div className="w-[80%] lg:w-[40%]">
+                        <div className=" w-[80%] lg:w-[40%]">
                             <p className="text-[clamp(26px,2vw,32px)] font-medium pl-1 pb-[6px] text-zinc-200">
                                 Aprende
                             </p>
                             <div className="border-b border-zinc-200 h-auto mb-3 w-[60%] lg:w-auto"></div>
                             <ul className="flex flex-col gap-[6px]">
-                                {aprende.map((item) => (
-                                    <li key={item.href} className="group text-[clamp(22px,2vw,28px)] leading-8 w-fit">
-                                        <a
-                                            id="navItem"
-                                            className="text-zinc-500 hover:text-zinc-100 duration-300 ease-linear"
-                                            href={item.href}
-                                            target={item.target}
-                                            title={item.label}
+                                {aprende.map((item) => {
+                                    const tieneCursos = Array.isArray(item.cursos) && item.cursos.length > 0;
+                                    const isExpanded = expandedItem === item.label;
+
+                                    return (
+                                        <li
+                                            key={item.href}
+                                            className="group text-[clamp(22px,2vw,28px)] leading-8 w-fit"
                                         >
-                                            {item.label}
-                                        </a>
-                                    </li>
-                                ))}
+                                            {tieneCursos ? (
+                                                <button
+                                                    onMouseEnter={() => toggleSubmenu(item.label)}
+                                                    className="flex items-center text-zinc-500 hover:text-zinc-100 duration-300 ease-linear"
+                                                    title={item.label}
+                                                >
+                                                    {item.label}
+                                                    <span
+                                                        className={`ml-2 transition-transform duration-300 ${isExpanded ? "rotate-90" : "rotate-0"
+                                                            }`}
+                                                    >
+                                                        ▶
+                                                    </span>
+                                                </button>
+                                            ) : (
+                                                <a
+                                                    id="navItem"
+                                                    className="text-zinc-500 hover:text-zinc-100 duration-300 ease-linear"
+                                                    href={item.href}
+                                                    target={item.target}
+                                                    title={item.label}
+                                                >
+                                                    {item.label}
+                                                </a>
+                                            )}
+
+                                            {tieneCursos && (
+                                                <ul
+                                                    className={` overflow-hidden transition-all duration-500 pl-4 mt-2 text-[clamp(18px,1.5vw,22px)] text-zinc-400 space-y-1 text-nowrap ${isExpanded ? "max-h-[500px] lg:max-h-max lg:visible opacity-100" : "max-h-0 lg:max-h-max invisible opacity-0"
+                                                        }`}
+                                                >
+                                                    {item.cursos.map((curso) => (
+                                                        <li key={curso.href}>
+                                                            <a
+                                                                href={curso.href}
+                                                                title={curso.label}
+                                                                className="hover:text-zinc-100 block"
+                                                            >
+                                                                {curso.label}
+                                                            </a>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            )}
+                                        </li>
+                                    );
+                                })}
                             </ul>
                         </div>
                     </div>

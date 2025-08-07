@@ -14,14 +14,15 @@ interface Props {
     url_curso: string;
     descripcion: string;
     url_compra: string;
-    estado?: string; 
+    estado?: string;
     img_empresa: string;
   }[];
 }
 const { id, titulo1, titulo2, contenido_before, descripcion, data } =
   Astro.props;
 
-
+// Filtrar los activos
+const dataActiva = data.filter((item) => item.estado !== "inactive");
 ---
 
 <SeccionCompleta
@@ -31,25 +32,27 @@ const { id, titulo1, titulo2, contenido_before, descripcion, data } =
   contenido_before={contenido_before}
   descripcion={descripcion}
 >
-  <div
-    class="grid  gap-6 place-items-center mt-8 mb-12 w-full"
-  >
+  <div class="grid gap-6 place-items-center mt-8 mb-12 w-full">
     {
-      data.map((item) => (
-        item.estado != "inactive" ?
-        <CardCursosEmpresas
-          titulo={item.titulo}
-          img={item.img_empresa}
-          url_curso={item.url_curso}
-          descripcion={item.descripcion}
-          url_compra={item.url_compra}
-          
-        />
-         <span class="w-1/2 border border-b-academia-negro mt-6"  data-aos="fade-up"
-    data-aos-duration="400"
-    data-aos-once="true"></span> :""
+      dataActiva.map((item, index) => (
+        <>
+          <CardCursosEmpresas
+            titulo={item.titulo}
+            img={item.img_empresa}
+            url_curso={item.url_curso}
+            descripcion={item.descripcion}
+            url_compra={item.url_compra}
+          />
+          {index !== dataActiva.length - 1 && (
+            <span
+              class="w-1/2 border border-b-academia-violeta4 mt-6 mb-2"
+              data-aos="fade-up"
+              data-aos-duration="400"
+              data-aos-once="true"
+            />
+          )}
+        </>
       ))
     }
-   
   </div>
 </SeccionCompleta>
