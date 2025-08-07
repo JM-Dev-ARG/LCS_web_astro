@@ -4,8 +4,16 @@
     "label": "Inicio"
   },
   {
+    "href": "/#about",
+    "label": "Un poquito de mi historia"
+  },
+  {
+    "href": "/#servicios",
+    "label": "Nuestros servicios"
+  },
+  {
     "href": "/#academia",
-    "label": "Academia de Seguros"
+    "label": "Capacitaciones"
   },
   {
     "href": "/#contacto",
