@@ -71,7 +71,7 @@ const Navbar = () => {
 
                     <div className="text-center lg:flex justify-end items-center lg:static z-10 flex-1  ">
                         <div className="flex justify-end items-center flex-1 mr-8 gap-4 ">
-                            <a title="whatsapp" href="https://wa.me/5491170627152?text=Hola, quiero hacerles una consulta" target="_blank" className="hover:scale-[1.1] transition-all ease-linear duration-300">
+                            <a title="whatsapp"/*  href="https://wa.me/5491170627152?text=Hola, quiero hacerles una consulta" */ href="/" target="_blank" className="hover:scale-[1.1] transition-all ease-linear duration-300">
                                 <img
                                     loading="lazy"
                                     src="./img/whatsapp.avif"
