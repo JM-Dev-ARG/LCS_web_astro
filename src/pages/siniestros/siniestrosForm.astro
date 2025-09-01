@@ -1,5 +1,4 @@
 ---
-import InputForm from "../../components/react_components/formsComponents/InputForm";
 import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
 import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
 const path = Astro.url.pathname;
@@ -10,9 +9,9 @@ const apiDefault = import.meta.env.DEFAULT_API_URL;
 ---
 
 <LayoutContactoServicios
-  title="Formulario de contacto para Fondo de Cese"
-  path={result}
->
+  title="Formulario de contacto para Siniestros"
+  path="/"
+  ><!-- Alterar path cuando se haga la pagina de servicio -->
   <main
     class="relative my-20 z-10 h-auto w-full grid place-items-center mx-auto"
   >
@@ -21,30 +20,7 @@ const apiDefault = import.meta.env.DEFAULT_API_URL;
         client:only="react"
         urlFetchDefault={apiDefault}
         urlFetchPatrimonieales={apiPatrimoniales}
-      >
-        <InputForm
-          name="Razon Social"
-          placeholder="Mi Empresa S.A."
-          type="text"
-          labelText="Razón Social"
-          client:only="react"
-        />
-        <InputForm
-          name="Rubro"
-          placeholder="Tecnología"
-          type="text"
-          labelText="Rubro"
-          client:only="react"
-        />
-
-        <InputForm
-          name="Cantidad Empleados"
-          placeholder="10"
-          type="text"
-          labelText="Cantidad de Empleados"
-          client:only="react"
-        />
-      </ServicesForm>
+      />
     </section>
   </main>
 </LayoutContactoServicios>

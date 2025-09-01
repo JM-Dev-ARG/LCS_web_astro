@@ -119,7 +119,7 @@ export default function ContactForm() {
             </div>
             <div className="w-full grid place-items-center mt-2 lg:mt-6">
                 <button
-                    className="background w-[200px] mt-4 text-[clamp(18px,3vw,30px)] rounded-full px-4 py-3"
+                    className="background mt-4 text-[clamp(18px,3vw,30px)] rounded-full px-[40px] py-3"
                     type="submit"
                 >Enviar</button>
             </div>

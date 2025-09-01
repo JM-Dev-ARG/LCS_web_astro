@@ -61,7 +61,7 @@ export default function ServicesForm({
     const form = e.target;
     const formData = new FormData(form);
     try {
-      /* const urlBase = getOrigin(path); */
+      const urlBase = getOrigin(path);
       const fetchURL =
         /* urlBase === "patrimoniales" ? urlFetchPatrimonieales : */ urlFetchDefault;
       const response = await fetch(fetchURL, {
@@ -74,7 +74,7 @@ export default function ServicesForm({
         saludo();
         form.reset();
         setTimeout(() => {
-          window.location.href = `/${path.split("/")[1]}`;
+          urlBase === "siniestros" ? window.location.href = "/" : window.location.href = `/${path.split("/")[1]}`;
         }, 5100);
       } else {
         saludoError();
@@ -110,6 +110,7 @@ export default function ServicesForm({
       otrosForm: "Otros",
       caucionForm: "Caucion",
       sepelioForm: "Sepelio",
+      siniestrosForm: "Siniestros",
     };
 
     const routeKey = path.split("/")[2];

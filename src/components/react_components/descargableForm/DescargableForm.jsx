@@ -123,7 +123,7 @@ export default function ServicesForm() {
 
                         <div className="w-full flex justify-center ">
                             <button
-                                className="background grid place-items-center w-[clamp(110px,10vw,150px)]   h-[40px] text-[clamp(18px,10vw,20px)] rounded-full "
+                                className="background grid place-items-center px-[40px] py-3 text-[clamp(18px,10vw,20px)] rounded-full "
                                 type="submit">
                                 Enviar
                             </button>

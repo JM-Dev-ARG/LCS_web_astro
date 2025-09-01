@@ -12,41 +12,36 @@ import ButtonLCS from "../reutilizables/ButtonLCS.astro";
   <Container>
     <span class="w-[40%] h-[1px] bg-lcsOrange3 mb-14"></span>
     <div
-      class="bg-black/80 h-[400px] w-full bg-opacity-85 rounded-[20px] flex justify-center lg:justify-end overflow-y-hidden"
+      class="bg-black/80 md:h-[400px] w-full bg-opacity-85 rounded-[20px] flex flex-col md:flex-row justify-center overflow-y-hidden"
     >
       <div
-        class="img-container w-[50%] bg-[url('../img/siniestros.avif')] bg-cover bg-no-repeat bg-center"
+        class="img-container h-[200px] md:h-full w-full md:w-1/2 bg-[url('../img/siniestros.avif')] bg-cover bg-no-repeat bg-center"
       >
       </div>
 
-      <div class="flex flex-col gap-5 px-2 md:px-5 py-5 w-full lg:w-[50%]">
-        <div
-          class="w-full grid place-items-center mx-auto z-10"
-          data-aos="fade-down"
-          data-aos-duration="1000"
-          data-aos-once="true"
+      <div
+        class="h-[300px] md:h-full w-full md:w-1/2 flex justify-center items-center flex-col gap-5"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
+        <h3
+          class="text-gray-50 text-center text-pretty text-[clamp(40px,5.5vw,65px)] font-light"
         >
-          <div class="w-full pt-32 lg:pt-0">
-            <h3
-              class="text-gray-50 text-center text-pretty text-[clamp(18px,3vw,30px)] font-light px-3"
-            >
-              Todo lo que necesitas saber para contratar un seguro está en
-              esta guía <strong class="font-semibold text-lcsOrange3">
-                digital y gratuita.</strong
-              >
-            </h3>
-            <p
-              class="text-[clamp(16px,3vw,22px)] text-gray-50 text-center font-semibold pt-3"
-            >
-              ¡Completá el formulario y es tuya!
-            </p>
+          Resolvemos tu <strong class="font-semibold text-lcsOrange3">
+            siniestro</strong
+          >
+        </h3>
+        <p
+          class="text-[clamp(16px,2.2vw,22px)] text-gray-50 text-center font-semibold"
+        >
+          Solicita tu asesoría legal sin cargo
+        </p>
 
-            <ButtonLCS
-              href="/siniestros/siniestrosForm"
-              text="hola"
-            />
-          </div>
-        </div>
+        <ButtonLCS
+          href="/siniestros/siniestrosForm"
+          text="Solicita tu asesoría"
+        />
       </div>
     </div>
     <span class="w-[40%] h-[1px] bg-lcsOrange3 mt-14"></span>
@@ -57,7 +52,9 @@ import ButtonLCS from "../reutilizables/ButtonLCS.astro";
       font-family: "Cormorant Garamond", serif;
     }
     .img-container {
-      clip-path: polygon(0 0, 100% 0%, 83% 100%, 0% 100%);
+      @media screen and (min-width: 768px) {
+        clip-path: polygon(0 0, 100% 0%, 83% 100%, 0% 100%);
+      }
     }
   </style>
 </section>
