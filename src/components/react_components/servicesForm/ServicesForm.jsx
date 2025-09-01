@@ -61,9 +61,9 @@ export default function ServicesForm({
     const form = e.target;
     const formData = new FormData(form);
     try {
-      const urlBase = getOrigin(path);
+      /* const urlBase = getOrigin(path); */
       const fetchURL =
-        urlBase === "patrimoniales" ? urlFetchPatrimonieales : urlFetchDefault;
+        /* urlBase === "patrimoniales" ? urlFetchPatrimonieales : */ urlFetchDefault;
       const response = await fetch(fetchURL, {
         method: "POST",
         body: formData,
@@ -157,9 +157,8 @@ export default function ServicesForm({
   }, [selectVersion]);
 
   // Obtener la fecha actual
-  const date = `${new Date().getUTCDate()}/${
-    new Date().getUTCMonth() + 1
-  }/${new Date().getUTCFullYear()}`;
+  const date = `${new Date().getUTCDate()}/${new Date().getUTCMonth() + 1
+    }/${new Date().getUTCFullYear()}`;
 
   return (
     <div className="w-full h-full">
@@ -298,9 +297,8 @@ export default function ServicesForm({
               </svg>
             </label>
             <p
-              className={`font-extralight text-nowrap text-[clamp(10px,3vw,15px)] pl-2 ${
-                checkedStates ? "text-[#e69c99]" : "text-gray-50"
-              }`}
+              className={`font-extralight text-nowrap text-[clamp(10px,3vw,15px)] pl-2 ${checkedStates ? "text-[#e69c99]" : "text-gray-50"
+                }`}
             >
               {" "}
               Acepto los{" "}
@@ -319,9 +317,8 @@ export default function ServicesForm({
         <div className="w-full grid place-items-center mt-4" id="btn-send-form">
           <button
             disabled={!checkedStates}
-            className={`background w-[200px] text-[clamp(18px,3vw,30px)] rounded-full px-4 py-3 ${
-              !checkedStates ? "opacity-50 cursor-not-allowed" : ""
-            }`}
+            className={`background w-[200px] text-[clamp(18px,3vw,30px)] rounded-full px-4 py-3 ${!checkedStates ? "opacity-50 cursor-not-allowed" : ""
+              }`}
             type="submit"
           >
             Enviar

@@ -1,0 +1,51 @@
+---
+import Presentacion from "../components/servicePages/Presentacion.astro";
+import Services from "../components/servicePages/Services.astro";
+import LayoutServicios from "../layouts/LayoutServicios.astro";
+import data from "../data/bentoPersonas.json";
+import BentoPersonas from "../components/servicePages/BentoPersonas.astro";
+import HeroService from "../components/servicePages/HeroService.astro";
+
+const url = new URL(Astro.url.href);
+const path = url.pathname.split("/").filter(Boolean).pop();
+---
+
+<LayoutServicios
+  title="La Chica del Seguro - Seguros de Personas"
+  description="Descubre los seguros personalizados de La Chica del Seguro: protección integral, planes de ahorro, independencia económica, fondos educativos, planes de retiro y apoyo a emprendedores."
+  keywords="Seguros personales,Protección financiera, Planes de ahorro, Independencia económica, Fondo educativo, Planificación de retiro, Seguros para emprendedores, La Chica del Seguro, Estabilidad financiera, Seguros a medida"
+  url=`${path}`
+>
+  <main>
+    <HeroService
+      title="Asegurarse es la nueva moda."
+      subtitle="Seguros que protegen tus sueños."
+      image="/img/img-personas3.avif"
+      className="bg-[top_center]"
+      transitionName="PERSONAS"
+    />
+
+    <Services>
+      {data.map((item) => <BentoPersonas {...item} />)}
+    </Services>
+
+    <Presentacion
+      image="/resources/planifica_mejor_logo.svg"
+      bgColor="bg-[#cdfacf]"
+      border="border-[#4cabad]"
+    >
+      <p>
+        <span class="font-medium text-[#386885]">
+          Especialista en seguros de personas y desarrollo económico multinivel.
+        </span>
+        <br />
+        La meta es lograr que las personas y empresas cumplan sus objetivos financieros
+        utilizando planificaciones confiables y transparentes con el respaldo de
+        aseguradoras de primera línea. El mejor aliado para lograr tu
+        <span class="font-medium text-[#386885]"
+          >salud e independencia financiera.</span
+        >
+      </p>
+    </Presentacion>
+  </main>
+</LayoutServicios>

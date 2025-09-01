@@ -1,0 +1,50 @@
+---
+import InputForm from "../../components/react_components/formsComponents/InputForm";
+import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
+import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
+const path = Astro.url.pathname;
+const basePath = path.split("/")[1];
+const result = `/${basePath}`;
+const apiPatrimoniales = import.meta.env.PATRIMONIALES_API_URL;
+const apiDefault = import.meta.env.DEFAULT_API_URL;
+---
+
+<LayoutContactoServicios
+  title="Formulario de contacto para Fondo de Cese"
+  path={result}
+>
+  <main
+    class="relative my-20 z-10 h-auto w-full grid place-items-center mx-auto"
+  >
+    <section class="flex h-full w-[80%] justify-center items-center">
+      <ServicesForm
+        client:only="react"
+        urlFetchDefault={apiDefault}
+        urlFetchPatrimonieales={apiPatrimoniales}
+      >
+        <InputForm
+          name="Razon Social"
+          placeholder="Mi Empresa S.A."
+          type="text"
+          labelText="Razón Social"
+          client:only="react"
+        />
+        <InputForm
+          name="Rubro"
+          placeholder="Tecnología"
+          type="text"
+          labelText="Rubro"
+          client:only="react"
+        />
+
+        <InputForm
+          name="Cantidad Empleados"
+          placeholder="10"
+          type="text"
+          labelText="Cantidad de Empleados"
+          client:only="react"
+        />
+      </ServicesForm>
+    </section>
+  </main>
+</LayoutContactoServicios>

@@ -3,6 +3,8 @@ import Mailgun from "mailgun.js";
 
 export async function enviarMail(data: FormData) {
   const origin = data.get("Origen");
+  console.log(origin);
+
   function getEmailTo(origin: FormDataEntryValue) {
     switch (origin) {
       case "personas":
