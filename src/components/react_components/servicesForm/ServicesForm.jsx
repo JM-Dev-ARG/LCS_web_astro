@@ -38,14 +38,6 @@ export default function ServicesForm({
   const [origin, setOrigin] = useState("");
   const path = window.location.pathname;
   const [checkedStates, setCheckedStates] = useState(false);
-  const [selectMarca, setSelectMarca] = useState("");
-  const [modelosServices, setModelosServices] = useState([]);
-  const [selectModelo, setSelectModelo] = useState("");
-  const [modeloVersion, setModeloVersion] = useState([]);
-  const [selectVersion, setSelectVersion] = useState("");
-  const [years, setYears] = useState([]);
-  const [selectYear, setSelectYear] = useState("");
-  const [modelCode, setModelCode] = useState("");
 
   const toggleCheckbox = (event) => {
     setCheckedStates(event.target.checked);
@@ -63,7 +55,7 @@ export default function ServicesForm({
     try {
       const urlBase = getOrigin(path);
       const fetchURL =
-        /* urlBase === "patrimoniales" ? urlFetchPatrimonieales : */ urlFetchDefault;
+        urlBase === "patrimoniales" ? urlFetchPatrimonieales : urlFetchDefault;
       const response = await fetch(fetchURL, {
         method: "POST",
         body: formData,
@@ -123,39 +115,6 @@ export default function ServicesForm({
     setOrigin(getOrigin(path));
   }, [path]);
 
-  useEffect(() => {
-    setModelosServices([]);
-    setSelectModelo("");
-    setModeloVersion([]);
-    setSelectVersion("");
-    setYears([]);
-    setSelectYear("");
-  }, [selectMarca]);
-
-  useEffect(() => {
-    const selectedModel = modelosServices.find(
-      (item) => item.slug === selectModelo
-    );
-    if (selectedModel) {
-      setModeloVersion(selectedModel.versions);
-    } else {
-      return;
-    }
-  }, [selectModelo]);
-
-  useEffect(() => {
-    if (selectVersion) {
-      const selectedVersion = modeloVersion.find(
-        (item) => item.slug === selectVersion
-      );
-      if (selectedVersion) {
-        setYears(selectedVersion.years);
-        setModelCode(selectedVersion.code);
-      }
-    } else {
-      return;
-    }
-  }, [selectVersion]);
 
   // Obtener la fecha actual
   const date = `${new Date().getUTCDate()}/${new Date().getUTCMonth() + 1
@@ -216,7 +175,7 @@ export default function ServicesForm({
 
           {children ? children : ""}
 
-          {sheetName === "Automotores" || sheetName === "Motocicleta" ? (
+          {/* {sheetName === "Automotores" || sheetName === "Motocicleta" ? (
             <SelectMarcaForm
               selectMarca={selectMarca}
               setSelectMarca={setSelectMarca}
@@ -263,7 +222,7 @@ export default function ServicesForm({
             />
           ) : (
             ""
-          )}
+          )} */}
         </div>
 
         <input type="text" name="Origen" defaultValue={origin} hidden />

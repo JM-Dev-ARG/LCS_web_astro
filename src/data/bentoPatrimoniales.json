@@ -69,7 +69,7 @@
             "RC elevadores y calderas.",
             "Daños por agua - RC por guarda de vehículos"
         ],
-        "dataform1": "/patrimoniales/automotoresForm",
+        "dataform1": "https://cotizador.cebrokers.com.ar/embed/6",
         "dataform2": "/patrimoniales/motocicletaForm",
         "dataform3": "/patrimoniales/caucionForm",
         "dataform4": "/patrimoniales/hogarForm",
