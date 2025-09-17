@@ -7,13 +7,14 @@ export const POST: APIRoute = async ({ request }) => {
   const data = await request.formData();
 
   try {
-    const mailerResponse = await postDataMailer(data);
+    /* const mailerResponse = await postDataMailer(data); */
+
     const dbResponse = await postDataDDBB(data);
+
     const mailgunResponse = await enviarMail(data);
-    /*   const dbCBResponse = await postDataDDBBCB(data); */
 
     if (
-      (mailerResponse === 200 || mailerResponse === 201) &&
+      /* (mailerResponse === 200 || mailerResponse === 201) && */
       dbResponse.status === 200 &&
       mailgunResponse === 200
     ) {
@@ -29,7 +30,7 @@ export const POST: APIRoute = async ({ request }) => {
         JSON.stringify({
           success: false,
           message: "Hubo un problema con alguna de las operaciones.",
-          mailerResponse,
+          /*  mailerResponse, */
           dbResponse,
         }),
         { status: 500 }
