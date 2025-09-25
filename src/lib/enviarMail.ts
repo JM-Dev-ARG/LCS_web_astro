@@ -3,7 +3,6 @@ import Mailgun from "mailgun.js";
 
 export async function enviarMail(data: FormData) {
   const origin = data.get("Origen");
-  console.log(origin);
 
   function getEmailTo(origin: FormDataEntryValue) {
     switch (origin) {
@@ -15,6 +14,8 @@ export async function enviarMail(data: FormData) {
         return `${import.meta.env.MAIL_PATRIMONIO_TO}`;
       case "siniestros":
         return `${import.meta.env.MAIL_SINIESTROS_TO}`;
+      case "descargable":
+        return `${data.get("email")}`;
       default:
         return `${import.meta.env.MAIL_DEFAULT_TO}`;
     }

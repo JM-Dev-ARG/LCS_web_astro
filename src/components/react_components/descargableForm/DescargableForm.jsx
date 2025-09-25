@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import "./form.css";
 import Swal from "sweetalert2";
 
@@ -34,6 +35,7 @@ async function submit(e) {
 
     const form = e.target;
     const formData = new FormData(form);
+    console.log(formData);
 
     try {
         const response = await fetch("/api/downloadApi", {
@@ -45,6 +47,7 @@ async function submit(e) {
         if (data.message) {
             saludo();
             form.reset();
+
 
         } else {
             saludoError();
@@ -61,7 +64,9 @@ async function submit(e) {
 
 
 // Componente principal del formulario
-export default function ServicesForm() {
+export default function DescargableForm() {
+
+
     const date = `${new Date().getUTCDate()}/${new Date().getUTCMonth() + 1}/${new Date().getUTCFullYear()}`;
     return (
         <div className=" w-full flex justify-center items-center  z-10">
@@ -120,10 +125,12 @@ export default function ServicesForm() {
                         </div>
                         <input type="text" name="sheetName" defaultValue="Descarga Guia" hidden />
                         <input type="text" name="Fecha" defaultValue={date} hidden />
+                        <input type="text" name="Origen" defaultValue="descargable" hidden />
 
                         <div className="w-full flex justify-center ">
                             <button
-                                className="background grid place-items-center px-[40px] py-3 text-[clamp(18px,10vw,20px)] rounded-full "
+
+                                className={`background grid place-items-center px-[40px] py-3 text-[clamp(18px,10vw,20px)] rounded-full `}
                                 type="submit">
                                 Enviar
                             </button>
