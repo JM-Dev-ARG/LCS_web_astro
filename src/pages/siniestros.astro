@@ -5,7 +5,6 @@ import LayoutServicios from "../layouts/LayoutServicios.astro";
 import data from "../data/bentoPersonas.json";
 import BentoPersonas from "../components/servicePages/BentoPersonas.astro";
 import HeroService from "../components/servicePages/HeroService.astro";
-import heroPersonas from "@/assets/personas/img-personas3.avif";
 
 const url = new URL(Astro.url.href);
 const path = url.pathname.split("/").filter(Boolean).pop();
@@ -21,7 +20,7 @@ const path = url.pathname.split("/").filter(Boolean).pop();
     <HeroService
       title="Asegurarse es la nueva moda."
       subtitle="Seguros que protegen tus sueños."
-      image={heroPersonas.src}
+      image="/img/img-personas3.avif"
       className="bg-[top_center]"
       transitionName="PERSONAS"
     />
@@ -31,7 +30,7 @@ const path = url.pathname.split("/").filter(Boolean).pop();
     </Services>
 
     <Presentacion
-      image="/img/LogoPM.avif"
+      image="/resources/planifica_mejor_logo.svg"
       bgColor="bg-[#cdfacf]"
       border="border-[#4cabad]"
     >

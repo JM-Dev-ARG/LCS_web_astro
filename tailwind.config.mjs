@@ -23,31 +23,12 @@ export default {
         lcsPink1: "#e69c99",
         lcsPink2: "#fcded0",
         lcsPink3: "#f2a9b1",
-        academia: {
-          negro: "#1D1D1B",
-          amarillo1: "#C6D300",
-          amarillo2: "#DBDF5B",
-          amarillo3: "#EDEEB2",
-          amarillo4: "#F9F6E8",
-          violeta1: "#5D4495",
-          violeta2: "#7B63B0",
-          violeta3: "#CBB2D7",
-          violeta4: "#857993",
-        },
       },
       screens: {
         "3xl": "1720px",
       },
       cursor: {
         scroll: "url(/resources/scroll-icon.svg), pointer",
-      },
-      boxShadow: {
-        academia: "10px 10px 0px #857993",
-        "academia-boton": "5px 5px 0px #CBB2D7",
-        "academia-boton-2": "5px 5px 0px #DBDF5B",
-      },
-      dropShadow: {
-        academia: "10px 0px 0px #857993",
       },
     },
   },

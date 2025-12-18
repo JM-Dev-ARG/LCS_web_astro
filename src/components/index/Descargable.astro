@@ -1,23 +1,7 @@
 ---
-interface Props {
-  titulo: string;
-  titulo_strong: string;
-  subtitulo: string;
-  imgURL: string;
-  img_alt: string;
-  color_background: string;
-  color_strong: string;
-}
-const {
-  titulo,
-  titulo_strong,
-  subtitulo,
-  imgURL,
-  img_alt,
-  color_background,
-  color_strong,
-} = Astro.props;
+import DescargableForm from "../react_components/descargableForm/DescargableForm";
 import Container from "../reutilizables/Container.astro";
+
 ---
 
 <section
@@ -27,11 +11,10 @@ import Container from "../reutilizables/Container.astro";
   <Container>
     <div class="relative mx-auto w-[90%] lg:w-full xl:w-[90%]">
       <div
-        class={`w-full bg-opacity-85 rounded-[20px] flex justify-center lg:justify-end overflow-y-hidden`}
-        style=`background-color:${color_background};`
+        class="bg-lcsGreen1 w-full bg-opacity-85 rounded-[20px] flex justify-center lg:justify-end overflow-y-hidden"
       >
         <div
-          class="absolute block w-full lg:w-[35%] xl:w-[30%] h-full top-0 left-0 right-0 skew-y-3"
+          class="absolute block w-full lg:w-[35%] xl:w-[30%] h-full top-0 left-0 right-0"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-once="true"
@@ -39,17 +22,30 @@ import Container from "../reutilizables/Container.astro";
           <img
             loading="lazy"
             class="h-[40%] w-full lg:h-full object-contain object-center absolute -top-24 rotate-[27deg] lg:rotate-0 lg:top-[10%] xl:top-[10%] lg:-left-10 scale-[170%]"
-            src={imgURL}
-            alt={img_alt}
+            src="/img/libro.avif"
+            alt="Imagen tapa y hojas de la guía Aprendé a leer tu poliza"
             height="auto"
             width="auto"
-            title={img_alt}
+            title="Imagen tapa y hojas de la guía Aprende a leer tu poliza"
           />
         </div>
+        <!--  <div class="hidden lg:block w-[30%]"></div> -->
 
         <div
           class="flex flex-col gap-5 px-2 md:px-5 py-5 w-full lg:w-[65%] xl:w-[70%] overflow-hidden"
         >
+          <!-- <div
+            class="w-full"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            <h3
+              class="text-gray-50 text-center text-[clamp(20px,4vw,28px)] title uppercase px-3"
+            >
+              La póliza no tiene letra chica, es un idioma nuevo.
+            </h3>
+          </div> -->
           <div
             class="w-full grid place-items-center mx-auto z-10"
             data-aos="fade-down"
@@ -60,15 +56,15 @@ import Container from "../reutilizables/Container.astro";
               <h3
                 class="text-gray-50 text-center text-pretty text-[clamp(18px,3vw,30px)] font-light px-3"
               >
-                {titulo}
-                <strong class={`font-semibold text-${color_strong}`}>
-                  {titulo_strong}
-                </strong>
+                Todo lo que necesitas saber para contratar un seguro está en
+                esta guía <strong class="font-semibold text-lcsOrange3">
+                  digital y gratuita.</strong
+                >
               </h3>
               <p
                 class="text-[clamp(16px,3vw,22px)] text-gray-50 text-center font-semibold pt-3"
               >
-                {subtitulo}
+                ¡Completá el formulario y es tuya!
               </p>
             </div>
           </div>
@@ -78,22 +74,22 @@ import Container from "../reutilizables/Container.astro";
             data-aos-duration="1000"
             data-aos-once="true"
           >
-            <slot />
+            <DescargableForm client:only="react" />
           </div>
         </div>
       </div>
+    </div>
+  </Container>
 
-      <style>
-        .title {
-          font-family: "Cormorant Garamond", serif;
-        }
-      </style>
-
-      <script>
-        import AOS from "aos";
-        import "aos/dist/aos.css";
-        AOS.init();
-      </script>
-    </div></Container
-  >
+  <style>
+    .title {
+      font-family: "Cormorant Garamond", serif;
+    }
+  </style>
 </section>
+<script>
+  import AOS from "aos";
+  import "aos/dist/aos.css"; // You can also use <link> for styles
+  // ..
+  AOS.init();
+</script>

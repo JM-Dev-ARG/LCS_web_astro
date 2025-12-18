@@ -1,13 +1,16 @@
 import type { APIRoute } from "astro";
-import postDataMailer from "../../lib/postDataMailer";
+import { postDataDDBB } from "../../lib/postDataDDBB";
+import { enviarLinkDescarga } from "../../lib/enviarLinkDescarga";
 
 export const POST: APIRoute = async ({ request }) => {
   const data = await request.formData();
 
   try {
-    const mailerResponse = await postDataMailer(data);
+    const dbResponse = await postDataDDBB(data);
 
-    if (mailerResponse === 200 || mailerResponse === 201) {
+    const mailgunResponse = await enviarLinkDescarga(data);
+
+    if (dbResponse.status === 200 && mailgunResponse === 200) {
       return new Response(
         JSON.stringify({
           success: true,
@@ -20,7 +23,8 @@ export const POST: APIRoute = async ({ request }) => {
         JSON.stringify({
           success: false,
           message: "Hubo un problema con alguna de las operaciones.",
-          mailerResponse,
+
+          dbResponse,
         }),
         { status: 500 }
       );

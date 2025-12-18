@@ -6,6 +6,7 @@ import SelectMarcaForm from "../formsComponents/SelectMarcaForm";
 import SelectModelosForm from "../formsComponents/SelectModelosForm";
 import SelectVersionForm from "../formsComponents/SelectVersionForm";
 import SelectYearsForm from "../formsComponents/SelectYearsForm";
+import TextAreaForm from "../formsComponents/textAreaForm";
 
 const isMobile = window.matchMedia("(max-width: 430px)").matches;
 
@@ -30,7 +31,7 @@ function saludoError() {
 }
 
 export default function ServicesForm({
-  children,
+  children = null,
   urlFetchPatrimonieales,
   urlFetchDefault,
 }) {
@@ -38,14 +39,6 @@ export default function ServicesForm({
   const [origin, setOrigin] = useState("");
   const path = window.location.pathname;
   const [checkedStates, setCheckedStates] = useState(false);
-  const [selectMarca, setSelectMarca] = useState("");
-  const [modelosServices, setModelosServices] = useState([]);
-  const [selectModelo, setSelectModelo] = useState("");
-  const [modeloVersion, setModeloVersion] = useState([]);
-  const [selectVersion, setSelectVersion] = useState("");
-  const [years, setYears] = useState([]);
-  const [selectYear, setSelectYear] = useState("");
-  const [modelCode, setModelCode] = useState("");
 
   const toggleCheckbox = (event) => {
     setCheckedStates(event.target.checked);
@@ -58,6 +51,7 @@ export default function ServicesForm({
   // Función para manejar el envío del formulario
   async function submit(e) {
     e.preventDefault();
+    setCheckedStates(false);
     const form = e.target;
     const formData = new FormData(form);
     try {
@@ -74,7 +68,9 @@ export default function ServicesForm({
         saludo();
         form.reset();
         setTimeout(() => {
-          window.location.href = `/${path.split("/")[1]}`;
+          urlBase === "siniestros"
+            ? (window.location.href = "/")
+            : (window.location.href = `/${path.split("/")[1]}`);
         }, 5100);
       } else {
         saludoError();
@@ -89,7 +85,7 @@ export default function ServicesForm({
   function getSheetName(path) {
     const pathToSheetName = {
       vacacionesForm: "Vacaciones",
-      "w&hForm": "WorkHoliday",
+      whForm: "WorkHoliday",
       enViajeForm: "Pasajero en Viaje",
       ceseForm: "Fondo de Cese",
       feducativoForm: "Fondo Educativo",
@@ -109,6 +105,8 @@ export default function ServicesForm({
       urbanoForm: "Urbano",
       otrosForm: "Otros",
       caucionForm: "Caucion",
+      sepelioForm: "Sepelio",
+      siniestrosForm: "Siniestros",
     };
 
     const routeKey = path.split("/")[2];
@@ -121,44 +119,9 @@ export default function ServicesForm({
     setOrigin(getOrigin(path));
   }, [path]);
 
-  useEffect(() => {
-    setModelosServices([]);
-    setSelectModelo("");
-    setModeloVersion([]);
-    setSelectVersion("");
-    setYears([]);
-    setSelectYear("");
-  }, [selectMarca]);
-
-  useEffect(() => {
-    const selectedModel = modelosServices.find(
-      (item) => item.slug === selectModelo
-    );
-    if (selectedModel) {
-      setModeloVersion(selectedModel.versions);
-    } else {
-      return;
-    }
-  }, [selectModelo]);
-
-  useEffect(() => {
-    if (selectVersion) {
-      const selectedVersion = modeloVersion.find(
-        (item) => item.slug === selectVersion
-      );
-      if (selectedVersion) {
-        setYears(selectedVersion.years);
-        setModelCode(selectedVersion.code);
-      }
-    } else {
-      return;
-    }
-  }, [selectVersion]);
-
   // Obtener la fecha actual
-  const date = `${new Date().getUTCDate()}/${
-    new Date().getUTCMonth() + 1
-  }/${new Date().getUTCFullYear()}`;
+  const date = `${new Date().getUTCDate()}/${new Date().getUTCMonth() + 1
+    }/${new Date().getUTCFullYear()}`;
 
   return (
     <div className="w-full h-full">
@@ -212,57 +175,13 @@ export default function ServicesForm({
           ) : (
             ""
           )}
+          {origin === "siniestros" ? (
+            <TextAreaForm />
+          ) : (
+            ""
+          )}
 
           {children ? children : ""}
-
-          {sheetName === "Automotores" || sheetName === "Motocicleta" ? (
-            <SelectMarcaForm
-              selectMarca={selectMarca}
-              setSelectMarca={setSelectMarca}
-            />
-          ) : (
-            ""
-          )}
-          {sheetName === "Automotores" || sheetName === "Motocicleta" ? (
-            <SelectModelosForm
-              selectModelo={selectModelo}
-              setSelectModelo={setSelectModelo}
-              marca={selectMarca}
-              setModelosServices={setModelosServices}
-            />
-          ) : (
-            ""
-          )}
-          {sheetName === "Automotores" || sheetName === "Motocicleta" ? (
-            <SelectVersionForm
-              selectVersion={selectVersion}
-              setSelectVersion={setSelectVersion}
-              version={modeloVersion}
-            />
-          ) : (
-            ""
-          )}
-
-          {sheetName === "Automotores" || sheetName === "Motocicleta" ? (
-            <SelectYearsForm
-              selectYear={selectYear}
-              setSelectYear={setSelectYear}
-              years={years}
-            />
-          ) : (
-            ""
-          )}
-
-          {sheetName === "Automotores" || sheetName === "Motocicleta" ? (
-            <input
-              type="text"
-              name="Codigo Modelo"
-              defaultValue={modelCode}
-              hidden
-            />
-          ) : (
-            ""
-          )}
         </div>
 
         <input type="text" name="Origen" defaultValue={origin} hidden />
@@ -297,9 +216,8 @@ export default function ServicesForm({
               </svg>
             </label>
             <p
-              className={`font-extralight text-nowrap text-[clamp(10px,3vw,15px)] pl-2 ${
-                checkedStates ? "text-[#e69c99]" : "text-gray-50"
-              }`}
+              className={`font-extralight text-nowrap text-[clamp(10px,3vw,15px)] pl-2 ${checkedStates ? "text-[#e69c99]" : "text-gray-50"
+                }`}
             >
               {" "}
               Acepto los{" "}
@@ -318,9 +236,8 @@ export default function ServicesForm({
         <div className="w-full grid place-items-center mt-4" id="btn-send-form">
           <button
             disabled={!checkedStates}
-            className={`background w-[200px] text-[clamp(18px,3vw,30px)] rounded-full px-4 py-3 ${
-              !checkedStates ? "opacity-50 cursor-not-allowed" : ""
-            }`}
+            className={`background w-[200px] text-[clamp(18px,3vw,30px)] rounded-full px-4 py-3 ${!checkedStates ? "opacity-50 cursor-not-allowed" : ""
+              }`}
             type="submit"
           >
             Enviar

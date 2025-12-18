@@ -1,0 +1,67 @@
+---
+import Container from "../reutilizables/Container.astro";
+import ButtonLCS from "../reutilizables/ButtonLCS.astro";
+---
+
+<section
+  id="contacto_siniestros"
+  class="w-full relative z-10 bg-[#fff5eb] pt-32 lg:pt-20"
+>
+  <Container>
+    <span class="w-[40%] h-[1px] bg-lcsOrange3 mb-14"></span>
+    <div
+      class="bg-black/80 md:h-[400px] w-full bg-opacity-85 rounded-[20px] flex flex-col md:flex-row justify-center overflow-y-hidden pb-4 md:pb-0"
+    >
+      <div
+        class="img-container h-[200px] md:h-full w-full md:w-1/2 bg-[url('../img/siniestros.avif')] bg-cover bg-no-repeat bg-center"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
+      </div>
+
+      <div
+        class="h-[300px] md:h-full w-full md:w-1/2 flex justify-center items-center flex-col gap-5"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
+        <h3
+          class="text-gray-50 text-center text-pretty text-[clamp(40px,5.5vw,65px)] font-light"
+        >
+          Resolvemos tu <strong class="font-semibold text-lcsOrange3">
+            siniestro</strong
+          >
+        </h3>
+        <p
+          class="text-[clamp(16px,2.2vw,22px)] text-gray-50 text-center font-semibold w-[80%]"
+        >
+          Reclama a tu seguro o al de un tercero junto a una asesora legal profesional
+        </p>
+
+        <ButtonLCS
+          href="/siniestros/siniestrosForm"
+          text="Solicita tu asesoría"
+        />
+      </div>
+    </div>
+    <span class="w-[40%] h-[1px] bg-lcsOrange3 mt-14"></span>
+  </Container>
+
+  <style>
+    .title {
+      font-family: "Cormorant Garamond", serif;
+    }
+    .img-container {
+      @media screen and (min-width: 768px) {
+        clip-path: polygon(0 0, 100% 0%, 83% 100%, 0% 100%);
+      }
+    }
+  </style>
+</section>
+<script>
+  import AOS from "aos";
+  import "aos/dist/aos.css"; // You can also use <link> for styles
+  // ..
+  AOS.init();
+</script>

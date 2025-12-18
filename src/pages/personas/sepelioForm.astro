@@ -1,6 +1,6 @@
 ---
-import InputForm from "../../components/react_components/formsComponents/InputForm";
-import { SelectForm } from "../../components/react_components/formsComponents/SelectForm";
+/* import InputForm from "../../components/react_components/formsComponents/InputForm";
+import { SelectForm } from "../../components/react_components/formsComponents/SelectForm"; */
 import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
 import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
 const path = Astro.url.pathname;
@@ -23,7 +23,7 @@ const apiDefault = import.meta.env.DEFAULT_API_URL;
         urlFetchDefault={apiDefault}
         urlFetchPatrimonieales={apiPatrimoniales}
       >
-        <InputForm
+        <!-- <InputForm
           name="Fecha Nacimiento"
           placeholder=""
           type="date"
@@ -39,7 +39,7 @@ const apiDefault = import.meta.env.DEFAULT_API_URL;
             { value: "Inscripto", labelText: "Responsable inscripto" },
             { value: "Otro", labelText: "Otro" },
           ]}
-        />
+        /> -->
       </ServicesForm>
     </section>
   </main>

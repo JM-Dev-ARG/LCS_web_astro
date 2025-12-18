@@ -10,5 +10,11 @@
     "description": "La vida es eso que pasa mientras estás dudando en asegurarla.",
     "image": "../img/img-viajes2.avif",
     "url": "/viajes"
+  },
+  {
+    "title": "PATRIMONIO",
+    "description": "La vida es eso que pasa mientras estás dudando en asegurarla.",
+    "image": "../img/img-patrimoniales.avif",
+    "url": "/patrimoniales"
   }
 ]
