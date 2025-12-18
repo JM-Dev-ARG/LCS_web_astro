@@ -1,0 +1,128 @@
+<div
+  class="parent"
+  data-aos="fade-up"
+  data-aos-duration="800"
+  data-aos-once="true"
+>
+  <div class="div1 flex justify-between items-center bg-academia-amarillo1">
+    <div class="-skew-x-[10deg] h-full w-full relative">
+      <p
+        class="text-academia-violeta2 text-center text-[55px] md:text-[80px] lg:text-[65px] xl:text-[80px] tracking-tighter w-full absolute -top-[15%] md:-top-[22%] lg:-top-[20%] xl:-top-[24%] -left-5 font-bold"
+      >
+        100% Online
+      </p>
+      <p
+        class="text-academia-violeta2 text-left text-[clamp(1rem,1.3vw,1.2rem)] h-full w-full flex items-center justify-center px-5"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias
+        atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea,
+        nihil deleniti maiores aspernatur in unde non illum aliquid placeat
+        autem?
+      </p>
+    </div>
+  </div>
+  <div class="div2 flex justify-between items-center bg-academia-violeta1">
+    <div class="-skew-x-[10deg] h-full w-full relative">
+      <p
+        class="text-academia-amarillo2 text-center text-[55px] md:text-[80px] lg:text-[65px] xl:text-[80px] tracking-tighter w-full absolute -top-[15%] md:-top-[22%] lg:-top-[20%] xl:-top-[24%] -left-5 font-bold"
+      >
+        100% Online
+      </p>
+      <p
+        class="text-academia-amarillo2 text-left text-[clamp(1rem,1.3vw,1.2rem)] h-full w-full flex items-center justify-center px-5"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias
+        atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea,
+        nihil deleniti maiores aspernatur in unde non illum aliquid placeat
+        autem?
+      </p>
+    </div>
+  </div>
+  <div class="div3 flex justify-between items-center bg-academia-violeta3">
+    <div class="-skew-x-[10deg] h-full w-full relative">
+      <p
+        class="text-academia-negro text-center text-[55px] md:text-[80px] lg:text-[65px] xl:text-[80px] tracking-tighter w-full absolute -top-[15%] md:-top-[22%] lg:-top-[20%] xl:-top-[24%] -left-5 font-bold"
+      >
+        100% Online
+      </p>
+      <p
+        class="text-academia-negro text-left text-[clamp(1rem,1.3vw,1.2rem)] h-full w-full flex items-center justify-center px-5"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias
+        atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea,
+        nihil deleniti maiores aspernatur in unde non illum aliquid placeat
+        autem?
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .parent {
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 64px;
+    column-gap: 30px;
+    margin-top: 30px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1025px) {
+      width: 80%;
+    }
+  }
+
+  .titulo {
+    position: absolute;
+    font-size: clamp(50px, 5.3vw, 80px);
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-academia-violeta2);
+    letter-spacing: -0.05em;
+  }
+
+  .parent > div {
+    height: 250px;
+    width: 100%;
+    transform: skewX(10deg);
+    box-shadow: 10px 10px 0px #857993;
+  }
+
+  .div1 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+
+    @media (max-width: 768px) {
+      grid-column: span 2 / span 2;
+      grid-row: span 2 / span 2;
+    }
+  }
+
+  .div2 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    grid-column-start: 4;
+
+    @media (max-width: 768px) {
+      grid-column: span 2 / span 2;
+      grid-row: span 2 / span 2;
+    }
+  }
+
+  .div3 {
+    grid-column: span 6 / span 6;
+    grid-row: span 3 / span 3;
+    grid-row-start: 4;
+
+    @media (max-width: 768px) {
+      grid-column: span 2 / span 2;
+      grid-row: span 2 / span 2;
+    }
+  }
+</style>

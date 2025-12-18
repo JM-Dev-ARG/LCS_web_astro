@@ -1,0 +1,98 @@
+---
+interface Props {
+  titulo: string;
+  titulo_strong: string;
+  subtitulo: string;
+  imgURL: string;
+  img_alt: string;
+  color_background: string;
+  color_strong: string;
+}
+const {
+  titulo,
+  titulo_strong,
+  subtitulo,
+  imgURL,
+  img_alt,
+  color_background,
+  color_strong,
+} = Astro.props;
+import Container from "../reutilizables/Container.astro";
+---
+
+<section
+  id="guia_descarga"
+  class="w-full z-10 bg-[#fff5eb] pt-32 lg:pt-20 2xl:pt-32"
+>
+  <Container>
+    <div class="relative mx-auto w-[90%] lg:w-full xl:w-[90%]">
+      <div
+        class="w-full bg-opacity-85 flex justify-center lg:justify-end bg-academia-violeta1 mb-3 shadow-academia"
+      >
+        <div
+          class="absolute w-full lg:w-[35%] xl:w-[30%] h-full top-0 left-0 right-0 skew-y-3"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          <img
+            loading="lazy"
+            class="h-[40%] w-full lg:h-full object-contain object-center absolute -top-24 rotate-[27deg] lg:rotate-0 lg:top-[10%] lg:-left-10 scale-[170%]"
+            src={imgURL}
+            alt={img_alt}
+            height="auto"
+            width="auto"
+            title={img_alt}
+          />
+        </div>
+
+        <div
+          class="flex flex-col gap-5 px-2 md:px-5 py-5 w-full lg:w-[65%] xl:w-[70%] overflow-hidden"
+        >
+          <div
+            class="w-full grid place-items-center mx-auto z-10"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            <div class="w-full pt-32 lg:pt-0">
+              <h3
+                class="text-gray-50 text-center text-pretty text-[clamp(18px,3vw,30px)] font-light px-3"
+              >
+                {titulo}
+                <strong class={`font-semibold text-${color_strong}`}>
+                  {titulo_strong}
+                </strong>
+              </h3>
+              <p
+                class="text-[clamp(16px,3vw,22px)] text-gray-50 text-center font-semibold pt-3"
+              >
+                {subtitulo}
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-full flex justify-center items-center"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            <slot />
+          </div>
+        </div>
+      </div>
+
+      <style>
+        .title {
+          font-family: "Cormorant Garamond", serif;
+        }
+      </style>
+
+      <script>
+        import AOS from "aos";
+        import "aos/dist/aos.css";
+        AOS.init();
+      </script>
+    </div></Container
+  >
+</section>

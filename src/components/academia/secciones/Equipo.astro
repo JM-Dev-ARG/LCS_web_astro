@@ -1,0 +1,59 @@
+---
+import SeccionCompleta from "../SeccionCompleta.astro";
+import CardEquipo from "../CardEquipo.astro";
+import CardProfesor from "../CardProfesor.astro";
+
+interface Props {
+  dataEquipo?: { titulo: string; descripcion: string; img: string }[];
+  dataProfesor?: {
+    titulo: string;
+    descripcion: { text: string }[];
+    img: string;
+  }[];
+  id: string;
+  titulo1: string;
+  titulo2: string;
+  contenido_before: string;
+  descripcion?: string; // Define any props if needed
+}
+const {
+  dataEquipo,
+  dataProfesor,
+  id,
+  titulo1,
+  titulo2,
+  contenido_before,
+  descripcion,
+} = Astro.props;
+---
+
+<SeccionCompleta
+  id={id}
+  titulo1={titulo1}
+  titulo2={titulo2}
+  contenido_before={contenido_before}
+  descripcion={descripcion}
+>
+  {
+    dataEquipo ? (
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center mt-8 mb-12 w-full place-items-center">
+        {dataEquipo.map((item, index) => (
+          <CardEquipo
+            titulo={item.titulo}
+            descripcion={item.descripcion}
+            img={item.img}
+            delay={(index * 200).toString()}
+          />
+        ))}
+      </div>
+    ) : (
+      <div class="w-full flex justify-center items-center lg:mt-8 mb-12">
+        <CardProfesor
+          titulo={dataProfesor[0].titulo}
+          descripcion={dataProfesor[0].descripcion}
+          img={dataProfesor[0].img}
+        />
+      </div>
+    )
+  }
+</SeccionCompleta>

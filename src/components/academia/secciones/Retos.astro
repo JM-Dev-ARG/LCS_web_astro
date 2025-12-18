@@ -1,0 +1,82 @@
+---
+import SeccionCompleta from "../SeccionCompleta.astro";
+import CardRetos from "../CardRetos.astro";
+
+interface Props {
+  id: string;
+  titulo1: string;
+  titulo2: string;
+  contenido_before: string;
+  descripcion: string;
+  img?: string;
+  data: {
+    titulo: string;
+    descripcion: string;
+  }[];
+  href_contacto?: string;
+}
+const {
+  id,
+  titulo1,
+  titulo2,
+  contenido_before,
+  descripcion,
+  data,
+  img,
+  href_contacto,
+} = Astro.props;
+---
+
+<SeccionCompleta
+  id={id}
+  titulo1={titulo1}
+  titulo2={titulo2}
+  contenido_before={contenido_before}
+  descripcion={descripcion}
+>
+  <div
+    class="grid grid-cols-1 lg:grid-cols-2 gap-6 place-items-center mt-12 w-full xl:w-[90%]"
+  >
+    <div class="w-full flex flex-col justify-center items-center gap-4">
+      {
+        data.map((item, index) => (
+          <CardRetos
+            titulo={item.titulo}
+            texto={item.descripcion}
+            delay={(index * 150).toString()}
+          />
+        ))
+      }
+    </div>
+    <div
+      class="w-full h-full hidden lg:grid place-items-center mx-auto"
+      data-aos="fade-left"
+      data-aos-duration="800"
+      data-aos-once="true"
+    >
+      <img
+        loading="lazy"
+        class="size-[80%] object-cover object-center shadow-academia aspect-square"
+        src={img}
+        alt="Imagen del curso Negocio de Seguros Digital"
+        height="auto"
+        width="auto"
+        title="Imagen del curso Negocio de Seguros Digital"
+      />
+    </div>
+  </div>
+  {
+    href_contacto ? (
+      <span class="flex justify-center items-center w-full mt-4">
+        <a
+          href={href_contacto}
+          class="bg-academia-violeta1 px-12 py-4 text-gray-50 font-normal text-2xl shadow-academia-boton hover:translate-x-[5px] hover:translate-y-[5px] hover:shadow-none transition-all duration-300 ease-in"
+        >
+          Solicita el tuyo
+        </a>
+      </span>
+    ) : (
+      ""
+    )
+  }
+</SeccionCompleta>

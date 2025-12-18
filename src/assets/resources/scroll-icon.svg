@@ -1,0 +1,8 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fef0e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-separator-vertical" transform="rotate(90, 0, 0)">
+  
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" class="svg-elem-1"></path>
+  <path d="M12 4l0 16" class="svg-elem-2"></path>
+  <path d="M8 8l-4 4l4 4" class="svg-elem-3"></path>
+  <path d="M16 16l4 -4l-4 -4" class="svg-elem-4"></path>
+</svg>

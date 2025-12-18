@@ -1,0 +1,30 @@
+---
+import data from "../../../data/cursos.json";
+import SeccionCompleta from "../SeccionCompleta.astro";
+import CardCursos from "../CardCursos.astro";
+---
+
+<SeccionCompleta
+  id="cursos"
+  titulo1="Conoce nuestros"
+  titulo2="Cursos y Mentorias"
+  contenido_before="Capacitate"
+  descripcion="Transformá tu forma de comercializar seguros: dominá el mundo digital, conectá con más clientes y multiplicá tus ventas con nuestros cursos,  mentorías y asesorías diseñadas para el nuevo mercado."
+>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 place-items-center mt-8 mb-12 w-full"
+  >
+    {
+      data.map((item, index) => (
+        <CardCursos
+          estado={item.estado}
+          titulo={item.titulo}
+          img_curso={item.img_curso}
+          url_curso={item.url_curso}
+          descripcion={item.descripcion}
+          delay={(index * 200).toString()}
+        />
+      ))
+    }
+  </div>
+</SeccionCompleta>

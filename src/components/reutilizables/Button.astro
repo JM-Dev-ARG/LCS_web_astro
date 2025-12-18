@@ -1,17 +1,18 @@
 ---
-type Props = {
+export interface Props {
   href?: string;
   title1?: string;
   title2?: string;
-};
+  target?: string;
+}
 
-const { href, title1, title2 } = Astro.props;
+const { href, title1, title2, target } = Astro.props;
 ---
 
 <a
   href={href}
   class="button px-2 md:px-4"
-  target="_blank"
+  target={target ? target : "_blank"}
   title={title2}
 >
   <div class="text-gray-50">

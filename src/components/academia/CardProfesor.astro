@@ -1,0 +1,43 @@
+---
+interface Props {
+  titulo: string;
+  descripcion: { text: string }[];
+  img: string;
+}
+const { titulo, descripcion, img } = Astro.props;
+---
+
+<div class="card w-[90%] flex flex-col lg:flex-row justify-around items-center">
+  <div
+    class="w-full flex justify-center items-center relative"
+    data-aos="fade-up"
+    data-aos-duration="800"
+    data-aos-once="true"
+  >
+    <img
+      class="h-[300px] lg:h-[500px] w-full drop-shadow-academia object-contain"
+      src={img}
+      alt={"Imagen de " + titulo}
+    />
+    <span
+      class="text-[clamp(20px,2.8vw,28px)] grid place-items-center font-bold text-academia-negro bg-academia-amarillo1 skew-x-[30deg] w-[90%] lg:w-[90%] absolute -bottom-4 lg:bottom-6 xl:-bottom-4 left-1/2 -translate-x-1/2"
+    >
+      <p class="-skew-x-[30deg]">{titulo}</p>
+    </span>
+  </div>
+  <div
+    class="w-full flex flex-col justify-center items-start gap-2 lg:gap-4 bg-black bg-opacity-5 shadow-academia p-8"
+    data-aos="fade-up"
+    data-aos-duration="800"
+    data-aos-delay="200"
+    data-aos-once="true"
+  >
+    {
+      descripcion.map((item) => (
+        <span class="text-[clamp(.9rem,1.2vw,1.2rem)] leading-snug lg:tracking-tight text-pretty">
+          {item.text}
+        </span>
+      ))
+    }
+  </div>
+</div>

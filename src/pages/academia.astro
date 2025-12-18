@@ -1,0 +1,68 @@
+---
+import HeroAcademia from "@/components/academia/secciones/HeroAcademia.astro";
+import Equipo from "@/components/academia/secciones/Equipo.astro";
+import libro from "@/assets/img_generales/libro.avif";
+import Soluciones from "@/components/academia/secciones/Soluciones.astro";
+import Cursos from "@/components/academia/secciones/Cursos.astro";
+import Presentacion from "@/components/academia/secciones/Presentacion.astro";
+import Preguntas from "@/components/academia/secciones/Preguntas.astro";
+import Opiniones from "@/components/academia/secciones/Opiniones.astro";
+import FooterAcademia from "@/components/academia/secciones/FooterAcademia.astro";
+import LayoutAcademia from "@/layouts/LayoutAcademia.astro";
+import DescargableAcademia from "@/components/academia/DescargableAcademia.astro";
+import DescargableAcademiaForm from "../components/react_components/descargableAcademia/DescargableAcademiaForm.jsx";
+import dataOpiniones from "@/data/opiniones.json";
+import dataPreguntas from "@/data/preguntas.json";
+import dataEquipo from "@/data/equipo.json";
+import ServiciosEmpresa from "@/components/academia/secciones/Servicios_empresa.astro";
+---
+
+<LayoutAcademia title="La Chica del Seguro - Academia de Seguros">
+  <main>
+    <HeroAcademia />
+
+    <Presentacion />
+    <div class="overflow-hidden my-8">
+      <DescargableAcademia
+        titulo="Todo lo que necesitas saber para contratar un seguro está en esta guía"
+        titulo_strong="digital y gratuita."
+        subtitulo="¡Completá el formulario y es tuya!"
+        imgURL={libro.src}
+        img_alt="Imagen tapa y hojas de la guía Aprendé a leer tu poliza"
+        color_background="#7B63B0"
+        color_strong="academia-amarillo2"
+      >
+        <DescargableAcademiaForm client:only="react" />
+      </DescargableAcademia>
+    </div>
+
+    <Soluciones />
+    <Cursos />
+    <ServiciosEmpresa />
+    <Equipo
+      dataEquipo={dataEquipo}
+      id="equipo"
+      titulo1="Te presentamos a"
+      titulo2="Nuestros expertos"
+      contenido_before="Equipo"
+      descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea, nihil deleniti maiores aspernatur in unde non illum aliquid placeat autem?"
+    />
+    <Preguntas
+      data={dataPreguntas}
+      id="preguntas_frecuentes"
+      titulo1="¿Tenes preguntas?"
+      titulo2="Nosotros las respuestas"
+      contenido_before="Preguntas"
+      descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea, nihil deleniti maiores aspernatur in unde non illum aliquid placeat autem?"
+    />
+    <Opiniones
+      data={dataOpiniones}
+      id="opiniones"
+      titulo1="Quienes nos eligen"
+      titulo2="Opinan de Nosotros"
+      contenido_before="Opiniones"
+      descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum alias atque voluptatibus recusandae? Quam, expedita. Quisquam quibusdam ea, nihil deleniti maiores aspernatur in unde non illum aliquid placeat autem?"
+    />
+    <FooterAcademia />
+  </main>
+</LayoutAcademia>

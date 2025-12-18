@@ -1,0 +1,44 @@
+---
+import Carrousel from "@/components/reutilizables/Carrousel.astro";
+import SeccionCompleta from "../SeccionCompleta.astro";
+import CardOpiniones from "../CardOpiniones.astro";
+interface Props {
+  data?: { nombre: string; opinion: string }[];
+  id: string;
+  titulo1: string;
+  titulo2: string;
+  contenido_before: string;
+  descripcion?: string; // Define any props if needed
+}
+const { data, id, titulo1, titulo2, contenido_before, descripcion } =
+  Astro.props;
+---
+
+<SeccionCompleta
+  id={id}
+  titulo1={titulo1}
+  titulo2={titulo2}
+  contenido_before={contenido_before}
+  descripcion={descripcion}
+>
+  <div
+    class="grid gap-4 mt-8 mb-12 w-full place-items-center"
+    data-aos="fade-left"
+    data-aos-duration="800"
+    data-aos-once="true"
+  >
+    <Carrousel
+      duration="slow"
+      classSlider="flex gap-12"
+    >
+      {
+        data.map((item) => (
+          <CardOpiniones
+            nombre={item.nombre}
+            opinion={item.opinion}
+          />
+        ))
+      }
+    </Carrousel>
+  </div>
+</SeccionCompleta>

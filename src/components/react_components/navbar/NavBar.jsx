@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import "./navbar.css"
 
+import whatsapp from "@/assets/img_generales/whatsapp.avif"
+import corazon from "@/assets/resources/corazon-paragua.svg"
+
 import navega from "../../../data/navega.json";
 import aprende from "../../../data/aprende.json";
-import { i } from "framer-motion/client";
 
 let url = window.location.pathname;
 
@@ -33,7 +35,6 @@ const Navbar = () => {
 
 
     useEffect(() => {
-        console.log(url);
         const closeMenuOnLinkClick = () => setMenuOpen(false);
         const navbarMovilLinks = navbarMovilRef.current.querySelectorAll("a");
 
@@ -59,7 +60,7 @@ const Navbar = () => {
                         <a onClick={handleScrollToTop} href="/" title="boton volver al inicio" >
                             <img
                                 className={`w-[50px] logo hover:rotate-[15deg] hover:scale-[1.1] transition duration-300 ease-in-out`}
-                                src="/resources/corazon-paragua.svg"
+                                src={corazon.src}
                                 alt="Logo Paragua Corazon de La Chica del Seguroo"
                                 height="auto"
                                 width="auto"
@@ -74,7 +75,7 @@ const Navbar = () => {
                             {/* <a title="whatsapp" href="https://wa.me/5491170627152?text=Hola, quiero hacerles una consulta" target="_blank" className="hover:scale-[1.1] transition-all ease-linear duration-300">
                                 <img
                                     loading="lazy"
-                                    src="./img/whatsapp.avif"
+                                    src={whatsapp.src}
                                     alt="logo whatsapp"
                                     className="w-[35px] h-[35px]"
                                     height="auto"
@@ -104,12 +105,12 @@ const Navbar = () => {
                     } transition-all duration-500 backdrop-grayscale-[.7] backdrop-blur-[10px]`}
             >
                 <div
-                    className={`flex justify-center items-center w-full bg-[#1d1e1c] h-full lg:h-[60%] ${menuOpen ? "opacity-100" : "opacity-0"
+                    className={`flex justify-center items-center w-full bg-[#1d1e1c] h-full lg:h-[80%] xl:h-[60%] ${menuOpen ? "opacity-100" : "opacity-0"
                         } transition-opacity duration-500`}
 
                 >
                     <div className="flex flex-col lg:flex-row  justify-center items-center lg:justify-start lg:items-start w-full lg:w-[80%] gap-10 lg:gap-20 my-6 lg:my-0">
-                        <div className="w-[80%] lg:w-[30%]">
+                        <div className="w-[80%] lg:w-[40%]">
                             <p className="text-[clamp(26px,2vw,32px)] font-medium pl-1 pb-[6px] text-zinc-200">
                                 Navega
                             </p>
@@ -133,7 +134,7 @@ const Navbar = () => {
                             </ul>
                         </div>
 
-                        <div className="w-[80%] lg:w-[30%]">
+                        <div className="w-[80%] lg:w-[40%]">
                             <p className="text-[clamp(26px,2vw,32px)] font-medium pl-1 pb-[6px] text-zinc-200">
                                 Aprende
                             </p>
