@@ -1,7 +1,5 @@
 ---
-import InputForm from "../../components/react_components/formsComponents/InputForm";
 import { SelectForm } from "../../components/react_components/formsComponents/SelectForm";
-
 import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
 import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
 const path = Astro.url.pathname;
@@ -12,7 +10,7 @@ const apiDefault = import.meta.env.DEFAULT_API_URL;
 ---
 
 <LayoutContactoServicios
-  title="Formulario de contacto para Fondo Educativo"
+  title="Formulario de contacto para más coberturas"
   path={result}
 >
   <main
@@ -25,26 +23,18 @@ const apiDefault = import.meta.env.DEFAULT_API_URL;
         urlFetchPatrimonieales={apiPatrimoniales}
       >
         <SelectForm
-          name="Tipo Emprendimiento"
-          labelText="Tipo de Emprendimiento"
+          name="Tipo de Seguro"
+          labelText="Tipo de Seguro"
           data={[
-            { value: "Producto", labelText: "Producto" },
-            { value: "Servicio", labelText: "Servicio" },
-            { value: "otro", labelText: "Otro" },
+            { value: "ART", labelText: "ART" },
+            { value: "Telefono movil", labelText: "Telefono movil" },
+            {
+              value: "Asistencia",
+              labelText: "Asistencia mecanica, hogar y mascotas",
+            },
+            { value: "Comercio", labelText: "Integral de comercio" },
+            { value: "Consorcio", labelText: "Integral de consorcio" },
           ]}
-        />
-        <InputForm
-          name="Tiempo de lanzamiento"
-          placeholder="6 meses"
-          type="text"
-          labelText="Tiempo en que tiene planeado lanzar el producto o servicio"
-          client:only="react"
-        />
-        <InputForm
-          name="Capital Necesario"
-          placeholder="AR$200000 / U$S50000 / no lo tengo definido aún"
-          type="text"
-          labelText="Capital necesario para lanzar el producto o servicio"
           client:only="react"
         />
       </ServicesForm>

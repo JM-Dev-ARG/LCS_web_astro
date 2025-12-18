@@ -15,7 +15,7 @@ export default defineConfig({
     }
   ), sitemap()],
 
-  site: 'https://lcs-astro.netlify.app/',
+  site: 'https://lachicadelseguro.com/',
   adapter: netlify(),
 
 });

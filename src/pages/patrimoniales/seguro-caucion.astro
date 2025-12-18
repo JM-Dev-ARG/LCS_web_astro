@@ -1,5 +1,4 @@
 ---
-import { SelectForm } from "../../components/react_components/formsComponents/SelectForm";
 import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
 import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
 const path = Astro.url.pathname;
@@ -10,7 +9,7 @@ const apiDefault = import.meta.env.DEFAULT_API_URL;
 ---
 
 <LayoutContactoServicios
-  title="Formulario de contacto para Seguros Automotores"
+  title="Formulario de contacto para Seguros de Cuación"
   path={result}
 >
   <main
@@ -22,21 +21,7 @@ const apiDefault = import.meta.env.DEFAULT_API_URL;
         urlFetchDefault={apiDefault}
         urlFetchPatrimonieales={apiPatrimoniales}
       >
-        <SelectForm
-          name="Tipo de Seguro"
-          labelText="Tipo de Seguro"
-          data={[
-            { value: "ART", labelText: "ART" },
-            { value: "Telefono movil", labelText: "Telefono movil" },
-            {
-              value: "Asistencia",
-              labelText: "Asistencia mecanica, hogar y mascotas",
-            },
-            { value: "Comercio", labelText: "Integral de comercio" },
-            { value: "Consorcio", labelText: "Integral de consorcio" },
-          ]}
-          client:only="react"
-        />
+        <span class="w-full"></span>
       </ServicesForm>
     </section>
   </main>

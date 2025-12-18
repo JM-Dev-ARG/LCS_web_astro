@@ -43,40 +43,10 @@
       "I. Comercio",
       "I. Consorcio"
     ],
-    "title6": "TELFONO MOVIL",
-    "datacontent6": "El celular es tu compañero de aventuras, tu herramienta de trabajo y tu enlace con el mundo. ¡Asegúrate!",
-    "title7": "ASISTENCIA",
-    "datacontent7": "",
-    "databullet7": [
-      "Auxilio mecánico.",
-      "Salud mascotas.",
-      "Asitencia para el hogar"
-    ],
-    "title8": "I. COMERCIO",
-    "datacontent8": "",
-    "databullet8": [
-      "Incendio - Cristales - Robo - RC comprensiva.",
-      "Seguro técnico para equipos y herramientas.",
-      "Robo de valores en caja o tránsito.",
-      "Daños materiales o maquinarias",
-      "Interrupción de explotación"
-    ],
-    "title9": "I. CONSORCIO",
-    "datacontent9": "",
-    "databullet9": [
-      "Incendio - Cristales - Robo - RC comprensiva.",
-      "Seguro técnico para equipos y herramientas.",
-      "RC elevadores y calderas.",
-      "Daños por agua - RC por guarda de vehículos"
-    ],
     "dataform1": "https://cotizador.cebrokers.com.ar/embed/lcs/97e63234-8309-4ad8-97e1-ddc4476717eb",
-    "dataform2": "/patrimoniales/motocicletaForm",
-    "dataform3": "/patrimoniales/caucionForm",
-    "dataform4": "/patrimoniales/hogarForm",
-    "dataform5": "/patrimoniales/otrosForm",
-    "dataform6": "/patrimoniales/movilForm",
-    "dataform7": "/patrimoniales/asistenciaForm",
-    "dataform8": "/patrimoniales/comercioForm",
-    "dataform9": "/patrimoniales/consorcioForm"
+    "dataform2": "/patrimoniales/seguro-motocileta-moto",
+    "dataform3": "/patrimoniales/seguro-caucion",
+    "dataform4": "/patrimoniales/seguro-hogar",
+    "dataform5": "/patrimoniales/seguro-masCoberturas"
   }
 ]

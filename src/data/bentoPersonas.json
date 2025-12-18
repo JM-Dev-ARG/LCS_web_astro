@@ -19,11 +19,11 @@
         "datacontent4": "Sabías que acompañar a tu hijo en su escolaridad cuesta desde 50 mil dólares? Si querés tener todo resuelto y disfrutar de ese viaje comenzá planificando hoy.",
         "datacontent5": "¿Vivir para trabajar o trabajar para vivir? El tiempo es el recurso más valioso, invertilo en vos. Si pones tus esfuerzos y tu dinero en la dirección correcta todo es más fácil. ",
         "datacontent6": "Emprender es un camino excitante pero difícil. Nadie planea fracasar pero fracasan por no planificar. Tiempo y dinero son los recursos más importantes. Podemos acompañarte asegurando tu emprendimiento 100%.",
-        "dataform1": "/personas/proteccionForm",
-        "dataform2": "/personas/libreForm",
-        "dataform3": "/personas/retiroForm",
-        "dataform4": "/personas/feducativoForm",
-        "dataform5": "/personas/independenciaForm",
-        "dataform6": "/personas/emprendedorForm"
+        "dataform1": "/personas/seguro-proteccion",
+        "dataform2": "/personas/seguro-ahorroLibre",
+        "dataform3": "/personas/seguro-retiro",
+        "dataform4": "/personas/seguro-fondoEducativo",
+        "dataform5": "/personas/seguro-independenciaEconomica",
+        "dataform6": "/personas/seguro-emprendedor"
     }
 ]

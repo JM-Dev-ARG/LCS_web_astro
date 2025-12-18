@@ -1,4 +1,5 @@
 ---
+import InputForm from "../../components/react_components/formsComponents/InputForm";
 import ServicesForm from "../../components/react_components/servicesForm/ServicesForm";
 import LayoutContactoServicios from "../../layouts/LayoutContactoServicios.astro";
 const path = Astro.url.pathname;
@@ -9,7 +10,7 @@ const apiDefault = import.meta.env.DEFAULT_API_URL;
 ---
 
 <LayoutContactoServicios
-  title="Formulario de contacto para Seguros Automotores"
+  title="Formulario de contacto para Independencia Económica"
   path={result}
 >
   <main
@@ -21,7 +22,27 @@ const apiDefault = import.meta.env.DEFAULT_API_URL;
         urlFetchDefault={apiDefault}
         urlFetchPatrimonieales={apiPatrimoniales}
       >
-        <span class="w-full"></span>
+        <InputForm
+          name="Fecha Nacimiento"
+          placeholder="Juan Perez"
+          type="date"
+          labelText="Fecha de Nacimiento"
+        />
+
+        <InputForm
+          name="Capital Buscado"
+          placeholder="AR$200000 / U$S50000 / no lo tengo definido aún"
+          type="text"
+          labelText="Cuánto capital necesitas conseguir"
+          client:only="react"
+        />
+        <InputForm
+          name="Edad Estimada"
+          placeholder="60 años"
+          type="text"
+          labelText="A que edad quieres conseguir el capital"
+          client:only="react"
+        />
       </ServicesForm>
     </section>
   </main>
