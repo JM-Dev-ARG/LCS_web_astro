@@ -1,10 +1,10 @@
 [
-    {
-        "href": "https://academia.lachicadelseguro.com.ar/",
-        "label": "Academia de Seguros"
-    },
-    {
-        "href": "/#guia_descarga",
-        "label": "Aprendé a leer tu póliza"
-    }
+  {
+    "href": "/#academia",
+    "label": "Academia de Seguros"
+  },
+  {
+    "href": "/#guia_descarga",
+    "label": "Aprendé a leer tu póliza"
+  }
 ]
