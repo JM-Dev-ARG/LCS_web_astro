@@ -43,10 +43,10 @@
       "I. Comercio",
       "I. Consorcio"
     ],
-    "dataform1": "https://cotizador.cebrokers.com.ar/embed/lcs/97e63234-8309-4ad8-97e1-ddc4476717eb",
-    "dataform2": "/patrimoniales/seguro-motocileta-moto",
-    "dataform3": "/patrimoniales/seguro-caucion",
-    "dataform4": "/patrimoniales/seguro-hogar",
-    "dataform5": "/patrimoniales/seguro-masCoberturas"
+    "dataform1": "/patrimoniales/seguro_automotor",
+    "dataform2": "/patrimoniales/seguro_motocicleta_moto",
+    "dataform3": "/patrimoniales/seguro_caucion",
+    "dataform4": "/patrimoniales/seguro_hogar",
+    "dataform5": "/patrimoniales/seguro_masCoberturas"
   }
 ]

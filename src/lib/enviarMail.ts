@@ -48,9 +48,9 @@ export async function enviarMail(data: FormData) {
           import.meta.env.MAILGUN_DOMAIN
         }>`,
         to: emailTo,
-        subject: `Nueva solicitud de cotización ${origin} desde página web`,
+        subject: `Nueva solicitud de cotización ${origin} desde página web La Chica del Seguro`,
         text: `Los datos del formulario son:\n${emailText}`,
-      }
+      },
     );
 
     return result.status;
