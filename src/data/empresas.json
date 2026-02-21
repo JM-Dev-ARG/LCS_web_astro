@@ -1,19 +1,19 @@
 [
     {
         "titulo": "In-Company",
-        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium",
+        "descripcion": "Llevamos la capacitación directamente a tu empresa. Formamos a tu equipo de productores con contenido adaptado a tu realidad, para que todos vendan más y mejor desde el primer día.",
         "img_curso": "../img/img_academia/capacitacion.avif",
         "url_curso": "/academia/empresas"
     },
     {
         "titulo": "Regala un curso",
-        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium",
+        "descripcion": "Invertí en el crecimiento de alguien que lo vale. Regalá acceso completo a uno de nuestros cursos y ayudá a un productor a transformar su forma de comercializar seguros.",
         "img_curso": "../img/img_academia/regalo.avif",
         "url_curso": "/academia/empresas"
     },
     {
         "titulo": "Regala un descuento",
-        "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis molestiae necessitatibus, nobis esse itaque, nam sunt saepe quae totam numquam, velit praesentium",
+        "descripcion": "Compartí el acceso a la academia con un beneficio especial. Una forma concreta de apoyar a tu equipo o a alguien de tu red para que dé el paso hacia la comercialización digital.",
         "img_curso": "../img/img_academia/descuento.avif",
         "url_curso": "/academia/empresas"
     }

@@ -1,0 +1,32 @@
+[
+    {
+        "numero": 1,
+        "titulo": "Diagnóstico previo",
+        "texto": "Antes de arrancar analizamos el nivel del equipo, los objetivos de la empresa y los desafíos del mercado."
+    },
+    {
+        "numero": 2,
+        "titulo": "Contenido a medida",
+        "texto": "Diseñamos el programa en base a tu realidad: ramo, cartera, canales de venta y herramientas que ya usás."
+    },
+    {
+        "numero": 3,
+        "titulo": "Modalidad flexible",
+        "texto": "Presencial, virtual o híbrida. Nos adaptamos a los tiempos y la dinámica de tu organización."
+    },
+    {
+        "numero": 4,
+        "titulo": "Instructores activos",
+        "texto": "Todos nuestros formadores son profesionales en ejercicio dentro del sector asegurador."
+    },
+    {
+        "numero": 5,
+        "titulo": "Seguimiento post-capacitación",
+        "texto": "Acompañamos al equipo después de la formación para asegurar que el aprendizaje se traduzca en resultados."
+    },
+    {
+        "numero": 6,
+        "titulo": "Certificación",
+        "texto": "Al finalizar, cada participante recibe su certificado de capacitación avalado por la Academia."
+    }
+]
