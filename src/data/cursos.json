@@ -2,6 +2,7 @@
     {
         "titulo": "WhatsApp Business",
         "descripcion": "Automatizá tu atención, profesionalizá tu marca y escalá tus ventas de seguros con la herramienta más potente del mundo.",
+        "estado": "inactive",
         "img_curso": "../img/img_academia/hero_movil.avif",
         "img_empresa": "../img/img_academia/hero_web.avif",
         "url_curso": "/academia/whatsappBusiness",

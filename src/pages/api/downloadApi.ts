@@ -1,5 +1,6 @@
 import type { APIRoute } from "astro";
 import { postDataDDBB } from "../../lib/postDataDDBB";
+import postDataMailer from "../../lib/postDataMailer";
 import { enviarLinkDescarga } from "../../lib/enviarLinkDescarga";
 
 export const POST: APIRoute = async ({ request }) => {
@@ -7,16 +8,19 @@ export const POST: APIRoute = async ({ request }) => {
 
   try {
     const dbResponse = await postDataDDBB(data);
-
+    const mailerResponse = await postDataMailer(data);
     const mailgunResponse = await enviarLinkDescarga(data);
 
-    if (dbResponse.status === 200 && mailgunResponse === 200) {
+    if (
+      dbResponse.status === 200 &&
+      (mailerResponse === 200 || mailerResponse === 201)
+    ) {
       return new Response(
         JSON.stringify({
           success: true,
           message: "Datos enviados correctamente.",
         }),
-        { status: 200 }
+        { status: 200 },
       );
     } else {
       return new Response(
@@ -26,7 +30,7 @@ export const POST: APIRoute = async ({ request }) => {
 
           dbResponse,
         }),
-        { status: 500 }
+        { status: 500 },
       );
     }
   } catch (error) {
@@ -37,7 +41,7 @@ export const POST: APIRoute = async ({ request }) => {
         message: "Error interno del servidor.",
         error: error.message,
       }),
-      { status: 500 }
+      { status: 500 },
     );
   }
 };

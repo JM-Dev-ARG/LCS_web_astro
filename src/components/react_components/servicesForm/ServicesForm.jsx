@@ -2,10 +2,6 @@ import "./form.css";
 import Swal from "sweetalert2";
 import InputForm from "../formsComponents/InputForm";
 import { useEffect, useState } from "react";
-import SelectMarcaForm from "../formsComponents/SelectMarcaForm";
-import SelectModelosForm from "../formsComponents/SelectModelosForm";
-import SelectVersionForm from "../formsComponents/SelectVersionForm";
-import SelectYearsForm from "../formsComponents/SelectYearsForm";
 import TextAreaForm from "../formsComponents/textAreaForm";
 
 const isMobile = window.matchMedia("(max-width: 430px)").matches;

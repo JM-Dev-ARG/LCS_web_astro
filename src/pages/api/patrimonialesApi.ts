@@ -1,7 +1,6 @@
 import type { APIRoute } from "astro";
 import postDataMailer from "../../lib/postDataMailer";
 import { postDataDDBB } from "../../lib/postDataDDBB";
-import { postDataDDBBCB } from "../../lib/postDDBBCB";
 import { enviarMail } from "../../lib/enviarMail";
 
 export const POST: APIRoute = async ({ request }) => {

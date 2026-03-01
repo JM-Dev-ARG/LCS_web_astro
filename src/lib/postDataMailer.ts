@@ -3,14 +3,10 @@ import MailerLite from "@mailerlite/mailerlite-nodejs";
 export default async function postDataMailer(data: FormData) {
   function getGroupId(data: string) {
     switch (data) {
-      case "patrimoniales":
-        return `${import.meta.env.MAILER_PATRIMONIALES_GROUP_ID}`;
-      case "personas":
-        return `${import.meta.env.MAILER_PERSONAS_GROUP_ID}`;
-      case "viajes":
-        return `${import.meta.env.MAILER_VIAJES_GROUP_ID}`;
-      case "siniestros":
-        return `${import.meta.env.MAILER_SINIESTROS_GROUP_ID}`;
+      case "aprende":
+        return `${import.meta.env.MAILER_APRENDE_GROUP_ID}`;
+      case "academia":
+        return `${import.meta.env.MAILER_GUIA_DIGITALIZADORA_ID}`;
       default:
         return `${import.meta.env.MAILER_APRENDE_GROUP_ID}`;
     }

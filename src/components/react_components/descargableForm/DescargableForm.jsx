@@ -125,7 +125,7 @@ export default function DescargableForm() {
                         </div>
                         <input type="text" name="sheetName" defaultValue="Descarga Guia" hidden />
                         <input type="text" name="Fecha" defaultValue={date} hidden />
-                        <input type="text" name="Origen" defaultValue="descargable" hidden />
+                        <input type="text" name="Origen" defaultValue="aprende" hidden />
 
                         <div className="w-full flex justify-center ">
                             <button

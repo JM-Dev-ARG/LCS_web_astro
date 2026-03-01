@@ -118,7 +118,8 @@ export default function DescargableAcademiaForm() {
                                 placeholder="juanperez@tumail.com"
                             />
                         </div>
-                        <input type="text" name="sheetName" defaultValue="Descarga Guia" hidden />
+                        <input type="text" name="sheetName" defaultValue="Guia Digitalizadora" hidden />
+                        <input type="text" name="Origen" defaultValue="academia" hidden />
                         <input type="text" name="Fecha" defaultValue={date} hidden />
 
                         <div className="w-full flex justify-center ">
