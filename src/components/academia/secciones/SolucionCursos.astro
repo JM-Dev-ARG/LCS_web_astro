@@ -26,16 +26,18 @@ const { id, titulo1, titulo2, contenido_before, descripcion, data } =
   descripcion={descripcion}
 >
   <div
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-cols-auto gap-6 place-items-start mt-12 w-full xl:w-[80%]"
+    class="flex flex-wrap justify-center gap-6 mt-12 w-full xl:w-[80%]"
   >
     {
       data.map((item, index) => (
-        <CardSoluciones
-          titulo={item.titulo}
-          texto={item.texto}
-          numero={item.numero}
-          delay={(index * 100).toString()}
-        />
+        <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+          <CardSoluciones
+            titulo={item.titulo}
+            texto={item.texto}
+            numero={item.numero}
+            delay={(index * 100).toString()}
+          />
+        </div>
       ))
     }
   </div>

@@ -125,7 +125,7 @@ export default function DescargableAcademiaForm() {
                             <button
                                 className="bg-academia-amarillo1 px-8 py-2 text-academia-negro font-semibold text-xl shadow-academia-boton hover:translate-x-[5px] hover:translate-y-[5px] hover:shadow-none transition-all duration-300 ease-in"
                                 type="submit">
-                                Enviar
+                                Comenzar
                             </button>
                         </div>
                     </div>

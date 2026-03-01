@@ -1,32 +1,27 @@
 [
     {
         "numero": 1,
-        "titulo": "Multiplataforma",
-        "texto": "Cotización y emisión las 24 horas desde cualquier dispositivo."
+        "titulo": "Identidad comercial",
+        "texto": "Configurar y personalizar el WB para potenciar tu identidad comercial."
     },
     {
         "numero": 2,
-        "titulo": "Autogestión",
-        "texto": "Sitio personalizado para descarga de documentos, solicitudes y pedidos del asegurado. "
+        "titulo": "Catálogo virtual",
+        "texto": "Utilizar el catálogo como una vidriera virtual que estimula la conversión."
     },
     {
         "numero": 3,
-        "titulo": "Siniestros",
-        "texto": "Carga, seguimiento y soporte en todo el proceso."
+        "titulo": "Mensajes automáticos",
+        "texto": "Diseñar y automatizar mensajes influyentes que atiendan tu oficina 24/7."
     },
     {
         "numero": 4,
-        "titulo": "Crosseling estratégico",
-        "texto": "Reportes inteligentes para maximizar los rendimientos de tu cartera."
+        "titulo": "Gestión de clientes",
+        "texto": "Organizar y administrar a tus clientes dentro de tu plataforma para optimizar la comunicación."
     },
     {
         "numero": 5,
-        "titulo": "Respaldo",
-        "texto": "Acceso a Aseguradoras de primer nivel, confianza y seguridad."
-    },
-    {
-        "numero": 6,
-        "titulo": "Microseguros y Hogar",
-        "texto": "Próximamente vas a poder comercializarlos desde nuestra app. "
+        "titulo": "Anuncios publicitarios",
+        "texto": "Crear anuncios publicitarios que potencien el alcance de tu asesoramiento digital."
     }
 ]
