@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 import { postDataDDBB } from "../../lib/postDataDDBB";
 import postDataMailer from "../../lib/postDataMailer";
-import { enviarLinkDescarga } from "../../lib/enviarLinkDescarga";
+/* import { enviarLinkDescarga } from "../../lib/enviarLinkDescarga"; */
 
 export const POST: APIRoute = async ({ request }) => {
   const data = await request.formData();
@@ -9,7 +9,7 @@ export const POST: APIRoute = async ({ request }) => {
   try {
     const dbResponse = await postDataDDBB(data);
     const mailerResponse = await postDataMailer(data);
-    const mailgunResponse = await enviarLinkDescarga(data);
+    /* const mailgunResponse = await enviarLinkDescarga(data); */
 
     if (
       dbResponse.status === 200 &&
