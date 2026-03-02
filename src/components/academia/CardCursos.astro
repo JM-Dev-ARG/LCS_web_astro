@@ -46,11 +46,16 @@ const { estado, titulo, descripcion, img_curso, url_curso, delay } =
       {descripcion}
     </span>
     <span class="flex justify-end items-center w-full mt-4">
-      <a
-        href=`${url_curso}`
-        class="bg-academia-violeta1 px-8 py-2 text-gray-50 font-normal text-xl shadow-academia-boton hover:translate-x-[5px] hover:translate-y-[5px] hover:shadow-none transition-all duration-300 ease-in"
-        >Saber más</a
-      >
+      {estado === "inactive" ? (
+        <span class="bg-academia-violeta1 px-8 py-2 text-gray-50 font-normal text-xl shadow-academia-boton opacity-50 pointer-events-none select-none">
+          Saber más
+        </span>
+      ) : (
+        <a
+          href=`${url_curso}`
+          class="bg-academia-violeta1 px-8 py-2 text-gray-50 font-normal text-xl shadow-academia-boton hover:translate-x-[5px] hover:translate-y-[5px] hover:shadow-none transition-all duration-300 ease-in"
+        >Saber más</a>
+      )}
     </span>
   </div>
 </div>

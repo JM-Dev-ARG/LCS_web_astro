@@ -150,7 +150,7 @@ const NavbarAcademia = () => {
                             <div className="border-b border-zinc-200 h-auto mb-3 w-[60%] lg:w-auto"></div>
                             <ul className="flex flex-col gap-[6px]">
                                 {aprende.map((item) => {
-                                    const tieneCursos = Array.isArray(item.cursos) && item.cursos.length > 0;
+                                    const tieneCursos = Array.isArray(item.cursos) && item.cursos.length > 1;
                                     const isExpanded = expandedItem === item.label;
 
                                     return (
@@ -172,6 +172,23 @@ const NavbarAcademia = () => {
                                                         ▶
                                                     </span>
                                                 </button>
+                                            ) : Array.isArray(item.cursos) && item.cursos.length === 1 && item.cursos[0].disabled ? (
+                                                <span
+                                                    title={item.cursos[0].label}
+                                                    className="text-zinc-500 opacity-40 pointer-events-none select-none"
+                                                >
+                                                    {item.cursos[0].label}
+                                                </span>
+                                            ) : Array.isArray(item.cursos) && item.cursos.length === 1 ? (
+                                                <a
+                                                    id="navItem"
+                                                    className="text-zinc-500 hover:text-zinc-100 duration-300 ease-linear"
+                                                    href={item.cursos[0].href}
+                                                    target={item.target}
+                                                    title={item.cursos[0].label}
+                                                >
+                                                    {item.cursos[0].label}
+                                                </a>
                                             ) : (
                                                 <a
                                                     id="navItem"
@@ -191,13 +208,22 @@ const NavbarAcademia = () => {
                                                 >
                                                     {item.cursos.map((curso) => (
                                                         <li key={curso.href}>
-                                                            <a
-                                                                href={curso.href}
-                                                                title={curso.label}
-                                                                className="hover:text-zinc-100 block"
-                                                            >
-                                                                {curso.label}
-                                                            </a>
+                                                            {curso.disabled ? (
+                                                                <span
+                                                                    title={curso.label}
+                                                                    className="block opacity-40 pointer-events-none select-none"
+                                                                >
+                                                                    {curso.label}
+                                                                </span>
+                                                            ) : (
+                                                                <a
+                                                                    href={curso.href}
+                                                                    title={curso.label}
+                                                                    className="hover:text-zinc-100 block"
+                                                                >
+                                                                    {curso.label}
+                                                                </a>
+                                                            )}
                                                         </li>
                                                     ))}
                                                 </ul>

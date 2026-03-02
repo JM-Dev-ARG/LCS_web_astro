@@ -1,39 +1,16 @@
 [
     {
         "href": "/academia/#guia_descarga",
-        "label": "Aprendé a leer tu póliza"
+        "label": "Challange Digitalizador 2026"
     },
     {
         "href": "/academia/negocio_de_seguros_digital",
         "label": "Nuestros cursos y mentorias",
         "cursos": [
             {
-                "href": "/academia/negocio_de_seguros_digital",
-                "label": "Negocio de seguros digital"
-            },
-            {
-                "href": "/academia/negocio_de_seguros_digital",
-                "label": "Estrategias de Marketing Digital para Seguros"
-            },
-            {
-                "href": "/academia/negocio_de_seguros_digital",
-                "label": "Estrategias de Marketing Digital para Seguros"
-            },
-            {
-                "href": "/academia/negocio_de_seguros_digital",
-                "label": "Estrategias de Marketing Digital para Seguros"
-            },
-            {
-                "href": "/academia/negocio_de_seguros_digital",
-                "label": "Estrategias de Marketing Digital para Seguros"
-            },
-            {
-                "href": "/academia/negocio_de_seguros_digital",
-                "label": "Estrategias de Marketing Digital para Seguros"
-            },
-            {
-                "href": "/academia/negocio_de_seguros_digital",
-                "label": "Estrategias de Marketing Digital para Seguros"
+                "href": "/academia/whatsappBusiness",
+                "label": "WhatsApp Business (Próximamente)",
+                "disabled": true
             }
         ]
     }
