@@ -2,11 +2,11 @@
     {
         "titulo": "WhatsApp Business",
         "descripcion": "Automatizá tu atención, profesionalizá tu marca y escalá tus ventas de seguros con la herramienta más potente del mundo.",
-        "estado": "inactive",
         "img_curso": "../img/img_academia/wb_curso.avif",
         "img_empresa": "../img/img_academia/wb_curso.avif",
         "url_curso": "/academia/whatsappBusiness",
-        "url_compra": "/academia/negocio_de_seguros_digital"
+        "url_compra": "https://academia.lachicadelseguro.com",
+        "estado": "inactive"
     },
     {
         "estado": "inactive",
