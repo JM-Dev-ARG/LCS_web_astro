@@ -64,7 +64,7 @@ export default function ServicesForm({
         saludo();
         form.reset();
         setTimeout(() => {
-          urlBase === "siniestros"
+          urlBase === "siniestros" || urlBase === "contadora"
             ? (window.location.href = "/")
             : (window.location.href = `/${path.split("/")[1]}`);
         }, 5100);
@@ -102,7 +102,8 @@ export default function ServicesForm({
       seguro_masCoberturas: "Otros",
       seguro_caucion: "Caucion",
       sepelioForm: "Sepelio",
-      siniestrosForm: "Siniestros",
+      asesoria_siniestros: "Siniestros",
+      mi_contadora: "Aldana"
     };
 
     const routeKey = path.split("/")[2];

@@ -14,6 +14,8 @@ export async function enviarMail(data: FormData) {
         return `${import.meta.env.MAIL_PATRIMONIO_TO}`;
       case "siniestros":
         return `${import.meta.env.MAIL_SINIESTROS_TO}`;
+      case "contadora":
+        return `${import.meta.env.MAIL_CONTADORA_TO}`;
       case "descargable":
         return `${data.get("email")}`;
       default:
@@ -27,7 +29,18 @@ export async function enviarMail(data: FormData) {
     formDataObject[key] = value.toString();
   }
 
-  const emailTo = getEmailTo(origin);
+  const emailOrigin = getEmailTo(origin);
+
+  const emailTo =
+    origin === "contadora"
+      ? [
+          `${import.meta.env.MAIL_CONTADORA_TO}` +
+            " " +
+            "," +
+            " " +
+            `${import.meta.env.MAIL_PERSONAS_TO}`,
+        ]
+      : emailOrigin;
 
   // Configuración de Mailgun
   const mailgun = new Mailgun(formData);
