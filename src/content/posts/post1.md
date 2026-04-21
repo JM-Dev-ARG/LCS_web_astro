@@ -1,151 +1,49 @@
 ---
 id: 1
-title: "Post 1"
-description: "Hi! I’m your first Markdown file in StackEdit. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me."
-date: "01 Enero 2025"
-author: "Javier"
-img: "/img/retiro2.avif"
-imgAuthor: "/img/foto-mock.avif"
-altImg: "alt text"
-imgAuthorAlt: "alt author"
-categories: ["Desarrollo", "Programacion"]
-tags: ["html", "css", "javascript", "pepito"]
+title: "El Seguro del Futuro: Cómo la Inteligencia Artificial te protege hoy (aunque no lo veas)"
+description: "Descubre cómo la IA y la innovación tecnológica están transformando el sector de los seguros en Latinoamérica para hacerlo más justo, rápido y humano."
+date: "22 Abril 2026"
+author: "La Doc del Seguro"
+imgAuthor: "/img/img_academia/mariel.avif"
+img: "/img/blog/seguros_con_ia_blog.avif"
+altImg: "imagen El Seguro del Futuro: Cómo la Inteligencia Artificial te protege hoy (aunque no lo veas)"
+imgAuthorAlt: "Foto de La Doc del Seguro"
+categories: []
+tags:
+  ["Inteligencia Artificial", "Insurtech", "Innovación", "Futuro", "Protección"]
 ---
 
-# Welcome to StackEdit!
+A menudo vemos al seguro como ese gasto mensual que _"ojalá no tengamos que usar"_. Sin embargo, el mundo está cambiando y la forma en que las compañías te cuidan también.
 
-**Hi! I'm your first Markdown** file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
+Hoy quiero contarte por qué la **innovación** y la **Inteligencia Artificial (IA)** no son solo palabras de moda, sino las herramientas que están haciendo que tu seguro sea más justo, rápido y transparente.
 
-# Files
+## 1. ¿Por qué es tan importante estar asegurado?
 
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+En esencia, el seguro es un contrato técnico que te da tranquilidad. Aunque en Argentina y Latinoamérica todavía nos falta asegurar más nuestras vidas y menos nuestros bienes (solo el 15% de los seguros son de personas), la tendencia es clara: el seguro es tu **red de seguridad** ante lo inesperado, desde un accidente hasta un problema climático.
 
-## Create files and folders
+## 2. La IA: Tu aliada silenciosa
 
-The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
+Seguramente escuchaste hablar de la Inteligencia Artificial, pero ¿sabías que ya está trabajando para vos? Las empresas están usando la IA para ser más eficientes. Esto significa:
 
-## Switch to another file
+- **Adiós a las esperas:** Lo que antes tardaba 3 días, como agendar una inspección de un auto, hoy se resuelve de forma casi inmediata gracias a procesos automatizados.
+- **Precios más justos:** La IA permite analizar los riesgos de manera tan precisa que pronto los precios de las pólizas se ajustarán mejor a cada persona (lo que llamamos _pricing_).
+- **Detección de trampas:** Al detectar fraudes automáticamente, las compañías evitan pérdidas millonarias, lo que ayuda a que el sistema sea sostenible para los asegurados honestos.
 
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
+## 3. La información es tu poder
 
-## Rename a file
+Uno de los mayores problemas actuales es que, a veces, hay demasiada oferta y terminas confundido. Por eso, la **información clara** es vital.
 
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
+Innovar también significa **"cocrear"**: que vos, como cliente, puedas decir qué necesitas realmente para que las empresas dejen de ofrecerte productos "enlatados" y empiecen a darte soluciones a medida.
 
-## Delete a file
+## 4. El toque humano que no desaparece
 
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
+Aunque se estima que entre el 40% y el 50% de los trámites se pueden automatizar, hay momentos donde la tecnología no alcanza. En situaciones delicadas (como un seguro de decesos o de vida), el **criterio humano y la empatía** siguen siendo irrenunciables. La IA debería ayudar a que los empleados tengan más tiempo para escucharte cuando realmente lo necesitas.
 
-## Export a file
+### ¿Qué tenés que saber para el 2026?
 
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
+El mercado se está volviendo más profesional. Las empresas que no se modernicen o no escuchen al cliente corren el riesgo de desaparecer. Mi consejo como _La Doc del Seguro_ es: **infórmate**.
 
-# Synchronization
+Hacia el 2029, el mercado vivirá una selección natural. Las aseguradoras que no inviertan en estas tecnologías corren el riesgo de volverse irrelevantes o, peor aún, de desaparecer. Al elegir tu cobertura, no mires solo el precio. **Estar informado es tu mejor seguro.**
 
-Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your **Google Drive**, your **Dropbox** and your **GitHub** accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.
-
-There are two types of synchronization and they can complement each other:
-
-- The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.
-
-  > To start syncing your workspace, just sign in with Google in the menu.
-
-- The file synchronization will keep one file of the workspace synced with one or multiple files in **Google Drive**, **Dropbox** or **GitHub**.
-  > Before starting to sync files, you must link an account in the **Synchronize** sub-menu.
-
-## Open a file
-
-You can open a file from **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Open from**. Once opened in the workspace, any modification in the file will be automatically synced.
-
-## Save a file
-
-You can save any file of the workspace to **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Save on**. Even if a file in the workspace is already synced, you can save it to another location. StackEdit can sync one file with multiple locations and accounts.
-
-## Synchronize a file
-
-Once your file is linked to a synchronized location, StackEdit will periodically synchronize it by downloading/uploading any modification. A merge will be performed if necessary and conflicts will be resolved.
-
-If you just have modified your file and you want to force syncing, click the **Synchronize now** button in the navigation bar.
-
-> **Note:** The **Synchronize now** button is disabled if you have no file to synchronize.
-
-## Manage file synchronization
-
-Since one file can be synced with multiple locations, you can list and manage synchronized locations by clicking **File synchronization** in the **Synchronize** sub-menu. This allows you to list and remove synchronized locations that are linked to your file.
-
-# Publication
-
-Publishing in StackEdit makes it simple for you to publish online your files. Once you're happy with a file, you can publish it to different hosting platforms like **Blogger**, **Dropbox**, **Gist**, **GitHub**, **Google Drive**, **WordPress** and **Zendesk**. With [Handlebars templates](http://handlebarsjs.com/), you have full control over what you export.
-
-> Before starting to publish, you must link an account in the **Publish** sub-menu.
-
-## Publish a File
-
-You can publish your file by opening the **Publish** sub-menu and by clicking **Publish to**. For some locations, you can choose between the following formats:
-
-- Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
-- HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
-
-## Update a publication
-
-After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the **Publish now** button in the navigation bar.
-
-> **Note:** The **Publish now** button is disabled if your file has not been published yet.
-
-## Manage file publication
-
-Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
-
-# Markdown extensions
-
-StackEdit extends the standard Markdown syntax by adding extra **Markdown extensions**, providing you with some nice features.
-
-> **ProTip:** You can disable any **Markdown extension** in the **File properties** dialog.
-
-## SmartyPants
-
-SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
-
-|                  | ASCII                           | HTML                          |
-| ---------------- | ------------------------------- | ----------------------------- |
-| Single backticks | `'Isn't this fun?'`             | 'Isn't this fun?'             |
-| Quotes           | `"Isn't this fun?"`             | "Isn't this fun?"             |
-| Dashes           | `-- is en-dash, --- is em-dash` | -- is en-dash, --- is em-dash |
-
-## KaTeX
-
-You can render LaTeX mathematical expressions using [KaTeX](https://khan.github.io/KaTeX/):
-
-The _Gamma function_ satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
-
-> You can find more information about **LaTeX** mathematical expressions [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
-
-## UML diagrams
-
-You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
-
-```mermaid
-sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
-
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
-```
-
-And this will produce a flow chart:
-
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
-```
+Mariel Adaro - La Doc del Seguro
+Abogada, periodista y docente especialista en Seguros.
