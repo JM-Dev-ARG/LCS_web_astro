@@ -8,6 +8,10 @@
     "label": "Un poquito de mi historia"
   },
   {
+    "href": "/#blog",
+    "label": "LCS Blog"
+  },
+  {
     "href": "/#servicios",
     "label": "Nuestros servicios"
   },
