@@ -24,13 +24,13 @@ const { Content } = await render(post);
 <LayoutBlog title={`LCS Blog - ${title}`}>
   <main class="relative w-full">
     <div
-      class="h-[320px] md:h-[410px] lg:h-[550px] w-full top-0 left-0 bg-lcsGreen3 bg-opacity-10 border-b-2 border-lcsPink1 absolute"
+      class="h-[420px] md:h-[450px] lg:h-[550px] w-full top-0 left-0 bg-lcsGreen3 bg-opacity-10 border-b-2 border-lcsPink1 absolute"
     >
     </div>
     <Container>
       <article
         aria-label={`Post ${title}`}
-        class="w-full lg-[80%] xl:w-[70%] flex flex-col justify-center items-center py-10 lg:py-20 2xl:py-24 gap-10"
+        class="w-full lg-[80%] xl:w-[70%] flex flex-col justify-center items-center py-20 lg:py-20 2xl:py-24 gap-10"
       >
         <div class="w-full flex flex-col justify-center">
           <h1
@@ -71,7 +71,7 @@ const { Content } = await render(post);
           class="max-w-xs md:max-w-full w-full flex justify-center items-center"
         >
           <div
-            class="prose prose-sm lg:prose-lg prose-stone font-light sm:prose-img:w-full md:prose-img:w-[70%] prose-img:place-self-center prose-img:mb-5 w-full"
+            class="prose-sm lg:prose-lg prose-stone font-light sm:prose-img:w-full md:prose-img:w-[70%] prose-img:place-self-center prose-img:mb-5 w-full"
           >
             <Content />
           </div>
@@ -86,7 +86,7 @@ const { Content } = await render(post);
             ))
           }
         </p>
-        <p class="flex gap-2">
+        <p class="flex justify-center  gap-2 flex-wrap">
           {
             data.tags.map((tag) => (
               <span class="text-sm bg-lcsPink1 text-white px-3 py-1 rounded-full">
