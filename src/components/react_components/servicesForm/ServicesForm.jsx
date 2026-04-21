@@ -80,30 +80,30 @@ export default function ServicesForm({
   // Función para obtener el nombre de la hoja basado en la ruta
   function getSheetName(path) {
     const pathToSheetName = {
-      seguro_vacaciones: "Vacaciones",
-      seguro_workHoliday: "WorkHoliday",
-      seguro_pasajeroEnViaje: "Pasajero en Viaje",
-      seguro_cese: "Fondo de Cese",
-      seguro_fondoEducativo: "Fondo Educativo",
-      seguro_ahorroLibre: "Ahorro Libre",
-      seguro_proteccion: "Proteccion",
-      seguro_retiro: "Retiro",
-      seguro_independenciaEconomica: "Independencia",
-      seguro_emprendedor: "Emprendedor",
+      "seguro-vacaciones": "Vacaciones",
+      "seguro-workHoliday": "WorkHoliday",
+      "seguro-pasajeroEnViaje": "Pasajero en Viaje",
+      "seguro-cese": "Fondo de Cese",
+      "seguro-fondoEducativo": "Fondo Educativo",
+      "seguro-ahorroLibre": "Ahorro Libre",
+      "seguro-proteccion": "Proteccion",
+      "seguro-retiro": "Retiro",
+      "seguro-independenciaEconomica": "Independencia",
+      "seguro-emprendedor": "Emprendedor",
       artForm: "ART",
       asistenciaForm: "Asistencia",
-      seguro_automotor: "Automotores",
+      "seguro-automotor": "Automotores",
       comercioForm: "Comercio",
       consorcioForm: "Consorcio",
-      seguro_hogar: "Hogar",
-      seguro_motocicleta_moto: "Motocicleta",
+      "seguro-hogar": "Hogar",
+      "seguro-motocicleta-moto": "Motocicleta",
       movilForm: "Movil",
       urbanoForm: "Urbano",
-      seguro_masCoberturas: "Otros",
-      seguro_caucion: "Caucion",
+      "seguro-masCoberturas": "Otros",
+      "seguro-caucion": "Caucion",
       sepelioForm: "Sepelio",
-      asesoria_siniestros: "Siniestros",
-      mi_contadora: "Aldana"
+      "asesoria-siniestros": "Siniestros",
+      "mi-contadora": "Aldana"
     };
 
     const routeKey = path.split("/")[2];
