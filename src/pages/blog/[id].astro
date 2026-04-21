@@ -16,7 +16,7 @@ export const prerender = true;
 
 const { post } = Astro.props;
 const { data, slug } = post;
-const { title, img, imgAuthor, author, date, altImg, imgAuthorAlt } = data;
+const { title, img, imgAuthor, author, date, altImg, imgAuthorAlt, authorDescription } = data;
 
 const { Content } = await render(post);
 ---
@@ -51,7 +51,10 @@ const { Content } = await render(post);
               width="auto"
               title={imgAuthorAlt}
             />
-            <p class="text-md text-neutral-400">{author}</p>
+            <div>
+              <p class="text-md font-medium text-neutral-500">{author}</p>
+            <p class="text-sm text-neutral-400">{authorDescription}</p>
+            </div>
           </div>
         </div>
 

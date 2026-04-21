@@ -3,7 +3,8 @@ id: 1
 title: "El Seguro del Futuro: Cómo la Inteligencia Artificial te protege hoy (aunque no lo veas)"
 description: "Descubre cómo la IA y la innovación tecnológica están transformando el sector de los seguros en Latinoamérica para hacerlo más justo, rápido y humano."
 date: "22 Abril 2026"
-author: "La Doc del Seguro"
+author: "Mariel Adaro - La Doc del Seguro"
+authorDescription: "Abogada, periodista y docente especialista en Seguros"
 imgAuthor: "/img/img_academia/mariel.avif"
 img: "/img/blog/seguros_con_ia_blog.avif"
 altImg: "imagen El Seguro del Futuro: Cómo la Inteligencia Artificial te protege hoy (aunque no lo veas)"
@@ -44,6 +45,3 @@ Aunque se estima que entre el 40% y el 50% de los trámites se pueden automatiza
 El mercado se está volviendo más profesional. Las empresas que no se modernicen o no escuchen al cliente corren el riesgo de desaparecer. Mi consejo como _La Doc del Seguro_ es: **infórmate**.
 
 Hacia el 2029, el mercado vivirá una selección natural. Las aseguradoras que no inviertan en estas tecnologías corren el riesgo de volverse irrelevantes o, peor aún, de desaparecer. Al elegir tu cobertura, no mires solo el precio. **Estar informado es tu mejor seguro.**
-
-Mariel Adaro - La Doc del Seguro
-Abogada, periodista y docente especialista en Seguros.
