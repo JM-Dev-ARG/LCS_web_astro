@@ -26,6 +26,9 @@ function saludoError() {
   });
 }
 
+/**
+ * @param {{ children?: import('react').ReactNode, urlFetchPatrimonieales: string, urlFetchDefault: string }} props
+ */
 export default function ServicesForm({
   children = null,
   urlFetchPatrimonieales,

@@ -22,27 +22,28 @@ const apiDefault = import.meta.env.DEFAULT_API_URL;
         urlFetchDefault={apiDefault}
         urlFetchPatrimonieales={apiPatrimoniales}
       >
-        <InputForm
-          name="Codigo Postal"
-          placeholder="1424"
-          type="text"
-          labelText="Codigo Postal"
-          client:only="react"
-        />
-        <InputForm
-          name="Edad"
-          placeholder="25 años"
-          type="text"
-          labelText="Edad"
-        />
-
-        <!-- <InputForm
-          name="Provincia"
-          placeholder="Buenos Aires"
-          type="text"
-          labelText="Provincia"
-          client:only="react"
-        /> -->
+        <>
+          <InputForm
+            name="Codigo Postal"
+            placeholder="1424"
+            type="text"
+            labelText="Codigo Postal"
+            client:only="react"
+          />
+          <InputForm
+            name="Edad"
+            placeholder="25 años"
+            type="text"
+            labelText="Edad"
+          />
+          <!-- <InputForm
+            name="Provincia"
+            placeholder="Buenos Aires"
+            type="text"
+            labelText="Provincia"
+            client:only="react"
+          /> -->
+        </>
       </ServicesForm>
     </section>
   </main>

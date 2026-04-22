@@ -23,36 +23,38 @@ const apiDefault = import.meta.env.DEFAULT_API_URL;
         urlFetchDefault={apiDefault}
         urlFetchPatrimonieales={apiPatrimoniales}
       >
-        <InputForm
-          name="Fecha Nacimiento"
-          placeholder="Juan Perez"
-          type="date"
-          labelText="Fecha de Nacimiento"
-        />
-        <SelectForm
-          name="Situacion laboral"
-          labelText="Situación Laboral"
-          data={[
-            { value: "Empleado", labelText: "Relación de dependencia" },
-            { value: "Monotributo", labelText: "Monotributista" },
-            { value: "Autonomo", labelText: "Autonomo" },
-            { value: "Inscripto", labelText: "Responsable inscripto" },
-            { value: "Otro", labelText: "Otro" },
-          ]}
-        />
-        <SelectForm
-          name="Proposito"
-          labelText="¿Tenés un propósito para tu ahorro?"
-          data={[
-            { value: "Auto", labelText: "Automovil" },
-            { value: "Viaje", labelText: "Viaje" },
-            { value: "Casa", labelText: "Casa" },
-            { value: "Capital", labelText: "Capital para emprendimiento" },
-            { value: "Estudios", labelText: "Estudios superiores" },
-            { value: "A Definir", labelText: "Aún no definí un propósito" },
-          ]}
-          client:only="react"
-        />
+        <>
+          <InputForm
+            name="Fecha Nacimiento"
+            placeholder="Juan Perez"
+            type="date"
+            labelText="Fecha de Nacimiento"
+          />
+          <SelectForm
+            name="Situacion laboral"
+            labelText="Situación Laboral"
+            data={[
+              { value: "Empleado", labelText: "Relación de dependencia" },
+              { value: "Monotributo", labelText: "Monotributista" },
+              { value: "Autonomo", labelText: "Autonomo" },
+              { value: "Inscripto", labelText: "Responsable inscripto" },
+              { value: "Otro", labelText: "Otro" },
+            ]}
+          />
+          <SelectForm
+            name="Proposito"
+            labelText="¿Tenés un propósito para tu ahorro?"
+            data={[
+              { value: "Auto", labelText: "Automovil" },
+              { value: "Viaje", labelText: "Viaje" },
+              { value: "Casa", labelText: "Casa" },
+              { value: "Capital", labelText: "Capital para emprendimiento" },
+              { value: "Estudios", labelText: "Estudios superiores" },
+              { value: "A Definir", labelText: "Aún no definí un propósito" },
+            ]}
+            client:only="react"
+          />
+        </>
       </ServicesForm>
     </section>
   </main>
