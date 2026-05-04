@@ -24,7 +24,8 @@ Si vos no tuviste la culpa y reclamás a la aseguradora del otro vehículo, la v
 La clave: Presentar el certificado de cobertura de tu propio seguro y el presupuesto de reparación de un taller de confianza, incluir las fotos panorámicas del suceso, la denuncia sellada, el documento de identidad del titular registral y la licencia de conducir. Si no presentas TODA la documentación el trámite no se inicia.
 Efecto Solvencia: Las compañías que están mejor posicionadas por su frecuencia de pagos cumplen con la normativa y la gestión dentro de los tiempos pactados o con pocas demoras. Suelen tener adicionalmente sistemas de compensación (como el sistema CLEAS) que permiten una gestión del reclamo directamente entre ellas. CLEAS no reduce el trámite ni garantiza la reparación y se tomarán 15 días para informar si inician el trámite o se cursará por las vías administrativas normales.
 
-##3. La Vía de la Mediación Previa
+## 3. La Vía de la Mediación Previa
+
 Si la oferta administrativa es baja o se demora más de 20 días hábiles o más, no pierdas tiempo "rogando" por teléfono. Pasar a una instancia de mediación profesional acelera los procesos de decisión de las compañías que sí tienen fondos pero están especulando con los plazos.
 En esta etapa, la aseguradora sabe que si no cierra un acuerdo justo, se enfrenta a UNA DEMANDA un juicio con costas mucho más caras.
 Nuestra asesora legal Mariel Adaro es quien lidera los reclamos en esa instancia ahorrando tiempo y dinero tanto para el reclamante como para las aseguradoras.
