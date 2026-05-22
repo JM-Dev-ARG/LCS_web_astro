@@ -55,6 +55,7 @@ const Navbar = () => {
                 id="navbar"
                 className="w-full grid place-items-center fixed z-[51] transition-all duration-500 "
             >
+
                 <div className="flex items-center justify-between lg:justify-center w-full mx-auto lg:px-3 2xl:px-0 py-3 ">
                     <div className="flex justify-left items-center flex-1 ml-8 ">
                         <a onClick={handleScrollToTop} href="/" title="boton volver al inicio" >
