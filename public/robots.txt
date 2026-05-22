@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lcs-astro.netlify.app//sitemap-index.xml
+Sitemap: https://lachicadelseguro.com/sitemap-index.xml

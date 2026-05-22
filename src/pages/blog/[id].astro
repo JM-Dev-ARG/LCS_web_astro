@@ -16,12 +16,26 @@ export const prerender = true;
 
 const { post } = Astro.props;
 const { data, slug } = post;
-const { title, img, imgAuthor, author, date, altImg, imgAuthorAlt, authorDescription } = data;
+const { title, img, imgAuthor, author, date, altImg, imgAuthorAlt, authorDescription, description, tags, categories } = data;
 
 const { Content } = await render(post);
+
+const siteUrl = "https://lachicadelseguro.com";
+const canonicalUrl = `${siteUrl}/blog/${slug}`;
+const absoluteImage = `${siteUrl}${img}`;
 ---
 
-<LayoutBlog title={`LCS Blog - ${title}`}>
+<LayoutBlog
+  title={`${title} | La Chica del Seguro`}
+  description={description}
+  image={absoluteImage}
+  canonicalUrl={canonicalUrl}
+  publishedDate={date}
+  author={author}
+  authorDescription={authorDescription}
+  categories={categories}
+  tags={tags}
+>
   <main class="relative w-full">
     <div
       class="h-[420px] md:h-[450px] lg:h-[550px] w-full top-0 left-0 bg-lcsGreen3 bg-opacity-10 border-b-2 border-lcsPink1 absolute"

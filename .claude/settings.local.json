@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git mv *)"
+      "Bash(git mv *)",
+      "Bash(Get-ChildItem -Path \"d:\\\\webs\\\\LCS_web_astro\" -Force)",
+      "Bash(Select-Object -First 20)",
+      "Bash(xargs grep -l \"BlogPosting\\\\|Article\\\\|NewsArticle\")"
     ]
   }
 }
