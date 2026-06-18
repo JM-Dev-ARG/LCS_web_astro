@@ -10,8 +10,21 @@ altImg: "Insurtech Meet Day 2026 img"
 imgAuthorAlt: "Foto de La Chica del Seguro"
 categories: ["seguro de vida", "tecnología y seguros", “educación financiera”]
 tags:
-  [“salud en argentina”,”cobertura médica”,”seguro universal”, “inteligencia artificial en salud”, “datos y prevención”, “protección financiera”, “insutech”, “medicina prepaga”, “enfermedades graves”, “educación financiera” ]
+  [
+    “salud en argentina”,
+    ”cobertura médica”,
+    ”seguro universal”,
+    “inteligencia artificial en salud”,
+    “datos y prevención”,
+    “protección financiera”,
+    “insutech”,
+    “medicina prepaga”,
+    “enfermedades graves”,
+    “educación financiera”,
+  ]
 ---
+
+Hace unos días, nos subimos a una mesa de streaming en el Insurtech Meetday 2026 en Rosario. No fuimos solo como profesionales del sector, sino como un equipo que comparte una misma energía y un propósito: abrir el juego.
 
 ## 1. ¿Qué fuimos a hacer?
 
