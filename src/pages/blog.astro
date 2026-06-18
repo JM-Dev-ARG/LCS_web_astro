@@ -41,7 +41,7 @@ El seguro está en cada decisión que tomás, aunque no lo veas. Desde las grand
       >
         <a
           href={`/blog/${lastPost.slug}`}
-          class="flex flex-col md:flex-row items-center relative gap-4 w-full lg:w-[80%] xl:w-[70%] h-[550px] md:h-[500px] md:my-5 bg-lcsPink3 bg-opacity-10 hover:scale-[1.03] transition-all duration-300"
+          class="flex flex-col lg:flex-row items-center relative gap-4 w-full lg:w-[95%] xl:w-[80%] h-[700px] lg:h-[500px] md:my-5 bg-lcsPink3 bg-opacity-10 hover:scale-[1.03] transition-all duration-300"
         >
           <div
             class="absolute top-0 right-0 z-10 bg-lcsOrange3 text-white py-2 px-4 rounded-bl-[50px] rounded-tl-[50px]"
@@ -49,7 +49,7 @@ El seguro está en cada decisión que tomás, aunque no lo veas. Desde las grand
             <p>Ultimo Post</p>
           </div>
 
-          <div class="w-full min-h-[230px] h-[230px] md:w-1/2 md:h-full">
+          <div class="w-full min-h-[230px] h-[230px] lg:w-1/2 md:h-[550px] lg:h-full ">
             <img
               loading="lazy"
               class="object-cover w-full h-full border-y-[6px] border-lcsPink1"
@@ -61,7 +61,7 @@ El seguro está en cada decisión que tomás, aunque no lo veas. Desde las grand
             />
           </div>
           <div
-            class="flex flex-col justify-between md:h-[90%] gap-2 md:w-1/2 px-5"
+            class="flex flex-col justify-between md:h-[90%] gap-2 lg:w-1/2 px-5"
           >
             <div class="h-full flex flex-col justify-center gap-2">
               <p class="text-sm text-neutral-400">{lastPost.data.date}</p>
@@ -76,10 +76,10 @@ El seguro está en cada decisión que tomás, aunque no lo veas. Desde las grand
               </p>
               <p class="text-sm text-neutral-400">
                 Autor: {lastPost.data.author}
-              </p>
-              <div class="flex gap-2">
+              </p> 
+              <div class="flex gap-2 flex-wrap">
                 {
-                  lastPost.data.tags.map((tag) => (
+                  lastPost.data.tags.slice(0, 4).map((tag) => (
                     <span class="text-sm bg-lcsPink1 text-white px-2 py-1 rounded-full">
                       {tag}
                     </span>
@@ -93,7 +93,7 @@ El seguro está en cada decisión que tomás, aunque no lo veas. Desde las grand
 
       <sectcion
         aria-label="Posts"
-        class="grid lg-[80%] xl:w-[70%] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10"
+        class="grid lg-[80%] grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 my-10"
       >
         {
           postsOrdered.map((post) => {
@@ -102,7 +102,7 @@ El seguro está en cada decisión que tomás, aunque no lo veas. Desde las grand
             return (
               <a
                 href={`/blog/${slug}`}
-                class=" articulo flex flex-col justify-between  items-center gap-2 h-[620px] md:h-[500px] lg:h-[620px] bg-lcsPink3 bg-opacity-10 hover:scale-[1.03] transition-all duration-300"
+                class=" articulo flex flex-col justify-between  items-center gap-2 h-[670px] lg:h-[620px] bg-lcsPink3 bg-opacity-10 hover:scale-[1.03] transition-all duration-300"
               >
                 <div class="w-full min-h-[230px] h-[230px] ">
                   <img

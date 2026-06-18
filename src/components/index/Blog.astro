@@ -78,7 +78,7 @@ const lastPost = postsOrdered[0];
               </p>
               <div class="flex gap-2 flex-wrap">
                 {
-                  lastPost.data.tags.map((tag) => (
+                  lastPost.data.tags.slice(0, 4).map((tag) => (
                     <span class="text-sm bg-lcsPink1 text-white px-2 py-1 rounded-full">
                       {tag}
                     </span>
