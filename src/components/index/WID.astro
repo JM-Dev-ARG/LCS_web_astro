@@ -168,9 +168,10 @@ import { WidScrollReveal } from "../react_components/wid/WidScrollReveal";
     import AOS from "aos";
     import "aos/dist/aos.css"; // You can also use <link> for styles
     // ..
-    AOS.init();
 
     document.addEventListener("astro:page-load", () => {
+      AOS.init();
+
       const historiaItems = document.querySelectorAll(".historia-item");
       let currentIndex = 0;
 

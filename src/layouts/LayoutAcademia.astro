@@ -177,5 +177,7 @@ const { title } = Astro.props;
 <script>
   import AOS from "aos";
   import "aos/dist/aos.css";
-  AOS.init();
+  document.addEventListener("astro:page-load", () => {
+    AOS.init();
+  });
 </script>

@@ -122,5 +122,7 @@ const backgroundColor = bgColor ? bgColor : "bg-[#1a6dc0]";
   import AOS from "aos";
   import "aos/dist/aos.css"; // You can also use <link> for styles
   // ..
-  AOS.init();
+  document.addEventListener("astro:page-load", () => {
+    AOS.init();
+  });
 </script>

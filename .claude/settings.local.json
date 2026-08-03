@@ -17,7 +17,17 @@
       "Bash(mv -f \"art 2.avif\" \"como-leer-una-poliza-sin-ser-abogado.avif\")",
       "Bash(mv -f \"art 3.avif\" \"prima-suma-asegurada-franquicia-y-deducible.avif\")",
       "Bash(mv -f \"art 4.avif\" \"por-que-el-seguro-mas-barato-termina-siendo-el-mas-caro.avif\")",
-      "Bash(mv -f \"art 5.avif\" \"por-que-argentina-asegura-menos-que-la-region.avif\")"
+      "Bash(mv -f \"art 5.avif\" \"por-que-argentina-asegura-menos-que-la-region.avif\")",
+      "Read(//d//**)",
+      "Bash(npm ls *)",
+      "Read(//c/Users/Usuario/AppData/Local/Temp/claude/bundled-skills/**)",
+      "Read(//c/Users/Usuario/AppData/Local/Temp/claude/bundled-skills/2.1.220//**)",
+      "Bash(ls \"/c/Users/Usuario/AppData/Local/Temp/claude/bundled-skills/2.1.220/\" 2>/dev/null)",
+      "Bash(node -e \"require.resolve\\('playwright'\\)\")",
+      "Bash(npx --no-install playwright --version)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill //F //PID 24452)",
+      "Bash(curl -sf http://localhost:4321)"
     ]
   }
 }

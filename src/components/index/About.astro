@@ -199,5 +199,7 @@ import img_hola from "@/assets/img_generales/img-hola.avif";
   import AOS from "aos";
   import "aos/dist/aos.css"; // You can also use <link> for styles
   // ..
-  AOS.init();
+  document.addEventListener("astro:page-load", () => {
+    AOS.init();
+  });
 </script>
