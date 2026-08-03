@@ -5,7 +5,19 @@
       "Bash(Get-ChildItem -Path \"d:\\\\webs\\\\LCS_web_astro\" -Force)",
       "Bash(Select-Object -First 20)",
       "Bash(xargs grep -l \"BlogPosting\\\\|Article\\\\|NewsArticle\")",
-      "PowerShell(Rename-Item \"d:\\\\webs\\\\LCS_web_astro\\\\src\\\\content\\\\posts\\\\4.md\" \"insurtech-meet-day-el-evento-donde-el-seguro-evoluciona.md\")"
+      "PowerShell(Rename-Item \"d:\\\\webs\\\\LCS_web_astro\\\\src\\\\content\\\\posts\\\\4.md\" \"insurtech-meet-day-el-evento-donde-el-seguro-evoluciona.md\")",
+      "Bash(npx astro *)",
+      "Bash(timeout 120 npx astro build)",
+      "Bash(mv \"art 1.avif\" \"seguro-de-vida-vs-seguro-de-retiro.avif\")",
+      "Bash(mv \"art 2.avif\" \"como-leer-una-poliza-sin-ser-abogado.avif\")",
+      "Bash(mv \"art 3.avif\" \"prima-suma-asegurada-franquicia-y-deducible.avif\")",
+      "Bash(mv \"art 4.avif\" \"por-que-el-seguro-mas-barato-termina-siendo-el-mas-caro.avif\")",
+      "Bash(mv \"art 5.avif\" \"por-que-argentina-asegura-menos-que-la-region.avif\")",
+      "Bash(mv -f \"art 1.avif\" \"seguro-de-vida-vs-seguro-de-retiro.avif\")",
+      "Bash(mv -f \"art 2.avif\" \"como-leer-una-poliza-sin-ser-abogado.avif\")",
+      "Bash(mv -f \"art 3.avif\" \"prima-suma-asegurada-franquicia-y-deducible.avif\")",
+      "Bash(mv -f \"art 4.avif\" \"por-que-el-seguro-mas-barato-termina-siendo-el-mas-caro.avif\")",
+      "Bash(mv -f \"art 5.avif\" \"por-que-argentina-asegura-menos-que-la-region.avif\")"
     ]
   }
 }
